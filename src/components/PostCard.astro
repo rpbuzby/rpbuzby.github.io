@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import { insightPath, themeSlug, fmtDate, type Insight } from '../lib/insights';
+
+interface Props {
+  entry: Insight;
+  eager?: boolean;
+  clamp?: number; // characters of summary to show; 0 = all
+}
+const { entry, eager = false, clamp = 220 } = Astro.props;
+const href = insightPath(entry);
+const d = entry.data;
+let summary = d.summary;
+if (clamp && summary.length > clamp) summary = summary.slice(0, clamp).replace(/\s+\S*$/, '') + '…';
+const cats = d.themes.map(themeSlug).join(' ');
+---
+<article class="post" data-cats={cats}>
+  <a class="post-img" href={href} tabindex="-1" aria-hidden="true">
+    <Image src={d.image} alt="" width={640} height={427} loading={eager ? 'eager' : 'lazy'} />
+  </a>
+  <div class="post-body">
+    <p class="log">
+      <time datetime={d.date.toISOString().slice(0, 10)}>{fmtDate(d.date)}</time>
+      <span class="sep">·</span>{d.themes.join(' · ')}
+    </p>
+    <h3><a href={href}>{d.title}</a></h3>
+    <p class="excerpt">{summary}</p>
+  </div>
+</article>

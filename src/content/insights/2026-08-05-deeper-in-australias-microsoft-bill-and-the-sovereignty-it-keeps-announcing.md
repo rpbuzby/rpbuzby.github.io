@@ -1,0 +1,45 @@
+---
+title: "Deeper In: Australia’s Microsoft bill and the sovereignty it keeps announcing"
+date: 2026-08-05
+summary: "In July 2026, Australian federal agencies signed over A$1 billion in Microsoft contracts, primarily for multi-year subscription renewals. This centralization, while financially beneficial, raises concerns about dependency on a single vendor for critical digital services. The government’s conflicting commitment to AI sovereignty is questioned, particularly regarding future procurement strategies."
+themes:
+  - "AI in Government"
+image: ../../assets/insights/deeper-in-australias-microsoft-bill-and-the-sovereignty-it-keeps-announcing.jpg
+wordpress: "https://russellbuzby.com/2026/08/05/deeper-in-australias-microsoft-bill-and-the-sovereignty-it-keeps-announcing/"
+---
+Australian federal agencies signed more than A\$1 billion in Microsoft contracts inside a single month, driven largely by renewals of big multi-year subscriptions at materially higher prices than the deals they replaced (InnovationAus, 2026a). The month in question was July 2026, which is also the month the sixth Volume Sourcing Arrangement came into effect. That arrangement is a five-year agreement negotiated by the Digital Transformation Agency, and it keeps non-corporate Commonwealth entities inside the Microsoft ecosystem for their core digital infrastructure: Copilot, Microsoft 365 and Azure, alongside security and identity services (Canberra Times, 2026).
+
+The case for arrangements like this is genuine and should be put properly before it is argued with. A review of the Commonwealth’s single seller arrangements found they delivered A\$1.6 billion in discounts between 2019 and 2024. Those discounts exist because the alternative to one arrangement is not a diverse and competitive market: it is more than a hundred agencies negotiating separately with the same vendor, and each of those agencies getting a worse price. Aggregating agency demand into a single arrangement is straightforwardly good public administration, and the DTA deserves credit for doing it instead of leaving the field to individual chief information officers.
+
+The trouble is what the discount answers. It answers whether the Commonwealth is paying a good price for Microsoft. It says nothing at all about whether one foreign supplier should hold the Commonwealth’s cloud and its AI assistant at the same time. Centralised procurement optimises inside a choice that has already been made, and the more efficiently it optimises, the more expensive it becomes to revisit the choice. Every agency migrated onto the common stack is another agency for whom leaving is a multi-year program instead of a decision.
+
+Set that against what the same month produced in policy. On 15 July the Prime Minister committed Australia to mandatory economy-wide AI standards and stood up an Office of AI inside the Department of the Prime Minister and Cabinet. In mid-July ASPI observed that Australia’s plan for building sovereign AI capability remains poorly defined even as AI is elevated to a national priority (ASPI, 2026). Two weeks later the Commonwealth locked its own public service into a single vendor’s AI assistant for five years. Each of those things can be defended on its own. Together they describe a government announcing sovereignty as an objective while purchasing in the opposite direction.
+
+Sovereignty in this context means something narrower than buying local. It is the question of what happens when the supplier and the customer disagree, which sits at the centre of [The Switch Is in Another Country](https://russellbuzby.com/2026/07/08/the-switch-is-in-another-country-australias-ai-sovereignty-and-the-day-the-access-was-cut/). Access to a hosted service is a commercial relationship subject to foreign law and to unilateral change. The same logic applies to the physical layer beneath it, which is why the undersea cable question keeps returning, a subject I covered in [The Cloud Is on the Ocean Floor](https://russellbuzby.com/2026/05/12/the-cloud-is-on-the-ocean-floor-australia-and-the-undersea-cable-question/). Concentration is the variable that matters. A dependency spread across four suppliers is a commercial risk. The same dependency resting on one supplier becomes a strategic exposure.
+
+There is an alternative use for that purchasing power, and Australian industry has been making the argument. InnovationAus reported in late July on procurement as the lever that could close the deep tech sector’s missing middle, with government acting as first customer for firms that have proved the science and cannot reach commercial scale (InnovationAus, 2026b). The Commonwealth spends on digital infrastructure at a scale that would transform the domestic market if even a modest share of it were directed there. Nobody sensible suggests Australia build a sovereign replacement for Azure. The question is narrower and more answerable: of the marginal dollar, and the marginal decision, how much goes toward capability that stays in the country?
+
+The United States has just published a cautionary note on the arithmetic that underwrites deals like this. The Government Accountability Office found that the Technology Modernization Fund has invested over US\$1 billion across 68 IT modernisation projects and realised US\$13.5 million in savings so far, with 98 per cent of the projected savings expected from fiscal 2027 onwards (GAO, 2026). That is a familiar shape. Present commitment is justified by future savings, the future savings arrive late or not at all, and by the time anyone checks, the commitment is structural. A five-year arrangement whose value case rests on discounts realised over its life deserves the same scepticism, and the same interim milestones the GAO recommends.
+
+The security dimension makes the concentration harder to wave away. InnovationAus reported in July that Australian agencies are under pressure to move past partial Zero Trust implementations and demonstrate real-time threat visibility and containment, as AI-enabled attacks lower the cost and speed of exploitation (InnovationAus, 2026c). Agencies are being asked to prove operational security maturity in the same period that they deepen their reliance on a single vendor’s identity and cloud services. A monoculture is efficient to administer and efficient to attack. That trade-off may still be worth making, but it should be made consciously and written down somewhere.
+
+The available fixes do not require tearing up the arrangement. Publish an annual reconciliation of actual realised savings against the VSA6 business case, so the Parliament can see whether the discount thesis holds while there is still time to act on it. Require an exit-cost estimate for the major components, refreshed each year, because a dependency you have never priced is one you cannot manage. Set a target share of Commonwealth digital spend directed to Australian suppliers and report against it, which moves the deep tech argument from advocacy to a number. Treat reversibility as a weighted and scored procurement criterion, instead of a virtue everyone endorses and nobody buys.
+
+The A\$1.55 million training fund Microsoft attached to the arrangement, covering skills development including ethical AI use, is a useful illustration of the imbalance. It is a real contribution and it is also rounding error against a billion dollars in a month, and it means the vendor is now partly shaping how the public service is taught to think about the vendor’s own product.
+
+Australia spent July announcing that it intends to govern artificial intelligence in the national interest, and also signing up to five more years of somebody else’s. The legislation behind that announcement is promised for early 2027, and the arrangement it sits beside runs to 2031.
+
+## References
+ASPI (2026, 17 July). As Australia prepares for the AI future, its plan for sovereign capability is unclear. The Strategist. <https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/>
+
+Canberra Times (2026). Secret caps and ‘black holes’: DTA locks public service into new five-year Microsoft mega-deal. <https://www.canberratimes.com.au/story/9187393/dtas-new-microsoft-deal-to-transform-federal-it/>
+
+GAO (2026, 23 July). Technology Modernization Fund: Small Savings Achieved So Far, but Substantial Future Savings Expected. GAO-26-107737. <https://gao.gov/products/gao-26-107737>
+
+InnovationAus (2026a, 27 July). \$1bn in a month: Govt’s Microsoft bill skyrockets. <https://innovationaus.com/1bn-in-a-month-govts-microsoft-bill-skyrockets>
+
+InnovationAus (2026b, 23 July). Procurement key to closing deep tech’s ‘missing middle’. <https://innovationaus.com/procurement-key-to-closing-deep-techs-missing-middle>
+
+InnovationAus (2026c, 22 July). Partial Zero Trust is no longer good enough. <https://innovationaus.com/partial-zero-trust-is-no-longer-good-enough>
+
+The New Daily (2026, 15 July). PM outlines standards for AI, data centres in major speech. <https://www.thenewdaily.com.au/life/tech/2026/07/15/pm-standards-ai-data-centres>

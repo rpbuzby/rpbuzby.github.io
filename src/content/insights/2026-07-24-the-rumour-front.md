@@ -1,0 +1,87 @@
+---
+title: "The Rumour Front"
+date: 2026-07-24
+summary: "In October 2024, an armed man threatened FEMA workers in North Carolina, leading to operational changes due to misinformation about hurricane relief. Rumors regarding federal aid and weather manipulation disrupted recovery efforts. This situation reflects broader challenges with misinformation during disasters, underscoring the need for effective communication strategies and community trust in emergency management."
+themes:
+  - "Emergency Management & Resilience"
+image: ../../assets/insights/the-rumour-front.jpg
+wordpress: "https://russellbuzby.com/2026/07/24/the-rumour-front/"
+---
+On a Saturday afternoon in October 2024, police in Rutherford County, North Carolina, arrested an armed man for threatening FEMA workers running hurricane relief. The charge carried an old and evocative name: going armed to the terror of the public. Within two days the agency had shifted its assistance teams out of door-to-door canvassing across parts of the state’s flooded west, moving them behind fixed relief sites while the threats were assessed (Axios, 2024). Days earlier, FEMA administrator Deanne Criswell had already described the falsehoods surrounding Hurricane Helene as “absolutely the worst I have ever seen” (E&E News, 2024).
+
+The rumours were specific, and they worked. Survivors heard that federal aid was capped at \$750, when the real figure was an upfront payment for immediate essentials with further assistance behind it (FEMA, 2024). They heard that registering for help would let the government seize their land, and that the hurricane itself had been steered: a serving member of the US Congress posted that “they” can control the weather (Forbes, 2024). Reports of armed militias hunting federal workers turned out to be one man acting alone, but by then the door-knocking had stopped for the very people least likely to reach a recovery centre on their own. Fabricated claims changed how a disaster agency operated in the field.
+
+Australia has spent the years since Black Summer rebuilding the machinery that delivers official emergency information. The Royal Commission into National Natural Disaster Arrangements pushed governments toward a nationally consistent warning system and shared fire danger ratings, with a national education effort behind them (Royal Commission, 2020). On 27 July, phones across the country will sound at once as the new AusAlert cell-broadcast system runs its national test ahead of an October launch (Department of Health, Disability and Ageing, 2026). Message delivery has never worked better. The institutional trust that carries those messages the last mile is a subject I wrote about separately in [The Analogue Backbone](https://russellbuzby.com/2026/04/18/the-analogue-backbone-why-132-million-for-ausalert-doesnt-fix-australias-emergency-broadcast-system/).
+
+Underneath that machinery sits a premise the Commission stated plainly: “The public must have confidence in the accuracy and reliability of the source of emergency information” (Royal Commission, 2020). Its worry was inconsistency, messages that differed across borders and between apps. Search the full report and the words misinformation and disinformation appear nowhere in its 24 chapters. Nobody should fault the Commissioners for that in 2020. The assumption just has not survived the half-decade since. Accuracy and consistency earn confidence slowly; other actors now work to demolish it quickly.
+
+The Australian ladder of examples is already long. During Black Summer, a claim that 183 arsonists had been arrested went global; the police record showed legal action against 183 people for every kind of fire-related offence, only 24 of them for allegedly lighting fires on purpose (AAP FactCheck, 2020). The [\#ArsonEmergency](#ArsonEmergency) hashtag carrying the claim drew early warnings about bot-like accounts (Graham & Keller, 2020), yet of the accounts the follow-up study could classify, 96.6 per cent came back confidently human (Weber et al., 2022). People, not machines, amplified the claim. After the 2022 floods, falsehoods about the Red Cross changed how some Australians donated, despite fact-checking (Carson & Phillips, 2025). As Cyclone Alfred crawled toward Brisbane in 2025, the long wait between warning and impact became an incubator for weather-manipulation theories (Smith, 2025). And in January this year, while Victorian communities took stock of what fires exceeding 400,000 hectares had left them (Risk Frontiers, 2026), posts insisted energy weapons had ignited the landscape to clear the way for planned renewable energy projects. The debunk took drone footage and fire-behaviour experts (AAP FactCheck, 2026).
+
+Each phase of a disaster now carries its own information hazard. Alfred showed the anticipation window is vulnerable. Victoria showed recovery is too, just when exhausted communities most need believable institutions. The audience is primed for the contest: 77 per cent of Australians worry about what is real or fake online, news on social media is trusted by only 21 per cent, and news from AI chatbots by 19 (University of Canberra News & Media Research Centre, 2026). The regulator found 72 per cent of adults who used a digital platform in the first half of 2025 believed they encountered misinformation there (ACMA, 2025b). Attention was distorting disaster operations before deliberate falsehood entered the picture, a pattern I traced in [The Photogenic Fire Gets the Helicopters](https://russellbuzby.com/2026/05/20/the-photogenic-fire-gets-the-helicopters-social-media-and-wildfire-resource-management/); manipulation is the same lever, pulled on purpose.
+
+The legislative backstop collapsed in late 2024. The *Combatting Misinformation and Disinformation Bill* passed the House of Representatives on 7 November 2024, its second reading carried 78 votes to 57, yet the government abandoned the Bill seventeen days later, conceding there was “no pathway to legislate this proposal through the Senate” (Rowland, 2024). No successor bill has appeared. What remains in the Bill’s place is a voluntary industry code, refreshed in 2026 with an independent advisory committee, whose regulator reported that support for third-party fact checking “appears to be stalling in Australia” (ACMA, 2025a).
+
+Nor is there a US model to borrow. The US cyber agency that once countered election and pandemic falsehoods had its mis- and disinformation staff sidelined in early 2025, and the White House budget then moved to eliminate the work altogether (The Hill, 2025). FEMA’s page rebutting hurricane falsehoods was maintained actively through Helene and Milton; it has sat frozen since October 2024. Domestic doctrine is thinner again: the national disaster response plan gives the threat a single line, telling crisis communicators to anticipate and resolve communication risks “including misinformation and disinformation” (NEMA, 2025a). The handbook guiding Australian public information and warnings practice, published in 2021, contains no framework for misinformation at all (AIDR, 2021).
+
+The sector’s attention has arrived ahead of its doctrine. NEMA’s Deputy Coordinator-General opened last year’s Emergency Media and Public Affairs conference by dubbing 2025 the year of crisis communications (NEMA, 2025b), and this year’s program in Brisbane ran misinformation and disinformation through its first two days (EMPA, 2026). Attention is the right start. The next step is to treat the problem the way emergency management treats every hazard it cannot regulate away: build standing capability against it.
+
+Little of the answer needs inventing. The Red Cross and Red Crescent World Disasters Report 2026 calls for harmful information preparedness embedded in operations as a core function, with trained teams and standardised tools behind it (IFRC, 2026). The World Health Organization’s infodemic work focuses on social listening for information voids, the unanswered questions that rumour rushes to fill (WHO, n.d.). Australian researchers have sketched the local version: develop trusted community information networks before disaster season, and prebunk the narrative families that reliably recur (Trijsburg & Richardson, 2024). When falsehood arrives anyway, correct it by leading with the truth, and write recovery plans that expect its long tail. The experimental evidence for prebunking is encouraging. In one landmark study, pairing a factual message with a forewarned refutation preserved up to two-thirds of the message’s effect against subsequent disinformation (van der Linden et al., 2017). Surveys of flood-affected Queensland communities keep returning the same request, detailed local information delivered consistently and often, because the vacuum is where rumour breeds (King & Gurtner, 2025).
+
+Anyone who has stood in a brigade shed has done all of this already. We test pumps before the season and rehearse the radio call we hope never to make. Rumour management belongs on the same list: a monitored channel, a designated owner, pre-agreed holding lines, relationships with local page moderators and community leaders built before disaster strikes. The AusAlert test on 27 July will prove the message can reach every compatible phone in the country. Whether the message is believed cannot be tested on a Monday afternoon. Belief has to be banked before the fire starts. That makes it preparedness, and preparedness is ours to build.
+
+## References
+AAP FactCheck (2020). Are arson figures on social media a bushfire beat-up? <https://www.aap.com.au/factcheck/are-arson-figures-on-social-media-a-bushfire-beat-up/>
+
+AAP FactCheck (2026). Footage of green treetops after bushfire sparks conspiracy theories. <https://www.aap.com.au/factcheck/footage-of-green-treetops-after-bushfire-sparks-conspiracy-theories/>
+
+ACMA (2025a, 12 September). ACMA releases fourth disinformation report. Australian Communications and Media Authority. <https://www.acma.gov.au/articles/2025-09/acma-releases-fourth-disinformation-report>
+
+ACMA (2025b). Communications and media in Australia: How we encounter misinformation. Australian Communications and Media Authority. <https://www.acma.gov.au/publications/2025-11/report/communications-and-media-australia-how-we-encounter-misinformation>
+
+AIDR (2021). Public Information and Warnings Handbook (2nd ed.). Australian Institute for Disaster Resilience. <https://knowledge.aidr.org.au/resources/public-information-and-warnings-handbook/>
+
+Axios (2024, 14 October). Safety concerns prompt FEMA to make “operational adjustments” in hurricane response. <https://www.axios.com/2024/10/14/fema-threats-hurricane-recovery-misinformation>
+
+Carson, A. & Phillips, J. (2025, 24 September). Facebook data reveal the devastating real-world harms caused by the spread of misinformation. The Conversation. <https://theconversation.com/facebook-data-reveal-the-devastating-real-world-harms-caused-by-the-spread-of-misinformation-265742>
+
+Department of Health, Disability and Ageing (2026, 14 July). Get ready for the AusAlert national test. <https://www.health.gov.au/news/get-ready-for-the-ausalert-national-test>
+
+E&E News (2024, 8 October). “The worst I have ever seen”: Disinformation chaos hammers FEMA. Politico’s E&E News. <https://www.eenews.net/articles/the-worst-i-have-ever-seen-disinformation-chaos-hammers-fema/>
+
+EMPA (2026). EMPA Australia 2026 conference program. Emergency Media and Public Affairs. <https://www.empa.org.au/events/empa-australia-2026>
+
+FEMA (2024). Hurricane rumor response. <https://www.fema.gov/disaster/recover/rumor/hurricane-rumor-response>
+
+Forbes (2024, 4 October). Marjorie Taylor Greene appears to claim Democrats ‘control the weather’ after Hurricane Helene strikes southeast. <https://www.forbes.com/sites/tylerroush/2024/10/04/marjorie-taylor-greene-appears-to-claim-democrats-control-the-weather-after-hurricane-helene-strikes-southeast/>
+
+Graham, T. & Keller, T. R. (2020, 10 January). Bushfires, bots and arson claims: Australia flung in the global disinformation spotlight. The Conversation. <https://theconversation.com/bushfires-bots-and-arson-claims-australia-flung-in-the-global-disinformation-spotlight-129556>
+
+IFRC (2026). World Disasters Report 2026: Truth, Trust and Humanitarian Action in the Age of Harmful Information. International Federation of Red Cross and Red Crescent Societies. <https://wdr26.org/en>
+
+King, D. & Gurtner, Y. (2025). Information and communication for disaster resilience. Australian Journal of Emergency Management, 40(3), 17–28. <https://knowledge.aidr.org.au/resources/ajem-july-2025-information-and-communication-for-disaster-resilience/>
+
+NEMA (2025a). Australian Government Disaster Response Plan (COMDISPLAN 2025). National Emergency Management Agency. <https://www.nema.gov.au/sites/default/files/2025-07/Australian%20Government%20Disaster%20Response%20Plan%202025%20(COMDISPLAN).pdf>
+
+NEMA (2025b). Reflections from the 2025 EMPA conference. National Emergency Management Agency. <https://www.nema.gov.au/about-us/media-centre/reflections-2025-empa-conference>
+
+NEMA (2026). AusAlert. National Emergency Management Agency. <https://www.nema.gov.au/our-work/risk-reduction/ausalert>
+
+Risk Frontiers (2026). The early January 2026 Victorian grassfires and bushfires. <https://riskfrontiers.com/insights/vic-bushfires-january-2026/>
+
+Rowland, M. (2024, 24 November). Communications Legislation Amendment (Combatting Misinformation and Disinformation) Bill 2024 \[media release\]. <https://minister.infrastructure.gov.au/rowland/media-release/communications-legislation-amendment-combatting-misinformation-and-disinformation-bill-2024>
+
+Royal Commission into National Natural Disaster Arrangements (2020). Report. <https://naturaldisaster.royalcommission.gov.au/>
+
+Smith, N. (2025, 11 March). Why conspiracy theories and misinformation spread in the long wait for Cyclone Alfred. The Conversation. <https://theconversation.com/why-conspiracy-theories-and-misinformation-spread-in-the-long-wait-for-cyclone-alfred-251899>
+
+The Hill (2025, 2 May). Trump budget would eliminate CISA disinformation offices, alleging censorship. <https://thehill.com/policy/technology/5279753-trump-proposes-cisa-disinformation/>
+
+Trijsburg, I. & Richardson, J. (2024, 11 December). Australia isn’t immune to disaster disinformation. Pursuit, University of Melbourne. <https://pursuit.unimelb.edu.au/articles/australia-isnt-immune-to-disaster-disinformation>
+
+University of Canberra News & Media Research Centre (2026). Digital News Report: Australia 2026. <https://www.canberra.edu.au/research/centres/nmrc/digital-news-report-australia>
+
+van der Linden, S., Leiserowitz, A., Rosenthal, S. & Maibach, E. (2017). Inoculating the public against misinformation about climate change. Global Challenges, 1(2). <https://doi.org/10.1002/gch2.201600008>
+
+Weber, D., Falzon, L., Mitchell, L. & Nasim, M. (2022). Promoting and countering misinformation during Australia’s 2019–2020 bushfires: a case study of polarisation. Social Network Analysis and Mining, 12, 64. <https://doi.org/10.1007/s13278-022-00892-x>
+
+WHO (n.d.). Infodemic. World Health Organization. <https://www.who.int/health-topics/infodemic>

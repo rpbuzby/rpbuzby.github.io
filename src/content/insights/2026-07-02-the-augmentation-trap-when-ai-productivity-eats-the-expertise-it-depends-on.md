@@ -1,0 +1,45 @@
+---
+title: "The Augmentation Trap: When AI productivity eats the expertise it depends on"
+date: 2026-07-02
+summary: "The “augmentation trap” highlights the risks of AI tools that boost short-term productivity while eroding essential human expertise. As analysts offload tasks to machines, they lose judgment skills, leading to dependency and a widening competency gap among workers. This phenomenon challenges organizations to incorporate skill maintenance into AI adoption strategies."
+themes:
+  - "AI in Government"
+image: ../../assets/insights/the-augmentation-trap-when-ai-productivity-eats-the-expertise-it-depends-on.jpg
+wordpress: "https://russellbuzby.com/2026/07/02/the-augmentation-trap-when-ai-productivity-eats-the-expertise-it-depends-on/"
+---
+Consider the analyst who used to build the financial model by hand and now reviews one the AI has produced in a fraction of the time. On any reasonable measure of output, that is a gain. The work goes out the door faster, and the client pays for an hour where they used to pay for a day. The catch is that those hours of building models by hand were exactly the hours that taught the analyst to tell a sound model from a plausible-looking wrong one, and they are the hours now being skipped.
+
+There is now a formal name for this effect and a model behind it: the augmentation trap. A paper released in late June argues that AI tools which lift short-term productivity can erode the underlying expertise those gains depend on, to the point where workers end up worse off than they were before they adopted the tool (The Augmentation Trap, 2026). The mechanism is a loop. Offloading a cognitive task to the machine reduces the practice a person gets at doing it, less practice degrades their judgement, and degraded judgement makes them lean on the machine more heavily still. Each turn of the loop feels like efficiency. The cumulative effect is a transfer of competence from the person to the tool.
+
+What turns that loop from a personal risk into a structural one is who pays for it. The productivity gain from AI augmentation is captured immediately and visibly, by the firm that bills the faster output or the agency that clears the larger caseload. The skill cost is paid later and elsewhere, by the worker whose judgement has thinned and the institution that discovers, a few years on, that it no longer has the bench of expertise it used to take for granted. When the people deciding to deploy a tool do not carry the long-run skill costs of deploying it, the decision looks like pure upside, and the trap closes precisely because no one with the authority to prevent it can see the bill.
+
+The trap does not close evenly across a workforce, and a companion paper explains why. Work on delegation and verification under AI found that small differences in a person’s ability to verify what the machine produces can trigger sharp shifts in behaviour, widening the quality gap between workers rather than narrowing it (Delegation and Verification Under AI, 2026). Someone who can reliably tell when an AI output is wrong uses the tool as genuine leverage and gets better at the work. Workers who cannot grow steadily more dependent on outputs they are not equipped to check. Handed to two people, the same tool can lift one and hollow out the other, and the difference between them is the verification skill that the augmentation trap is busy eroding.
+
+That puts a premium on the very capability that is hardest to maintain once the machine is doing the first draft of the thinking. Research on the future of the software profession makes the point directly: as AI agents take over more of the implementation, what becomes the most critical human competency left is the verification and validation of what they produce (Skills for the Future Software Profession, 2026). The uncomfortable implication is that the skill an organisation most needs to keep is the one its AI tools most reliably degrade, and keeping it will not happen by accident.
+
+This would matter less if the machines were ready to carry the judgement themselves, and they are not. A benchmark released in late June evaluated frontier deep-research agents on real expert consulting work and found that none of them reached an adequate quality threshold, with acceptance rates sitting below 16 per cent against the standard a competent professional would be held to (Evaluating Deep Research Agents on Expert Consulting Work, 2026). Read alongside the augmentation trap, that finding is the whole problem in miniature. The expertise being eroded is the expertise still needed to catch what the machine gets wrong, and the machine gets a great deal wrong. An organisation that deskills its people on the assumption that the AI has it covered is making a bet the evidence does not yet support.
+
+None of this is really a story about technology, which is the second uncomfortable finding. A study of enterprise AI transformations released in late June concluded that most failures stem from leadership capability gaps rather than technological shortcomings, naming undefined success criteria and disengaged frontline workers among the recurring causes (When Technology Works but Adoption Fails, 2026). I have argued separately that AI readiness is better understood as an organisational learning problem than a procurement one, and the augmentation trap is what that problem looks like when it is left unmanaged. Leaders who treat AI adoption as a tooling decision, rather than a decision about how their people will keep and grow expertise, are the ones who walk their organisations into the trap.
+
+The effect is already visible upstream, in the institutions that produce the next generation of experts. A study of habitual generative AI use among university students found that it erodes critical thinking and produces measurable cognitive deskilling, with the strongest effects among the students who trust the tool most (The Dark Side of Generative AI in Personal Learning, 2026). The students most comfortable handing their thinking to the machine are the ones learning least from the struggle of doing it themselves. Those students become the graduates that firms and agencies hire, which means the augmentation trap is being primed before anyone reaches the workforce, and the verification skill the workplace depends on arrives thinner than it used to.
+
+For government the stakes sit higher than billable efficiency. Institutional memory and regulatory judgement rest on deep expertise that takes years to build and is expensive to replace once it thins. InnovationAus described the Australian public sector in late June as data rich and intelligence poor, with the binding constraint being analytical capability rather than data infrastructure (InnovationAus, 2026). AI deployed without attention to the human capability it displaces widens that gap rather than closing it, by degrading the judgement that turns data into decisions while giving the comfortable appearance that the problem is being solved.
+
+Put bluntly, for an industry currently selling AI transformation to almost everyone, very few of those business cases account for the downstream cost of cognitive offloading at all. The productivity line is modelled in detail. The skill-erosion line rarely makes the spreadsheet, because it lands on a different balance sheet and a later quarter than the one the business case is written to optimise. An adviser who recommends AI adoption without modelling the skill-degradation risk is selling something more fragile than the business case admits: a system that performs impressively right up until the expertise needed to run it has gone.
+
+The augmentation trap is not an argument against using AI, any more than erosion is an argument against rivers. It is an argument for one discipline that current practice almost always skips: putting skill maintenance into the business case as a real and owned line, and treating the ability to verify the machine as the scarce asset it has become. The productivity gain and the skill cost land on different balance sheets, and a business case that counts only the first measures something other than efficiency. It is borrowing against expertise and booking the loan as profit.
+
+## References
+*Delegation and Verification Under AI.* (2026). arXiv:2603.02961.
+
+*The Augmentation Trap: AI productivity and the cost of cognitive offloading.* (2026). arXiv:2604.03501.
+
+*The Dark Side of Generative Artificial Intelligence in Personal Learning: A cognitive perspective.* (2026). PACIS 2026 Proceedings.
+
+*Evaluating Deep Research Agents on Expert Consulting Work: A benchmark with verifiers, rubrics, and cognitive traps.* (2026). arXiv:2605.17554.
+
+InnovationAus. (2026, June 25). *“Data rich, intelligence poor”: The challenge facing govt.*
+
+*Skills for the future software profession: Beyond agentic AI!* (2026). arXiv:2606.21894.
+
+*When Technology Works but Adoption Fails: Leadership capability gaps in enterprise AI transformation.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20759385>

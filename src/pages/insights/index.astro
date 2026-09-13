@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import { publishedInsights, themeSlug } from '../../lib/insights';
+import { THEMES } from '../../content.config';
+
+const posts = await publishedInsights();
+const counts = THEMES.map((t) => ({ t, slug: themeSlug(t), n: posts.filter((p) => p.data.themes.includes(t)).length })).filter((c) => c.n > 0);
+const first = posts[0]?.data.date;
+const firstMonth = first ? new Intl.DateTimeFormat('en-AU', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(posts[posts.length - 1].data.date) : '';
+---
+<Base title="Insights" description="Writing on emergency management, AI in government, Defence, and change: articles by Russell Buzby.">
+  <section>
+    <div class="stack">
+      <h1>Writing on emergency management, AI in government, Defence, and change.</h1>
+      <p class="lede measure">{posts.length} articles since {firstMonth}.</p>
+    </div>
+    <div class="chips" role="group" aria-label="Filter by theme">
+      <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">All <span>{posts.length}</span></button>
+      {counts.map((c) => (
+        <button class="chip" type="button" data-filter={c.slug} aria-pressed="false">{c.t} <span>{c.n}</span></button>
+      ))}
+    </div>
+    <div class="posts" id="posts">
+      {posts.map((e, i) => <PostCard entry={e} eager={i < 3} />)}
+    </div>
+    <p class="empty" id="empty" hidden>No articles in that theme yet.</p>
+  </section>
+</Base>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.chip');
+  const posts = document.querySelectorAll<HTMLElement>('#posts .post');
+  const empty = document.getElementById('empty')!;
+  function apply(f: string) {
+    chips.forEach((x) => { const on = x.dataset.filter === f; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    let shown = 0;
+    posts.forEach((p) => { const ok = f === 'all' || (p.dataset.cats || '').split(' ').includes(f); p.hidden = !ok; if (ok) shown++; });
+    empty.hidden = shown > 0;
+  }
+  chips.forEach((c) => c.addEventListener('click', () => { const f = c.dataset.filter || 'all'; apply(f); history.replaceState(null, '', f === 'all' ? '/insights/' : `/insights/#${f}`); }));
+  const h = location.hash.replace(/^#/, '');
+  if (h && [...chips].some((c) => c.dataset.filter === h)) apply(h);
+</script>

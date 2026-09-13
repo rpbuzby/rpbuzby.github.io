@@ -1,0 +1,103 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import NewsList from '../components/NewsList.astro';
+import headshot from '../assets/site/poet-headshot.jpg';
+import holmgren from '../assets/site/holmgren.jpg';
+import omara from '../assets/site/omara.jpg';
+import wiw from '../assets/site/words-in-winter.jpg';
+
+const poems = (await getCollection('poems')).sort((a, b) => a.data.order - b.data.order);
+const rendered = await Promise.all(poems.map(async (p) => ({ p, Content: (await render(p)).Content })));
+---
+<Base title="Poetry" description="Poems from Braidwood, in the southern tablelands of New South Wales: the land, the people on it, and what fire and weather do to both.">
+  <section class="epigraph">
+    <div class="stack">
+      <h1>Poems from Braidwood, in the southern tablelands of New South Wales.</h1>
+      <p class="lede measure">The land, the people on it, and what fire and weather do to both.</p>
+      <blockquote>This is the only poem in all the entries that pierced the regions of my soul. I don’t know why, and I don’t want to reason with it. I trust the primal tellings it conjured in me. I’m in gratitude to the poet.
+        <cite>Patrick Jones, judge, on ‘Bogong’<br />2026 Venie Holmgren Environmental Poetry Prize</cite>
+      </blockquote>
+    </div>
+    <figure>
+      <Image src={headshot} alt="Russell Buzby" width={900} loading="eager" />
+    </figure>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Published and placed</h2></div>
+    <div class="poems">
+      {rendered.map(({ p, Content }) => (
+        <article class="poem">
+          <div>
+            <h3>{p.data.title}</h3>
+            <p class="status">{p.data.status}{p.data.detail && <><br />{p.data.detail}</>}</p>
+          </div>
+          <div class="stack">
+            <Content />
+            <div class="btns">
+              {p.data.links.map((l, i) => (
+                <a class={i === 0 ? 'btn primary' : 'btn'} href={l.url} target="_blank" rel="noopener">{l.label}</a>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="Words in Winter 2026">
+    <figure><Image src={holmgren} alt="David Holmgren and Russell Buzby at the announcement" width={1000} /><figcaption>David Holmgren and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter.</figcaption></figure>
+    <figure><Image src={omara} alt="Judge Peter O’Mara and Russell Buzby at the announcement" width={1000} /><figcaption>Judge Peter O’Mara and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter.</figcaption></figure>
+  </section>
+
+  <section class="news">
+    <div class="section-head"><h2>Recent news</h2></div>
+    <NewsList />
+  </section>
+
+  <section class="origin">
+    <figure>
+      <Image src={wiw} alt="Russell Buzby at the Words in Winter festival, Daylesford" width={900} />
+      <figcaption>Words in Winter 2026, Daylesford. Photo: Jeffrey Chua.</figcaption>
+    </figure>
+    <div class="prose">
+      <h2>Where the poems come from</h2>
+      <p>I live and write at Braidwood, in the southern tablelands of New South Wales, Australia, on the unceded Country of the Ngunnawal and Yuin peoples. I am a captain in the local Rural Fire Service brigade and turn out when the pager goes. Most of what I write circles back to the same handful of things: the land, the people on it, and what fire and weather do to both. When it strays, it strays towards myths and rebellion, and sometimes both at once.</p>
+      <p>2026 is the first year I have sent poems out into the world, and they have travelled further than I expected. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize; Patrick Jones, one of the two judges, said it “haunts acutely the material before us as moderns, while travels in mythic time, acutely and ethereally.” Two poems, ‘Shearwater’ and ‘Magpies, Year Four’, were shortlisted for the Bridport Prize 2026, and ‘Underburn’ for the Robert Gray Prize for Poetry 2026, and so will be published in the anthology Oystercatcher Three. ‘Hecuba’ is on the longlist for the Winchester Poetry Prize 2026, judged by Julia Copus, and will be published with the winners in October. ‘The singing, not the song’ appears in Cordite Poetry Review.</p>
+      <p>I write in two registers that keep swapping places: a plain documentary line that comes from radio logs, coronial statements and the shire’s records, and a mythic one in which Penelope or Cassandra find themselves in modern Australia. Longer work in progress includes a verse epic on the Roman civil wars and a play in couplets about Orpheus and Eurydice. My poesis asks of me: precision, and an ear for how words sound to the people who have to hear them.</p>
+      <h2>On Instagram</h2>
+      <p>I read poems on Instagram (<a href="https://www.instagram.com/rpbuzby/" target="_blank" rel="noopener">@rpbuzby</a>): my own once they are published, and otherwise other people’s, from Clare and Hopkins to Judith Wright and Les Murray, with a few words on why. ‘Bogong’ was the first of mine, read on 6 September 2026.</p>
+      <div class="btns"><a class="btn primary" href="https://www.instagram.com/reel/Dc5PtIAiqzH/" target="_blank" rel="noopener">Watch ‘Bogong’</a><a class="btn" href="https://www.instagram.com/rpbuzby/" target="_blank" rel="noopener">@rpbuzby</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Bios, photograph, contact</h2></div>
+    <div class="bios">
+      <div class="bio">
+        <div class="top"><h3>Bio – 50 words</h3><button class="copy" type="button" data-copy="bio50" id="copy-bio50">Copy</button></div>
+        <p id="bio50">Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia, and turns out with the local bushfire brigade when the pager goes. He won the Venie Holmgren Environmental Poetry Prize for ‘Bogong’, was shortlisted for the Bridport and Robert Gray prizes, and appears in Cordite Poetry Review.</p>
+      </div>
+      <div class="bio">
+        <div class="top"><h3>Bio – 100 words</h3><button class="copy" type="button" data-copy="bio100" id="copy-bio100">Copy</button></div>
+        <p id="bio100">Russell Buzby lives and writes on Ngunnawal and Yuin Country at Braidwood, in the southern tablelands of New South Wales. This year his poems have gone further afield: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, others were shortlisted for the Bridport Prize and the Robert Gray Prize and longlisted for the Winchester Poetry Prize, and ‘The singing, not the song’ appears in Cordite Poetry Review. He turns out with the local bushfire brigade when the pager goes, and what he writes keeps circling back to the land, the people on it, and what fire and weather do to both.</p>
+      </div>
+    </div>
+    <div class="meta-row">
+      <div><h3>Photograph</h3><p>The headshot above is available in full colour and at print resolution on request. Festival photographs are by Jeffrey Chua for Words in Winter 2026.</p></div>
+      <div><h3>Contact</h3><p>Through the <a href="/contact/">contact page</a>, or by email for submissions correspondence.</p></div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy').forEach((b) => {
+    b.addEventListener('click', () => {
+      const t = document.getElementById(b.dataset.copy!)?.textContent ?? '';
+      const done = () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, done); else done();
+    });
+  });
+</script>

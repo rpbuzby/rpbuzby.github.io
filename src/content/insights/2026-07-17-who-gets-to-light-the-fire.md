@@ -1,0 +1,45 @@
+---
+title: "Who Gets to Light the Fire?"
+date: 2026-07-17
+summary: "Between 2015 and 2024, wildfires devastated 17.6% of giant sequoias, compared to under 1% in the previous thirty years. Prescribed burns significantly reduced tree loss in treated groves. However, bureaucratic barriers hinder Indigenous cultural burning practices in Australia. Effective fire management requires adjusting regulations to enable broader community participation."
+themes:
+  - "Emergency Management & Resilience"
+image: ../../assets/insights/who-gets-to-light-the-fire.jpg
+wordpress: "https://russellbuzby.com/2026/07/17/who-gets-to-light-the-fire/"
+---
+Between 2015 and 2024, wildfire killed an estimated 17.6 per cent of all the large giant sequoias on Earth. In the thirty years before that, the figure was under one per cent (The state of the giant sequoias, 2026). Trees that had stood for two thousand years, through every fire regime California could produce, died in a single decade. Within that catastrophe, though, sits the most useful natural experiment in modern fire management, and a paper in Nature Communications has now reported its result (Previous prescribed burns saved thousands of ancient sequoias, 2026). Groves treated with prescribed burns before the recent unprecedented wildfires kept significantly more of their ancient trees than untreated groves, and the burns are credited with saving thousands of mature sequoias. The treated forest survived. The untreated forest is a memorial.
+
+That finding arrived in an Australia already on notice. The Bureau of Meteorology declared El Niño underway on 16 June, and the outlooks point to a strong to very strong event bringing below-average rainfall and above-average daytime temperatures to much of southern and eastern Australia through winter and spring (Bureau of Meteorology, 2026). A caution belongs here, because El Niño strength maps poorly onto Australian impacts. The very strong 1997-98 event produced near-average rainfall across most of the country, while the far weaker 2002-03 event helped deliver the Millennium Drought (Murdock & Vargas Zeppetello, 2026). The declaration does not guarantee a catastrophic season. It guarantees that the odds have shifted, and fire planning is a discipline of odds.
+
+The evidence for treatment keeps accumulating. Alongside the sequoia result, a 2025 study of old-growth coast redwood forest found that the protective benefits of prescribed burning were still measurable in areas burned more than nine years earlier. The treated stands held more canopy and kept more trees alive through the 2020 fires (Long-term influence of prescribed burning, 2025). I wrote separately about the operational version of the same evidence in an Australian paddock: a fire that ran until it reached the previous autumn’s burn line, and stopped. The modelling tools are improving in parallel. New physics-guided machine learning models predict fuel density more accurately than purely data-driven approaches, which means agencies can increasingly target treatment where it buys the most protection (Physics-guided spatiotemporal neural models, 2026). Even the deep history is being put to work, with researchers reading Wilsons Promontory’s eucalypt forests for how they responded to past fires and what that implies for managing the next ones (The Conversation, 2026).
+
+So the science is in reasonable shape. The constraint sits somewhere less comfortable, in the question of who is allowed to do the burning.
+
+A new Australian study in Environmental Science & Policy examined the ACT’s long-running effort to bring Indigenous cultural burning inside a government fire agency. Indigenous and non-Indigenous public servants alike were committed to making it work. The study’s finding is that the public sector’s own regulatory architecture persistently constrained Indigenous authority and autonomy (Indigenous peoples’ cultural burning within a government fire agency?, 2026). Credentialing requirements were built for agency staff. Approval processes were built for agency burns. Workplace safety rules sat over smoke emission controls, and together the framework decided when and how Traditional Owners could practise, always on the agency’s terms. None of those instruments was designed to exclude anyone. Each is defensible on its own. Stacked together, they reproduce the arrangement I wrote about separately as the colonial load: Indigenous practitioners are invited to carry responsibility inside the system while the system withholds the authority that makes the practice theirs.
+
+The asymmetry deserves to be named. A planned cool burn conducted by people drawing on the longest continuous fire knowledge on the planet attracts credentialing gates and emissions paperwork. The megafire that arrives in its absence fills no forms at all. Regulation prices the intervention and never the counterfactual. The safest-looking decision on paper, another season lost to process, is routinely the most dangerous decision in the landscape. When The Conversation’s researchers listed Australia’s genuinely low-regrets preparedness actions for this El Niño, lifting the legal barriers that prevent Traditional Owners practising cultural burning at scale made the first tier (Murdock & Vargas Zeppetello, 2026). Low regrets is the right category. The evidence says treatment works, the treated area is the cheapest insurance on offer, and the people best placed to extend it are the ones the paperwork holds at arm’s length.
+
+There is movement worth acknowledging. On 4 June, New South Wales released its first Cultural Fire Strategy (NSW DCCEEW, 2026). The commitment traces back to the 2020 Bushfire Inquiry and promises simpler processes with fewer regulatory barriers to cultural burning. Five weeks old, the strategy is a statement of intent rather than a record of change. The ACT study is effectively a preview of what its implementation is up against: the accumulated friction of rules written for a different kind of fire and a different kind of practitioner. The strategy will succeed if, a year from now, a Traditional Owner group can plan and lead a burn under its own authority in weeks rather than seasons. It will fail the way these commitments usually fail, with the barriers renamed but intact.
+
+I volunteer with the NSW Rural Fire Service, and nothing here argues against the safety architecture that keeps planned burns from becoming the story. The argument is about what that architecture is calibrated to. Rules built exclusively around agency suppression treat cultural burning as an exception to be permitted, one burn at a time, when the evidence now supports treating it as core fire management to be enabled at landscape scale. The sequoia groves make the stakes legible: the difference between the treated and untreated forest was not knowledge, and it was not tools. It was whether the burning actually happened, at scale, before the fire arrived.
+
+El Niño has fixed the season and the research has settled the method. The one variable still fully under human control before the season peaks is how much country gets treated and who holds the authority to treat it. That authority question was never scientific. It is a policy choice, and we renew the choice every year we leave the barriers standing.
+
+## References
+Bureau of Meteorology. (2026, June 16). *ENSO Outlook: El Niño underway.* <http://www.bom.gov.au/climate/enso/>
+
+*Indigenous peoples’ cultural burning within a government fire agency? The state craft and agenda stakes in public sector land management.* (2026). Environmental Science & Policy. <https://doi.org/10.1016/j.envsci.2026.104436>
+
+*Long-term influence of prescribed burning on subsequent wildfire in an old-growth coast redwood forest.* (2025). Fire Ecology. <https://doi.org/10.1186/s42408-025-00356-5>
+
+Murdock, E., & Vargas Zeppetello, L. (2026, July 10). *A big El Niño is likely. Australia needs to get ready now for drought, fire and the unknown.* The Conversation. <https://theconversation.com/a-big-el-nino-is-likely-australia-needs-to-get-ready-now-for-drought-fire-and-the-unknown-286634>
+
+NSW Department of Climate Change, Energy, the Environment and Water. (2026, June 4). *NSW Cultural Fire Strategy.*<https://www.environment.nsw.gov.au/news/nsw-releases-its-first-cultural-fire-strategy>
+
+*Physics-guided spatiotemporal neural models for fuel density prediction.* (2026). arXiv. <https://arxiv.org/abs/2607.06999>
+
+*Previous prescribed burns saved thousands of ancient sequoias during historically unprecedented wildfires.* (2026). Nature Communications. <https://doi.org/10.1038/s41467-026-75418-6>
+
+*The state of the giant sequoias: Losses, risks, and opportunities.* (2026). Fire Ecology. <https://doi.org/10.1186/s42408-026-00469-5>
+
+*Wilsons Prom has been scarred by bushfires. It may help us protect other fire-prone forests.* (2026, July 7). The Conversation. <https://theconversation.com/wilsons-prom-has-been-scarred-by-bushfires-it-may-help-us-protect-other-fire-prone-forests-283377>

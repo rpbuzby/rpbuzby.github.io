@@ -1,0 +1,41 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import { publishedInsights, insightParams, insightPath, fmtDate } from '../../../../lib/insights';
+
+export async function getStaticPaths() {
+  const posts = await publishedInsights();
+  return posts.map((entry, i) => ({
+    params: insightParams(entry),
+    props: { entry, newer: posts[i - 1] ?? null, older: posts[i + 1] ?? null },
+  }));
+}
+const { entry, newer, older } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const og = await getImage({ src: d.image, width: 1200, height: 630, format: 'jpg' });
+const ogUrl = new URL(og.src, Astro.site).href;
+---
+<Base title={d.title} description={d.summary} image={ogUrl} type="article">
+  <article class="article">
+    <header class="article-head">
+      <p class="log">
+        <time datetime={d.date.toISOString().slice(0, 10)}>{fmtDate(d.date)}</time>
+        <span class="sep">·</span>{d.themes.join(' · ')}
+      </p>
+      <h1>{d.title}</h1>
+    </header>
+    <figure class="article-hero">
+      <Image src={d.image} alt="" width={1600} height={800} loading="eager" fetchpriority="high" />
+      {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
+    </figure>
+    <div class="article-body">
+      <Content />
+    </div>
+    <nav class="article-nav" aria-label="More articles">
+      {older ? <a href={insightPath(older)}><span class="label">Earlier</span><span class="t">{older.data.title}</span></a> : <span></span>}
+      {newer ? <a href={insightPath(newer)}><span class="label">Later</span><span class="t">{newer.data.title}</span></a> : <span></span>}
+    </nav>
+  </article>
+</Base>

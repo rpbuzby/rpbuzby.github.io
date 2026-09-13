@@ -1,0 +1,41 @@
+---
+title: "You Cannot Govern What You Cannot See: Shadow AI, agentic risk and the observability gap"
+date: 2026-07-01
+summary: "A recent study on 27 Australian critical infrastructure organizations reveals the risks of unsanctioned AI, termed “shadow AI,” which undermines regulatory compliance and governance. This concern is magnified with the rise of agentic AI, highlighting the necessity for improved visibility and continuous governance before deployment to prevent harmful cascading errors and accountability gaps."
+themes:
+  - "AI in Government"
+image: ../../assets/insights/you-cannot-govern-what-you-cannot-see-shadow-ai-agentic-risk-and-the-observability-gap.jpg
+wordpress: "https://russellbuzby.com/2026/07/01/you-cannot-govern-what-you-cannot-see-shadow-ai-agentic-risk-and-the-observability-gap/"
+---
+A study of 27 Australian critical infrastructure organisations, published in early June, found something most executives would rather not know about their own networks. Staff across energy and water utilities, among other critical providers, are already using frontier AI tools outside any organisational control, and that unsanctioned use, which the researchers label shadow AI, is eroding assurance and regulatory compliance from the inside. The finding matters less for its novelty than for its specificity. Baruwal Chhetri and colleagues do not merely assert that the practice is a problem. They describe the exact pathways by which it becomes one.
+
+Those pathways are worth stating plainly. Data flows bypass the perimeters an organisation thought it had established. Approved tools gain new AI capabilities that expand what they can do in ways nobody assessed. And governance gets circumvented in a way that destroys forensic auditability, so that even after an incident the organisation cannot reconstruct what an AI tool actually saw or did. Each pathway arrives at the same place, which is an organisation that has lost sight of its own AI use.
+
+That loss of sight is the heart of the problem, and it is worth separating from the policy conversation that usually surrounds it. Most AI governance debate concerns what the rules should say. Unsanctioned use is less a rules problem than an observability one, because a control you cannot see being followed is not a control at all. An agency can hold an immaculate AI policy and have no idea that a third of its staff are pasting sensitive material into consumer chatbots. The framework exists; the visibility does not, and the gap between them is where the real exposure sits.
+
+The next wave of adoption widens that gap rather than closing it. InnovationAus reported in early June that the Digital Transformation Agency has warned agencies that agentic AI deployments carry serious risks of cascading errors and uncontrolled actions that can quickly become illegal or unethical. The concern is not Australia’s alone. The ACSC and its Five Eyes partners issued joint guidance in late April on the careful adoption of agentic AI, warning that a single error in such a system can cascade across the whole of it, and recommending that these systems be confined to low-risk, non-sensitive tasks for now. The common thread is the move from AI that informs a human to AI that acts on its own.
+
+That move changes the governance question, because unsanctioned tools and agentic systems are the same problem at two stages. The first stage is ungoverned software moving data where the organisation cannot watch. The second is software taking actions where the organisation cannot intervene in time. The observability gap that lets the first stay hidden becomes an accountability gap the moment the system can act, because an action an autonomous system has already taken cannot be recalled the way a draft can be deleted. The harm is done before the human in the loop has finished reading the alert.
+
+This is why the cascading-error warning is really an argument about sequence. I have written separately about the pattern behind automated decision failures, from Robodebt to overseas welfare systems, and the conclusion there applies with more force here: the accountability scaffolding has to exist before the system goes live, rather than being retrofitted after a public failure. With a tool that only recommends, retrofitting is merely expensive. With a system that acts, there is no satisfactory afterwards, because the consequence has already occurred. The only place left to govern an agentic system is before it is allowed to act at all.
+
+The research community is converging on what governing-before looks like in practice. One paper argues that the prompts driving public-sector AI should be governed as a commons, versioned and open to challenge, rather than treated as private operational detail no one outside the team ever sees. Another proposes continuous assurance, on the reasoning that a questionnaire answered once before deployment leaves a dangerous gap the day after go-live, when the system meets real data and real users. Both point the same way. Assurance has to be continuous and observable rather than a single gate at the start, which is the capability that unsanctioned use shows most organisations currently lack.
+
+For agencies, the practical implication is uncomfortable but clear. The cascading-error warning is a signal to build the governance before the agentic deployment, while there is a meaningful difference between a pilot and a production system. Building that governance has a procurement dimension too. The Digital Transformation Agency has begun pulling one available lever, embedding stronger digital-sovereignty terms into whole-of-government technology contracts, which at least puts some requirements where the procurement actually happens. That lever connects to the broader audit gap I have written about, where most organisations cannot currently prove their systems do what they claim, and to the Chief AI Officer mandate, where the role meant to own this problem is too often a re-labelled job rather than a resourced one.
+
+For anyone advising government, the practice is at once a risk to manage and a service to offer, and the two cannot be separated. Closing the observability gap takes detection of what is actually being used, policy that reflects that reality rather than an idealised version of it, and workforce education so that staff stop reaching for ungoverned tools out of simple convenience. Sell any one of those without the others and the gap stays open. The value for an adviser is in the integration rather than the individual product, which is the lesson running through most public-sector technology reform.
+
+Underneath all of this, visibility rather than policy is the binding constraint. A governance framework that cannot see what staff are already doing is a description of intentions rather than a control of behaviour. Unsanctioned AI has already shown how wide that distance can grow inside a critical-infrastructure network. Agentic AI is about to make the same distance something an organisation can no longer afford to leave unmeasured. The tools hiding in the gap so far have only been moving data. What hides there next will be systems that act on their own.
+
+## References
+Baruwal Chhetri, M., Tariq, S., Aamir, T., Grobler, M., Thapa, C., & Singh, R. (2026). *From frontier to shadow AI: A simmering threat to assurance and security in critical infrastructure* \[Preprint\]. arXiv:2606.00088.
+
+InnovationAus. (2026, June 4). *Government AI agents add risk of cascading errors.*
+
+Australian Signals Directorate / ACSC, with CISA, NSA, Canadian Centre for Cyber Security, NZ NCSC, and UK NCSC. (2026, April 30). *Careful adoption of agentic AI services.*
+
+InnovationAus. (2026, June 1). *DTA promises sovereignty in whole-of-government tech deals.*
+
+*Prompts for public-sector LLMs should be governed as commons* \[Preprint\]. (2026, June 3). arXiv.
+
+*Trustworthy AI Posture (TAIP): A framework for continuous AI assurance of agentic systems* \[Preprint\]. (2026). arXiv:2603.03340.
