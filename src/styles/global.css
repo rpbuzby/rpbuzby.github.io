@@ -46,7 +46,7 @@ a { color: inherit; text-decoration-color: color-mix(in srgb, var(--ember) 55%, 
 :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
 /* Type roles (desktop max): page title 3rem/500 · door 2.25rem/500 · section 1.75rem/600 · item 1.35rem/600 · lede 1.15rem sans · body 17px · label .78rem caps */
 h1, h2, h3, h4 { font-family: var(--display); margin: 0; text-wrap: balance; }
-h1 { font-size: clamp(2.1rem, 4vw, 3rem); font-weight: 500; line-height: 1.1; letter-spacing: -.01em; max-width: 20ch; }
+h1 { font-size: clamp(2.4rem, 4.8vw, 3.6rem); font-weight: 500; line-height: 1.08; letter-spacing: -.01em; max-width: 20ch; }
 h2 { font-size: clamp(1.5rem, 2.4vw, 1.75rem); font-weight: 600; line-height: 1.15; }
 h3 { font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
 p { margin: 0; }
@@ -190,7 +190,7 @@ figcaption { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em;
 /* article */
 .article { display: grid; gap: 2rem; }
 .article-head { display: grid; gap: 1.2rem; }
-.article-head h1 { font-size: clamp(2rem, 3.4vw, 2.6rem); max-width: 26ch; }
+.article-head h1 { font-size: clamp(2.2rem, 3.8vw, 3rem); max-width: 26ch; }
 .article-hero { margin: 0; }
 .article-hero img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
 .article-body { max-width: var(--measure); display: grid; gap: 1.2rem; font-size: 1.05rem; line-height: 1.7; }
