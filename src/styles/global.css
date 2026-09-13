@@ -56,7 +56,7 @@ p { margin: 0; }
 .log .sep { margin-inline: .6em; }
 .label { font-family: var(--ui); font-size: .76rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--stone); }
 .byline { font-family: var(--ui); font-size: .95rem; color: var(--stone); }
-.lede { font-family: var(--body); font-size: clamp(1.05rem, 1.4vw, 1.15rem); line-height: 1.55; font-weight: 400; color: var(--stone); }
+.lede { font-family: var(--body); font-size: clamp(1.05rem, 1.4vw, 1.15rem); line-height: 1.55; font-weight: 400; }
 .stack { display: grid; gap: 1.1rem; }
 .btns { display: flex; flex-wrap: wrap; gap: .75rem 1rem; }
 .btn {
