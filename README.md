@@ -40,9 +40,9 @@ Copy an existing file in `src/content/poems/` or `src/content/news/`, edit, comm
 
 ## Editing in Obsidian
 
-Open this folder as its own vault: Obsidian → **Open folder as vault** → `~/Projects/russellbuzby.com`. The saved vault settings hide the code folders, so the file explorer shows only `src/content/` (insights, poems, news) and `docs/`. Frontmatter appears as Properties at the top of each note.
+Open the content folder as its own vault: Obsidian → **Open folder as vault** → `~/Projects/russellbuzby.com/src/content`. The explorer then shows only `insights`, `news`, `pages` and `poems`. Frontmatter appears as Properties at the top of each note.
 
-- **Edit a fixed page:** `src/content/pages/home.md`, `about.md`, `poetry.md` or `contact.md`. Headline, buttons, captions and bios are Properties; the prose is the body. Photos are named by filename from `src/assets/site/`.
+- **Edit a fixed page:** `pages/home.md`, `about.md`, `poetry.md` or `contact.md`. Headline, buttons, captions and bios are Properties; the prose is the body. Photos are named by filename from `src/assets/site/`.
 - **Edit an article:** open it under `src/content/insights/`, change the text or the `summary` property.
 - **Add a poem or a news item:** duplicate a file in `poems/` or `news/`, edit the properties and the body.
 - **Add an article from the vault pipeline:** use `scripts/publish_article.py` (below); it handles the image and the URL write-back.

@@ -1,0 +1,9 @@
+{
+  "showUnsupportedFiles": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "insights",
+  "useMarkdownLinks": true,
+  "readableLineLength": true,
+  "spellcheck": true,
+  "spellcheckLanguages": ["en-AU"]
+}

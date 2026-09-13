@@ -4,7 +4,7 @@ dist/
 .DS_Store
 *.log
 
-# Obsidian: keep the vault config but not per-machine state
-.obsidian/*
-!.obsidian/app.json
-!.obsidian/core-plugins.json
+# Obsidian vault lives at src/content: keep its config, not per-machine state
+src/content/.obsidian/*
+!src/content/.obsidian/app.json
+!src/content/.obsidian/core-plugins.json
