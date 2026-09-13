@@ -1,7 +1,7 @@
 ---
 title: "Sentinel-2 to Goats: The wildfire decision support gap and the practitioner last mile"
 date: 2026-04-29
-summary: "In a week of significant wildfire research advancements, the focus shifted from technical innovations to the challenges of tool adoption by agencies. Key findings identified gaps in communication and training as critical barriers, suggesting that participatory design and user-focused literacy should precede tool deployment. Cultivating trust is essential for effective wildfire management."
+summary: "Agencies keep failing to adopt the wildfire decision tools built for them, and a Fire Ecology review traces that to communication and capacity gaps. A CFA goat trial did more for practitioners in five weeks than the satellite science; fund co-design before the next product."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/sentinel-2-to-goats-the-wildfire-decision-support-gap-and-the-practitioner-last-mile.jpg

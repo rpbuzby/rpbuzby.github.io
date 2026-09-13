@@ -1,7 +1,7 @@
 ---
 title: "The Analogue Backbone: Why $132 million for AusAlert doesn’t fix Australia’s emergency broadcast system"
 date: 2026-04-18
-summary: "In January 2026, fire disrupted ABC and commercial radio services in central Victoria, highlighting the importance of local knowledge and institutional capital for effective emergency broadcasting. While Australia will launch the AusAlert warning system in October 2026, it only addresses part of the communication needs, risking the effectiveness of emergency responses amid ongoing funding cuts to the ABC."
+summary: "AusAlert will ping every phone inside a 160-metre target area from October. Sustained emergency broadcasting still runs on local ABC staff, and the ABC’s real-terms budget sits around $150 million below its 2013 level, so the Commonwealth is funding the alert while starving the backbone."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-analogue-backbone-why-132-million-for-ausalert-doesnt-fix-australias-emergency-broadcast-system.jpg

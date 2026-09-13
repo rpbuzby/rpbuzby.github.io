@@ -1,7 +1,7 @@
 ---
 title: "Governance Without Readiness: Why the APS reform’s quietest phase is also its most fragile"
 date: 2026-04-20
-summary: "The APS Reform program reached a revealing milestone in early 2026: 54 of its 59 initiatives were either complete or in active delivery. On the surface that sounds like the home stretch. In reality it is the most fragile phase of any reform of this scale, the point at which the difficult but clean work […]"
+summary: "With 54 of 59 initiatives complete or in delivery, APS Reform has entered embedding, where reforms take root or evaporate. Governance explains 67 per cent of variance in implementation outcomes; readiness decides whether it works, and the quietest phase of the program is its most fragile."
 themes:
   - "Change & Transformation"
 image: ../../assets/insights/governance-without-readiness-why-the-aps-reforms-quietest-phase-is-also-its-most-fragile.jpg

@@ -1,0 +1,10 @@
+{
+  "userIgnoreFilters": ["node_modules/", "dist/", ".astro/", ".github/", "public/", "scripts/", "src/assets/", "src/components/", "src/layouts/", "src/lib/", "src/styles/", "package.json", "package-lock.json", "astro.config.mjs"],
+  "showUnsupportedFiles": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "src/content/insights",
+  "useMarkdownLinks": true,
+  "readableLineLength": true,
+  "spellcheck": true,
+  "spellcheckLanguages": ["en-AU"]
+}

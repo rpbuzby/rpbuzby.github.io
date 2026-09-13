@@ -1,7 +1,7 @@
 ---
 title: "The Photogenic Fire Gets the Helicopters: Social media and wildfire resource management"
 date: 2026-05-20
-summary: "A recent University of Waterloo study highlights the Visibility-Efficiency Paradox in wildfire response, illustrating that fires with high social media attention receive disproportionate resources. The study suggests institutional changes to ensure resource allocation is based on operational needs rather than public visibility, which could lead to improved fire management outcomes."
+summary: "Fires that trend on social media end up with more resources than they need on operational grounds; the remote fire that does not trend gets fewer. A University of Waterloo study of California fires measures the gap, and Australian agencies hold the data to run the same audit."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-photogenic-fire-gets-the-helicopters-social-media-and-wildfire-resource-management.jpg

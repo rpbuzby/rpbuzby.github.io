@@ -1,7 +1,7 @@
 ---
 title: "The Augmentation Trap: When AI productivity eats the expertise it depends on"
 date: 2026-07-02
-summary: "The “augmentation trap” highlights the risks of AI tools that boost short-term productivity while eroding essential human expertise. As analysts offload tasks to machines, they lose judgement skills, leading to dependency and a widening competency gap among workers. This phenomenon challenges organisations to incorporate skill maintenance into AI adoption strategies."
+summary: "AI tools that lift short-term productivity can erode the expertise those gains depend on, and the firm books the gain while the worker and the institution pay the skill cost later. Skill maintenance belongs in the business case as an owned line."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-augmentation-trap-when-ai-productivity-eats-the-expertise-it-depends-on.jpg

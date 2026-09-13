@@ -1,7 +1,7 @@
 ---
 title: "From Resilient Individuals to Responsible Organisations: Australia’s first firefighter trauma framework"
 date: 2026-07-06
-summary: "A new framework for tracking exposure to traumatic events in emergency services shifts responsibility from individual resilience to organizational accountability. Endorsed by the Australasian Fire and Emergency Service Authorities Council, it aims to systematically monitor and address psychological impacts, enhancing workforce sustainability and retention, particularly for volunteer firefighters."
+summary: "Resilience asked the firefighter whether they were tough enough. The new AFAC-endorsed principles ask the agency whether it is tracking cumulative trauma exposure, and the duty falls hardest on volunteer services, whose people appear on no payroll."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/from-resilient-individuals-to-responsible-organisations-australias-first-firefighter-trauma-framework.jpg

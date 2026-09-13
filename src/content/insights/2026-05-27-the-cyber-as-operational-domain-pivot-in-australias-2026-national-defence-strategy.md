@@ -1,7 +1,7 @@
 ---
 title: "The Cyber-as-Operational-Domain Pivot in Australia’s 2026 National Defence Strategy"
 date: 2026-05-27
-summary: "The 2026 National Defence Strategy significantly increases Australia’s cyber investment, emphasising cyber as an operational domain in warfare rather than a support function. This shift presents workforce challenges, requiring new skills and pipeline adjustments. Additionally, it impacts regulatory relationships in critical infrastructure and demands rapid tool acquisition, reflecting broader strategic changes."
+summary: "Under the 2026 National Defence Strategy, REDSPICE spending roughly doubles and cyber becomes a fifth operational domain. Doctrine is the simpler half; the strategy stands or falls on whether Defence can train and clear cyber operators at scale."
 themes:
   - "Defence"
 image: ../../assets/insights/the-cyber-as-operational-domain-pivot-in-australias-2026-national-defence-strategy.jpg

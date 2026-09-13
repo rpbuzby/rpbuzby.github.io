@@ -1,7 +1,7 @@
 ---
 title: "The Deterrence Trap: When alliances make war uncontrollable"
 date: 2026-04-24
-summary: "Australia’s 2026 National Defence Strategy prioritises deterrence, which forms the basis for significant defence investments. However, it does not address how escalating crises can result from alliances that are meant to deter conflict. The challenge lies in balancing commitments to deter aggression while avoiding entrapment in uncontrollable conflicts."
+summary: "“Deterrence” appears nearly 30 times in the 2026 National Defence Strategy and justifies $425 billion in capability investment. Alliances built to deter turned an assassination in Sarajevo into a continental war in 1914, and the strategy does not engage with that entrapment risk."
 themes:
   - "Defence"
 image: ../../assets/insights/the-deterrence-trap-when-alliances-make-war-uncontrollable.jpg

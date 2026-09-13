@@ -1,7 +1,7 @@
 ---
 title: "Nine Weeks From Enforcement: The public sector AI governance readiness gap"
 date: 2026-06-03
-summary: "The European Union’s AI Act mandates enforcement for high-risk AI systems by August 2, 2026. Studies indicate that public sector organisations are unprepared, with significant gaps in compliance evidence and capacity. The findings highlight disparities in readiness, suggesting that institutional capability, not technology, is the underlying challenge for effective AI governance."
+summary: "Public-sector deployers cannot yet demonstrate compliance with the EU AI Act’s high-risk obligations, and enforcement begins on 2 August, nine weeks away. Studies from Estonia to Brazil put the gap in institutional capability, and the rules are getting clearer faster than agencies can build it."
 themes:
   - "AI in Government"
 image: ../../assets/insights/nine-weeks-from-enforcement-the-public-sector-ai-governance-readiness-gap.jpg

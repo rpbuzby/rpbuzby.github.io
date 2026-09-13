@@ -1,7 +1,7 @@
 ---
 title: "You Cannot Govern What You Cannot See: Shadow AI, agentic risk and the observability gap"
 date: 2026-07-01
-summary: "A recent study on 27 Australian critical infrastructure organisations reveals the risks of unsanctioned AI, termed “shadow AI,” which undermines regulatory compliance and governance. This concern is magnified with the rise of agentic AI, highlighting the necessity for improved visibility and continuous governance before deployment to prevent harmful cascading errors and accountability gaps."
+summary: "Staff across 27 Australian critical infrastructure organisations already use frontier AI outside any control, and a policy nobody can see followed is no control. Agentic systems turn that observability gap into an accountability gap, so governance has to exist before the system may act."
 themes:
   - "AI in Government"
 image: ../../assets/insights/you-cannot-govern-what-you-cannot-see-shadow-ai-agentic-risk-and-the-observability-gap.jpg

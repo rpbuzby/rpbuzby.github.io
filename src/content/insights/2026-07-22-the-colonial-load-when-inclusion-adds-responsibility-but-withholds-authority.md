@@ -1,7 +1,7 @@
 ---
 title: "The Colonial Load: When inclusion adds responsibility but withholds authority"
 date: 2026-07-22
-summary: "A national survey led by Monash University examines the “colonial load” faced by Aboriginal and Torres Strait Islander emergency service workers, highlighting the burden of cultural responsibility without actual authority. It emphasises the need for genuine decision-making power and accountability in inclusion initiatives to improve outcomes in emergency management."
+summary: "Aboriginal and Torres Strait Islander emergency workers are asked to build trust and interpret culture on top of the job, while the decision rights stay where they were. That asymmetry is the colonial load, a capability problem before it is a wellbeing one."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-colonial-load-when-inclusion-adds-responsibility-but-withholds-authority.jpg

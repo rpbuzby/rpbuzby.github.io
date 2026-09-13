@@ -1,7 +1,7 @@
 ---
 title: "An Organisational Learning Problem: Australia’s 2026 AI governance reality check"
 date: 2026-04-30
-summary: "In a warning to Australian public servants, the Digital Transformation Agency stressed the risks of poorly implemented AI, echoing findings from a Canadian review that revealed significant exclusion of dissenting voices in AI tools used for public consultation. Both highlight the urgent need for governance reforms in AI deployment within government."
+summary: "AI summaries of a Canadian consultation dropped up to 16.9 per cent of respondents and filtered dissent at up to 88 per cent. Government AI is an organisational learning problem first and a procurement problem second, so auditing what a tool drops is standing work."
 themes:
   - "AI in Government"
 image: ../../assets/insights/an-organisational-learning-problem-australias-2026-ai-governance-reality-check.jpg

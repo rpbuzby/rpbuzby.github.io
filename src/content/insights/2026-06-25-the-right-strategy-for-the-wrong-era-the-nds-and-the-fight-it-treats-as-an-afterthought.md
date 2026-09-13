@@ -1,7 +1,7 @@
 ---
 title: "The Right Strategy for the Wrong Era: The NDS and the fight it treats as an afterthought"
 date: 2026-06-25
-summary: "The 2026 National Defence Strategy allocates A$181.9 million daily to defence, offering a stronger framework amidst critiques of being outdated. Critics argue it misreads Australia’s strategic geography and underestimates the significance of information warfare. While it identifies threats accurately, it may not adequately address current geopolitical realities and resource limitations."
+summary: "Australia’s 2026 National Defence Strategy reads the China contest more clearly than its predecessor did. It then resources the war over perception as a communications function, and that is the fight already underway and the one Australia is least prepared to win."
 themes:
   - "Defence"
 image: ../../assets/insights/the-right-strategy-for-the-wrong-era-the-nds-and-the-fight-it-treats-as-an-afterthought.jpg

@@ -1,7 +1,7 @@
 ---
 title: "A 4.2% Discount for Telling the Truth: What WA’s bushfire maps show about disclosure as policy"
 date: 2026-07-20
-summary: "In 2015, Western Australia’s bushfire prone area maps revealed that 90% of the state was classified as such, leading to a 4.2% discount for properties in these areas. This price change stemmed from increased risk transparency rather than pre-existing perceptions. The findings highlight the impact of disclosure on market behaviour and property values."
+summary: "Western Australia’s 2015 bushfire prone area maps were followed by a 4.2 per cent discount on sale prices inside the boundary, and the study traces it to the disclosure itself. Telling buyers the truth repriced the risk at close to zero fiscal cost; the obligation is keeping the map current."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/a-4-2-discount-for-telling-the-truth-what-was-bushfire-maps-show-about-disclosure-as-policy.jpg

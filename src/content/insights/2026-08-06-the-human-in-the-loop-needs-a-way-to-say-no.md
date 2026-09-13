@@ -1,7 +1,7 @@
 ---
 title: "The Human in the Loop Needs a Way to Say No"
 date: 2026-08-06
-summary: "On July 20, the Australian government announced new rules to enhance fairness and transparency in AI-driven public service decisions. Concurrently, whistleblower Jeannie-Marie Blake initiated legal action against the Commonwealth for mistreatment related to the Robodebt system. The situation highlights ongoing accountability issues within automated decision-making frameworks."
+summary: "Robodebt was disclosed in budget papers and defended at estimates, and it ran anyway: humans reviewed cases at scale and none held documented authority to set the output aside. Whatever commences on 10 December 2026 has to hand somebody that authority."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-human-in-the-loop-needs-a-way-to-say-no.jpg

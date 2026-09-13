@@ -3,3 +3,8 @@ dist/
 .astro/
 .DS_Store
 *.log
+
+# Obsidian: keep the vault config but not per-machine state
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/core-plugins.json

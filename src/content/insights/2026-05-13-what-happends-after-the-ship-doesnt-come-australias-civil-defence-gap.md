@@ -1,7 +1,7 @@
 ---
 title: "What Happens After the Ship Doesn’t Come: Australia’s civil defence gap"
 date: 2026-05-13
-summary: "Finland, Sweden, Germany, and France have enhanced civil preparedness in response to contemporary threats, while Australia’s 2026 National Defence Strategy acknowledges this need but lacks practical frameworks. Effective civil-defence coordination seen in Victoria highlights existing capability gaps. The report urges immediate action to establish a bureaucratic structure that supports national readiness."
+summary: "Calling national defence whole-of-nation does not make it so until people outside Defence have something to do. Sweden reissued its preparedness handbook to every household; Australia’s 2026 National Defence Strategy gave civil preparedness one paragraph and no institution with the authority to own it."
 themes:
   - "Defence"
   - "Emergency Management & Resilience"

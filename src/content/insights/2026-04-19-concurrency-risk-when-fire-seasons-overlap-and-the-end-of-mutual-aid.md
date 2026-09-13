@@ -1,7 +1,7 @@
 ---
 title: "Concurrency Risk: When fire seasons overlap and the end of mutual aid"
 date: 2026-04-19
-summary: "International firefighting cooperation relies on seasonal rotations of resources between hemispheres. However, recent research indicates a breakdown of this model due to increasing extreme fire weather coinciding across regions. As a result, Australia needs to adapt its firefighting strategies and foster local surge capacity to manage overlapping fire seasons effectively."
+summary: "Simultaneous extreme fire weather across Europe has expanded by nearly 15 per cent a year over the past decade. Sharing aircraft and crews between hemispheres assumed sequential seasons, and Australia now has to size its own fleet and workforce for overlap."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/concurrency-risk-when-fire-seasons-overlap-and-the-end-of-mutual-aid.jpg

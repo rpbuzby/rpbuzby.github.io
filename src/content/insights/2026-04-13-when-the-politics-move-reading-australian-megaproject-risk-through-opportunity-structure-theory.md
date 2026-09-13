@@ -1,7 +1,7 @@
 ---
 title: "When the Politics Move: Reading Australian megaproject risk through opportunity structure theory"
 date: 2026-04-13
-summary: "Australian megaprojects like Inland Rail, Snowy 2.0, and Western Sydney Airport are experiencing significant cost overruns and political challenges. Traditional explanations cite optimism bias, but a Political Opportunity Structure (POS) approach reveals how changes in political dynamics influence community engagement and project outcomes, highlighting the need for adaptable stakeholder strategies."
+summary: "Inland Rail was scoped at $4.7 billion and now sits near $32 billion, and optimism bias covers only part of that. The opposition to these projects never changed; the political environment did, and most engagement plans still file political risk as background."
 themes:
   - "Change & Transformation"
 image: ../../assets/insights/when-the-politics-move-reading-australian-megaproject-risk-through-opportunity-structure-theory.jpg

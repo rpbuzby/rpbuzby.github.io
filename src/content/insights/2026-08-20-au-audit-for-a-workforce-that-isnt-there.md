@@ -1,7 +1,7 @@
 ---
 title: "Au Audit for a Workforce That Isn’t There"
 date: 2026-08-20
-summary: "By 2035, Australia faces a shortfall of 70,707 nurses, primarily impacting aged care. The recent National Nursing Workforce Strategy predicts a need for nearly 80,000 nurses to bridge this gap. While audits verify care minutes in aged care homes, no clear ownership exists for addressing this shortfall amidst regulatory complexities and resource challenges."
+summary: "In one August week the health department made registered nurse coverage in aged care an externally audited figure and projected a shortfall of 70,707 nurses by 2035, with those staffing rules already assumed in the aged care forecast. Both documents are honest, and neither names who closes the gap."
 themes:
   - "Change & Transformation"
 image: ../../assets/insights/au-audit-for-a-workforce-that-isnt-there.jpg

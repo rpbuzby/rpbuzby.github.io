@@ -1,7 +1,7 @@
 ---
 title: "Two Freezes in Three Years: The KPMG suspension and the accountability that waits for a scandal"
 date: 2026-07-09
-summary: "The Department of Finance has halted new contracts with KPMG due to whistleblower allegations of misconduct, marking the second freeze on a Big Four firm in three years. The response highlights systemic issues in oversight and accountability, raising questions about whether structural changes will ensure future compliance and prevent further breaches."
+summary: "Finance has barred new KPMG engagements until 30 September, three years after PwC was frozen out, and close to $200 million in expiring audit work may survive through extensions. Both cases were caught by a whistleblower; the standing controls were not doing the catching."
 themes:
   - "Leadership"
 image: ../../assets/insights/two-freezes-in-three-years-the-kpmg-suspension-and-the-accountability-that-waits-for-a-scandal.jpg

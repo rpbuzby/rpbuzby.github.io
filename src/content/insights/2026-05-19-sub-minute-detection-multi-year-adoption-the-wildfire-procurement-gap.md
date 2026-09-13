@@ -1,7 +1,7 @@
 ---
 title: "Sub-Minute Detection, Multi-Year Adoption: The wildfire procurement gap"
 date: 2026-05-19
-summary: "A simulated satellite constellation detected a Californian wildfire in 68 seconds, but local responses lagged by about 45 minutes, highlighting a gap in operational capabilities. While technology for real-time wildfire intelligence exists, integration with institutional decision-making remains inadequate. Effective procurement specifications are crucial to bridge this operational gap for Australian agencies."
+summary: "A simulated satellite constellation detected a Californian ignition in 68 seconds; the responding agency saw it about 45 minutes later. Sub-minute detection is now a procurement problem, and an agency that tenders without specifying constellation architecture is buying a black box."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/sub-minute-detection-multi-year-adoption-the-wildfire-procurement-gap.jpg

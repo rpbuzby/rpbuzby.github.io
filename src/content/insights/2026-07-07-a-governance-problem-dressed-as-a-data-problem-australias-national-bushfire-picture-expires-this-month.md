@@ -1,7 +1,7 @@
 ---
 title: "A Governance Problem Dressed as a Data Problem: Australia’s national bushfire picture expires this month"
 date: 2026-07-07
-summary: "Australia’s National Near Real-Time Bushfire Boundaries dataset faces funding expiration soon, highlighting a larger issue of fragmented bushfire data and governance. Despite abundant data, the lack of integration hampers effective national responses to bushfires. Effective governance is needed to create a comprehensive, sustainable national fire information system."
+summary: "On 30 June funding ends for the near real-time picture of where Australia is burning. Six years after the Royal Commission asked for a national bushfire database there is a scoping study and no authority able to compel a common schema; governance is the gap."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/a-governance-problem-dressed-as-a-data-problem-australias-national-bushfire-picture-expires-this-month.jpg

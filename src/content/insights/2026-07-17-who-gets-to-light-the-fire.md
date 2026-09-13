@@ -1,7 +1,7 @@
 ---
 title: "Who Gets to Light the Fire?"
 date: 2026-07-17
-summary: "Between 2015 and 2024, wildfires devastated 17.6% of giant sequoias, compared to under 1% in the previous thirty years. Prescribed burns significantly reduced tree loss in treated groves. However, bureaucratic barriers hinder Indigenous cultural burning practices in Australia. Effective fire management requires adjusting regulations to enable broader community participation."
+summary: "Wildfire killed 17.6 per cent of Earth’s large giant sequoias in a decade; groves given prescribed burns beforehand kept more trees. With El Niño declared, what stops Australia treating country at scale is agency-built credentialing and approval rules that keep Traditional Owners at arm’s length."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/who-gets-to-light-the-fire.jpg

@@ -1,7 +1,7 @@
 ---
 title: "The Chief AI Officer deadline and the capability it doesn’t create"
 date: 2026-06-24
-summary: "By June 30, every non-corporate Commonwealth agency must appoint a Chief AI Officer from existing leadership without additional funding. This strategy risks reinforcing compliance over capability, hindering meaningful AI adoption. While frameworks exist, operational capacity and citizen accountability lag, threatening trust and effective governance in AI implementation."
+summary: "Every non-corporate Commonwealth entity needs a Chief AI Officer by 30 June, drawn from existing leadership with no new money, which buys a designation. The deadline will mostly be met on paper, and what changes on 1 July is, for most agencies, not much."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-chief-ai-officer-deadline-and-the-capability-it-doesnt-create.jpg

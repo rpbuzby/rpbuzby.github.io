@@ -1,7 +1,7 @@
 ---
 title: "The Cloud is on the Ocean Floor: Australia and the undersea cable question"
 date: 2026-05-12
-summary: "Seventeen undersea cables in the Strait of Hormuz are crucial for both data transmission and oil transport, with their vulnerability posing significant risks. The growing competition over cable ownership, especially involving China, highlights strategic concerns for nations like Australia. A coordinated resilience strategy is essential to address these challenges effectively."
+summary: "Roughly 97 per cent of intercontinental internet traffic runs on seabed cables, and seventeen of them thread the Red Sea and the Strait of Hormuz. Finland answered the Baltic cable disruptions with a military and civilian framework; Australia spreads the problem across several departments and the operators, and nobody holds the integration mandate."
 themes:
   - "Defence"
 image: ../../assets/insights/the-cloud-is-on-the-ocean-floor-australia-and-the-undersea-cable-question.jpg

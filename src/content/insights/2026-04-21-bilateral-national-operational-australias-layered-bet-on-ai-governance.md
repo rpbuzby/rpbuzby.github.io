@@ -1,7 +1,7 @@
 ---
 title: "Bilateral, National, Operational: Australia’s layered bet on AI governance"
 date: 2026-04-21
-summary: "On April 1, 2026, Australia signed a memorandum of understanding with Anthropic under its National AI Plan, which focuses on multiple collaboration areas, including infrastructure and research partnerships. This MOU signals a strategic shift towards implementing national AI governance amid existing frameworks from the US and EU, addressing potential procurement conflicts and ethical considerations."
+summary: "On 1 April Australia signed its first National AI Plan memorandum with Anthropic, aiming to layer American deployment speed onto European coherence. That MOU is a research and safety collaboration; the layer with authority to stop a deployment has still to be built."
 themes:
   - "AI in Government"
 image: ../../assets/insights/bilateral-national-operational-australias-layered-bet-on-ai-governance.jpg

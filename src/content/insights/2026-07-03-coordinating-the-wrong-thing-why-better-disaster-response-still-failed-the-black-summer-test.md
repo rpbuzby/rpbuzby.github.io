@@ -1,7 +1,7 @@
 ---
 title: "Coordinating the Wrong Thing: Why better disaster response still failed the Black Summer test"
 date: 2026-07-03
-summary: "Australia faced another severe fire season after the Black Summer as structural governance issues persist. Although improved coordination was implemented, the existing response framework remains inadequate for climate-related crises. The need for redesigning governance rather than merely enhancing coordination is crucial, with past reforms only addressing superficial layers."
+summary: "Five years after Black Summer, Australia’s 2025-26 fire season showed the post-Royal Commission coordination machinery working as designed. Coordination improves a response built for bounded emergencies without redesigning it, and a climate-era crisis keeps testing the structure the reforms left intact."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/coordinating-the-wrong-thing-why-better-disaster-response-still-failed-the-black-summer-test.jpg

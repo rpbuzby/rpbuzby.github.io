@@ -1,7 +1,7 @@
 ---
 title: "A Website is not a Capability: Reading the AI.gov.au launch in context"
 date: 2026-05-18
-summary: "The National AI Centre launched AI.gov.au, a resource aimed at aiding businesses and not-for-profits in the responsible adoption of AI as part of a broader $39.9 million investment in Australia’s AI ecosystem. While the site provides valuable guidance, its long-term effectiveness will depend on user feedback and further integration into the broader AI framework."
+summary: "AI.gov.au is a credible deliverable with useful content. A guidance website cannot close the gap between the National AI Plan and agency practice, and the next two budget cycles decide whether the launch was a start or the most visible thing the plan produced."
 themes:
   - "AI in Government"
   - "Change & Transformation"

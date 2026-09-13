@@ -1,7 +1,7 @@
 ---
 title: "The Transparency Illusion: Compliance you can see, substance you can’t"
 date: 2026-07-15
-summary: "In March, the Australian Government’s Digital Transformation Agency reported all 94 agencies complied with AI transparency standards, addressing earlier issues of vague disclosures. However, a June study revealed that important information remains undisclosed for high-risk stakeholders, highlighting a “Transparency Illusion.” Genuine accountability is needed to ensure citizens understand AI’s impact on them."
+summary: "All 94 agencies bound by the AI transparency standard have published statements, and a June study of 92 found the people most exposed to government AI get the least usable disclosure. Compliance is measured at the centre; the harm accrues at the edge."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-transparency-illusion-compliance-you-can-see-substance-you-cant.jpg

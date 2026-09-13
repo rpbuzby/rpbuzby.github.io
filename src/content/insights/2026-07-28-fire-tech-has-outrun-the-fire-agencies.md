@@ -1,7 +1,7 @@
 ---
 title: "Fire Tech Has Outrun the Fire Agencies"
 date: 2026-07-28
-summary: "AI-equipped cameras in Arizona’s Coconino National Forest have improved wildfire detection, often alerting emergency services 45 minutes before human calls. Similar systems, like California’s ALERTCalifornia network, have successfully detected thousands of incidents early. However, operational integration and institutional capability remain critical challenges in utilising advanced fire detection technology effectively."
+summary: "An AI camera in Arizona now sees smoke about 45 minutes before the first emergency call, and California’s network flagged 3,600 fires in 2025, over half before anyone rang. Science is no longer the constraint, and a camera still cannot sign its own purchase order."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/fire-tech-has-outrun-the-fire-agencies.jpg

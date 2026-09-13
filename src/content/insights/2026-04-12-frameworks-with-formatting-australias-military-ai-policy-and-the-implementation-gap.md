@@ -1,7 +1,7 @@
 ---
 title: "Frameworks with Formatting: Australia’s military AI policy and the implementation gap"
 date: 2026-04-12
-summary: "In March 2026, the Australian Defence released its “Policy Settings for Responsible Use of Artificial Intelligence in Defence,” which outlines compliance with laws, accountability, and risk management. However, it lacks specific implementation pathways and enforcement mechanisms, causing concerns about its effectiveness compared to allied nations’ more detailed frameworks and operational directives."
+summary: "Defence’s March 2026 AI policy sets sound requirements and names a governance hub, then attaches no resourcing and no consequence for non-compliance. The US and UK are years into the operational phase of military AI governance; Australia has published a statement of intent."
 themes:
   - "AI in Government"
 image: ../../assets/insights/frameworks-with-formatting-australias-military-ai-policy-and-the-implementation-gap.jpg

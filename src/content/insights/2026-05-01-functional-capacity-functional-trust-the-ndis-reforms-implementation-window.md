@@ -1,7 +1,7 @@
 ---
 title: "Functional Capacity, Functional Trust: The NDIS reform’s implementation window"
 date: 2026-05-01
-summary: "On April 22, 2026, Mark Butler announced significant reforms to the National Disability Insurance Scheme (NDIS), including eligibility changes and reduced funding. With participant numbers expected to decline to 600,000, the effectiveness of these adjustments hinges on successful implementation and coordination between federal and state governments over the next two years."
+summary: "Butler’s NDIS reset is sound on paper. Funding changes bite from 1 July 2026 while eligibility criteria wait until 2028, leaving 760,000 participants wondering for two years, and the review pathway that would earn their trust after Robodebt has not been built."
 themes:
   - "Change & Transformation"
 image: ../../assets/insights/functional-capacity-functional-trust-the-ndis-reforms-implementation-window.jpg

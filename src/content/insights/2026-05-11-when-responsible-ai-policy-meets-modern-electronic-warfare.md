@@ -1,7 +1,7 @@
 ---
 title: "When Responsible AI Policy Meets Modern Electronic Warfare"
 date: 2026-05-11
-summary: "A Ukrainian drone operator using a $5,000 commercial quadcopter neutralised a Russian motorised company on the Pokrovsk axis last month inside an afternoon. The unit cost ratio between the quadcopter and the company it engaged was around six orders of magnitude, and the decision loop from drone sensor to weapon release was measured in seconds. […]"
+summary: "A $5,000 quadcopter took out a Russian motorised company in an afternoon while Defence was working through comments on a responsible AI policy written for AI as an adviser. Either that policy is rewritten for machine tempo or the exceptions get made off the page."
 themes:
   - "Defence"
 image: ../../assets/insights/when-responsible-ai-policy-meets-modern-electronic-warfare.jpg

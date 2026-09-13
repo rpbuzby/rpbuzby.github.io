@@ -1,7 +1,7 @@
 ---
 title: "Chairing COP31 with an Unravelling Consensus: The attribution gap at the heart of Australian climate politics"
 date: 2026-04-22
-summary: "In November 2026, Australia will host COP31, marking an important diplomatic event. However, public concern about climate change has declined, complicating the country’s ability to advocate effectively. Research indicates that personal attribution of weather events to climate change is essential for policy support, yet many Australians struggle with this connection, impacting domestic climate action."
+summary: "With climate concern down to 51 per cent, Australia chairs COP31 in November. Policy support follows personal attribution of extreme weather to warming, a 68-country study finds, and stronger national identity makes Australians attribute less, so the diplomacy is running ahead of the electorate."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/chairing-cop31-with-an-unravelling-consensus-the-attribution-gap-at-the-heart-of-australian-climate-politics.jpg

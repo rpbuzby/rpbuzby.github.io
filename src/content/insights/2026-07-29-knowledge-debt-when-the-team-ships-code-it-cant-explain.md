@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Debt: When the team ships code it can’t explain"
 date: 2026-07-29
-summary: "Microsoft’s implementation of AI coding agents, including Claude Code and GitHub Copilot CLI, led to a 24% increase in engineers’ productivity. However, this shift raises concerns about “Knowledge Debt,” where reliance on AI hampers developers’ incidental learning and comprehension of code, potentially jeopardising long-term expertise and problem-solving abilities."
+summary: "Microsoft engineers adopting coding agents merged 24 per cent more pull requests; in a controlled study, AI-assisted developers scored 17 per cent lower on comprehension. Comprehension is what teams draw on at 2 am when systems fail, so learning has to be budgeted like security."
 themes:
   - "AI in Government"
 image: ../../assets/insights/knowledge-debt-when-the-team-ships-code-it-cant-explain.jpg

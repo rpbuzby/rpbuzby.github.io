@@ -1,7 +1,7 @@
 ---
 title: "Who Does Australia’s AI Policy Actually Bind?"
 date: 2026-07-31
-summary: "On July 27, the Digital Transformation Agency exposed gaps in its policy distribution, prompting criticism from a senator for incompetence. Concurrently, it was revealed that politicians and their staff lacked coverage under AI governance frameworks. These findings raise concerns about Australia’s readiness to implement mandatory AI standards while effectively overseeing their application."
+summary: "Staff at the DTA distributed whole-of-government policy by guessing email addresses, and the next day politicians turned out to sit outside the AI framework they administer. Australia is about to legislate a mandatory AI standard that will not cover the people writing it."
 themes:
   - "AI in Government"
 image: ../../assets/insights/who-does-australias-ai-policy-actually-bind.jpg

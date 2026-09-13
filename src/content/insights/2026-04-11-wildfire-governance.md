@@ -1,7 +1,7 @@
 ---
 title: "Beyond Recruitment Headlines: Surge, retention and the coordination gap in bushfire governance"
 date: 2026-04-11
-summary: "Following the January 2026 Victorian bushfires, 3,400 individuals showed interest in volunteering with the Country Fire Authority. However, past patterns indicate that initial enthusiasm often wanes without effective training and integration, posing challenges for long-term operational capability. Retention depends on coordinated efforts among various agencies and comprehensive support for volunteers."
+summary: "Around 3,400 people expressed interest in joining the CFA after the January 2026 Victorian fires, a number that measures interest. Whether it becomes capability turns on coordination across agencies and jurisdictions, and on how many are still rostered in March 2027."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/wildfire-governance.jpg

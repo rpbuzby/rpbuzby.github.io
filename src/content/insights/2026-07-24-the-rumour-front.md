@@ -1,7 +1,7 @@
 ---
 title: "The Rumour Front"
 date: 2026-07-24
-summary: "In October 2024, an armed man threatened FEMA workers in North Carolina, leading to operational changes due to misinformation about hurricane relief. Rumors regarding federal aid and weather manipulation disrupted recovery efforts. This situation reflects broader challenges with misinformation during disasters, underscoring the need for effective communication strategies and community trust in emergency management."
+summary: "FEMA pulled its teams off door-knocking in North Carolina after an armed man threatened its workers, and fabricated claims changed how a disaster agency operated. Australia’s message delivery has never worked better; whether the message is believed cannot be tested in a drill, so rumour management is preparedness."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-rumour-front.jpg

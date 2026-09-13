@@ -1,7 +1,7 @@
 ---
 title: "Smoke Reaches the Cardiac Ward"
 date: 2026-08-12
-summary: "The discourse in Australia surrounding bushfire smoke primarily focuses on respiratory health impacts. Recent studies show long-term exposure to bushfire smoke is linked to increased heart disease risks, highlighting that the health implications extend beyond asthma. Future burn planning should incorporate these findings to mitigate cardiovascular risks and allocate health resources effectively."
+summary: "Long-term bushfire smoke exposure is linked to coronary plaque in asymptomatic adults, and in California agricultural and prescribed burning together produce roughly a third of smoke-attributable asthma cases. Burn windows should score downwind populations alongside fire behaviour, and health districts belong at the planning table."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/smoke-reaches-the-cardiac-ward.jpg

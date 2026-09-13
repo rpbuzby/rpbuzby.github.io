@@ -1,7 +1,7 @@
 ---
 title: "The Same Failure, in Sequence: HMRC, Robodebt, and the pre-deployment accountability gap"
 date: 2026-05-26
-summary: "Between August and October 2025, 23,800 UK families were unjustly suspended from Child Benefit payments due to flawed Home Office travel data. This case reflects systemic issues similar to Australia’s Robodebt scheme, highlighting the absence of proper accountability, error management, and legislative safeguards in automated decision-making processes."
+summary: "Before deployment, HMRC knew its travel data had a 46 per cent pilot error rate. It suspended Child Benefit for 23,800 families anyway, 71 per cent of them legitimate, and Australia has no legislation in train two and a half years after Robodebt’s 57 recommendations."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-same-failure-in-sequence-hmrc-robodebt-and-the-pre-deployment-accountability-gap.jpg

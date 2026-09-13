@@ -1,7 +1,7 @@
 ---
 title: "The Model Isn’t the Bottleneck: Machine learning and Australian bushfire prediction"
 date: 2026-07-23
-summary: "In late June, over 400 fire practitioners and researchers met in Adelaide to discuss advancements in machine learning for wildfire prediction. Despite strong model performance, challenges persist in data integration and explainable AI. Recent reviews emphasise that enhancing operational decision support requires investment in data foundations and interpretability, not just model accuracy."
+summary: "Australia’s bushfire prediction models are already accurate; more than 400 practitioners in Adelaide saw machine learning that works. What keeps them off the fireground is fragmented data going in and predictions no analyst can interrogate coming out, and that is where the money should go."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-model-isnt-the-bottleneck-machine-learning-and-australian-bushfire-prediction.jpg

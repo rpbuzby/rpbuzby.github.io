@@ -1,7 +1,7 @@
 ---
 title: "The Boat That Disappeared: What the revised AUKUS submarine deal reveals about alliance risk"
 date: 2026-06-30
-summary: "The revised AUKUS submarine deal reflects significant changes, replacing one new submarine with three used Virginia-class subs, reducing Australia’s fleet capability by approximately a decade. This shift reveals production limitations and raises questions about the unequal risk distribution within the partnership, amidst broader pressures on the program affecting all three nations involved."
+summary: "The new-build Virginia-class boat dropped out of AUKUS Pillar I in May, replaced by a third used one, and the fleet lost a decade of hull life. When a mega-program meets a hard production limit, the risk moves to whoever holds the weakest hand."
 themes:
   - "Defence"
 image: ../../assets/insights/the-boat-that-disappeared-what-the-revised-aukus-submarine-deal-reveals-about-alliance-risk.jpg

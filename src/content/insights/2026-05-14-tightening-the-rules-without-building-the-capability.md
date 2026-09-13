@@ -1,7 +1,7 @@
 ---
 title: "Tightening the Rules Without Building the Capability"
 date: 2026-05-14
-summary: "The Australian government’s draft procurement rule amendments require suppliers to accept accountability for AI-generated outputs, creating challenges for small vendors who may lack the resources to comply. While intended to enhance transparency and risk sharing, the current public sector capacity to evaluate AI use remains inconsistent, complicating implementation and trust in AI governance."
+summary: "A small vendor reading Finance’s draft procurement rules is asked to accept accountability for AI outputs from models it neither owns nor understands, a liability no local insurer will underwrite. The agencies receiving those disclosures cannot yet evaluate them; their own transparency statements show it."
 themes:
   - "AI in Government"
   - "Change & Transformation"

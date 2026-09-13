@@ -1,7 +1,7 @@
 ---
 title: "Fewer Than One in a Hundred"
 date: 2026-08-04
-summary: "A survey published in late July went through 2,086 studies on artificial intelligence across the wildfire management lifecycle and counted how many used spatially blocked validation. Fewer than one per cent did. The authors draw the obvious conclusion, which is that most published fire-prediction models are probably overstating how well they would perform in the […]"
+summary: "Of 2,086 studies of AI in wildfire management, fewer than one per cent tested their models on country those models had never seen, which inflates most accuracy figures on vendor spec sheets. Agencies can refuse to buy on those numbers, starting with the tender form."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/fewer-than-one-in-a-hundred.jpg

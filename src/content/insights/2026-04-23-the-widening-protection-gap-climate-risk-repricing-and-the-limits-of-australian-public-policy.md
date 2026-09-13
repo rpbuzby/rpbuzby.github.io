@@ -1,7 +1,7 @@
 ---
 title: "The Widening Protection Gap: Climate risk repricing and the limits of Australian public policy"
 date: 2026-04-23
-summary: "Swiss Re projects global insured catastrophe losses for 2025 at US$107 billion, primarily driven by wildfires, storms, and floods. California’s soaring premiums reflect insurers’ response to climate risks. The widening insurance protection gap raises concerns about financial stability, particularly as private insurers retreat from high-risk areas, complicating policy responses."
+summary: "In California, premiums in fire-prone postcodes have roughly quadrupled and carriers are pulling out; Australia should read that as a preview. Actuaries are repricing climate risk well ahead of any government decision on who bears it once cover is withdrawn."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-widening-protection-gap-climate-risk-repricing-and-the-limits-of-australian-public-policy.jpg

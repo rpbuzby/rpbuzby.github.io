@@ -1,7 +1,7 @@
 ---
 title: "From Rules to Power: The doctrinal shift in Australia’s 2026 National Defence Strategy"
 date: 2026-04-28
-summary: "Australia’s 2026 National Defence Strategy shifts focus from maintaining a “rules-based order” to achieving a “favourable regional balance of power.” This change reflects a more realistic assessment of global dynamics, acknowledging the challenges posed by Russia and China. However, strategic responses and budget transparency still need alignment with this new framework."
+summary: "One phrase makes the biggest change in the 2026 National Defence Strategy: the ADF now contributes to a favourable regional balance of power, where 2024 said a rules-based order. The vocabulary is more honest; instrument selection and budget transparency have yet to catch up."
 themes:
   - "Defence"
 image: ../../assets/insights/from-rules-to-power-the-doctrinal-shift-in-australias-2026-national-defence-strategy.jpg

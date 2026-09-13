@@ -1,7 +1,7 @@
 ---
 title: "After Attribution: When the fire science is settled but the resourcing question isn’t"
 date: 2026-04-14
-summary: "Recent studies have confirmed that climate change significantly intensifies extreme fire weather, with human activity contributing to over half of this increase. The debate over climate attribution has shifted to urgent resourcing needs for fire agencies, necessitating investments in firefighting infrastructure and workforce to address growing fire seasons and overlapping global fire events."
+summary: "Two Science Advances papers this year put the human fingerprint on extreme fire weather at 99 per cent confidence, which closes the science. It leaves treasury holding a resourcing bill that has genuinely grown, and no community preparedness program can pay it."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/after-attribution-when-the-fire-science-is-settled-and-the-resourcing-question-isnt.jpg

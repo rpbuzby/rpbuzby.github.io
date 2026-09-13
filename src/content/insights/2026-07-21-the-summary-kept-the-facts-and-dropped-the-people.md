@@ -1,7 +1,7 @@
 ---
 title: "The Summary Kept the Facts and Dropped the People"
 date: 2026-07-21
-summary: "Canada’s public consultation for its AI strategy revealed significant shortcomings in participant representation, with up to 88% of dissenting voices excluded from summaries. This highlights the need for better auditing of AI-generated outputs to ensure fidelity to public input. Australia faces similar challenges as it develops its own AI frameworks."
+summary: "Canada’s AI-assisted summary of 5,253 consultation submissions passed accuracy checks and dropped dissenting participants at rates between 33 and 88 per cent. Australia’s decentralised AI plan leaves every policy team to choose its own tooling, and no agency gate yet checks whose voices a summary keeps."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-summary-kept-the-facts-and-dropped-the-people.jpg

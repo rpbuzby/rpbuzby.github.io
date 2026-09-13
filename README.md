@@ -38,6 +38,17 @@ draft: false                               # true keeps it out of the build
 
 Copy an existing file in `src/content/poems/` or `src/content/news/`, edit, commit, push. The first link on a poem renders as the primary (ember) button, the rest as outlined buttons.
 
+## Editing in Obsidian
+
+Open this folder as its own vault: Obsidian → **Open folder as vault** → `~/Projects/russellbuzby.com`. The saved vault settings hide the code folders, so the file explorer shows only `src/content/` (insights, poems, news) and `docs/`. Frontmatter appears as Properties at the top of each note.
+
+- **Edit an article:** open it under `src/content/insights/`, change the text or the `summary` property.
+- **Add a poem or a news item:** duplicate a file in `poems/` or `news/`, edit the properties and the body.
+- **Add an article from the vault pipeline:** use `scripts/publish_article.py` (below); it handles the image and the URL write-back.
+- **Publish:** run `scripts/publish.sh` from a terminal (or set up the Obsidian Git community plugin with “Commit-and-sync” so it happens from the command palette). The site rebuilds in about a minute.
+
+Rules of the house: Australian spelling, curly quotes, no em dashes, and a poem goes in `poems/` only once it is published or placed, and only as a link to the venue.
+
 ## Local preview
 
 ```

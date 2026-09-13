@@ -1,7 +1,7 @@
 ---
 title: "Funded Across the Budget, Governed by One Policy: The ADF’s AI integration gap"
 date: 2026-06-29
-summary: "Australia’s defence strategy integrates artificial intelligence (AI) as a central element by 2026, with substantial financial commitments. A framework for responsible AI use emphasises accountability, legal compliance, and risk management. However, the rapid adoption of AI outpaces governance, which raises concerns about effectiveness and oversight, necessitating more concrete measures for accountability."
+summary: "AI sits in almost every line of the $425 billion defence investment plan and is governed by one March 2026 policy. That policy asserts human accountability without auditable records to evidence it, and spiral development will keep the capability a moving target."
 themes:
   - "AI in Government"
 image: ../../assets/insights/funded-across-the-budget-governed-by-one-policy-the-adfs-ai-integration-gap.jpg

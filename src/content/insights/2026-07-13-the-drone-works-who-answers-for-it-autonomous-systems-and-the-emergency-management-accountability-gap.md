@@ -1,7 +1,7 @@
 ---
 title: "The Drone Works. Who Answers for It? Autonomous systems and the emergency-management accountability gap"
 date: 2026-07-13
-summary: "Autonomous drones are enhancing firefighting capabilities, but accountability issues arise when they malfunction or make decisions. Recent studies highlight the unclear responsibility among operators, developers, and agencies. A framework called DroneLets aims to standardise human-drone interactions, enabling effective procurement that aligns capability with accountability, crucial for future deployments."
+summary: "Nobody can say who answers when an autonomous firefighting drone gets it wrong. One early-warning system would have evacuated 180,000 residents eight hours earlier in a replayed typhoon, so refusing the capability would be the worse error; accountability has to be written into the contract before the first flight."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-drone-works-who-answers-for-it-autonomous-systems-and-the-emergency-management-accountability-gap.jpg
