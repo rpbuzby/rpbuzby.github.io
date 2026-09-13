@@ -17,7 +17,7 @@ buttons:
   - { label: "Get in touch", url: "/contact/" }
 photos:
   - { image: "rfs-hose.jpg", alt: "Russell Buzby with NSW Rural Fire Service", caption: "With the NSW Rural Fire Service." }
-  - { image: "rfs-radio.jpg", alt: "Russell Buzby on the radio in an NSW RFS vehicle", caption: "On the radio in an NSW RFS vehicle." }
+  - { image: "rfs-radio.jpg", alt: "Russell Buzby on the radio in a NSW RFS vehicle", caption: "On the radio in a NSW RFS vehicle." }
 ---
 ## What I do now
 
