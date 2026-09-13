@@ -3,15 +3,10 @@ title: "About"
 headline: "Twenty years working through complexity."
 description: "Twenty years of helping leaders and organisations work through complexity, across government consulting, higher education leadership and financial services."
 lede: "My career has taken me across government consulting, higher education leadership, and financial services, and the common thread has always been the same: translating intent into practical, sustainable outcomes."
-capabilities:
-  - Strategic advisory
-  - Organisational change management
-  - Governance and assurance
-  - Stakeholder engagement
-  - Business readiness
-  - Program and project delivery
-  - Strategic communications
-  - Benefits realisation
+evidence:
+  - { label: "On Defence delivery reform", url: "/2026/07/30/the-new-agency-is-the-easy-part/", title: "The New Agency Is the Easy Part" }
+  - { label: "On AI in the public service", url: "/2026/08/06/the-human-in-the-loop-needs-a-way-to-say-no/", title: "The Human in the Loop Needs a Way to Say No" }
+  - { label: "On bushfire governance", url: "/2026/07/07/a-governance-problem-dressed-as-a-data-problem-australias-national-bushfire-picture-expires-this-month/", title: "A Governance Problem Dressed as a Data Problem" }
 buttons:
   - { label: "Read my insights", url: "/insights/" }
   - { label: "Get in touch", url: "/contact/" }
@@ -37,3 +32,5 @@ This breadth of experience gives me a perspective that most consultants in a sin
 I’m also a Captain in the NSW Rural Fire Service, serving on Yuin Country. The fireground has shaped how I think about leadership, decision-making and communication in ways that no boardroom ever could. When lives and property are on the line, you learn to think clearly under pressure, communicate with precision and lead people through uncertainty with calm authority.
 
 I bring that same approach to my consulting work: a bias toward action, sound judgement under pressure, and a focus on outcomes that are credible and grounded in operational reality.
+
+The other thing I do at Braidwood is write. My poems circle the same country the brigade covers, the land, the people on it, and what fire and weather do to both, and in 2026 they started to travel: ‘Bogong’ won the Venie Holmgren Environmental Poetry Prize, and others were placed in the Bridport, Robert Gray and Winchester prizes. The consulting and the poetry ask the same thing of me, which is precision, and an ear for how words sound to the people who have to hear them. There is more on the [Poetry page](/poetry/).

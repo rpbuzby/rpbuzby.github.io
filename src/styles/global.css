@@ -54,6 +54,8 @@ h2 { font-size: clamp(1.5rem, 2.4vw, 1.75rem); font-weight: 600; line-height: 1.
 h3, .post-title { font-size: 1.35rem; font-weight: 600; line-height: 1.25; }
 p { margin: 0; }
 .wrap { max-width: var(--max); margin-inline: auto; }
+.skip { position: absolute; left: 1rem; top: -3rem; z-index: 10; background: var(--ink); color: var(--ground); padding: .6em 1em; font-family: var(--ui); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
+.skip:focus { top: 1rem; }
 .measure { max-width: var(--measure); }
 .log { font-family: var(--mono); font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; color: var(--stone); }
 .log .sep { margin-inline: .6em; }
@@ -96,7 +98,7 @@ section { display: grid; gap: var(--s3); }
 .hero .stack { gap: var(--s3); }
 .hero h1 { max-width: none; }
 .hero figure { margin: 0; display: flex; }
-.hero img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; object-position: 50% 30%; }
+.hero img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; object-position: 50% 20%; }
 figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); margin-top: .6rem; line-height: 1.5; }
 .hero figure, .register img, .epigraph figure, .origin figure, .gallery figure, .article-hero, .author img { background: var(--ash); }
 
@@ -152,8 +154,11 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .photos { display: grid; gap: var(--s3); position: sticky; top: 2rem; }
 .photos figure { margin: 0; }
 .photos img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.caps { columns: 2; column-gap: 2.5rem; margin: 0; padding: 0; }
-.caps li { list-style: none; padding-block: .55rem; border-bottom: 1px solid var(--line); break-inside: avoid; font-size: 1rem; }
+.evidence { margin: 0; padding: 0; display: grid; }
+.evidence li { list-style: none; border-bottom: 1px solid var(--line); }
+.evidence a { display: grid; gap: .2rem; padding-block: .8rem; text-decoration: none; }
+.evidence .t { font-family: var(--display); font-size: 1.3rem; font-weight: 600; line-height: 1.2; }
+@media (hover: hover) and (pointer: fine) { .evidence a:hover .t { text-decoration: underline; text-decoration-color: var(--ember); } }
 
 /* poetry */
 .epigraph { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--col-gap); align-items: center; }
@@ -167,8 +172,8 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .poem .status { font-family: var(--mono); font-size: .88rem; letter-spacing: 0; color: var(--ember); margin-top: .5rem; line-height: 1.6; }
 .poem .detail { font-size: .92rem; color: var(--stone); margin-top: .25rem; line-height: 1.5; }
 .jumps { display: flex; flex-wrap: wrap; gap: .2rem 1.4rem; font-family: var(--ui); font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
-.jumps a { text-decoration: none; color: var(--ember); display: inline-flex; align-items: center; min-height: 2.5rem; }
-.jumps a:hover { text-decoration: underline; }
+.jumps a { text-decoration: none; color: var(--stone); border-bottom: 1px solid transparent; display: inline-flex; align-items: center; min-height: 2.5rem; transition: color 150ms ease, border-color 150ms ease; }
+@media (hover: hover) and (pointer: fine) { .jumps a:hover { color: var(--ink); border-bottom-color: var(--ember); } }
 .poem .stack { gap: var(--s2); }
 .poem .stack p { max-width: 52ch; }
 .poem .btns { padding-top: .3rem; }
@@ -178,7 +183,7 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .origin { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--col-gap); align-items: start; }
 .origin figure { margin: 0; }
 .origin img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; object-position: 50% 15%; }
-.bios { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+.bios { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s3); }
 .bio { border: 1px solid var(--line); background: var(--ash); padding: var(--s3); display: grid; gap: var(--s2); align-content: start; }
 .bio p { font-size: .98rem; }
 .bio .top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
@@ -209,9 +214,12 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .article-body h3 { font-size: 1.4rem; margin-top: .8rem; }
 .article-body ul, .article-body ol { padding-left: 1.2em; margin: 0; display: grid; gap: .5rem; }
 .article-body blockquote { margin: 0; padding-left: 1.2rem; border-left: 1px solid var(--ember); font-family: var(--display); font-size: 1.3rem; line-height: 1.4; }
-.article-body h2 + ul { font-size: .88rem; color: var(--stone); line-height: 1.5; padding-left: 0; list-style: none; }
-.article-body h2 + ul li { padding-left: 1.6em; text-indent: -1.6em; }
-.article-body h2 + ul a { color: var(--stone); text-decoration-color: var(--line); font-size: .92em; }
+.article-body h2:last-of-type:has(+ ul:last-child), .article-body h2:last-of-type + ul:last-child { display: none; } /* References render after the author card via .refs */
+.refs { display: grid; gap: var(--s2); border-top: 1px solid var(--line); padding-top: var(--s3); }
+.refs h2 { font-size: 1.25rem; }
+.refs ol { margin: 0; padding-left: 1.6em; display: grid; gap: .5rem; font-size: .9rem; color: var(--stone); line-height: 1.5; max-width: var(--measure); }
+.refs a { color: var(--stone); text-decoration-color: var(--line); overflow-wrap: anywhere; }
+@media (hover: hover) and (pointer: fine) { .refs a:hover { color: var(--ink); text-decoration-color: var(--ember); } }
 .author { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: var(--s3); align-items: center; border-top: 1px solid var(--line); padding-top: var(--s3); }
 .author img { width: 96px; height: 96px; object-fit: cover; object-position: 60% 20%; border-radius: 50%; }
 .author .stack { gap: .6rem; }
@@ -252,7 +260,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; }
   .hero img { aspect-ratio: 4 / 3; }
   .nav a { padding-inline: .35em; }
   .news li { grid-template-columns: 1fr; gap: .3rem; }
-  .caps { columns: 1; }
+  .bios { grid-template-columns: 1fr; }
   .photos { grid-template-columns: 1fr; }
   .nav { gap: 0; }
   .nav a { padding-inline: .45em; }

@@ -1,6 +1,7 @@
 ---
 import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
+import { splitReferences } from '../../../../lib/refs';
 import Base from '../../../../layouts/Base.astro';
 import Buttons from '../../../../components/Buttons.astro';
 import { publishedInsights, insightParams, insightPath, fmtDate } from '../../../../lib/insights';
@@ -23,6 +24,7 @@ export async function getStaticPaths() {
 const { entry, newer, older, redirectTo } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+const refs = splitReferences(entry.body ?? '');
 const og = await getImage({ src: d.image, width: 1200, height: 630, format: 'jpg' });
 const ogUrl = new URL(og.src, Astro.site).href;
 ---
@@ -52,7 +54,7 @@ const ogUrl = new URL(og.src, Astro.site).href;
       <Image src={d.image} alt={d.title} width={1600} height={800} loading="eager" fetchpriority="high" />
       {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
     </figure>
-    <div class="article-body">
+    <div class="article-body" id="body">
       <Content />
     </div>
     <aside class="author" aria-label="About the author">
@@ -63,6 +65,12 @@ const ogUrl = new URL(og.src, Astro.site).href;
         <Buttons links={[{ label: 'All insights', url: '/insights/' }, { label: 'About', url: '/about/' }, { label: 'Poetry', url: '/poetry/' }]} />
       </div>
     </aside>
+    {refs.length > 0 && (
+      <section class="refs" aria-label="References">
+        <h2>References</h2>
+        <ol>{refs.map((r) => <li set:html={r} />)}</ol>
+      </section>
+    )}
     <nav class="article-nav" aria-label="More articles">
       {older && <a href={insightPath(older)}><span class="label">Earlier article</span><span class="t">{older.data.title}</span></a>}
       {newer && <a class="later" href={insightPath(newer)}><span class="label">Later article</span><span class="t">{newer.data.title}</span></a>}

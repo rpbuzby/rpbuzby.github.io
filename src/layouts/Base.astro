@@ -49,6 +49,7 @@ const nav = [
   </head>
   <body>
     <div class="wrap">
+      <a class="skip" href="#main">Skip to content</a>
       <header class="mast">
         <a class="brand" href="/">Russell Buzby</a>
         <nav class="nav" aria-label="Site">
@@ -57,7 +58,7 @@ const nav = [
           ))}
         </nav>
       </header>
-      <main class="page">
+      <main class="page" id="main">
         <slot />
       </main>
       <footer>

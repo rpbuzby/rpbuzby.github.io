@@ -22,19 +22,35 @@ const firstMonth = first ? new Intl.DateTimeFormat('en-AU', { month: 'long', yea
       ))}
     </div>
     <div class="posts" id="posts">
-      {posts.map((e, i) => <PostCard entry={e} eager={i < 3} level={2} />)}
+      {posts.map((e, i) => <PostCard entry={e} eager={i < 3} level={2} hidden={i >= 12} />)}
     </div>
+    <div class="btns"><button class="btn" type="button" id="more">Show more</button></div>
   </section>
 </Base>
 
 <script>
+  const PAGE = 12;
   const chips = document.querySelectorAll<HTMLButtonElement>('.chip');
-  const posts = document.querySelectorAll<HTMLElement>('#posts .post');
+  const posts = [...document.querySelectorAll<HTMLElement>('#posts .post')];
+  const more = document.getElementById('more') as HTMLButtonElement;
+  let filter = 'all';
+  let limit = PAGE;
+  function matches(p: HTMLElement) { return filter === 'all' || (p.dataset.cats || '').split(' ').includes(filter); }
+  function draw() {
+    const pool = posts.filter(matches);
+    posts.forEach((p) => { p.hidden = true; });
+    pool.slice(0, limit).forEach((p) => { p.hidden = false; });
+    const left = pool.length - Math.min(limit, pool.length);
+    more.hidden = left <= 0;
+    more.textContent = left > 0 ? `Show ${Math.min(PAGE, left)} more (${left} remaining)` : 'Show more';
+  }
   function apply(f: string) {
+    filter = f; limit = PAGE;
     chips.forEach((x) => { const on = x.dataset.filter === f; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-    posts.forEach((p) => { const ok = f === 'all' || (p.dataset.cats || '').split(' ').includes(f); p.hidden = !ok; });
+    draw();
   }
   chips.forEach((c) => c.addEventListener('click', () => { const f = c.dataset.filter || 'all'; apply(f); history.replaceState(null, '', f === 'all' ? '/insights/' : `/insights/#${f}`); }));
+  more.addEventListener('click', () => { const first = posts.filter(matches)[limit]; limit += PAGE; draw(); first?.querySelector<HTMLElement>('a')?.focus(); });
   const h = location.hash.replace(/^#/, '');
-  if (h && [...chips].some((c) => c.dataset.filter === h)) apply(h);
+  apply(h && [...chips].some((c) => c.dataset.filter === h) ? h : 'all');
 </script>

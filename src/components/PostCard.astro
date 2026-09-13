@@ -7,8 +7,9 @@ interface Props {
   eager?: boolean;
   clamp?: number; // characters of summary to show; 0 = all
   level?: 2 | 3; // heading level for the title, by where the card sits
+  hidden?: boolean; // rendered hidden; the Insights page reveals in batches
 }
-const { entry, eager = false, clamp = 0, level = 3 } = Astro.props;
+const { entry, eager = false, clamp = 0, level = 3, hidden = false } = Astro.props;
 const H = level === 2 ? 'h2' : 'h3';
 const href = insightPath(entry);
 const d = entry.data;
@@ -16,7 +17,7 @@ let summary = d.summary;
 if (clamp && summary.length > clamp) summary = summary.slice(0, clamp).replace(/\s+\S*$/, '') + '…';
 const cats = d.themes.map(themeSlug).join(' ');
 ---
-<article class="post" data-cats={cats}>
+<article class="post" data-cats={cats} hidden={hidden || undefined}>
   <a class="post-img" href={href} tabindex="-1" aria-hidden="true">
     <Image src={d.image} alt="" width={640} height={427} loading={eager ? 'eager' : 'lazy'} />
   </a>

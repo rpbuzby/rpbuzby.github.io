@@ -11,6 +11,7 @@ const { data: d, Content } = await pageNote('poetry');
 const poems = (await getCollection('poems')).sort((a, b) => a.data.order - b.data.order);
 const rendered = await Promise.all(poems.map(async (p) => ({ p, Content: (await render(p)).Content })));
 const bios = [
+  { id: 'bio25', label: 'Bio – 25 words', text: d.bio25 },
   { id: 'bio50', label: 'Bio – 50 words', text: d.bio50 },
   { id: 'bio100', label: 'Bio – 100 words', text: d.bio100 },
 ].filter((b) => b.text);

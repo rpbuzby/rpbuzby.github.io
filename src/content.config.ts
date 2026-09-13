@@ -67,6 +67,8 @@ const pages = defineCollection({
       lede: z.string().optional(),
       buttons: z.array(link).optional(),
       capabilities: z.array(z.string()).optional(),
+      evidence: z.array(z.object({ label: z.string(), url: z.string(), title: z.string() })).optional(),
+      bio25: z.string().optional(),
       photos: z.array(photo).optional(),
       consulting: z.object({ title: z.string(), lede: z.string(), text: z.string(), buttons: z.array(link) }).optional(),
       poetry: z.object({ title: z.string(), lede: z.string(), text: z.string(), buttons: z.array(link) }).optional(),

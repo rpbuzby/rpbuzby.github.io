@@ -12,10 +12,10 @@ const { data: d, Content } = await pageNote('about');
       <h1>{d.headline}</h1>
       {d.lede && <p class="lede">{d.lede}</p>}
       <Content />
-      {d.capabilities && (
+      {d.evidence && (
         <>
-          <h2>Core capabilities</h2>
-          <ul class="caps">{d.capabilities.map((c) => <li>{c}</li>)}</ul>
+          <h2>How I think, in writing</h2>
+          <ul class="evidence">{d.evidence.map((e) => <li><a href={e.url}><span class="label">{e.label}</span><span class="t">{e.title}</span></a></li>)}</ul>
         </>
       )}
       <Buttons links={d.buttons} class="mt" />
