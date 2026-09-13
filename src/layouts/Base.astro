@@ -51,7 +51,7 @@ const nav = [
     <div class="wrap">
       <a class="skip" href="#main">Skip to content</a>
       <header class="mast">
-        <a class="brand" href="/">Russell Buzby</a>
+        <a class="brand" href="/" aria-current={path === '/' ? 'page' : undefined}>Russell Buzby</a>
         <nav class="nav" aria-label="Site">
           {nav.map((n) => (
             <a href={n.href} aria-current={n.match(path) ? 'page' : undefined} data-home={n.href === '/' ? '' : undefined}>{n.label}</a>
@@ -64,9 +64,7 @@ const nav = [
       <footer>
         <span>Russell Buzby · Braidwood, New South Wales</span>
         <span class="links">
-          <a href="/about/">About</a>
-          <a href="/insights/">Insights</a>
-          <a href="/poetry/">Poetry</a>
+          <a href="mailto:rpbuzby@me.com">Email</a>
           <a href="/rss.xml">RSS feed</a>
           <a href="https://www.linkedin.com/in/russell-buzby/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.instagram.com/rpbuzby/" target="_blank" rel="noopener">Instagram</a>

@@ -7,7 +7,7 @@ const ext = (u: string) => /^https?:\/\//.test(u);
 {links.length > 0 && (
   <div class:list={['btns', cls]}>
     {links.map((l, i) => (
-      <a class={i === 0 ? 'btn primary' : 'btn'} href={l.url} target={ext(l.url) ? '_blank' : undefined} rel={ext(l.url) ? 'noopener' : undefined}>{l.label}</a>
+      <a class={i === 0 ? 'btn primary' : 'btn'} href={l.url} target={ext(l.url) ? '_blank' : undefined} rel={ext(l.url) ? 'noopener' : undefined}>{l.label}{ext(l.url) && <span class="ext" aria-hidden="true">↗</span>}{ext(l.url) && <span class="sr">, opens in a new tab</span>}</a>
     ))}
   </div>
 )}

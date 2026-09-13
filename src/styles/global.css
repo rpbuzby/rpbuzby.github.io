@@ -54,6 +54,8 @@ h2 { font-size: clamp(1.5rem, 2.4vw, 1.75rem); font-weight: 600; line-height: 1.
 h3, .post-title { font-size: 1.35rem; font-weight: 600; line-height: 1.25; }
 p { margin: 0; }
 .wrap { max-width: var(--max); margin-inline: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.btn .ext { margin-left: .5em; font-size: .9em; }
 .skip { position: absolute; left: 1rem; top: -3rem; z-index: 10; background: var(--ink); color: var(--ground); padding: .6em 1em; font-family: var(--ui); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; }
 .skip:focus { top: 1rem; }
 .measure { max-width: var(--measure); }

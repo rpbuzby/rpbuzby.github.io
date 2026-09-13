@@ -31,6 +31,7 @@ themes:
   - "Emergency Management & Resilience"   # one or more of the five themes in src/content.config.ts
 image: ../../assets/insights/slug.jpg
 imageCredit: "Photo: … (optional)"
+imageAlt: "What the picture shows (optional; blank means decorative)"
 draft: false                               # true keeps it out of the build
 ```
 

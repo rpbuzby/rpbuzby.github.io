@@ -21,6 +21,7 @@ const insights = defineCollection({
       themes: z.array(z.enum(THEMES)).min(1),
       image: image(),
       imageCredit: z.string().optional(),
+      imageAlt: z.string().optional(),
       wordpress: z.string().url().optional(),
       draft: z.boolean().default(false),
       // Old URL slugs for this article (after a file rename). Each one becomes a page that forwards here.

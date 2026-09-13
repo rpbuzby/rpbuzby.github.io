@@ -51,7 +51,7 @@ const ogUrl = new URL(og.src, Astro.site).href;
       <p class="byline">Russell Buzby · Braidwood, New South Wales</p>
     </header>
     <figure class="article-hero">
-      <Image src={d.image} alt={d.title} width={1600} height={800} loading="eager" fetchpriority="high" />
+      <Image src={d.image} alt={d.imageAlt ?? ''} width={1600} height={800} loading="eager" fetchpriority="high" />
       {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
     </figure>
     <div class="article-body" id="body">
