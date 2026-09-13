@@ -1,46 +1,33 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import hose from '../assets/site/rfs-hose.jpg';
-import radio from '../assets/site/rfs-radio.jpg';
+import Buttons from '../components/Buttons.astro';
+import { pageNote, sitePhoto } from '../lib/site';
+
+const { data: d, Content } = await pageNote('about');
 ---
-<Base title="About" description="Twenty years of helping leaders and organisations work through complexity, across government consulting, higher education leadership and financial services.">
+<Base title={d.title} description={d.description ?? d.lede ?? d.headline}>
   <section class="about-grid">
     <div class="prose">
-      <h1>Twenty years of helping leaders and organisations work through complexity.</h1>
-      <p class="lede">My career has taken me across government consulting, higher education leadership, and financial services, and the common thread has always been the same: translating intent into practical, sustainable outcomes.</p>
-
-      <h2>What I do now</h2>
-      <p>I’m a Senior Manager at Parbery Consulting in the Change and Communications team, where I support clients across the Commonwealth with advice on complex reform, project management and benefits realisation. My work typically involves helping senior leaders clarify direction, engage stakeholders, manage risk and move from policy intent to operational reality.</p>
-      <p>I’ve led enterprise-wide change and readiness programs, strategic communications, business readiness and stakeholder engagement across Defence and other Commonwealth environments, including work connected to the Defence Strategic Review and National Defence Strategy.</p>
-
-      <h2>Where I’ve been</h2>
-      <p>Before consulting, I held executive leadership roles in higher education, where I led major business and ICT systems transformation including enterprise platform implementation, operating model improvement and significant capital projects. Earlier in my career I worked in legal and compliance management in financial services.</p>
-      <p>This breadth of experience gives me a perspective that most consultants in a single lane don’t have. I understand governance, risk, delivery, communications and stakeholder dynamics not as separate disciplines but as interconnected parts of the same challenge.</p>
-
-      <h2>Beyond the boardroom</h2>
-      <p>I’m also a Captain in the NSW Rural Fire Service, serving on Yuin country. The fireground has shaped how I think about leadership, decision-making and communication in ways that no boardroom ever could. When lives and property are on the line, you learn to think clearly under pressure, communicate with precision and lead people through uncertainty with calm authority.</p>
-      <p>I bring that same approach to my consulting work: a bias toward action, sound judgement under pressure, and a focus on outcomes that are credible and grounded in operational reality.</p>
-
-      <h2>Core capabilities</h2>
-      <ul class="caps">
-        <li>Strategic advisory</li>
-        <li>Organisational change management</li>
-        <li>Governance and assurance</li>
-        <li>Stakeholder engagement</li>
-        <li>Business readiness</li>
-        <li>Program and project delivery</li>
-        <li>Strategic communications</li>
-        <li>Benefits realisation</li>
-      </ul>
-      <div class="btns" style="margin-top:.6rem">
-        <a class="btn primary" href="/insights/">Read my insights</a>
-        <a class="btn" href="/contact/">Get in touch</a>
-      </div>
+      <h1>{d.headline}</h1>
+      {d.lede && <p class="lede">{d.lede}</p>}
+      <Content />
+      {d.capabilities && (
+        <>
+          <h2>Core capabilities</h2>
+          <ul class="caps">{d.capabilities.map((c) => <li>{c}</li>)}</ul>
+        </>
+      )}
+      <Buttons links={d.buttons} class="mt" />
     </div>
     <div class="photos">
-      <figure><Image src={hose} alt="Russell Buzby with NSW Rural Fire Service" width={1000} /><figcaption>With the NSW Rural Fire Service.</figcaption></figure>
-      <figure><Image src={radio} alt="Russell Buzby on the radio in an NSW RFS vehicle" width={1000} /><figcaption>On the radio in an NSW RFS vehicle.</figcaption></figure>
+      {(d.photos ?? []).map((p) => (
+        <figure><Image src={sitePhoto(p.image)} alt={p.alt} width={1000} />{p.caption && <figcaption>{p.caption}</figcaption>}</figure>
+      ))}
     </div>
   </section>
 </Base>
+
+<style>
+  .mt { margin-top: .6rem; }
+</style>

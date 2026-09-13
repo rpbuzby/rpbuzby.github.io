@@ -1,20 +1,27 @@
 ---
 import Base from '../layouts/Base.astro';
+import Buttons from '../components/Buttons.astro';
+import { pageNote, inline } from '../lib/site';
+
+const { data: d, Content } = await pageNote('contact');
 ---
-<Base title="Contact" description="Get in touch with Russell Buzby through LinkedIn.">
+<Base title={d.title} description={d.description ?? d.lede ?? d.headline}>
   <section class="contact">
     <div class="stack">
-      <h1>Get in touch</h1>
-      <p class="lede measure">If you’d like to connect, discuss an idea, or explore working together, the best way to reach me is through LinkedIn.</p>
-      <div class="btns">
-        <a class="btn primary" href="https://www.linkedin.com/in/russell-buzby/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-      </div>
+      <h1>{d.headline}</h1>
+      {d.lede && <p class="lede measure">{d.lede}</p>}
+      <Content />
+      <Buttons links={d.buttons} />
     </div>
-    <dl>
-      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/russell-buzby/" target="_blank" rel="noopener">linkedin.com/in/russell-buzby</a></dd>
-      <dt>Instagram</dt><dd><a href="https://www.instagram.com/rpbuzby/" target="_blank" rel="noopener">@rpbuzby</a>, poems read aloud</dd>
-      <dt>Poetry</dt><dd>Bios and photograph for editors are on the <a href="/poetry/">Poetry page</a>. Submissions correspondence by email.</dd>
-      <dt>Based</dt><dd>Braidwood, southern tablelands of New South Wales</dd>
-    </dl>
+    {d.details && (
+      <dl>
+        {d.details.map((x) => (
+          <>
+            <dt>{x.label}</dt>
+            <dd set:html={inline(x.text)} />
+          </>
+        ))}
+      </dl>
+    )}
   </section>
 </Base>

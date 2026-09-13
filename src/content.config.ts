@@ -50,4 +50,37 @@ const news = defineCollection({
   }),
 });
 
-export const collections = { insights, poems, news };
+// Fixed pages: home, about, poetry, contact. Each note's frontmatter holds the
+// structured bits (headline, buttons, captions); the body is the prose.
+const link = z.object({ label: z.string(), url: z.string() });
+const photo = z.object({ image: z.string(), alt: z.string(), caption: z.string().optional() });
+const pages = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+  schema: z
+    .object({
+      title: z.string().optional(),
+      headline: z.string(),
+      description: z.string().optional(),
+      byline: z.string().optional(),
+      lede: z.string().optional(),
+      buttons: z.array(link).optional(),
+      capabilities: z.array(z.string()).optional(),
+      photos: z.array(photo).optional(),
+      consulting: z.object({ title: z.string(), lede: z.string(), text: z.string(), buttons: z.array(link) }).optional(),
+      poetry: z.object({ title: z.string(), lede: z.string(), text: z.string(), buttons: z.array(link) }).optional(),
+      epigraph: z.string().optional(),
+      epigraph_cite: z.array(z.string()).optional(),
+      headshot: photo.optional(),
+      gallery: z.array(photo).optional(),
+      origin_photo: photo.optional(),
+      instagram_buttons: z.array(link).optional(),
+      bio50: z.string().optional(),
+      bio100: z.string().optional(),
+      photograph_note: z.string().optional(),
+      contact_note: z.string().optional(),
+      details: z.array(z.object({ label: z.string(), text: z.string() })).optional(),
+    })
+    .passthrough(),
+});
+
+export const collections = { insights, poems, news, pages };

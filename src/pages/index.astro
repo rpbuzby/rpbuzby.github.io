@@ -3,51 +3,44 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import NewsList from '../components/NewsList.astro';
+import Buttons from '../components/Buttons.astro';
 import { publishedInsights } from '../lib/insights';
-import headshot from '../assets/site/headshot.jpg';
-import radio from '../assets/site/rfs-radio.jpg';
-import wiw from '../assets/site/words-in-winter.jpg';
+import { pageNote, sitePhoto } from '../lib/site';
 
+const { data: d, Content } = await pageNote('home');
 const posts = await publishedInsights();
 const latest = posts.slice(0, 3);
+const doors = [
+  { ...d.consulting!, image: sitePhoto('rfs-radio.jpg'), alt: 'Russell Buzby on the radio in an NSW RFS vehicle', pos: '50% 50%' },
+  { ...d.poetry!, image: sitePhoto('words-in-winter.jpg'), alt: 'Russell Buzby reading at the Words in Winter festival', pos: '50% 25%' },
+];
 ---
-<Base description="Russell Buzby: management consultant and change leader, NSW RFS captain, and poet, writing from Braidwood in the southern tablelands of New South Wales.">
+<Base description={d.description ?? d.lede ?? d.headline}>
   <section class="hero">
     <div class="stack">
-      <h1>Helping leaders navigate complexity and deliver benefits that last.</h1>
-      <p class="byline">Russell Buzby · Senior Manager, Parbery Consulting</p>
-      <p class="lede measure">I’m a management consultant and change leader living on Yuin country with more than 20 years of experience advising government and complex organisations through reform, transformation and implementation.</p>
-      <p class="measure">My work sits at the intersection of strategy and delivery. I help senior leaders clarify direction, engage stakeholders, manage risk and translate policy and organisational intent into practical outcomes. My background spans government consulting, executive leadership in higher education, and legal and compliance management in financial services.</p>
-      <p class="measure">Outside the boardroom, I serve as a Captain in the NSW Rural Fire Service, where I’ve learned that real leadership is tested under pressure, not in planning sessions.</p>
-      <div class="btns">
-        <a class="btn primary" href="/insights/">Read my insights</a>
-        <a class="btn" href="/contact/">Get in touch</a>
-      </div>
+      <h1>{d.headline}</h1>
+      {d.byline && <p class="byline">{d.byline}</p>}
+      {d.lede && <p class="lede measure">{d.lede}</p>}
+      <div class="stack measure"><Content /></div>
+      <Buttons links={d.buttons} />
     </div>
     <figure>
-      <Image src={headshot} alt="Russell Buzby, management consultant and change leader" width={1200} loading="eager" fetchpriority="high" />
+      <Image src={sitePhoto('headshot.jpg')} alt="Russell Buzby, management consultant and change leader" width={1200} loading="eager" fetchpriority="high" />
     </figure>
   </section>
 
   <section class="registers" aria-label="Two registers">
-    <div class="register">
-      <Image src={radio} alt="Russell Buzby on the radio in an NSW RFS vehicle" width={1000} />
-      <div class="stack">
-        <h2>Consulting</h2>
-        <p class="lede">Translating intent into practical, sustainable outcomes.</p>
-        <p>Government consulting, higher education leadership, and financial services: the common thread has always been the same. Advice on complex reform, project management and benefits realisation for clients across the Commonwealth.</p>
-        <div class="btns"><a class="btn primary" href="/about/">About my work</a><a class="btn" href="/insights/">Insights</a></div>
+    {doors.map((r) => (
+      <div class="register">
+        <Image src={r.image} alt={r.alt} width={1000} style={`object-position: ${r.pos};`} />
+        <div class="stack">
+          <h2>{r.title}</h2>
+          <p class="lede">{r.lede}</p>
+          <p>{r.text}</p>
+          <Buttons links={r.buttons} />
+        </div>
       </div>
-    </div>
-    <div class="register">
-      <Image src={wiw} alt="Russell Buzby reading at the Words in Winter festival" width={1000} style="object-position: 50% 25%;" />
-      <div class="stack">
-        <h2>Poetry</h2>
-        <p class="lede">The land, the people on it, and what fire and weather do to both.</p>
-        <p>Poems from Braidwood, in the southern tablelands of New South Wales. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize; others were shortlisted for the Bridport and Robert Gray prizes and longlisted for the Winchester Poetry Prize.</p>
-        <div class="btns"><a class="btn primary" href="/poetry/">Published and placed poems</a><a class="btn" href="https://holmgren.com.au/poem/bogong-by-russell-buzby/" target="_blank" rel="noopener">Read ‘Bogong’</a></div>
-      </div>
-    </div>
+    ))}
   </section>
 
   <section>
@@ -56,7 +49,7 @@ const latest = posts.slice(0, 3);
       <a class="more" href="/insights/">All {posts.length} articles</a>
     </div>
     <div class="featured">
-      {latest.map((e) => <PostCard entry={e} eager clamp={0} />)}
+      {latest.map((e) => <PostCard entry={e} eager />)}
     </div>
   </section>
 

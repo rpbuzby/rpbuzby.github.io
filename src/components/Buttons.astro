@@ -1,0 +1,13 @@
+---
+// A primary/secondary button pair (or more). The first link is the ember primary.
+interface Props { links?: { label: string; url: string }[]; class?: string }
+const { links = [], class: cls } = Astro.props;
+const ext = (u: string) => /^https?:\/\//.test(u);
+---
+{links.length > 0 && (
+  <div class:list={['btns', cls]}>
+    {links.map((l, i) => (
+      <a class={i === 0 ? 'btn primary' : 'btn'} href={l.url} target={ext(l.url) ? '_blank' : undefined} rel={ext(l.url) ? 'noopener' : undefined}>{l.label}</a>
+    ))}
+  </div>
+)}
