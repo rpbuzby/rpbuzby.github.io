@@ -7,7 +7,7 @@ interface Props {
   eager?: boolean;
   clamp?: number; // characters of summary to show; 0 = all
 }
-const { entry, eager = false, clamp = 220 } = Astro.props;
+const { entry, eager = false, clamp = 0 } = Astro.props;
 const href = insightPath(entry);
 const d = entry.data;
 let summary = d.summary;

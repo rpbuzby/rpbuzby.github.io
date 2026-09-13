@@ -120,7 +120,7 @@ figcaption { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em;
 .featured .post { grid-template-columns: 1fr; gap: .9rem; border-bottom: 0; padding-block: 0; }
 .featured { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
 .featured .post h3 { font-size: 1.55rem; }
-.featured .excerpt { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.featured .excerpt { display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
 .chip { font-family: var(--ui); font-size: .74rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; background: transparent; color: var(--stone); border: 1px solid var(--line); min-height: 2.5rem; padding: .4em 1em; cursor: pointer; border-radius: 999px; transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 160ms var(--ease-out); }
 .chip:active { transform: scale(.97); }

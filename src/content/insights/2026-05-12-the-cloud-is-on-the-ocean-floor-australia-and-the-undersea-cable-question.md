@@ -1,7 +1,7 @@
 ---
 title: "The Cloud is on the Ocean Floor: Australia and the undersea cable question"
 date: 2026-05-12
-summary: "Roughly 97 per cent of intercontinental internet traffic runs on seabed cables, and seventeen of them thread the Red Sea and the Strait of Hormuz. Finland answered the Baltic cable disruptions with a military and civilian framework; Australia spreads the problem across several departments and the operators, and nobody holds the integration mandate."
+summary: "Roughly 97 per cent of intercontinental internet traffic runs on seabed cables, and seventeen of them thread the Red Sea and the Strait of Hormuz. Finland answered the Baltic cable disruptions with a military and civilian framework; Australia spreads the problem across departments and nobody holds the integration mandate."
 themes:
   - "Defence"
 image: ../../assets/insights/the-cloud-is-on-the-ocean-floor-australia-and-the-undersea-cable-question.jpg
