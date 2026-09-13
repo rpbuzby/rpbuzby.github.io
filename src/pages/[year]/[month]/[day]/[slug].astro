@@ -8,17 +8,36 @@ import { sitePhoto } from '../../../../lib/site';
 
 export async function getStaticPaths() {
   const posts = await publishedInsights();
-  return posts.map((entry, i) => ({
+  const pages = posts.map((entry, i) => ({
     params: insightParams(entry),
-    props: { entry, newer: posts[i - 1] ?? null, older: posts[i + 1] ?? null },
+    props: { entry, newer: posts[i - 1] ?? null, older: posts[i + 1] ?? null, redirectTo: null as string | null },
   }));
+  const aliases = posts.flatMap((entry) =>
+    entry.data.aliases.map((alias) => ({
+      params: { ...insightParams(entry), slug: alias },
+      props: { entry, newer: null, older: null, redirectTo: insightPath(entry) },
+    })),
+  );
+  return [...pages, ...aliases];
 }
-const { entry, newer, older } = Astro.props;
+const { entry, newer, older, redirectTo } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 const og = await getImage({ src: d.image, width: 1200, height: 630, format: 'jpg' });
 const ogUrl = new URL(og.src, Astro.site).href;
 ---
+{redirectTo ? (
+  <html lang="en-AU">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="refresh" content={`0; url=${redirectTo}`} />
+      <link rel="canonical" href={new URL(redirectTo, Astro.site)} />
+      <meta name="robots" content="noindex" />
+      <title>{d.title}</title>
+    </head>
+    <body><p>This article moved to <a href={redirectTo}>{d.title}</a>.</p></body>
+  </html>
+) : (
 <Base title={d.title} description={d.summary} image={ogUrl} type="article">
   <article class="article">
     <header class="article-head">
@@ -50,3 +69,4 @@ const ogUrl = new URL(og.src, Astro.site).href;
     </nav>
   </article>
 </Base>
+)}

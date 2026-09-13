@@ -23,6 +23,8 @@ const insights = defineCollection({
       imageCredit: z.string().optional(),
       wordpress: z.string().url().optional(),
       draft: z.boolean().default(false),
+      // Old URL slugs for this article (after a file rename). Each one becomes a page that forwards here.
+      aliases: z.array(z.string()).default([]),
     }),
 });
 

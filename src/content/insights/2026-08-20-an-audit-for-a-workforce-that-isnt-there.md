@@ -5,6 +5,8 @@ summary: In one August week the health department made registered nurse coverage
 themes:
   - Change & Transformation
 image: ../../assets/insights/au-audit-for-a-workforce-that-isnt-there.jpg
+aliases:
+  - au-audit-for-a-workforce-that-isnt-there
 wordpress: https://russellbuzby.com/2026/08/20/au-audit-for-a-workforce-that-isnt-there/
 ---
 By 2035, on our own health department’s modelling, Australia will be short 70,707 full-time-equivalent nurses. The National Nursing Workforce Strategy that published the number on 6 August translates it into people: around 79,473 nurses needed to fill the gap (Department of Health, Disability and Ageing \[DHDA\], 2026c). Two days before the strategy appeared, the same department confirmed that registered nurse coverage in residential aged care is now an externally audited figure (DHDA, 2026a). One working week, one workforce, both halves of a contradiction.

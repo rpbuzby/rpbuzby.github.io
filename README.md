@@ -11,7 +11,7 @@ Static site built with [Astro](https://astro.build), content in markdown, deploy
 | Poetry news | `src/content/news/YYYY-MM-title.md` |
 | Fixed pages (home, about, poetry, contact) | `src/content/pages/*.md` (the words); `src/pages/*.astro` (the layout) |
 | Design tokens and all CSS | `src/styles/global.css` |
-| Article URL scheme | `/YYYY/MM/DD/slug/` (same as WordPress; the filename date and slug set it) |
+| Article URL scheme | `/YYYY/MM/DD/slug/` (same as WordPress; the filename date and slug set it). **Renaming a file changes its address**: add the old slug under `aliases:` in the frontmatter so shared links keep working |
 
 ## Publish an article from the vault
 
