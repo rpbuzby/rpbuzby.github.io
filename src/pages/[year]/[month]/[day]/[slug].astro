@@ -35,7 +35,7 @@ const ogUrl = new URL(og.src, Astro.site).href;
       <meta name="robots" content="noindex" />
       <title>{d.title}</title>
     </head>
-    <body><p>This article moved to <a href={redirectTo}>{d.title}</a>.</p></body>
+    <body><p>This article has a new address: <a href={redirectTo}>{d.title}</a>.</p></body>
   </html>
 ) : (
 <Base title={d.title} description={d.summary} image={ogUrl} type="article">
@@ -64,8 +64,8 @@ const ogUrl = new URL(og.src, Astro.site).href;
       </div>
     </aside>
     <nav class="article-nav" aria-label="More articles">
-      {older && <a href={insightPath(older)}><span class="label">Earlier</span><span class="t">{older.data.title}</span></a>}
-      {newer && <a class="later" href={insightPath(newer)}><span class="label">Later</span><span class="t">{newer.data.title}</span></a>}
+      {older && <a href={insightPath(older)}><span class="label">Earlier article</span><span class="t">{older.data.title}</span></a>}
+      {newer && <a class="later" href={insightPath(newer)}><span class="label">Later article</span><span class="t">{newer.data.title}</span></a>}
     </nav>
   </article>
 </Base>

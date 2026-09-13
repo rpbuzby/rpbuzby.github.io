@@ -87,7 +87,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
     <div class="bios">
       {bios.map((b) => (
         <div class="bio">
-          <div class="top"><h3>{b.label}</h3><button class="copy" type="button" data-copy={b.id} id={`copy-${b.id}`} aria-live="polite">Copy</button></div>
+          <div class="top"><h3>{b.label}</h3><button class="copy" type="button" data-copy={b.id} id={`copy-${b.id}`} aria-live="polite" aria-label={`Copy the ${b.label.toLowerCase()}`}>Copy</button></div>
           <p id={b.id}>{b.text}</p>
         </div>
       ))}
@@ -103,8 +103,8 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
   document.querySelectorAll<HTMLButtonElement>('.copy').forEach((b) => {
     b.addEventListener('click', () => {
       const t = document.getElementById(b.dataset.copy!)?.textContent ?? '';
-      const done = () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1600); };
-      if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, done); else done();
+      const show = (msg: string) => { b.textContent = msg; setTimeout(() => { b.textContent = 'Copy'; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(() => show('Copied'), () => show('Select and copy')); else show('Select and copy');
     });
   });
 </script>

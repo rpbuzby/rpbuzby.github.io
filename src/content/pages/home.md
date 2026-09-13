@@ -11,13 +11,13 @@ consulting:
   text: "Government consulting, higher education leadership, and financial services: the common thread has always been the same. Advice on complex reform, project management and benefits realisation for clients across the Commonwealth."
   buttons:
     - { label: "About my work", url: "/about/" }
-    - { label: "Insights", url: "/insights/" }
+    - { label: "Read the insights", url: "/insights/" }
 poetry:
   title: "Poetry"
   lede: "The land, the people on it, and what fire and weather do to both."
   text: "Poems from Braidwood, in the southern tablelands of New South Wales. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize; others were shortlisted for the Bridport and Robert Gray prizes and longlisted for the Winchester Poetry Prize."
   buttons:
-    - { label: "Published and placed poems", url: "/poetry/" }
+    - { label: "The poems", url: "/poetry/" }
     - { label: "Read ‘Bogong’", url: "https://holmgren.com.au/poem/bogong-by-russell-buzby/" }
 ---
 I advise Commonwealth leaders on complex change at Parbery Consulting, and I turn out with the Braidwood bushfire brigade when the pager goes. My poems have started to travel too: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize.

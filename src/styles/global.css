@@ -136,7 +136,6 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .chip.is-on { background: var(--ink); color: var(--ground); border-color: var(--ink); }
 .chip.is-on span { color: color-mix(in srgb, var(--ground) 70%, transparent); }
 .post[hidden] { display: none; }
-.empty { color: var(--stone); padding-block: 2rem; }
 
 /* news */
 .news ul { margin: 0; padding: 0; }

@@ -15,7 +15,7 @@ const firstMonth = first ? new Intl.DateTimeFormat('en-AU', { month: 'long', yea
       <h1>Insights</h1>
       <p class="lede measure">Writing on emergency management, AI in government, Defence, and change: {posts.length} articles since {firstMonth}.</p>
     </div>
-    <div class="chips" role="group" aria-label="Filter by theme">
+    <div class="chips" role="group" aria-label="Show articles by theme">
       <button class="chip is-on" type="button" data-filter="all" aria-pressed="true">All <span>{posts.length}</span></button>
       {counts.map((c) => (
         <button class="chip" type="button" data-filter={c.slug} aria-pressed="false">{c.t} <span>{c.n}</span></button>
@@ -24,19 +24,15 @@ const firstMonth = first ? new Intl.DateTimeFormat('en-AU', { month: 'long', yea
     <div class="posts" id="posts">
       {posts.map((e, i) => <PostCard entry={e} eager={i < 3} level={2} />)}
     </div>
-    <p class="empty" id="empty" hidden>No articles in that theme yet.</p>
   </section>
 </Base>
 
 <script>
   const chips = document.querySelectorAll<HTMLButtonElement>('.chip');
   const posts = document.querySelectorAll<HTMLElement>('#posts .post');
-  const empty = document.getElementById('empty')!;
   function apply(f: string) {
     chips.forEach((x) => { const on = x.dataset.filter === f; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-    let shown = 0;
-    posts.forEach((p) => { const ok = f === 'all' || (p.dataset.cats || '').split(' ').includes(f); p.hidden = !ok; if (ok) shown++; });
-    empty.hidden = shown > 0;
+    posts.forEach((p) => { const ok = f === 'all' || (p.dataset.cats || '').split(' ').includes(f); p.hidden = !ok; });
   }
   chips.forEach((c) => c.addEventListener('click', () => { const f = c.dataset.filter || 'all'; apply(f); history.replaceState(null, '', f === 'all' ? '/insights/' : `/insights/#${f}`); }));
   const h = location.hash.replace(/^#/, '');
