@@ -1,7 +1,7 @@
 ---
 title: "The Case for Burning Never Needed the Smoke Number"
 date: 2026-08-14
-summary: "A Stanford-led study indicated that prescribed burning in the western U.S. reduced wildfire severity and emissions. However, Mark Kreider raised concerns about the study’s methodology, suggesting it overestimated benefits. Despite this dispute, key researchers support prescribed fire for forest management, noting the need for clarity in public claims regarding smoke emissions."
+summary: "A Stanford-led study indicated that prescribed burning in the western US reduced wildfire severity and emissions. However, Mark Kreider raised concerns about the study’s methodology, suggesting it overestimated benefits. Despite this dispute, key researchers support prescribed fire for forest management, noting the need for clarity in public claims regarding smoke emissions."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/the-case-for-burning-never-needed-the-smoke-number.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Half the Forest That Burns, on a Handful of Days: Heatwaves as the dominant forest fire driver"
 date: 2026-07-10
-summary: "A recent study highlights that from 2001 to 2024, 42% of forest fires in the western U.S. occurred during or after heatwaves, despite heatwaves constituting only 12-15% of warm days. This underscores the need for targeted fire management strategies, as heatwaves significantly amplify fire risks in forested areas."
+summary: "A recent study highlights that from 2001 to 2024, 42% of forest fires in the western US occurred during or after heatwaves, despite heatwaves constituting only 12-15% of warm days. This underscores the need for targeted fire management strategies, as heatwaves significantly amplify fire risks in forested areas."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/half-the-forest-that-burns-on-a-handful-of-days-heatwaves-as-the-dominant-forest-fire-driver.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Seven Thousand Kilometres Past the Press Conference"
 date: 2026-07-16
-summary: "On July 6, Anthony Albanese and Sitiveni Rabuka signed treaties solidifying Australia and Fiji’s defense collaboration and over A$1 billion in investment. Hours later, China conducted a provocative missile test in the South Pacific, raising concerns among regional leaders about stability and the implications for Australia’s expanding alliances."
+summary: "On July 6, Anthony Albanese and Sitiveni Rabuka signed treaties solidifying Australia and Fiji’s defence collaboration and over A$1 billion in investment. Hours later, China conducted a provocative missile test in the South Pacific, raising concerns among regional leaders about stability and the implications for Australia’s expanding alliances."
 themes:
   - "Defence"
 image: ../../assets/insights/seven-thousand-kilometres-past-the-press-conference.jpg

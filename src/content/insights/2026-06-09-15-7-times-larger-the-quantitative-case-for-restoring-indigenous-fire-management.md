@@ -1,7 +1,7 @@
 ---
 title: "15.7 Times Larger: The quantitative case for restoring Indigenous fire management"
 date: 2026-06-09
-summary: "A Zenodo deposit reveals that wildfires on California tribal lands were 15.7 times larger than those on non-tribal lands from 2000 to 2018, resulting from a century of suppressed Indigenous burning practices. This study emphasizes the need for adopting Indigenous fire management to better address wildfire risks and improve environmental health."
+summary: "A Zenodo deposit reveals that wildfires on California tribal lands were 15.7 times larger than those on non-tribal lands from 2000 to 2018, resulting from a century of suppressed Indigenous burning practices. This study emphasises the need for adopting Indigenous fire management to better address wildfire risks and improve environmental health."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/15-7-times-larger-the-quantitative-case-for-restoring-indigenous-fire-management.jpg

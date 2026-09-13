@@ -1,7 +1,7 @@
 ---
 title: "When the Risk Map Moves 61% in One Update: Wildfire modelling and the limits of periodic assessment"
 date: 2026-07-14
-summary: "A recent update to the U.S. Forest Service’s wildfire simulation model dramatically revised risk assessments, increasing building exposure in the East by 61% and reducing it by 9% in the West. This shift highlights the urgent need for updated frameworks that account for rapidly changing wildfire risks and ozone-related health impacts."
+summary: "A recent update to the US Forest Service’s wildfire simulation model dramatically revised risk assessments, increasing building exposure in the East by 61% and reducing it by 9% in the West. This shift highlights the urgent need for updated frameworks that account for rapidly changing wildfire risks and ozone-related health impacts."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/when-the-risk-map-moves-61-in-one-update-wildfire-modelling-and-the-limits-of-periodic-assessment.jpg

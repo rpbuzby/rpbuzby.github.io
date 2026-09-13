@@ -1,7 +1,7 @@
 ---
 title: "The New Agency Is the Easy Part"
 date: 2026-07-30
-summary: "On July 1, 2026, Australia announced the creation of the Defence Delivery Agency (DDA) to reform its defense procurement system after the Defence Materiel Organisation’s dissolution in 2015. This agency aims for rapid, iterative capability delivery. However, concerns remain regarding governance risks and whether these reforms will genuinely improve defense industry capabilities."
+summary: "On July 1, 2026, Australia announced the creation of the Defence Delivery Agency (DDA) to reform its defence procurement system after the Defence Materiel Organisation’s dissolution in 2015. This agency aims for rapid, iterative capability delivery. However, concerns remain regarding governance risks and whether these reforms will genuinely improve defence industry capabilities."
 themes:
   - "Defence"
 image: ../../assets/insights/the-new-agency-is-the-easy-part.jpg

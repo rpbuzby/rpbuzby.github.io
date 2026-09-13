@@ -1,7 +1,7 @@
 ---
 title: "Northern NSW, Pyrocumulonimbus, and the AI Forecasting Test"
 date: 2026-06-04
-summary: "A recent study projects an increase in pyrocumulonimbus events in southeastern Australia due to climate change, particularly in northern New South Wales. It emphasizes the need for better allocation of research and resources. Additionally, two other studies highlight challenges in wildfire prediction and detection, urging more comprehensive evaluation methods for AI tools in emergency management."
+summary: "A recent study projects an increase in pyrocumulonimbus events in southeastern Australia due to climate change, particularly in northern New South Wales. It emphasises the need for better allocation of research and resources. Additionally, two other studies highlight challenges in wildfire prediction and detection, urging more comprehensive evaluation methods for AI tools in emergency management."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/northern-nsw-pyrocumulonimbus-and-the-ai-forecasting-test.jpg

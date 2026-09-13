@@ -1,7 +1,7 @@
 ---
 title: "The Switch Is in Another Country: Australia’s AI sovereignty and the day the access was cut"
 date: 2026-07-08
-summary: "The U.S. directive to Anthropic to block foreign access to its AI models prompted a shutdown affecting users worldwide, highlighting Australia’s dependency on foreign AI. This incident shifted the conversation from safety to sovereignty, urging institutions to assess their reliance on foreign-controlled AI systems and prepare for potential access restrictions."
+summary: "The US directive to Anthropic to block foreign access to its AI models prompted a shutdown affecting users worldwide, highlighting Australia’s dependency on foreign AI. This incident shifted the conversation from safety to sovereignty, urging institutions to assess their reliance on foreign-controlled AI systems and prepare for potential access restrictions."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-switch-is-in-another-country-australias-ai-sovereignty-and-the-day-the-access-was-cut.jpg

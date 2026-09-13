@@ -1,7 +1,7 @@
 ---
 title: "You Cannot Get the Skill Back by Taking the Tool Away"
 date: 2026-08-10
-summary: "The Australian Public Service is projected to decrease staffing levels significantly over the next decade, raising concerns about the impacts of automation on employee competence. New research indicates that previous skills may not be recoverable once reliance on automation exceeds a certain threshold, emphasizing the importance of careful sequencing in tool adoption to maintain essential capabilities."
+summary: "The Australian Public Service is projected to decrease staffing levels significantly over the next decade, raising concerns about the impacts of automation on employee competence. New research indicates that previous skills may not be recoverable once reliance on automation exceeds a certain threshold, emphasising the importance of careful sequencing in tool adoption to maintain essential capabilities."
 themes:
   - "AI in Government"
 image: ../../assets/insights/you-cannot-get-the-skill-back-by-taking-the-tool-away.jpg

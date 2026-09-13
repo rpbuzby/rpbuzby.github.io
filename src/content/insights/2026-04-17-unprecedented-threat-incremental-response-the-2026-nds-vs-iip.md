@@ -1,7 +1,7 @@
 ---
 title: "Unprecedented Threat, Incremental Response: The 2026 NDS vs IIP"
 date: 2026-04-17
-summary: "The 2026 National Defence Strategy highlights Australia’s perilous strategic environment, emphasizing self-reliance amid increasing military coercion. While committing $425 billion to capability investment, discrepancies arise between strategy and funding priorities. Critics argue the approach lacks transformative change, raising concerns about Australia’s ability to meet unprecedented threats effectively."
+summary: "The 2026 National Defence Strategy highlights Australia’s perilous strategic environment, emphasising self-reliance amid increasing military coercion. While committing $425 billion to capability investment, discrepancies arise between strategy and funding priorities. Critics argue the approach lacks transformative change, raising concerns about Australia’s ability to meet unprecedented threats effectively."
 themes:
   - "Defence"
 image: ../../assets/insights/unprecedented-threat-incremental-response-the-2026-nds-vs-iip.jpg

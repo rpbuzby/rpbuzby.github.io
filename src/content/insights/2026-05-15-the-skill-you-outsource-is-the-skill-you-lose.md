@@ -1,7 +1,7 @@
 ---
 title: "The Skill You Outsource is the Skill You Lose"
 date: 2026-05-15
-summary: "The rise of AI delegation in professional settings is leading to a significant erosion of cognitive skills, similar to how GPS reliance diminishes spatial memory. As organizations increasingly depend on AI, the risk of becoming locked into low-skill equilibria grows, complicating future reversals. Firms must prioritize maintaining human expertise alongside AI to sustain competitive advantages."
+summary: "The rise of AI delegation in professional settings is leading to a significant erosion of cognitive skills, similar to how GPS reliance diminishes spatial memory. As organisations increasingly depend on AI, the risk of becoming locked into low-skill equilibria grows, complicating future reversals. Firms must prioritise maintaining human expertise alongside AI to sustain competitive advantages."
 themes:
   - "AI in Government"
   - "Change & Transformation"

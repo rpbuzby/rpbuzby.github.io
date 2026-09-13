@@ -1,7 +1,7 @@
 ---
 title: "Role Migration: When the Forecast Becomes the Clearance"
 date: 2026-08-19
-summary: "A recent framework paper introduces the “decision role migration problem,” highlighting how AI outputs used for predictions can become accepted as authoritative, affecting safety decisions. Institutional pressures and inadequate governance exacerbate risks, necessitating explicit validation and accountability measures for AI deployments, especially in safety-critical domains like urban fire management and defense."
+summary: "A recent framework paper introduces the “decision role migration problem,” highlighting how AI outputs used for predictions can become accepted as authoritative, affecting safety decisions. Institutional pressures and inadequate governance exacerbate risks, necessitating explicit validation and accountability measures for AI deployments, especially in safety-critical domains like urban fire management and defence."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/role-migration-when-the-forecast-becomes-the-clearance.jpg

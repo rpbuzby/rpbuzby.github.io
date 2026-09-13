@@ -1,7 +1,7 @@
 ---
 title: "A Fire That Stopped at the Burn Line: The operational case for prescribed and cultural burning"
 date: 2026-06-26
-summary: "In late May, a bushfire in Victoria was contained thanks to a prior planned burn, highlighting the effectiveness of prescribed burning. Amid warnings of an early bushfire season, the case emphasizes the need for operational evidence supporting cultural and ecological burning practices. Coordination and incentive structures are critical for broader implementation."
+summary: "In late May, a bushfire in Victoria was contained thanks to a prior planned burn, highlighting the effectiveness of prescribed burning. Amid warnings of an early bushfire season, the case emphasises the need for operational evidence supporting cultural and ecological burning practices. Coordination and incentive structures are critical for broader implementation."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/a-fire-that-stopped-at-the-burn-line-the-operational-case-for-prescribed-and-cultural-burning.jpg

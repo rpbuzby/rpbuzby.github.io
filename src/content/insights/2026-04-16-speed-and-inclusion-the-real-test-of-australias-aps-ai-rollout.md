@@ -1,7 +1,7 @@
 ---
 title: "Speed and Inclusion: The real test of Australia’s APS AI rollout"
 date: 2026-04-16
-summary: "In March 2026, Australia’s Reason Group secured a $4.6 million AI contract, indicating a shift towards local SMEs in public sector procurement. The Australian Public Service (APS) is accelerating its AI rollout, but risks emerge from rapid deployment without ensuring equitable design, particularly for marginalized communities. Future decisions will influence true capability uplift versus existing service gaps."
+summary: "In March 2026, Australia’s Reason Group secured a $4.6 million AI contract, indicating a shift towards local SMEs in public sector procurement. The Australian Public Service (APS) is accelerating its AI rollout, but risks emerge from rapid deployment without ensuring equitable design, particularly for marginalised communities. Future decisions will influence true capability uplift versus existing service gaps."
 themes:
   - "AI in Government"
 image: ../../assets/insights/speed-and-inclusion-the-real-test-of-australias-aps-ai-rollout.jpg

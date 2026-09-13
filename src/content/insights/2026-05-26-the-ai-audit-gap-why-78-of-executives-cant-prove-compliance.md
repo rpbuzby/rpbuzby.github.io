@@ -1,7 +1,7 @@
 ---
 title: "The AI Audit Gap: Why 78% of executives can’t prove compliance"
 date: 2026-05-26
-summary: "The 2026 AI Impact Survey reveals that 78% of executives doubt their ability to pass an AI governance audit. Current frameworks emphasize structural issues over procedural ones, with many relying on inadequate behavioral assurance. Different regulatory approaches globally highlight the persistent verification gap in AI compliance, complicating procurement and consulting practices."
+summary: "The 2026 AI Impact Survey reveals that 78% of executives doubt their ability to pass an AI governance audit. Current frameworks emphasise structural issues over procedural ones, with many relying on inadequate behavioural assurance. Different regulatory approaches globally highlight the persistent verification gap in AI compliance, complicating procurement and consulting practices."
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-ai-audit-gap-why-78-of-executives-cant-prove-compliance.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Negative Capability for $700 Million: The Collins-class LOTE as a program governance failure"
 date: 2026-06-02
-summary: "Australia’s National Audit Office reported that nearly A$700 million spent on the Collins-class submarine upgrade has resulted in reduced capability and availability. The Albanese government has committed A$11 billion for further upgrades. Concerns arise about the defense program’s governance, capacity for nuclear operations, and the implications of a potentially flawed planning process."
+summary: "Australia’s National Audit Office reported that nearly A$700 million spent on the Collins-class submarine upgrade has resulted in reduced capability and availability. The Albanese government has committed A$11 billion for further upgrades. Concerns arise about the defence program’s governance, capacity for nuclear operations, and the implications of a potentially flawed planning process."
 themes:
   - "Defence"
 image: ../../assets/insights/negative-capability-for-700-million-the-collins-class-lote-as-a-program-governance-failure.jpg

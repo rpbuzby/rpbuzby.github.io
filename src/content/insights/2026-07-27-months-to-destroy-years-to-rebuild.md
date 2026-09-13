@@ -1,7 +1,7 @@
 ---
 title: "Months to Destroy, Years to Rebuild"
 date: 2026-07-27
-summary: "The 2026 Budget Paper reveals a substantial effort by the Australian Government to restore public service capacity after previous restructures depleted essential expertise. While over 11,800 roles were added, concerns arise that knowledge losses from these changes could hinder future capabilities, emphasizing the need for honest assessments of restructuring impacts."
+summary: "The 2026 Budget Paper reveals a substantial effort by the Australian Government to restore public service capacity after previous restructures depleted essential expertise. While over 11,800 roles were added, concerns arise that knowledge losses from these changes could hinder future capabilities, emphasising the need for honest assessments of restructuring impacts."
 themes:
   - "Change & Transformation"
 image: ../../assets/insights/months-to-destroy-years-to-rebuild.jpg

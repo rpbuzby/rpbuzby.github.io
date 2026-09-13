@@ -1,7 +1,7 @@
 ---
 title: "Finer Forecasts, the Same Fire Ground"
 date: 2026-08-07
-summary: "On July 27, Australia successfully tested its AusAlert system, achieving a 94% broadcasting rate across mobile towers. Despite technological advancements, the effectiveness hinges on adequate training for incident controllers. Additionally, while predictive models for fire management improve, practical implementation remains slow, emphasizing the need for enhanced preparation and community communication."
+summary: "On July 27, Australia successfully tested its AusAlert system, achieving a 94% broadcasting rate across mobile towers. Despite technological advancements, the effectiveness hinges on adequate training for incident controllers. Additionally, while predictive models for fire management improve, practical implementation remains slow, emphasising the need for enhanced preparation and community communication."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/finer-forecasts-the-same-fire-ground.jpg

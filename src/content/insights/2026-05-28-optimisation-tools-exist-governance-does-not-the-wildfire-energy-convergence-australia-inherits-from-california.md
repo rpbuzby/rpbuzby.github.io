@@ -1,7 +1,7 @@
 ---
 title: "Optimisation Tools Exist, Governance Does Not: The wildfire-energy convergence Australia inherits from California"
 date: 2026-05-28
-summary: "California is facing its 2026 fire season with unprecedented battery storage but continues to implement Public Safety Power Shutoffs as a precaution against wildfire risks. Research highlights the need for optimized infrastructure planning that integrates energy, emergency, and land use policies, yet governance structures remain fragmented, limiting effective action amid rising wildfire threats."
+summary: "California is facing its 2026 fire season with unprecedented battery storage but continues to implement Public Safety Power Shutoffs as a precaution against wildfire risks. Research highlights the need for optimised infrastructure planning that integrates energy, emergency, and land use policies, yet governance structures remain fragmented, limiting effective action amid rising wildfire threats."
 themes:
   - "Emergency Management & Resilience"
 image: ../../assets/insights/optimisation-tools-exist-governance-does-not-the-wildfire-energy-convergence-australia-inherits-from-california.jpg

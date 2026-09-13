@@ -1,7 +1,7 @@
 ---
 title: "Reforms Without Scrutiny: Concentrating defence acquisition authority as oversight retreats"
 date: 2026-04-15
-summary: "On March 6, 2026, the Joint Committee of Public Accounts and Audit ceased the Major Projects Report, which had provided crucial oversight on Australia’s defense acquisition programs. Concurrently, the new Defence Delivery Agency was created to streamline operations. The lack of independent scrutiny raises concerns about the effectiveness of this reform."
+summary: "On March 6, 2026, the Joint Committee of Public Accounts and Audit ceased the Major Projects Report, which had provided crucial oversight on Australia’s defence acquisition programs. Concurrently, the new Defence Delivery Agency was created to streamline operations. The lack of independent scrutiny raises concerns about the effectiveness of this reform."
 themes:
   - "Change & Transformation"
 image: ../../assets/insights/reforms-without-scrutiny-concentrating-defence-acquisition-authority-as-oversight-retreats.jpg

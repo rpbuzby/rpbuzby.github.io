@@ -1,7 +1,7 @@
 ---
 title: "Deeper In: Australia’s Microsoft bill and the sovereignty it keeps announcing"
 date: 2026-08-05
-summary: "In July 2026, Australian federal agencies signed over A$1 billion in Microsoft contracts, primarily for multi-year subscription renewals. This centralization, while financially beneficial, raises concerns about dependency on a single vendor for critical digital services. The government’s conflicting commitment to AI sovereignty is questioned, particularly regarding future procurement strategies."
+summary: "In July 2026, Australian federal agencies signed over A$1 billion in Microsoft contracts, primarily for multi-year subscription renewals. This centralisation, while financially beneficial, raises concerns about dependency on a single vendor for critical digital services. The government’s conflicting commitment to AI sovereignty is questioned, particularly regarding future procurement strategies."
 themes:
   - "AI in Government"
 image: ../../assets/insights/deeper-in-australias-microsoft-bill-and-the-sovereignty-it-keeps-announcing.jpg
