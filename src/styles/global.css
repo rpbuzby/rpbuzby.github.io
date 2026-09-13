@@ -36,7 +36,7 @@ time, .status, .log { font-variant-numeric: tabular-nums; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--ground); color: var(--ink);
-  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
   padding-inline: clamp(16px, 4vw, 40px); padding-block: 0;
   -webkit-font-smoothing: antialiased;
 }
@@ -91,7 +91,7 @@ section { display: grid; gap: 1.6rem; }
 /* hero */
 .hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: stretch; }
 .hero .stack { gap: 1.4rem; }
-.hero h1 { max-width: 18ch; }
+.hero h1 { max-width: none; }
 .hero figure { margin: 0; display: flex; }
 .hero img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; object-position: 50% 30%; }
 figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); margin-top: .6rem; line-height: 1.5; }
@@ -111,7 +111,7 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 
 /* posts */
 .posts { display: grid; gap: 0; }
-.post { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 1.4rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+.post { display: grid; grid-template-columns: minmax(160px, 24%) minmax(0, 1fr); gap: 1.4rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
 .post-img { display: block; background: var(--ash); aspect-ratio: 3 / 2; overflow: hidden; }
 .post-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85); transition: filter 200ms ease; }
 @media (hover: hover) and (pointer: fine) { .post:hover .post-img img { filter: saturate(1); } }
@@ -152,7 +152,7 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 
 /* poetry */
 .epigraph { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; }
-.epigraph blockquote { position: relative; margin: 1.2rem 0 0; padding-left: 1.6rem; border-left: 1px solid var(--ember); font-family: var(--display); font-style: italic; font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.35; font-weight: 400; max-width: 32ch; }
+.epigraph blockquote { position: relative; margin: 1.2rem 0 0; padding-left: 1.6rem; border-left: 1px solid var(--ember); font-family: var(--display); font-style: italic; font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.35; font-weight: 400; max-width: 40ch; }
 .epigraph blockquote::before { content: "“"; position: absolute; left: -.55em; top: -.15em; color: var(--ember); font-size: 2.2em; line-height: 1; background: var(--ground); padding-inline: .1em; }
 .epigraph cite { display: block; font-style: normal; font-family: var(--ui); font-size: .9rem; color: var(--stone); margin-top: 1.4rem; line-height: 1.6; }
 .epigraph img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 60% 20%; }
@@ -178,7 +178,7 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .bio p { font-size: .98rem; }
 .bio .top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .bio h3 { font-family: var(--ui); font-size: .76rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--stone); }
-.copy { font-family: var(--ui); font-size: .72rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; background: transparent; border: 1px solid var(--line); color: var(--stone); min-height: 2.25rem; padding: .3em .9em; cursor: pointer; transition: color 150ms ease, border-color 150ms ease, transform 160ms var(--ease-out); }
+.copy { font-family: var(--ui); font-size: .72rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; background: transparent; border: 1px solid var(--line); color: var(--stone); min-height: 2.5rem; padding: .3em .9em; cursor: pointer; transition: color 150ms ease, border-color 150ms ease, transform 160ms var(--ease-out); }
 .copy:active { transform: scale(.97); }
 @media (hover: hover) and (pointer: fine) { .copy:hover { color: var(--ink); border-color: var(--ink); } }
 .meta-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
@@ -229,7 +229,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; }
   .hero, .about-grid, .epigraph, .origin, .contact, .poem { grid-template-columns: 1fr; }
   .hero { align-items: start; }
   .hero figure { order: -1; }
-  .hero img { height: auto; min-height: 0; aspect-ratio: 4 / 3; }
+  .hero img { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
   .registers, .bios, .gallery { grid-template-columns: 1fr; }
   .register + .register { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 2rem; margin-top: 2rem; }
   .register:first-child { padding-right: 0; }
@@ -239,9 +239,11 @@ footer .links { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; }
   .origin img { aspect-ratio: 4 / 3; }
 }
 @media (max-width: 560px) {
-  body { font-size: 16px; }
+  body { font-size: 1rem; }
   .post { grid-template-columns: 1fr; gap: .8rem; }
   .post-img { aspect-ratio: 2 / 1; }
+  .hero img { aspect-ratio: 4 / 3; }
+  .nav a { padding-inline: .35em; }
   .news li { grid-template-columns: 1fr; gap: .3rem; }
   .caps { columns: 1; }
   .photos { grid-template-columns: 1fr; }
