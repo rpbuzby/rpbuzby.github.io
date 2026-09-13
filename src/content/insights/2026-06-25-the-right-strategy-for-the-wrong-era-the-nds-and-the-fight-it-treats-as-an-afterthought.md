@@ -26,18 +26,11 @@ The hardest implication comes from the emerging work on what some researchers ca
 None of this makes the 2026 strategy a bad document. It is a serious piece of work that reads the threat more honestly than anything Canberra has produced in a decade. The trouble is narrower and more uncomfortable. A strategy can be right about the adversary and still be built for the wrong era if it prepares for the last war’s information environment while the next one is already being contested. The perception fight is the one underway now, and on the evidence of the NDS, it is the one we are least prepared to win.
 
 ## References
-Australian Strategic Policy Institute. (2026, May 30). *The NDS 2026: the right strategy for the wrong era.* The Strategist.
-
-Australian Strategic Policy Institute. (2026, May 25). *Australia is not prepared for the war over perception.* The Strategist.
-
-Australian Strategic Policy Institute. (2026, May 27-28). *The Cost of Defence 2026* (24th ed.).
-
-Lowy Institute. (2026, May 29). *Australia’s layered anxieties.* The Interpreter.
-
-Dead Reckoning. (2026, May 25). *Misreading the map.*
-
-Perth USAsia Centre. (2026, May). *The NDS 2026: well designed, poorly timed.*
-
-*Public support for military AI – a nine-country survey* \[Preprint\]. (2026, May 27). arXiv.
-
-*Intelligentized warfare and the centralization paradox* \[Preprint\]. (2026, May 29). OpenAlex.
+- Australian Strategic Policy Institute. (2026, May 30). *The NDS 2026: the right strategy for the wrong era.* The Strategist.
+- Australian Strategic Policy Institute. (2026, May 25). *Australia is not prepared for the war over perception.* The Strategist.
+- Australian Strategic Policy Institute. (2026, May 27-28). *The Cost of Defence 2026* (24th ed.).
+- Lowy Institute. (2026, May 29). *Australia’s layered anxieties.* The Interpreter.
+- Dead Reckoning. (2026, May 25). *Misreading the map.*
+- Perth USAsia Centre. (2026, May). *The NDS 2026: well designed, poorly timed.*
+- *Public support for military AI – a nine-country survey* \[Preprint\]. (2026, May 27). arXiv.
+- *Intelligentized warfare and the centralization paradox* \[Preprint\]. (2026, May 29). OpenAlex.

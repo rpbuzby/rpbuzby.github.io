@@ -26,22 +26,13 @@ The test also sharpened a narrower military question. The Nightly reported conce
 An alliance signed in an afternoon is a statement of intent. What redeems it is built across the decade that follows in shipyards and training pipelines that never hold a signing ceremony. China’s missile crossed 7,000 kilometres of ocean to make a point about power, and it made a second point Beijing did not intend, about the distance between what states declare and what they do. Australia should take both seriously. The region has just measured the worth of China’s assurances against a missile plume, and in time it will measure the worth of ours against what we actually build.
 
 ## References
-ASPI Strategist. (2026, July 9). *Good in principle, but China’s new military AI logistics are themselves targets.* <https://aspistrategist.org.au/good-in-principle-but-chinas-new-military-ai-logistics-are-themselves-targets>
-
-Bloomberg. (2026, July 7). *Australia slams China test of nuclear-capable missile in Pacific.* <https://www.bloomberg.com/news/articles/2026-07-07/australia-slams-china-test-of-nuclear-capable-missile-in-pacific>
-
-CNBC. (2026, July 8). *China’s rare missile test will push wary Asia-Pacific countries to close ranks, analysts say.* <https://www.cnbc.com/2026/07/08/china-nuclear-missile-launch-test-pacific-weapons-military-defense-alliance-australia-.html>
-
-Defence Ministers. (2026, July 6). *Australia and Fiji sign historic Vuvale Union and Ocean of Peace Alliance* \[Media release\]. <https://www.minister.defence.gov.au/media-releases/2026-07-06/australia-fiji-sign-historic-vuvale-union-ocean-peace-alliance>
-
-Defense News. (2026, July 7). *Chinese ballistic missile test is said to undermine nuclear weapons-free zone in South Pacific.* <https://www.defensenews.com/global/asia-pacific/2026/07/07/chinese-ballistic-missile-test-is-said-to-undermine-nuclear-weapons-free-zone-in-south-pacific/>
-
-Dørum, E. (2026). *Mobilizing to retain: Three mechanisms suppressing specialist retention in the Norwegian Armed Forces.* Scandinavian Journal of Military Studies, 9(1), 368-382. <https://doi.org/10.31374/sjms.520>
-
-Prime Minister of Australia. (2025, October 6). *Joint communique: Papua New Guinea and Australia on a Mutual Defence Treaty.* <https://www.pm.gov.au/media/joint-communique-papua-new-guinea-and-australia-mutual-defence-treaty>
-
-The Conversation. (2026, July 7). *Australia and Fiji sign a new defence pact as China launches a ballistic missile test in the Pacific. What does it all mean?* <https://theconversation.com/australia-and-fiji-sign-a-new-defence-pact-as-china-launches-a-ballistic-missile-test-in-the-pacific-what-does-it-all-mean-286845>
-
-The Diplomat. (2026, July 10). *Can Indo-Pacific powers deter China without the US?* <https://thediplomat.com/2026/07/can-indo-pacific-powers-deter-china-without-the-us>
-
-The Nightly. (2026, July 8). *China nuclear-capable missile test in Pacific sparks grave concerns for AUKUS bases and air defences.* <https://thenightly.com.au/politics/china-nuclear-capable-missile-test-in-pacific-sparks-grave-concerns-for-aukus-bases-and-air-defences-c-22547635>
+- ASPI Strategist. (2026, July 9). *Good in principle, but China’s new military AI logistics are themselves targets.* <https://aspistrategist.org.au/good-in-principle-but-chinas-new-military-ai-logistics-are-themselves-targets>
+- Bloomberg. (2026, July 7). *Australia slams China test of nuclear-capable missile in Pacific.* <https://www.bloomberg.com/news/articles/2026-07-07/australia-slams-china-test-of-nuclear-capable-missile-in-pacific>
+- CNBC. (2026, July 8). *China’s rare missile test will push wary Asia-Pacific countries to close ranks, analysts say.* <https://www.cnbc.com/2026/07/08/china-nuclear-missile-launch-test-pacific-weapons-military-defense-alliance-australia-.html>
+- Defence Ministers. (2026, July 6). *Australia and Fiji sign historic Vuvale Union and Ocean of Peace Alliance* \[Media release\]. <https://www.minister.defence.gov.au/media-releases/2026-07-06/australia-fiji-sign-historic-vuvale-union-ocean-peace-alliance>
+- Defense News. (2026, July 7). *Chinese ballistic missile test is said to undermine nuclear weapons-free zone in South Pacific.* <https://www.defensenews.com/global/asia-pacific/2026/07/07/chinese-ballistic-missile-test-is-said-to-undermine-nuclear-weapons-free-zone-in-south-pacific/>
+- Dørum, E. (2026). *Mobilizing to retain: Three mechanisms suppressing specialist retention in the Norwegian Armed Forces.* Scandinavian Journal of Military Studies, 9(1), 368-382. <https://doi.org/10.31374/sjms.520>
+- Prime Minister of Australia. (2025, October 6). *Joint communique: Papua New Guinea and Australia on a Mutual Defence Treaty.* <https://www.pm.gov.au/media/joint-communique-papua-new-guinea-and-australia-mutual-defence-treaty>
+- The Conversation. (2026, July 7). *Australia and Fiji sign a new defence pact as China launches a ballistic missile test in the Pacific. What does it all mean?* <https://theconversation.com/australia-and-fiji-sign-a-new-defence-pact-as-china-launches-a-ballistic-missile-test-in-the-pacific-what-does-it-all-mean-286845>
+- The Diplomat. (2026, July 10). *Can Indo-Pacific powers deter China without the US?* <https://thediplomat.com/2026/07/can-indo-pacific-powers-deter-china-without-the-us>
+- The Nightly. (2026, July 8). *China nuclear-capable missile test in Pacific sparks grave concerns for AUKUS bases and air defences.* <https://thenightly.com.au/politics/china-nuclear-capable-missile-test-in-pacific-sparks-grave-concerns-for-aukus-bases-and-air-defences-c-22547635>

@@ -24,22 +24,13 @@ For Australia the timing is pointed. El Niño is declared and the outlooks for t
 The Diamond Fire stopped at seven acres because, some years earlier, a mundane chain held: somebody budgeted for cameras, somebody integrated the alerts into dispatch, and somebody trained crews to trust a machine’s eyes. Fires are decided in their first minutes, and those minutes are decided years earlier by procurement decisions and by operational doctrine that never makes the news. The technology can now see smoke faster than any human being on the continent. It still can’t sign its own purchase order.
 
 ## References
-*Anomalous moisture signal in Sentinel-2 imagery precedes overwintering wildfire.* (2026, July 2). International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIX-M-1-2026. <https://doi.org/10.5194/isprs-archives-xlix-m-1-2026-11-2026>
-
-*Congestion-aware multi-agent reinforcement learning for wildfire evacuation routing.* (2026, July 2). International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIX-M-1-2026. <https://doi.org/10.5194/isprs-archives-xlix-m-1-2026-41-2026>
-
-*Construction and validation of an AI-based fire detection model using fire simulation images.* (2026). Journal of the Korean Institute of Fire Science and Engineering. <https://doi.org/10.7731/kifse.41c7271c>
-
-*The ignition cascade problem: How urban wildfire has outgrown its response paradigm, and what to do about it.* (2026, June 30). \[Preprint\]. Figshare. <https://doi.org/10.6084/m9.figshare.32832698.v1>
-
-*Irrigated green firebreaks on wildland-urban interfaces: A conceptual design framework informed by Noosa Shire, Australia.* (2026, July 2). \[Preprint\]. Preprints.org. <https://doi.org/10.20944/preprints202607.0168.v1>
-
-Levinson, K. (2026, July 1). *What California has learned from an AI-enabled early wildfire detection system.* Route Fifty. <https://www.route-fifty.com/public-safety/2026/07/what-california-has-learned-ai-enabled-early-wildfire-detection-system/414566/>
-
-Pineda, D., & Peterson, B. (2026, May 5). *States across the wildfire-prone Western US are using AI for early detection.*AP via KPBS. <https://www.kpbs.org/news/science-technology/2026/05/05/states-across-the-wildfire-prone-western-us-are-using-ai-for-early-detection>
-
-*pyflam: Open, multiplatform wildfire-behavior modelling.* (2026, July 2). \[Software\]. Zenodo. <https://doi.org/10.5281/zenodo.21132875>
-
-Wang, Z., Hu, P., & Gunn, G. (2026). *Toward LEO satellite network systems for instantaneous detection of environmental changes.* arXiv:2605.01243. <https://arxiv.org/abs/2605.01243>
-
-*Wildfire early warning systems: A multisensor and predictive modelling comparison across countries with a Canadian perspective.* (2026, July 2). International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIX-M-1-2026. <https://doi.org/10.5194/isprs-archives-xlix-m-1-2026-59-2026>
+- *Anomalous moisture signal in Sentinel-2 imagery precedes overwintering wildfire.* (2026, July 2). International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIX-M-1-2026. <https://doi.org/10.5194/isprs-archives-xlix-m-1-2026-11-2026>
+- *Congestion-aware multi-agent reinforcement learning for wildfire evacuation routing.* (2026, July 2). International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIX-M-1-2026. <https://doi.org/10.5194/isprs-archives-xlix-m-1-2026-41-2026>
+- *Construction and validation of an AI-based fire detection model using fire simulation images.* (2026). Journal of the Korean Institute of Fire Science and Engineering. <https://doi.org/10.7731/kifse.41c7271c>
+- *The ignition cascade problem: How urban wildfire has outgrown its response paradigm, and what to do about it.* (2026, June 30). \[Preprint\]. Figshare. <https://doi.org/10.6084/m9.figshare.32832698.v1>
+- *Irrigated green firebreaks on wildland-urban interfaces: A conceptual design framework informed by Noosa Shire, Australia.* (2026, July 2). \[Preprint\]. Preprints.org. <https://doi.org/10.20944/preprints202607.0168.v1>
+- Levinson, K. (2026, July 1). *What California has learned from an AI-enabled early wildfire detection system.* Route Fifty. <https://www.route-fifty.com/public-safety/2026/07/what-california-has-learned-ai-enabled-early-wildfire-detection-system/414566/>
+- Pineda, D., & Peterson, B. (2026, May 5). *States across the wildfire-prone Western US are using AI for early detection.*AP via KPBS. <https://www.kpbs.org/news/science-technology/2026/05/05/states-across-the-wildfire-prone-western-us-are-using-ai-for-early-detection>
+- *pyflam: Open, multiplatform wildfire-behavior modelling.* (2026, July 2). \[Software\]. Zenodo. <https://doi.org/10.5281/zenodo.21132875>
+- Wang, Z., Hu, P., & Gunn, G. (2026). *Toward LEO satellite network systems for instantaneous detection of environmental changes.* arXiv:2605.01243. <https://arxiv.org/abs/2605.01243>
+- *Wildfire early warning systems: A multisensor and predictive modelling comparison across countries with a Canadian perspective.* (2026, July 2). International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIX-M-1-2026. <https://doi.org/10.5194/isprs-archives-xlix-m-1-2026-59-2026>

@@ -30,12 +30,8 @@ Over the next twelve to eighteen months, the more telling developments will not 
 Defence acquisition is one of the hardest public delivery problems in the country, and it deserves serious reform. Serious reform and serious reorganisation are not the same thing, and the difference between them is almost always visible in what happens to independent scrutiny when the structural change lands. On that score, the last month has moved in the wrong direction. The clearest sign of whether a reform is real is what happens to the people tasked with watching it. On that measure, this one has some ground to make up.
 
 ## References
-Cohen, L. (2026a, March 12). *Australia’s new defence acquisition organisation must be forward looking*. ASPI Strategist. <https://aspistrategist.org.au/australias-new-defence-acquisition-organisation-must-be-forward-looking>
-
-Cohen, L. (2026b, March 12). *The biggest window into Australian defence acquisition has closed*. ASPI Strategist. <https://aspistrategist.org.au/the-biggest-window-into-australian-defence-acquisition-has-closed>
-
-Department of Defence. (2025, December 1). *Defence Delivery Agency announcement*. Commonwealth of Australia.
-
-Long, M. (2026, March 13). *Reforming without change – Seven decades of Australian defence acquisition reform*. Si Vis Pacem, Para Bellum (Substack). <https://mablong.substack.com/p/reforming-without-change-seven-decades>
-
-Parliamentary Joint Committee of Public Accounts and Audit. (2026, March 6). *Discontinuation of the Major Projects Report*. Parliament of Australia.
+- Cohen, L. (2026a, March 12). *Australia’s new defence acquisition organisation must be forward looking*. ASPI Strategist. <https://aspistrategist.org.au/australias-new-defence-acquisition-organisation-must-be-forward-looking>
+- Cohen, L. (2026b, March 12). *The biggest window into Australian defence acquisition has closed*. ASPI Strategist. <https://aspistrategist.org.au/the-biggest-window-into-australian-defence-acquisition-has-closed>
+- Department of Defence. (2025, December 1). *Defence Delivery Agency announcement*. Commonwealth of Australia.
+- Long, M. (2026, March 13). *Reforming without change – Seven decades of Australian defence acquisition reform*. Si Vis Pacem, Para Bellum (Substack). <https://mablong.substack.com/p/reforming-without-change-seven-decades>
+- Parliamentary Joint Committee of Public Accounts and Audit. (2026, March 6). *Discontinuation of the Major Projects Report*. Parliament of Australia.

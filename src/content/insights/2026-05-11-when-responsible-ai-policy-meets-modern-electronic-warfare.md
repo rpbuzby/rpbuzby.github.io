@@ -28,14 +28,9 @@ For consultants and policy professionals working in or around Defence, the pract
 A policy written for the wrong tempo will not be repaired by good intentions. Correction comes from rewriting it with the actual operational context in view. The longer that revision is delayed, the more of Australia’s AI-enabled defence capability will end up living outside the governance framework meant to discipline it. Responsible use that cannot keep up with the war it is meant to govern lapses, in operational settings, into the appearance of responsibility, and that appearance lasts only as long as the first operational decision that puts it under pressure.
 
 ## References
-Australian Strategic Policy Institute. (2026). *Australian Defence AI policy risks writing modern EW out of the force*. The Strategist.
-
-ARMOR 2025 benchmark. (2026). Testing of 21 commercial LLMs against Law of War and Rules of Engagement scenarios. arXiv preprint.
-
-Department of Defence. (2026, March). *Policy Settings for Responsible Use of Artificial Intelligence in Defence*. Commonwealth of Australia.
-
-Department of Defence. (2026). *2026 National Defence Strategy and Integrated Investment Program*. Commonwealth of Australia.
-
-Lowy Institute. (2026). *Taiwan’s mobilisation model holds lessons for Australia*. The Interpreter.
-
-MEBL framework. (2026). *Military Evaluation Benchmark for Large Language Models*. OpenAlex.
+- Australian Strategic Policy Institute. (2026). *Australian Defence AI policy risks writing modern EW out of the force*. The Strategist.
+- ARMOR 2025 benchmark. (2026). Testing of 21 commercial LLMs against Law of War and Rules of Engagement scenarios. arXiv preprint.
+- Department of Defence. (2026, March). *Policy Settings for Responsible Use of Artificial Intelligence in Defence*. Commonwealth of Australia.
+- Department of Defence. (2026). *2026 National Defence Strategy and Integrated Investment Program*. Commonwealth of Australia.
+- Lowy Institute. (2026). *Taiwan’s mobilisation model holds lessons for Australia*. The Interpreter.
+- MEBL framework. (2026). *Military Evaluation Benchmark for Large Language Models*. OpenAlex.

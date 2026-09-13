@@ -29,18 +29,11 @@ For vendors selling to government, the practical implication is to read the rule
 Frameworks without implementation pathways are intentions with formatting. The new procurement rules are genuine intentions, and the underlying analysis behind them is sound. Whether they become implementation depends on what happens around them in the next two budget cycles. How Chief AI Officers are resourced will matter. How the AI literacy training actually translates inside agencies will matter more. And how transparency statement quality improves, once agencies have to defend their statements alongside their procurement obligations, will matter most of all. The intent is clear. The pathway, currently, is not.
 
 ## References
-6clicks. (2026). *Insights from Ready for Sovereignty 2026, Canberra: Australia’s AI governance stalemate*.
-
-arXiv preprint. (2026). *Systematic analysis of Australian Government AI Transparency Statements*.
-
-Department of Finance. (2026). *Draft amendments to Commonwealth Procurement Rules: AI disclosure and supplier accountability*. Commonwealth of Australia.
-
-Digital Transformation Agency. (2025, March). *Model AI clauses for Commonwealth contracts*. Commonwealth of Australia.
-
-Government Accountability Office. (2025). *Expert panel findings on AI in federal procurement*. United States.
-
-Government News. (2026). *Building trust in AI*.
-
-InnovationAus. (2026). *Suppliers face strict new AI rules in procurement shake-up*.
-
-The Mandarin. (2026). *Why public sector AI uptake keeps stalling*.
+- 6clicks. (2026). *Insights from Ready for Sovereignty 2026, Canberra: Australia’s AI governance stalemate*.
+- arXiv preprint. (2026). *Systematic analysis of Australian Government AI Transparency Statements*.
+- Department of Finance. (2026). *Draft amendments to Commonwealth Procurement Rules: AI disclosure and supplier accountability*. Commonwealth of Australia.
+- Digital Transformation Agency. (2025, March). *Model AI clauses for Commonwealth contracts*. Commonwealth of Australia.
+- Government Accountability Office. (2025). *Expert panel findings on AI in federal procurement*. United States.
+- Government News. (2026). *Building trust in AI*.
+- InnovationAus. (2026). *Suppliers face strict new AI rules in procurement shake-up*.
+- The Mandarin. (2026). *Why public sector AI uptake keeps stalling*.

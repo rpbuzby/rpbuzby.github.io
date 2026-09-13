@@ -30,16 +30,10 @@ There is one more warning worth carrying into the drafting. Work published in mi
 Australia sits in a better position than it did in 2016. The safeguards now have a commencement date and a department coordinating them, and they rest on findings nobody can pretend not to have read. What the safeguards have yet to prove is that they hand somebody the authority to halt a system that is working precisely as designed and hurting people anyway. Authority of that kind is what makes a safeguard a safeguard, and it is the easiest thing to leave out of a draft. December is four months away.
 
 ## References
-Another View on Article 22 GDPR: The Future of Automated Decision-Making (2026). Semantic Scholar. <https://semanticscholar.org/paper/9b75683b99d9a8600d75a9c169a28e90852a7c66>
-
-Attorney-General’s Department (2024). Use of automated decision-making by government: consultation paper. <https://consultations.ag.gov.au/integrity/adm/user_uploads/consultation-paper-use-of-automated-decision-making-by-government.pdf>
-
-Digital Preparedness: A New Modality of Governance (2026). Digital Society. <https://doi.org/10.1007/s44206-026-00271-5>
-
-OAIC (2026). Consultation on guidance for transparency in automated decision making. Office of the Australian Information Commissioner. <https://www.oaic.gov.au/engage-with-us/consultations/consultation-on-guidance-for-transparency-in-automated-decision-making>
-
-The Mandarin (2026a, 20 July). Public service to get AI guardrails for a fairer system. <https://themandarin.com.au/316587-public-service-to-get-ai-guardrails-for-a-fairer-system>
-
-The Mandarin (2026b, 20 July). Robodebt whistleblower suit alleges mistreatment by Services Australia. <https://themandarin.com.au/316565-robodebt-whistleblower-suit-alleges-mistreatment-by-services-australia>
-
-Unsafe at any AUC: Unlearned Lessons from Sociotechnical Disasters for Responsible AI (2026). arXiv:2607.14353. <https://arxiv.org/abs/2607.14353>
+- Another View on Article 22 GDPR: The Future of Automated Decision-Making (2026). Semantic Scholar. <https://semanticscholar.org/paper/9b75683b99d9a8600d75a9c169a28e90852a7c66>
+- Attorney-General’s Department (2024). Use of automated decision-making by government: consultation paper. <https://consultations.ag.gov.au/integrity/adm/user_uploads/consultation-paper-use-of-automated-decision-making-by-government.pdf>
+- Digital Preparedness: A New Modality of Governance (2026). Digital Society. <https://doi.org/10.1007/s44206-026-00271-5>
+- OAIC (2026). Consultation on guidance for transparency in automated decision making. Office of the Australian Information Commissioner. <https://www.oaic.gov.au/engage-with-us/consultations/consultation-on-guidance-for-transparency-in-automated-decision-making>
+- The Mandarin (2026a, 20 July). Public service to get AI guardrails for a fairer system. <https://themandarin.com.au/316587-public-service-to-get-ai-guardrails-for-a-fairer-system>
+- The Mandarin (2026b, 20 July). Robodebt whistleblower suit alleges mistreatment by Services Australia. <https://themandarin.com.au/316565-robodebt-whistleblower-suit-alleges-mistreatment-by-services-australia>
+- Unsafe at any AUC: Unlearned Lessons from Sociotechnical Disasters for Responsible AI (2026). arXiv:2607.14353. <https://arxiv.org/abs/2607.14353>

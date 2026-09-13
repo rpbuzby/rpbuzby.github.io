@@ -26,14 +26,9 @@ The broader AI-governance reading is the one I have written about across several
 Buying an AI forecasting tool on benchmark results is the same shape of mistake as buying any other safety-critical system on the headline figures alone. The next round of fire-agency procurement specifications needs the second test built into the contract from the outset, with deployment-review evidence collected against the operational metric the tool was procured to support. The research is now clear enough to make the case for the change. The procurement timetable is the constraint that decides whether the case translates into the next set of tools acquired.
 
 ## References
-Di Virgilio, G. et al. (2019). *Climate change increases the potential for extreme wildfires*. Geophysical Research Letters.
-
-Guyot, A., Vile, J., Soulard-Fischer, L., McGowan, H., Protat, A., & Poulsen, C. (2026, 18 May). *Multi-sensor tracking of pyroconvection reveals discrepancies between satellite cloud-top detection and convective dynamics*. EGUsphere preprint. <https://doi.org/10.5194/egusphere-2026-1907>
-
-Ma, W., Sharples, J. J., & Jovanoski, Z. (2026). *Projected changes in pyrocumulonimbus (pyroCb) occurrence probability under future climate scenarios over temperate southeast Australia*. Environmental Research Letters. <https://doi.org/10.1088/1748-9326/ae7131>
-
-Peterson, D. A. et al. (2021). *Australia’s Black Summer pyrocumulonimbus super-outbreak reveals potential for increasingly extreme stratospheric smoke events*. npj Climate and Atmospheric Science.
-
-Risk Frontiers. (2026, February). *Victorian bushfires, January 2026: pyroconvection observations*.
-
-Xu, Y., Dai, Y., Chang, L., Wang, Q., & Dong, Y. (2026, 14 May). *Does Your Wildfire Prediction Model Actually Work, or Just Score Well?* arXiv:2605.18911
+- Di Virgilio, G. et al. (2019). *Climate change increases the potential for extreme wildfires*. Geophysical Research Letters.
+- Guyot, A., Vile, J., Soulard-Fischer, L., McGowan, H., Protat, A., & Poulsen, C. (2026, 18 May). *Multi-sensor tracking of pyroconvection reveals discrepancies between satellite cloud-top detection and convective dynamics*. EGUsphere preprint. <https://doi.org/10.5194/egusphere-2026-1907>
+- Ma, W., Sharples, J. J., & Jovanoski, Z. (2026). *Projected changes in pyrocumulonimbus (pyroCb) occurrence probability under future climate scenarios over temperate southeast Australia*. Environmental Research Letters. <https://doi.org/10.1088/1748-9326/ae7131>
+- Peterson, D. A. et al. (2021). *Australia’s Black Summer pyrocumulonimbus super-outbreak reveals potential for increasingly extreme stratospheric smoke events*. npj Climate and Atmospheric Science.
+- Risk Frontiers. (2026, February). *Victorian bushfires, January 2026: pyroconvection observations*.
+- Xu, Y., Dai, Y., Chang, L., Wang, Q., & Dong, Y. (2026, 14 May). *Does Your Wildfire Prediction Model Actually Work, or Just Score Well?* arXiv:2605.18911

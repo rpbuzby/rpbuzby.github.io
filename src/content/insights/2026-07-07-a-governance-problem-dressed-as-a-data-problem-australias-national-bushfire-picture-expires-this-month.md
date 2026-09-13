@@ -26,10 +26,7 @@ The NBIC funding position is the whole problem in miniature. Treating a core pie
 So the honest framing is not that Australia has too little bushfire data. It has more than it can currently use, recorded in too many incompatible ways, with no standing authority to make it national and a central piece of the picture funded only to the end of June. Six years after the Royal Commission asked for a national capability, the country has a scoping study and a near-real-time national view with an expiry date. The technology to fix this exists and has for years. What does not exist, and what the next severe season will once again expose, is the governance willing to own the integration as permanent infrastructure rather than as a grant to be renewed.
 
 ## References
-National Bushfire Intelligence Capability (CSIRO) and Geoscience Australia, funded via the National Emergency Management Agency and the Department of Climate Change, Energy, the Environment and Water. (2026). *National Near Real-Time Bushfire Boundaries / Extents dataset.*
-
-Natural Hazards Research Australia. (2026). *Bushfire information database scoping study; Natural Hazards Research Forum 2026, Adelaide (10-12 June).*
-
-Royal Commission into National Natural Disaster Arrangements. (2020). *Final report.*
-
-*A three-decade review of GeoAI in wildfire research* \[Preprint\]. (2026, June). OpenAlex.
+- National Bushfire Intelligence Capability (CSIRO) and Geoscience Australia, funded via the National Emergency Management Agency and the Department of Climate Change, Energy, the Environment and Water. (2026). *National Near Real-Time Bushfire Boundaries / Extents dataset.*
+- Natural Hazards Research Australia. (2026). *Bushfire information database scoping study; Natural Hazards Research Forum 2026, Adelaide (10-12 June).*
+- Royal Commission into National Natural Disaster Arrangements. (2020). *Final report.*
+- *A three-decade review of GeoAI in wildfire research* \[Preprint\]. (2026, June). OpenAlex.

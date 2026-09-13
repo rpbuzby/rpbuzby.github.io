@@ -30,20 +30,12 @@ There is a broader argument in international practice worth noting too. A synthe
 The AusAlert test showed that Australia can now reach almost everyone in the country in a few seconds. October will show whether the people holding the button have practised.
 
 ## References
-Atmospheric moisture, soil moisture, and topography predict windows for prescribed burning (2026). Fire Ecology. <https://doi.org/10.1186/s42408-026-00540-1>
-
-AusAlert (2026). National test. <https://www.ausalert.gov.au/alerts-explained/national-test>
-
-Challenges to Ethical Assessments of Prescribed Fire Policies (2026). Ethics, Policy & Environment. <https://doi.org/10.1080/21550085.2026.2699063>
-
-Department of Health, Disability and Ageing (2026, 14 July). Get ready for the AusAlert national test. <https://www.health.gov.au/news/get-ready-for-the-ausalert-national-test>
-
-Eight lifesaving ways to improve wildfire risk management (2026). <https://doi.org/10.64628/aao.vram5gs96>
-
-Fire regimes are becoming increasingly volatile: implications for managing extreme fire events in the Mediterranean (2026). EGUsphere (Plinius Conference abstract). <https://doi.org/10.5194/egusphere-plinius19-12>
-
-Flammability of native perennial grasses in temperate Australia as influenced by dryness, fire intensity and species (2026). International Journal of Wildland Fire. <https://doi.org/10.1071/wf25290>
-
-Operationalizing the Fire Warning: distinguishing structural constraints from training-sensitive perceptions (2026). <https://doi.org/10.1038/s44304-026-00247-y>
-
-Record-breaking 2025 wildfires in Northwest Iberia: extreme fire weather, fuel continuity and emerging Mediterranean fire risk (2026). EGUsphere (Plinius Conference abstract). <https://doi.org/10.5194/egusphere-plinius19-47>
+- Atmospheric moisture, soil moisture, and topography predict windows for prescribed burning (2026). Fire Ecology. <https://doi.org/10.1186/s42408-026-00540-1>
+- AusAlert (2026). National test. <https://www.ausalert.gov.au/alerts-explained/national-test>
+- Challenges to Ethical Assessments of Prescribed Fire Policies (2026). Ethics, Policy & Environment. <https://doi.org/10.1080/21550085.2026.2699063>
+- Department of Health, Disability and Ageing (2026, 14 July). Get ready for the AusAlert national test. <https://www.health.gov.au/news/get-ready-for-the-ausalert-national-test>
+- Eight lifesaving ways to improve wildfire risk management (2026). <https://doi.org/10.64628/aao.vram5gs96>
+- Fire regimes are becoming increasingly volatile: implications for managing extreme fire events in the Mediterranean (2026). EGUsphere (Plinius Conference abstract). <https://doi.org/10.5194/egusphere-plinius19-12>
+- Flammability of native perennial grasses in temperate Australia as influenced by dryness, fire intensity and species (2026). International Journal of Wildland Fire. <https://doi.org/10.1071/wf25290>
+- Operationalizing the Fire Warning: distinguishing structural constraints from training-sensitive perceptions (2026). <https://doi.org/10.1038/s44304-026-00247-y>
+- Record-breaking 2025 wildfires in Northwest Iberia: extreme fire weather, fuel continuity and emerging Mediterranean fire risk (2026). EGUsphere (Plinius Conference abstract). <https://doi.org/10.5194/egusphere-plinius19-47>

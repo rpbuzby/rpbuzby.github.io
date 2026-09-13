@@ -26,12 +26,8 @@ It is worth being clear that none of this is an argument for slowing the technol
 The drones already work, and the early-warning systems already buy eight hours that save lives. What those systems lack is an answer to the first question any inquiry would ask after a serious failure: who decided, and who is answerable for it. On current trajectory, agencies are buying that capability now and will write the accountability later, once something has gone wrong badly enough to compel it. That is the usual order, and it is exactly the order that an autonomous system, once it can act without waiting for a human, no longer permits.
 
 ## References
-*Accountability in autonomous drone-based firefighting: Insights from a field trial* \[Preprint\]. (2026). arXiv:2606.17831.
-
-*From ad hoc pilots to repeatable patterns: Structuring drone collaboration in emergency services with DroneLets*\[Preprint\]. (2026). arXiv:2606.17839.
-
-*ED3R: Energy-aware distributed disaster detection enabled by cooperative robotic agents* \[Preprint\]. (2026). arXiv:2606.17739.
-
-*MAESTRO multi-agent AI early-warning system* \[Preprint\]. (2026).
-
-*FireSwarm autonomous firefighting trials, Ontario and British Columbia* (2026).
+- *Accountability in autonomous drone-based firefighting: Insights from a field trial* \[Preprint\]. (2026). arXiv:2606.17831.
+- *From ad hoc pilots to repeatable patterns: Structuring drone collaboration in emergency services with DroneLets*\[Preprint\]. (2026). arXiv:2606.17839.
+- *ED3R: Energy-aware distributed disaster detection enabled by cooperative robotic agents* \[Preprint\]. (2026). arXiv:2606.17739.
+- *MAESTRO multi-agent AI early-warning system* \[Preprint\]. (2026).
+- *FireSwarm autonomous firefighting trials, Ontario and British Columbia* (2026).

@@ -28,18 +28,11 @@ This is not the first time the gap between an AI policy and the practice it is m
 A policy exists, and it is a good one. The open question is whether the governance can scale across every program that now contains AI, and whether it can iterate as fast as the capability it is meant to oversee. On current evidence the capability is moving at the speed of the technology and the oversight is moving at the speed of a committee, and the distance between those two speeds is where the risk lives. Closing it is the harder, less visible work: building the auditable records and the decision limits that turn a sound policy into something that holds when an AI system, somewhere in the budget, makes a consequential call faster than anyone can check it.
 
 ## References
-*AI Reliance: a reproducible measure of how deep, and how reversible, systematic AI dependency is.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20763481>
-
-Australian Strategic Policy Institute. (2026a, June 24). *The ADF is integrating AI faster than it can govern it.* The Strategist.
-
-Australian Strategic Policy Institute. (2026b, June 25). *Australia will increasingly use spiral development in defence: Conroy.* The Strategist.
-
-*The Capability-Friction Dynamics: A macro-architecture for public sector AI.* (2026). AMCIS 2026 Proceedings.
-
-Commonwealth of Australia. (2026). *2026 National Defence Strategy and Integrated Investment Plan.*
-
-Department of Defence. (2026, March). *Policy Settings for Responsible Use of Artificial Intelligence in Defence.*
-
-*The Governance Inversion Hypothesis: Why more AI regulation may produce less organisational control.* (2026). arXiv:2606.26117.
-
-*Human in the Log: Public evidence chains for public-sector AI oversight.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20759553>
+- *AI Reliance: a reproducible measure of how deep, and how reversible, systematic AI dependency is.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20763481>
+- Australian Strategic Policy Institute. (2026a, June 24). *The ADF is integrating AI faster than it can govern it.* The Strategist.
+- Australian Strategic Policy Institute. (2026b, June 25). *Australia will increasingly use spiral development in defence: Conroy.* The Strategist.
+- *The Capability-Friction Dynamics: A macro-architecture for public sector AI.* (2026). AMCIS 2026 Proceedings.
+- Commonwealth of Australia. (2026). *2026 National Defence Strategy and Integrated Investment Plan.*
+- Department of Defence. (2026, March). *Policy Settings for Responsible Use of Artificial Intelligence in Defence.*
+- *The Governance Inversion Hypothesis: Why more AI regulation may produce less organisational control.* (2026). arXiv:2606.26117.
+- *Human in the Log: Public evidence chains for public-sector AI oversight.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20759553>

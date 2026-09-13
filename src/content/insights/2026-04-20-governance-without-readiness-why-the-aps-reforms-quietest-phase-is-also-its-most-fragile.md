@@ -30,16 +30,10 @@ Embedding is the phase nobody writes a media release about, and that is part of 
 Restructuring without readiness is how you spend a decade rearranging the organisational chart while the same problems compound underneath it, and the Defence Delivery Agency is about to find out whether this iteration of that pattern ends differently from the last one.
 
 ## References
-Alsuhaimi, M. (2026). *Governance mechanisms and strategic implementation success in public sector transformations: The moderating roles of change readiness and resource availability*. International Review of Management and Marketing, 16(3), 41-51. <https://doi.org/10.32479/irmm.22548>
-
-Australian Government News. (2026, January 26). *APS Commission chief resigns*. Government News.
-
-Australian Strategic Policy Institute. (2026). *Analysis of the Defence Delivery Agency announcement*. ASPI.
-
-Digital Transformation Agency. (2026). *Major digital projects report*. Commonwealth of Australia.
-
-Marles, R. (2026, February). *Address to ADM Congress, Canberra*. Minister for Defence.
-
-Moore, R., Gil, N. and colleagues. (2026, April 1). *Political opportunity structure and stakeholder engagement on the Bisri Dam megaproject*. Project Management Journal.
-
-The Mandarin. (2026, March). *APS Reform implementation coverage*. The Mandarin.
+- Alsuhaimi, M. (2026). *Governance mechanisms and strategic implementation success in public sector transformations: The moderating roles of change readiness and resource availability*. International Review of Management and Marketing, 16(3), 41-51. <https://doi.org/10.32479/irmm.22548>
+- Australian Government News. (2026, January 26). *APS Commission chief resigns*. Government News.
+- Australian Strategic Policy Institute. (2026). *Analysis of the Defence Delivery Agency announcement*. ASPI.
+- Digital Transformation Agency. (2026). *Major digital projects report*. Commonwealth of Australia.
+- Marles, R. (2026, February). *Address to ADM Congress, Canberra*. Minister for Defence.
+- Moore, R., Gil, N. and colleagues. (2026, April 1). *Political opportunity structure and stakeholder engagement on the Bisri Dam megaproject*. Project Management Journal.
+- The Mandarin. (2026, March). *APS Reform implementation coverage*. The Mandarin.

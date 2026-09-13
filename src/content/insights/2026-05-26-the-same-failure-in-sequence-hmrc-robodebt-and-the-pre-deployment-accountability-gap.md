@@ -28,16 +28,10 @@ None of these mechanics are mysterious. They are routine in domains where safety
 That last incentive is the hardest to legislate against. It is also the one that keeps producing carbon copies. The HMRC case is not an outlier. It is what happens when an automation programme is delivered on the same schedule as the funding cycle that procured it, with the governance work treated as something that can be retrofitted later if challenged. The Robodebt Royal Commission is the evidence that retrofitting later is the more expensive path. The Lords Bill is the evidence that at least one Westminster jurisdiction has now read that evidence and concluded that legislation is the cheaper option. The work is the same, in the end, whether it happens before deployment, when the system can absorb it, or after a Royal Commission asks why it wasn’t.
 
 ## References
-Amnesty International. (2024). *Coded injustice: Surveillance and discrimination in Denmark’s automated welfare state*.
-
-HMRC. (2026, January). *Evidence of John-Paul Marks (Chief Executive) to the Treasury Select Committee on Child Benefit suspensions*. UK Parliament.
-
-InnovationAus. (2026). *Robodebt’s unquantifiable contingent liability*. May 2026 reporting on the automated welfare compliance saga.
-
-La Quadrature du Net. (2023). *Notation des allocataires: l’inacceptable discrimination algorithmique de la CAF*.
-
-NJCM v The Netherlands. (2020). District Court of The Hague, Case C/09/550982. *Judgment on the System Risk Indication (SyRI)*.
-
-Royal Commission into the Robodebt Scheme. (2023). *Report*. Commonwealth of Australia.
-
-Written Evidence to UK Parliament. (2026). *HMRC’s Anti-Fraud Intervention on Child Benefit*. Zenodo deposit 20205530. <https://doi.org/10.5281/zenodo.20205530>
+- Amnesty International. (2024). *Coded injustice: Surveillance and discrimination in Denmark’s automated welfare state*.
+- HMRC. (2026, January). *Evidence of John-Paul Marks (Chief Executive) to the Treasury Select Committee on Child Benefit suspensions*. UK Parliament.
+- InnovationAus. (2026). *Robodebt’s unquantifiable contingent liability*. May 2026 reporting on the automated welfare compliance saga.
+- La Quadrature du Net. (2023). *Notation des allocataires: l’inacceptable discrimination algorithmique de la CAF*.
+- NJCM v The Netherlands. (2020). District Court of The Hague, Case C/09/550982. *Judgment on the System Risk Indication (SyRI)*.
+- Royal Commission into the Robodebt Scheme. (2023). *Report*. Commonwealth of Australia.
+- Written Evidence to UK Parliament. (2026). *HMRC’s Anti-Fraud Intervention on Child Benefit*. Zenodo deposit 20205530. <https://doi.org/10.5281/zenodo.20205530>

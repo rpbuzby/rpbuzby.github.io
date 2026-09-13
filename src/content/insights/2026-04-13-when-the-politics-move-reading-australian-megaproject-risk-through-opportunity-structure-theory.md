@@ -28,12 +28,8 @@ This is where the article links back to the broader theme in the recent Australi
 For consultants advising on large infrastructure or capability programs, the short version of all this is that any engagement model which does not account for political regime change is incomplete. It will hold for the period between regime changes, and the Australian delivery timetable for most megaprojects is long enough to guarantee that the period will end before the project does.
 
 ## References
-Flyvbjerg, B. (2014). What you should know about megaprojects and why: An overview. *Project Management Journal*, 45(2), 6-19.
-
-Gil, N. (2023). Megaprojects as political arenas: Coalition dynamics and the sustainability of multi-sponsor delivery. *International Journal of Project Management*, 41(3).
-
-*Unraveling stakeholder engagement in megaprojects: A political opportunity structure perspective in turbulent times*. (2026). UCL Discovery. <https://discovery.ucl.ac.uk/id/eprint/10221805> (Cited from research digests 2026-03-13, 2026-03-21, 2026-03-22 and 2026-03-31 via OpenAlex; specific author list and journal of record should be independently verified before publication.)
-
-Schott, K. (2023). *The Delivery of Inland Rail: An Independent Review*. Commonwealth of Australia. Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts.
-
-Senate Rural and Regional Affairs and Transport References Committee. (2021, August). *Inland Rail: Derailed from the start*. Parliament of Australia.
+- Flyvbjerg, B. (2014). What you should know about megaprojects and why: An overview. *Project Management Journal*, 45(2), 6-19.
+- Gil, N. (2023). Megaprojects as political arenas: Coalition dynamics and the sustainability of multi-sponsor delivery. *International Journal of Project Management*, 41(3).
+- *Unraveling stakeholder engagement in megaprojects: A political opportunity structure perspective in turbulent times*. (2026). UCL Discovery. <https://discovery.ucl.ac.uk/id/eprint/10221805> (Cited from research digests 2026-03-13, 2026-03-21, 2026-03-22 and 2026-03-31 via OpenAlex; specific author list and journal of record should be independently verified before publication.)
+- Schott, K. (2023). *The Delivery of Inland Rail: An Independent Review*. Commonwealth of Australia. Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts.
+- Senate Rural and Regional Affairs and Transport References Committee. (2021, August). *Inland Rail: Derailed from the start*. Parliament of Australia.

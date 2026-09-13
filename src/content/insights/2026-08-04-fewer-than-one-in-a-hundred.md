@@ -30,18 +30,11 @@ There is a broader point in here about how research quality reaches operations. 
 Australia is entering a fire season with a research field that has just admitted its accuracy numbers are inflated, a national dataset that six years of inquiries have failed to produce, and a procurement process that asks about neither. The most useful thing anyone could add before summer is a question on the tender form.
 
 ## References
-Artificial Intelligence Across the Wildfire Management Lifecycle: A PRISMA-Guided Survey of Techniques, Validation Practices, and the Global-South Gap (2026). Analysis code and derived data. Zenodo. <https://doi.org/10.5281/zenodo.21543246>
-
-BNHCRC (2026a, 27 July). Could we unite bushfire datasets for an effective national database? July Hazardous Webinar recap. <https://bnhcrc.com.au/news-and-events/news-and-views/could-we-unite-bushfire-datasets-effective-national-database-july>
-
-BNHCRC (2026b, 23 July). August Hazardous Webinar: Transformative scenarios in a climate-challenged world. <https://bnhcrc.com.au/news-and-events/events/august-hazardous-webinar-transformative-scenarios-climate-challenged-world>
-
-BNHCRC (2026c, 27 July). Defendable space around homes and the role of gardens in bushfires: May Hazardous Webinar recap. <https://bnhcrc.com.au/news-and-events/news-and-views/defendable-space-around-homes-and-role-gardens-bushfires-may>
-
-Natural Hazards Research Australia (2026). Bushfire information database: scoping study. <https://www.naturalhazards.com.au/research/research-projects/bushfire-information-database-scoping-study>
-
-Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals (2026). arXiv:2607.21597. <https://arxiv.org/abs/2607.21597>
-
-Royal Commission into National Natural Disaster Arrangements (2020). Report. <https://naturaldisaster.royalcommission.gov.au/>
-
-The Conversation (2026, 26 July). The dangerous climate driving California’s wildfires and a warning for Australia. <https://theconversation.com/the-dangerous-climate-driving-californias-wildfires-and-a-warning-for-australia-288190>
+- Artificial Intelligence Across the Wildfire Management Lifecycle: A PRISMA-Guided Survey of Techniques, Validation Practices, and the Global-South Gap (2026). Analysis code and derived data. Zenodo. <https://doi.org/10.5281/zenodo.21543246>
+- BNHCRC (2026a, 27 July). Could we unite bushfire datasets for an effective national database? July Hazardous Webinar recap. <https://bnhcrc.com.au/news-and-events/news-and-views/could-we-unite-bushfire-datasets-effective-national-database-july>
+- BNHCRC (2026b, 23 July). August Hazardous Webinar: Transformative scenarios in a climate-challenged world. <https://bnhcrc.com.au/news-and-events/events/august-hazardous-webinar-transformative-scenarios-climate-challenged-world>
+- BNHCRC (2026c, 27 July). Defendable space around homes and the role of gardens in bushfires: May Hazardous Webinar recap. <https://bnhcrc.com.au/news-and-events/news-and-views/defendable-space-around-homes-and-role-gardens-bushfires-may>
+- Natural Hazards Research Australia (2026). Bushfire information database: scoping study. <https://www.naturalhazards.com.au/research/research-projects/bushfire-information-database-scoping-study>
+- Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals (2026). arXiv:2607.21597. <https://arxiv.org/abs/2607.21597>
+- Royal Commission into National Natural Disaster Arrangements (2020). Report. <https://naturaldisaster.royalcommission.gov.au/>
+- The Conversation (2026, 26 July). The dangerous climate driving California’s wildfires and a warning for Australia. <https://theconversation.com/the-dangerous-climate-driving-californias-wildfires-and-a-warning-for-australia-288190>

@@ -32,14 +32,9 @@ Which of these readings turns out to be accurate will be visible in specific, ob
 Whether anyone notices when a policy isn’t followed tells you everything about whether the policy ever mattered. Australia’s military AI policy, as currently published, is a framework with formatting. Whether it becomes a framework with teeth is the part of the story the next twelve months will decide.
 
 ## References
-Digital Transformation Agency. (2024, September). *Policy for responsible use of AI in government (v1.1)*. Commonwealth of Australia.
-
-Defence AI Centre. (2024). *Establishment announcement*. Department of Defence.
-
-Department of Defence. (2026, March). *Policy settings for responsible use of artificial intelligence in Defence*. Commonwealth of Australia.
-
-The Conversation. (2026, March). *Australia’s new military AI policy comes at a crucial time. The challenge is turning it into practice*. <https://theconversation.com/australias-new-military-ai-policy-comes-at-a-crucial-time-the-challenge-is-turning-it-into-practice-278992>
-
-United Kingdom Ministry of Defence. (2025, October). *Laying the groundwork: Responsible AI Senior Officers’ Report 2025*. UK Government. <https://www.gov.uk/government/publications/laying-the-groundwork-responsible-ai-senior-officers-report-2025>
-
-United States Department of Defense. (2022). *Responsible AI strategy and implementation pathway*. US DoD.
+- Digital Transformation Agency. (2024, September). *Policy for responsible use of AI in government (v1.1)*. Commonwealth of Australia.
+- Defence AI Centre. (2024). *Establishment announcement*. Department of Defence.
+- Department of Defence. (2026, March). *Policy settings for responsible use of artificial intelligence in Defence*. Commonwealth of Australia.
+- The Conversation. (2026, March). *Australia’s new military AI policy comes at a crucial time. The challenge is turning it into practice*. <https://theconversation.com/australias-new-military-ai-policy-comes-at-a-crucial-time-the-challenge-is-turning-it-into-practice-278992>
+- United Kingdom Ministry of Defence. (2025, October). *Laying the groundwork: Responsible AI Senior Officers’ Report 2025*. UK Government. <https://www.gov.uk/government/publications/laying-the-groundwork-responsible-ai-senior-officers-report-2025>
+- United States Department of Defense. (2022). *Responsible AI strategy and implementation pathway*. US DoD.

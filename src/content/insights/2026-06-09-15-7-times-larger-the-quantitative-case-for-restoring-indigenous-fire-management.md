@@ -24,16 +24,10 @@ I have written separately about the wildfire decision support procurement gap, t
 A 15.7x disparity is the kind of number that reshapes a policy argument. The cultural case for restoring Indigenous fire management authority has always been clear. The operational evidence now matches it, with named-author research from Greenler and colleagues providing the per-frequency anchor and the anonymous-deposit California study providing the comparative scale. Regulatory and funding settings remain a generation behind both arguments. The case for catching them up is no longer one that has to be made primarily on cultural grounds. It is one that the operational and risk-management evidence now supports on its own terms.
 
 ## References
-Anonymous. (2026, 18 May). *Wildfire Size Disparity on Tribal Lands in California and Associated PM2.5 Burden, 2000-2018*. Zenodo. <https://doi.org/10.5281/zenodo.20270947>
-
-California Wildfire and Forest Resilience Task Force. (2025, 7 March). *California advances wildfire resilience and honors tribal sovereignty through cultural burning agreement with the Karuk Tribe*.
-
-CAL FIRE. *Tribal Wildfire Resilience grants program*. <https://www.fire.ca.gov/what-we-do/grants/tribal-wildfire-resilience>
-
-Department of Biodiversity, Conservation and Attractions, Western Australia. *Cultural burning policy and joint management arrangements*.
-
-Federation of Victorian Traditional Owner Corporations. (2019, May). *Victorian Traditional Owner Cultural Fire Strategy*.
-
-Greenler, S., Lake, F. K. et al. (2024). *Cultural ignition frequency in Karuk Aboriginal Territory*. Ecological Applications.
-
-WWF Australia. *New study confirms Indigenous fire management equals success*.
+- Anonymous. (2026, 18 May). *Wildfire Size Disparity on Tribal Lands in California and Associated PM2.5 Burden, 2000-2018*. Zenodo. <https://doi.org/10.5281/zenodo.20270947>
+- California Wildfire and Forest Resilience Task Force. (2025, 7 March). *California advances wildfire resilience and honors tribal sovereignty through cultural burning agreement with the Karuk Tribe*.
+- CAL FIRE. *Tribal Wildfire Resilience grants program*. <https://www.fire.ca.gov/what-we-do/grants/tribal-wildfire-resilience>
+- Department of Biodiversity, Conservation and Attractions, Western Australia. *Cultural burning policy and joint management arrangements*.
+- Federation of Victorian Traditional Owner Corporations. (2019, May). *Victorian Traditional Owner Cultural Fire Strategy*.
+- Greenler, S., Lake, F. K. et al. (2024). *Cultural ignition frequency in Karuk Aboriginal Territory*. Ecological Applications.
+- WWF Australia. *New study confirms Indigenous fire management equals success*.

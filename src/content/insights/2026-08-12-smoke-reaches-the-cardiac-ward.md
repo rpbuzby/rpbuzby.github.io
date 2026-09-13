@@ -38,14 +38,9 @@ Three changes follow from taking the evidence seriously, and none of them requir
 The smoke was always going somewhere. What has changed is that we now know something about what it does when it gets there, and roughly which days do most of the damage. Spring is close enough that this season’s burn plans are still the ones that can use it.
 
 ## References
-Australians recognise the effects of climate change but not its consequences for health system resilience and workforce capacity. (2026). *Scientific Reports*. <https://doi.org/10.1038/s41598-026-64124-4>
-
-Competing Health Impacts of Smoke from Wildfires, Agricultural Burning, and Prescribed Fires in California. (2026). <https://doi.org/10.31223/x5cn4w>
-
-Creative destruction: from fire ecology to management principles, a conceptual review. (2026). *Frontiers in Forests and Global Change*. <https://doi.org/10.3389/ffgc.2026.1882526>
-
-Long-term exposure to bushfire-related fine particulate matter and coronary plaque burden in asymptomatic adults. (2026). *European Journal of Preventive Cardiology*. <https://doi.org/10.1093/eurjpc/zwag399>
-
-The Conversation. (2026, July 26). *The dangerous climate driving California’s wildfires and a warning for Australia.*<https://theconversation.com/the-dangerous-climate-driving-californias-wildfires-and-a-warning-for-australia-288190>
-
-The Heart of the Inferno: A Retrospective Audit of ST-Elevation Myocardial Infarction (STEMI) Incidence During Major Bushfire Events in a Regional Health District. (2026). *Heart, Lung and Circulation*. <https://doi.org/10.1016/j.hlc.2026.07.695>
+- Australians recognise the effects of climate change but not its consequences for health system resilience and workforce capacity. (2026). *Scientific Reports*. <https://doi.org/10.1038/s41598-026-64124-4>
+- Competing Health Impacts of Smoke from Wildfires, Agricultural Burning, and Prescribed Fires in California. (2026). <https://doi.org/10.31223/x5cn4w>
+- Creative destruction: from fire ecology to management principles, a conceptual review. (2026). *Frontiers in Forests and Global Change*. <https://doi.org/10.3389/ffgc.2026.1882526>
+- Long-term exposure to bushfire-related fine particulate matter and coronary plaque burden in asymptomatic adults. (2026). *European Journal of Preventive Cardiology*. <https://doi.org/10.1093/eurjpc/zwag399>
+- The Conversation. (2026, July 26). *The dangerous climate driving California’s wildfires and a warning for Australia.*<https://theconversation.com/the-dangerous-climate-driving-californias-wildfires-and-a-warning-for-australia-288190>
+- The Heart of the Inferno: A Retrospective Audit of ST-Elevation Myocardial Infarction (STEMI) Incidence During Major Bushfire Events in a Regional Health District. (2026). *Heart, Lung and Circulation*. <https://doi.org/10.1016/j.hlc.2026.07.695>

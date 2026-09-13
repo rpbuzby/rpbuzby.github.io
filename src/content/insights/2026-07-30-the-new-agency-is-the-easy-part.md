@@ -26,20 +26,12 @@ The eleven-year arc from DMO abolition to DDA creation should discipline our exp
 A new agency is an easy thing to announce and a hard thing to make matter. The DDA will be judged the way the DMO was, on whether the behaviour inside it diverges from the behaviour that made its creation necessary. Eleven years is roughly one capability cycle. If the culture does not shift with the nameplate, we already know what the review in 2037 will say.
 
 ## References
-Cohen, L. (2026, July 3). *Australian Defence acquisition’s turn to stewardship of industry brings new risks.* The Strategist. <https://www.aspistrategist.org.au/australian-defence-acquisitions-turn-to-stewardship-of-industry-brings-new-risks/>
-
-Department of Defence. (2026). *2026 Defence Industry Development Strategy.* <https://www.defence.gov.au/about/strategic-planning/2026-defence-industry-development-strategy>
-
-Department of Defence Ministers. (2026a, July 2). *2026 Defence Industry Development Strategy* \[Media release\]. <https://www.minister.defence.gov.au/media-releases/2026-07-02/2026-defence-industry-development-strategy>
-
-Department of Defence Ministers. (2026b, July 2). *Rebuilding Defence capability to keep Australians safe* \[Media release\]. <https://www.minister.defence.gov.au/media-releases/2026-07-02/rebuilding-defence-capability-keep-australians-safe>
-
-Hendry, J. (2026, July 2). *‘Industry policy is security policy’: Conroy’s defence industry plan.* InnovationAus. <https://innovationaus.com/industry-policy-is-security-policy-conroys-defence-industry-plan>
-
-*Industrial cooperation in Europe.* (2026). Routledge. <https://doi.org/10.4324/9781003562474-11>
-
-McDowall, W. (2026, July 3). *Australia’s defence industry needs a government investment fund.* The Strategist. <https://www.aspistrategist.org.au/australias-defence-industry-needs-a-government-investment-fund/>
-
-Stewart, C. (2026, July 3). *Greater industrial self-reliance can make Australia’s deterrence strategy more credible.* The Strategist. <https://www.aspistrategist.org.au/greater-industrial-self-reliance-can-make-australias-deterrence-strategy-more-credible/>
-
-U.S. Government Accountability Office. (2026, July 2). *Weapon systems annual assessment* (GAO-26-108457). <https://www.gao.gov/products/gao-26-108457>
+- Cohen, L. (2026, July 3). *Australian Defence acquisition’s turn to stewardship of industry brings new risks.* The Strategist. <https://www.aspistrategist.org.au/australian-defence-acquisitions-turn-to-stewardship-of-industry-brings-new-risks/>
+- Department of Defence. (2026). *2026 Defence Industry Development Strategy.* <https://www.defence.gov.au/about/strategic-planning/2026-defence-industry-development-strategy>
+- Department of Defence Ministers. (2026a, July 2). *2026 Defence Industry Development Strategy* \[Media release\]. <https://www.minister.defence.gov.au/media-releases/2026-07-02/2026-defence-industry-development-strategy>
+- Department of Defence Ministers. (2026b, July 2). *Rebuilding Defence capability to keep Australians safe* \[Media release\]. <https://www.minister.defence.gov.au/media-releases/2026-07-02/rebuilding-defence-capability-keep-australians-safe>
+- Hendry, J. (2026, July 2). *‘Industry policy is security policy’: Conroy’s defence industry plan.* InnovationAus. <https://innovationaus.com/industry-policy-is-security-policy-conroys-defence-industry-plan>
+- *Industrial cooperation in Europe.* (2026). Routledge. <https://doi.org/10.4324/9781003562474-11>
+- McDowall, W. (2026, July 3). *Australia’s defence industry needs a government investment fund.* The Strategist. <https://www.aspistrategist.org.au/australias-defence-industry-needs-a-government-investment-fund/>
+- Stewart, C. (2026, July 3). *Greater industrial self-reliance can make Australia’s deterrence strategy more credible.* The Strategist. <https://www.aspistrategist.org.au/greater-industrial-self-reliance-can-make-australias-deterrence-strategy-more-credible/>
+- U.S. Government Accountability Office. (2026, July 2). *Weapon systems annual assessment* (GAO-26-108457). <https://www.gao.gov/products/gao-26-108457>

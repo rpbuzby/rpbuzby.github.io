@@ -26,16 +26,10 @@ This is where the procurement-sequence argument matters again. The frameworks-wi
 The advice that earns the AI governance consulting fee has to acknowledge that the assurance question is now epistemological before it is procedural. A buyer asking for an AI governance audit in 2026 is asking for a thing that, in the rigorous sense, the market is not yet equipped to deliver. The honest consulting answer is to scope the assurance work against what current methods can verify, name what they cannot, design the monitoring posture for the residual risk, and not pretend the gap closes by writing a stronger clause into the contract. A governance policy without verifiable assurance is the same artefact as a framework without an implementation pathway.
 
 ## References
-Birhane, A., Angius, R., Agnew, W., Pandit, H. J., Mitra, B., Dobbe, R., & Talat, Z. (2026). Big AI’s regulatory capture: Mapping industry interference and government complicity. arXiv:2605.06806. <https://arxiv.org/abs/2605.06806>
-
-Seth, P., & Sankarapu, V. K. (2026). Position: Behavioural assurance cannot verify the safety claims governance now demands. arXiv:2605.15164. <https://arxiv.org/abs/2605.15164>
-
-Grant Thornton. (2026). 2026 AI Impact Survey. Grant Thornton International.
-
-LSE Business Review. (2026, February). From point-in-time audits to living compliance: The next phase of AI governance. London School of Economics.
-
-European Parliament and Council. (2024). Regulation (EU) 2024/1689 on artificial intelligence (the AI Act). Official Journal of the European Union.
-
-Department for Science, Innovation and Technology (UK). (2023). A pro-innovation approach to AI regulation. HM Government.
-
-The White House. (2023). Executive Order 14110: Safe, secure, and trustworthy development and use of artificial intelligence. The White House.
+- Birhane, A., Angius, R., Agnew, W., Pandit, H. J., Mitra, B., Dobbe, R., & Talat, Z. (2026). Big AI’s regulatory capture: Mapping industry interference and government complicity. arXiv:2605.06806. <https://arxiv.org/abs/2605.06806>
+- Seth, P., & Sankarapu, V. K. (2026). Position: Behavioural assurance cannot verify the safety claims governance now demands. arXiv:2605.15164. <https://arxiv.org/abs/2605.15164>
+- Grant Thornton. (2026). 2026 AI Impact Survey. Grant Thornton International.
+- LSE Business Review. (2026, February). From point-in-time audits to living compliance: The next phase of AI governance. London School of Economics.
+- European Parliament and Council. (2024). Regulation (EU) 2024/1689 on artificial intelligence (the AI Act). Official Journal of the European Union.
+- Department for Science, Innovation and Technology (UK). (2023). A pro-innovation approach to AI regulation. HM Government.
+- The White House. (2023). Executive Order 14110: Safe, secure, and trustworthy development and use of artificial intelligence. The White House.

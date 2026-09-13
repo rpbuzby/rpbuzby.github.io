@@ -32,16 +32,10 @@ For consultants and change practitioners working in or around this rollout, the 
 Speed is the easy part of this story. Inclusion at pace is the part that will decide whether the APS AI rollout ends up as a genuine capability uplift or as a faster version of the same service gaps we already have. The difference between those two outcomes will be invisible in the launch-day metrics and very visible in the complaints data eighteen months later.
 
 ## References
-Department of Industry, Science and Resources. (2025, December 2). *National AI Plan*. Commonwealth of Australia.
-
-Department of Finance, Digital Transformation Agency and Australian Public Service Commission. (2025). *AI Plan for the Australian Public Service 2025*. Commonwealth of Australia. <https://www.digital.gov.au/policy/ai/australian-public-service-ai-plan-2025>
-
-*Systematic inequities in Australian health workforce, digital access, and service utilisation: Implications for artificial intelligence deployment in public health*. (2026). Zenodo. <https://doi.org/10.5281/zenodo.18979127>
-
-CSIRO. (2025). *Artificial intelligence for healthcare in Australian Indigenous communities: Scoping project to explore relevance*. Commonwealth Scientific and Industrial Research Organisation.
-
-Digital Transformation Agency. (2025, December 15). *Policy for responsible use of AI in government v2.0*. Commonwealth of Australia.
-
-InnovationAus. (2026a, March 13). *DISR enlists local tech firm for its AI drive*. <https://innovationaus.com/disr-enlists-local-tech-firm-for-its-ai-drive>
-
-InnovationAus. (2026b, March 2). *Up to 20,000 public servants to join GovAI trials*. <https://innovationaus.com/up-to-20000-public-servants-to-join-govai-trials>
+- Department of Industry, Science and Resources. (2025, December 2). *National AI Plan*. Commonwealth of Australia.
+- Department of Finance, Digital Transformation Agency and Australian Public Service Commission. (2025). *AI Plan for the Australian Public Service 2025*. Commonwealth of Australia. <https://www.digital.gov.au/policy/ai/australian-public-service-ai-plan-2025>
+- *Systematic inequities in Australian health workforce, digital access, and service utilisation: Implications for artificial intelligence deployment in public health*. (2026). Zenodo. <https://doi.org/10.5281/zenodo.18979127>
+- CSIRO. (2025). *Artificial intelligence for healthcare in Australian Indigenous communities: Scoping project to explore relevance*. Commonwealth Scientific and Industrial Research Organisation.
+- Digital Transformation Agency. (2025, December 15). *Policy for responsible use of AI in government v2.0*. Commonwealth of Australia.
+- InnovationAus. (2026a, March 13). *DISR enlists local tech firm for its AI drive*. <https://innovationaus.com/disr-enlists-local-tech-firm-for-its-ai-drive>
+- InnovationAus. (2026b, March 2). *Up to 20,000 public servants to join GovAI trials*. <https://innovationaus.com/up-to-20000-public-servants-to-join-govai-trials>

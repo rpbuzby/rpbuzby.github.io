@@ -26,10 +26,7 @@ This connects to arguments I have made elsewhere about wildfire governance and t
 The uncomfortable conclusion is that a disaster response can be coordinated flawlessly and still be the wrong response. Black Summer was not primarily a failure of agencies to work together, and the fix is not primarily to make them work together better, which the 2025-26 season shows they now largely do. It was a structural mismatch between the shape of the governance and the shape of the crisis, and that mismatch survives every improvement to coordination because it sits one level above it. We have made the response faster and more joined-up. We have not yet redesigned the thing that is responding, and the next season will not wait for us to get around to it.
 
 ## References
-*Understanding and addressing the disruptive impacts of contemporary climate crises.* (2026). Journal of Management Studies. <https://doi.org/10.1111/joms.70112>
-
-*JESIP (Joint Emergency Services Interoperability Programme) embedding evaluation.* (2026). University of Liverpool.
-
-*Building trauma-informed and equitable capacity for city programs.* (2026, May 29). Frontiers in Public Health.
-
-*Royal Commission into National Natural Disaster Arrangements.* (2020). Final report.
+- *Understanding and addressing the disruptive impacts of contemporary climate crises.* (2026). Journal of Management Studies. <https://doi.org/10.1111/joms.70112>
+- *JESIP (Joint Emergency Services Interoperability Programme) embedding evaluation.* (2026). University of Liverpool.
+- *Building trauma-informed and equitable capacity for city programs.* (2026, May 29). Frontiers in Public Health.
+- *Royal Commission into National Natural Disaster Arrangements.* (2020). Final report.

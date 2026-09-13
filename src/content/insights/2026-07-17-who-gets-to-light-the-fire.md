@@ -26,20 +26,12 @@ I volunteer with the NSW Rural Fire Service, and nothing here argues against the
 El Niño has fixed the season and the research has settled the method. The one variable still fully under human control before the season peaks is how much country gets treated and who holds the authority to treat it. That authority question was never scientific. It is a policy choice, and we renew the choice every year we leave the barriers standing.
 
 ## References
-Bureau of Meteorology. (2026, June 16). *ENSO Outlook: El Niño underway.* <http://www.bom.gov.au/climate/enso/>
-
-*Indigenous peoples’ cultural burning within a government fire agency? The state craft and agenda stakes in public sector land management.* (2026). Environmental Science & Policy. <https://doi.org/10.1016/j.envsci.2026.104436>
-
-*Long-term influence of prescribed burning on subsequent wildfire in an old-growth coast redwood forest.* (2025). Fire Ecology. <https://doi.org/10.1186/s42408-025-00356-5>
-
-Murdock, E., & Vargas Zeppetello, L. (2026, July 10). *A big El Niño is likely. Australia needs to get ready now for drought, fire and the unknown.* The Conversation. <https://theconversation.com/a-big-el-nino-is-likely-australia-needs-to-get-ready-now-for-drought-fire-and-the-unknown-286634>
-
-NSW Department of Climate Change, Energy, the Environment and Water. (2026, June 4). *NSW Cultural Fire Strategy.*<https://www.environment.nsw.gov.au/news/nsw-releases-its-first-cultural-fire-strategy>
-
-*Physics-guided spatiotemporal neural models for fuel density prediction.* (2026). arXiv. <https://arxiv.org/abs/2607.06999>
-
-*Previous prescribed burns saved thousands of ancient sequoias during historically unprecedented wildfires.* (2026). Nature Communications. <https://doi.org/10.1038/s41467-026-75418-6>
-
-*The state of the giant sequoias: Losses, risks, and opportunities.* (2026). Fire Ecology. <https://doi.org/10.1186/s42408-026-00469-5>
-
-*Wilsons Prom has been scarred by bushfires. It may help us protect other fire-prone forests.* (2026, July 7). The Conversation. <https://theconversation.com/wilsons-prom-has-been-scarred-by-bushfires-it-may-help-us-protect-other-fire-prone-forests-283377>
+- Bureau of Meteorology. (2026, June 16). *ENSO Outlook: El Niño underway.* <http://www.bom.gov.au/climate/enso/>
+- *Indigenous peoples’ cultural burning within a government fire agency? The state craft and agenda stakes in public sector land management.* (2026). Environmental Science & Policy. <https://doi.org/10.1016/j.envsci.2026.104436>
+- *Long-term influence of prescribed burning on subsequent wildfire in an old-growth coast redwood forest.* (2025). Fire Ecology. <https://doi.org/10.1186/s42408-025-00356-5>
+- Murdock, E., & Vargas Zeppetello, L. (2026, July 10). *A big El Niño is likely. Australia needs to get ready now for drought, fire and the unknown.* The Conversation. <https://theconversation.com/a-big-el-nino-is-likely-australia-needs-to-get-ready-now-for-drought-fire-and-the-unknown-286634>
+- NSW Department of Climate Change, Energy, the Environment and Water. (2026, June 4). *NSW Cultural Fire Strategy.*<https://www.environment.nsw.gov.au/news/nsw-releases-its-first-cultural-fire-strategy>
+- *Physics-guided spatiotemporal neural models for fuel density prediction.* (2026). arXiv. <https://arxiv.org/abs/2607.06999>
+- *Previous prescribed burns saved thousands of ancient sequoias during historically unprecedented wildfires.* (2026). Nature Communications. <https://doi.org/10.1038/s41467-026-75418-6>
+- *The state of the giant sequoias: Losses, risks, and opportunities.* (2026). Fire Ecology. <https://doi.org/10.1186/s42408-026-00469-5>
+- *Wilsons Prom has been scarred by bushfires. It may help us protect other fire-prone forests.* (2026, July 7). The Conversation. <https://theconversation.com/wilsons-prom-has-been-scarred-by-bushfires-it-may-help-us-protect-other-fire-prone-forests-283377>

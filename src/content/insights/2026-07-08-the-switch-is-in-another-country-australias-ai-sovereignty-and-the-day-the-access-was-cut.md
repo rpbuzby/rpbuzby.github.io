@@ -26,12 +26,8 @@ There are faint signs of institutional awareness. The Digital Transformation Age
 Australia spent a long time debating whether its artificial intelligence was safe. The Anthropic shut-off reframed that debate around a harder question, easier to ignore, of whether the AI is actually Australia’s own. Sovereignty here was never about owning the compute or the buildings that house it. Sovereignty is about knowing what you would do on the morning someone in another country flips the switch, and on current evidence, most of the institutions leaning hardest on these systems do not yet have an answer worth the name.
 
 ## References
-The Conversation. (2026, June 17). *The US government can shut off access to AI at will. What does this mean for Australia?*
-
-*AI Reliance: a reproducible measure of how deep, and how reversible, systematic AI dependency is.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20763481>
-
-*The Capability-Friction Dynamics: A macro-architecture for public sector AI.* (2026). AMCIS 2026 Proceedings.
-
-Australian Strategic Policy Institute. (2026, June). *On AI sovereignty: decide where independence matters most.* The Strategist.
-
-United States. *Clarifying Lawful Overseas Use of Data (CLOUD) Act,* 2018.
+- The Conversation. (2026, June 17). *The US government can shut off access to AI at will. What does this mean for Australia?*
+- *AI Reliance: a reproducible measure of how deep, and how reversible, systematic AI dependency is.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20763481>
+- *The Capability-Friction Dynamics: A macro-architecture for public sector AI.* (2026). AMCIS 2026 Proceedings.
+- Australian Strategic Policy Institute. (2026, June). *On AI sovereignty: decide where independence matters most.* The Strategist.
+- United States. *Clarifying Lawful Overseas Use of Data (CLOUD) Act,* 2018.

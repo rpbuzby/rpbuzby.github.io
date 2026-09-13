@@ -31,18 +31,11 @@ A more cynical reading of the rollout is available, in which AI.gov.au is a visi
 A guidance hub is a useful piece of furniture in the room being built. It is not, by itself, the room. The real test of AI.gov.au will be how it evolves over the next two budget cycles, how the user research is fed back into the site’s structure, and whether the resource becomes a genuine reference point for the procurement and workforce capability changes that the broader National AI Plan has signalled. The release last week was good news. The follow-up is what determines whether the announcement was the start of something or the most visible thing the National AI Plan produced.
 
 ## References
-AI.gov.au. (2026). *National AI Centre platform launch*.
-
-arXiv preprint. (2026). *Systematic analysis of Australian Government AI Transparency Statements*.
-
-Deloitte. (2026). *Scaling the public sector’s human edge: Making human-AI collaboration work*. Government Trends 2026.
-
-Department of Industry, Science and Resources. (2026). *National AI Centre launches AI.gov.au*. Commonwealth of Australia.
-
-OpenGov Asia. (2026). *Australia Launches AI.gov.au to Support Responsible AI Adoption*.
-
-The Mandarin. (2026). *Why public sector AI uptake keeps stalling*.
-
-White & Case. (2026). *Australia’s National AI Plan: big ambitions, but light on details*.
-
-6clicks. (2026). *Insights from Ready for Sovereignty 2026 Canberra: Australia’s AI governance stalemate*.
+- AI.gov.au. (2026). *National AI Centre platform launch*.
+- arXiv preprint. (2026). *Systematic analysis of Australian Government AI Transparency Statements*.
+- Deloitte. (2026). *Scaling the public sector’s human edge: Making human-AI collaboration work*. Government Trends 2026.
+- Department of Industry, Science and Resources. (2026). *National AI Centre launches AI.gov.au*. Commonwealth of Australia.
+- OpenGov Asia. (2026). *Australia Launches AI.gov.au to Support Responsible AI Adoption*.
+- The Mandarin. (2026). *Why public sector AI uptake keeps stalling*.
+- White & Case. (2026). *Australia’s National AI Plan: big ambitions, but light on details*.
+- 6clicks. (2026). *Insights from Ready for Sovereignty 2026 Canberra: Australia’s AI governance stalemate*.

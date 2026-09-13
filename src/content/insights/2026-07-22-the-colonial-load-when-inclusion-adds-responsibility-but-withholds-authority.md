@@ -26,12 +26,8 @@ This is where the distinction between representation and authority earns its kee
 The emergency-management sector is a hard test case, and a fair one, because the stakes do not allow for euphemism. Lives, property and country depend on whether several knowledge systems can actually work together when a fire is running, and that cooperation fails whenever one system is invited to contribute and denied the authority to direct. The colonial load is the bill for inclusion without authority, and it is being paid right now in the burnout and turnover of the very people the sector says it wants to keep. An organisation can keep paying that bill, or it can do the harder thing the research keeps pointing to and move some decision rights. Real inclusion comes down to one thing, the say it grants over the decision that matters, and by that measure the sector still has a long way to travel.
 
 ## References
-*Disaster Preparedness Scorecard: Closing the gap in emergency management.* (2026). <https://doi.org/10.26180/31610536>
-
-*Public attitudes to forest disturbance and Indigenous fire stewardship: A factorial survey experiment in western Canada.* (2026).
-
-Natural Hazards Research Australia. (2026a, June 22). *New survey investigates First Nations experiences in emergency management to improve leadership, representation and wellbeing.*
-
-Natural Hazards Research Australia. (2026b, June 24). *Leading to impact: NHRF26.*
-
-*The politics and co-production of knowledge in Indigenous wildfire management.* (2026). Environmental Science & Policy. <https://doi.org/10.1016/j.envsci.2026.104424>
+- *Disaster Preparedness Scorecard: Closing the gap in emergency management.* (2026). <https://doi.org/10.26180/31610536>
+- *Public attitudes to forest disturbance and Indigenous fire stewardship: A factorial survey experiment in western Canada.* (2026).
+- Natural Hazards Research Australia. (2026a, June 22). *New survey investigates First Nations experiences in emergency management to improve leadership, representation and wellbeing.*
+- Natural Hazards Research Australia. (2026b, June 24). *Leading to impact: NHRF26.*
+- *The politics and co-production of knowledge in Indigenous wildfire management.* (2026). Environmental Science & Policy. <https://doi.org/10.1016/j.envsci.2026.104424>

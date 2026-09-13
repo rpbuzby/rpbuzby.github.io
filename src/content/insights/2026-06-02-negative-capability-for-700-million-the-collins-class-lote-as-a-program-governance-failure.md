@@ -30,20 +30,12 @@ The original LinkedIn post version of this argument put the claim that “major 
 If A\$700 million has already produced negative capability, the case for treating the next A\$11 billion as a high-risk program at the outset rather than at the next audit window writes itself. The accountability test is not whether the LOTE eventually delivers. It is whether the program governance that failed once is meaningfully different the second time.
 
 ## References
-Australian National Audit Office. (2026, May). *Performance audit on the Collins-class Life of Type Extension design contract*. Auditor-General Report. Cited via Senator Paterson media release, 22 May 2026.
-
-Australian Submarine Agency. *AUKUS Pillar 1: Australia’s Nuclear-Powered Submarines*. <https://www.asa.gov.au/aukus/australias-nuclear-powered-submarines>
-
-Congressional Research Service. *Australia’s Future Submarine Program (AUKUS Pillar 1, Optimal Pathway)*. RL32418. <https://www.congress.gov/crs-product/RL32418>
-
-Department of Defence. (2026, 19 May). *Ministerial release: Government commits to Collins-class Life of Type Extension program*. Minister for Defence.
-
-Greene, A. (2026, 19-22 May). Collins LOTE rescoping and ministerial announcement coverage. *The Nightly*.
-
-Greene, A. (2026, 21 May). US Capt. Collin Rogers thesis questions Australia’s institutional and technical capacity for nuclear-powered submarine operations under AUKUS. *The Nightly*.
-
-Naval News. (2026, May). *Australia spends big on LOTE life extension for Collins submarines*. <https://www.navalnews.com/naval-news/2026/05/australia-spends-big-on-lote-life-extension-for-collins-submarines/>
-
-Shephard Media. (2024, June). *Tomahawk missiles and optronics axed from RAN Collins submarine upgrade*.
-
-Sullivan, D. (2026, 18 May). *NDS 2026 focus on high-intensity conflict neglects peacekeeping and HADR*. ASPI Strategist.
+- Australian National Audit Office. (2026, May). *Performance audit on the Collins-class Life of Type Extension design contract*. Auditor-General Report. Cited via Senator Paterson media release, 22 May 2026.
+- Australian Submarine Agency. *AUKUS Pillar 1: Australia’s Nuclear-Powered Submarines*. <https://www.asa.gov.au/aukus/australias-nuclear-powered-submarines>
+- Congressional Research Service. *Australia’s Future Submarine Program (AUKUS Pillar 1, Optimal Pathway)*. RL32418. <https://www.congress.gov/crs-product/RL32418>
+- Department of Defence. (2026, 19 May). *Ministerial release: Government commits to Collins-class Life of Type Extension program*. Minister for Defence.
+- Greene, A. (2026, 19-22 May). Collins LOTE rescoping and ministerial announcement coverage. *The Nightly*.
+- Greene, A. (2026, 21 May). US Capt. Collin Rogers thesis questions Australia’s institutional and technical capacity for nuclear-powered submarine operations under AUKUS. *The Nightly*.
+- Naval News. (2026, May). *Australia spends big on LOTE life extension for Collins submarines*. <https://www.navalnews.com/naval-news/2026/05/australia-spends-big-on-lote-life-extension-for-collins-submarines/>
+- Shephard Media. (2024, June). *Tomahawk missiles and optronics axed from RAN Collins submarine upgrade*.
+- Sullivan, D. (2026, 18 May). *NDS 2026 focus on high-intensity conflict neglects peacekeeping and HADR*. ASPI Strategist.

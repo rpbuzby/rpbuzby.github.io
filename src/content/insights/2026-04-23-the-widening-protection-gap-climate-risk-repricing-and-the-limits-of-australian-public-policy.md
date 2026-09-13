@@ -28,12 +28,8 @@ For consultants and strategic advisors working in or around this area, the widen
 This is also an area where the resourcing argument from the fire weather attribution article comes back into play. The scientific case for treating the climate context as a permanently elevated baseline is settled. The actuarial case for repricing is settled. The insurance industry is acting on both. What is missing is the corresponding policy case, and the distance between actuarial reality and policy response is widening faster than the political system is prepared to close it. That distance is the protection gap in its fullest sense. The narrow meaning (the dollar difference between economic loss and insured loss in any given year) is the part that shows up in Swiss Re’s numbers. The wider meaning is the gap between what climate science and insurance markets (and, increasingly, land-use planners) can already see coming, and what the political system is prepared to act on.
 
 ## References
-Australian Prudential Regulation Authority. (2026). *Climate risk and insurance market coverage update*. APRA.
-
-California Department of Insurance. (2025). *Fire-prone area premium and coverage data*. State of California.
-
-OMFIF. (2026, February). *The insurance protection gap: a growing risk to financial stability*. Official Monetary and Financial Institutions Forum. <https://www.omfif.org/2026/02/the-insurance-protection-gap-a-growing-risk-to-financial-stability/>
-
-Swiss Re Institute. (2026, March). *Natural catastrophes in 2025: the persistent rise of wildfire and storm risk*. sigma 1/2026. Swiss Re. <https://www.swissre.com/institute/research/sigma-research/sigma-2026-01-natcat-2025-wildfire-storm-risk.html>
-
-World Economic Forum. (2026). *Climate loss and insurance coverage*. WEF.
+- Australian Prudential Regulation Authority. (2026). *Climate risk and insurance market coverage update*. APRA.
+- California Department of Insurance. (2025). *Fire-prone area premium and coverage data*. State of California.
+- OMFIF. (2026, February). *The insurance protection gap: a growing risk to financial stability*. Official Monetary and Financial Institutions Forum. <https://www.omfif.org/2026/02/the-insurance-protection-gap-a-growing-risk-to-financial-stability/>
+- Swiss Re Institute. (2026, March). *Natural catastrophes in 2025: the persistent rise of wildfire and storm risk*. sigma 1/2026. Swiss Re. <https://www.swissre.com/institute/research/sigma-research/sigma-2026-01-natcat-2025-wildfire-storm-risk.html>
+- World Economic Forum. (2026). *Climate loss and insurance coverage*. WEF.

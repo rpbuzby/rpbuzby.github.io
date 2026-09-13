@@ -22,16 +22,10 @@ The most consequential element of the strategy may receive the least public atte
 The think tank consensus is that the 2026 NDS represents evolution, not revolution. Ryan called it “more of the same.” ASPI’s Mike Hughes described it as “evolution, not revolution.” The strategic framework is unchanged: National Defence, Strategy of Denial, deter-shape-respond. The capability priorities are refined, not reimagined. The new money, while significant in absolute terms, is incremental rather than transformative. The question the strategy does not quite answer is whether incremental improvement is adequate to the environment it describes with such urgency. A strategy that assesses the threat as unprecedented but funds the response as a progression is making an implicit bet that the timeline for action remains forgiving. The next biennial review, due in 2028, will test whether that bet was well placed.
 
 ## References
-Australian Government (2026). *National Defence Strategy 2026*. Department of Defence.
-
-Australian Government (2026). *2026 Integrated Investment Program*. Department of Defence.
-
-ASPI (2026). “2026 National Defence Strategy: views from ASPI analysts.” *The Strategist*, 16 April 2026.
-
-Grattan, M. (2026). “Albanese government will commit to boosting defence spending to 3% of GDP, but under a revised definition.” *The Conversation*.
-
-Hughes, M. & Bassi, R. (2026). “NDS 2026 – The Australia-US Alliance: the art of dealing with a great power.” *The Strategist*, 16 April 2026.
-
-Layton, P. (2026). “The new National Defence Strategy feels written for a bygone era – and ignores the elephant in the room.” *The Conversation*, 16 April 2026.
-
-Ryan, M. (2026). “The 2026 National Defence Strategy delivers more of the same.” *The Interpreter*, Lowy Institute, 16 April 2026.
+- Australian Government (2026). *National Defence Strategy 2026*. Department of Defence.
+- Australian Government (2026). *2026 Integrated Investment Program*. Department of Defence.
+- ASPI (2026). “2026 National Defence Strategy: views from ASPI analysts.” *The Strategist*, 16 April 2026.
+- Grattan, M. (2026). “Albanese government will commit to boosting defence spending to 3% of GDP, but under a revised definition.” *The Conversation*.
+- Hughes, M. & Bassi, R. (2026). “NDS 2026 – The Australia-US Alliance: the art of dealing with a great power.” *The Strategist*, 16 April 2026.
+- Layton, P. (2026). “The new National Defence Strategy feels written for a bygone era – and ignores the elephant in the room.” *The Conversation*, 16 April 2026.
+- Ryan, M. (2026). “The 2026 National Defence Strategy delivers more of the same.” *The Interpreter*, Lowy Institute, 16 April 2026.

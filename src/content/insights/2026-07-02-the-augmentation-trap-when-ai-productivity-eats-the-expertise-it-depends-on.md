@@ -30,16 +30,10 @@ Put bluntly, for an industry currently selling AI transformation to almost every
 The augmentation trap is not an argument against using AI, any more than erosion is an argument against rivers. It is an argument for one discipline that current practice almost always skips: putting skill maintenance into the business case as a real and owned line, and treating the ability to verify the machine as the scarce asset it has become. The productivity gain and the skill cost land on different balance sheets, and a business case that counts only the first measures something other than efficiency. It is borrowing against expertise and booking the loan as profit.
 
 ## References
-*Delegation and Verification Under AI.* (2026). arXiv:2603.02961.
-
-*The Augmentation Trap: AI productivity and the cost of cognitive offloading.* (2026). arXiv:2604.03501.
-
-*The Dark Side of Generative Artificial Intelligence in Personal Learning: A cognitive perspective.* (2026). PACIS 2026 Proceedings.
-
-*Evaluating Deep Research Agents on Expert Consulting Work: A benchmark with verifiers, rubrics, and cognitive traps.* (2026). arXiv:2605.17554.
-
-InnovationAus. (2026, June 25). *“Data rich, intelligence poor”: The challenge facing govt.*
-
-*Skills for the future software profession: Beyond agentic AI!* (2026). arXiv:2606.21894.
-
-*When Technology Works but Adoption Fails: Leadership capability gaps in enterprise AI transformation.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20759385>
+- *Delegation and Verification Under AI.* (2026). arXiv:2603.02961.
+- *The Augmentation Trap: AI productivity and the cost of cognitive offloading.* (2026). arXiv:2604.03501.
+- *The Dark Side of Generative Artificial Intelligence in Personal Learning: A cognitive perspective.* (2026). PACIS 2026 Proceedings.
+- *Evaluating Deep Research Agents on Expert Consulting Work: A benchmark with verifiers, rubrics, and cognitive traps.* (2026). arXiv:2605.17554.
+- InnovationAus. (2026, June 25). *“Data rich, intelligence poor”: The challenge facing govt.*
+- *Skills for the future software profession: Beyond agentic AI!* (2026). arXiv:2606.21894.
+- *When Technology Works but Adoption Fails: Leadership capability gaps in enterprise AI transformation.* (2026). Zenodo. <https://doi.org/10.5281/zenodo.20759385>

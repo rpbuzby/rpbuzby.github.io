@@ -26,10 +26,7 @@ The familiar caution applies, though, because an endorsed framework is not an im
 The deeper change is worth naming plainly, because it is easy to miss inside the procedural language of principles and monitoring cycles, and it is a change in where responsibility sits. For decades, resilience was a convenient place to put that responsibility, because it asked nothing of the organisation and everything of the person. Moving the duty to track exposure onto the agency is the harder and more honest choice. The real test of the framework is not whether it was endorsed, which it was, but whether the agencies that endorsed it will resource the tracking it calls for, especially for the volunteers who carry so much of the work and appear on none of the payrolls.
 
 ## References
-Phoenix Australia – Centre for Posttraumatic Mental Health, funded by Natural Hazards Research Australia. (2026). *Good practice principles for tracking potentially traumatic event exposure and organisational responses in emergency services.*
-
-Natural Hazards Research Australia. (2026, June 10-12). *Natural Hazards Research Forum 2026, Adelaide.*
-
-Australasian Fire and Emergency Service Authorities Council (AFAC). (2026). *Endorsement of the PTE exposure tracking principles.*
-
-Royal Commission into National Natural Disaster Arrangements. (2020). *Final report.*
+- Phoenix Australia – Centre for Posttraumatic Mental Health, funded by Natural Hazards Research Australia. (2026). *Good practice principles for tracking potentially traumatic event exposure and organisational responses in emergency services.*
+- Natural Hazards Research Australia. (2026, June 10-12). *Natural Hazards Research Forum 2026, Adelaide.*
+- Australasian Fire and Emergency Service Authorities Council (AFAC). (2026). *Endorsement of the PTE exposure tracking principles.*
+- Royal Commission into National Natural Disaster Arrangements. (2020). *Final report.*

@@ -28,14 +28,9 @@ For anyone advising government, the practice is at once a risk to manage and a s
 Underneath all of this, visibility rather than policy is the binding constraint. A governance framework that cannot see what staff are already doing is a description of intentions rather than a control of behaviour. Unsanctioned AI has already shown how wide that distance can grow inside a critical-infrastructure network. Agentic AI is about to make the same distance something an organisation can no longer afford to leave unmeasured. The tools hiding in the gap so far have only been moving data. What hides there next will be systems that act on their own.
 
 ## References
-Baruwal Chhetri, M., Tariq, S., Aamir, T., Grobler, M., Thapa, C., & Singh, R. (2026). *From frontier to shadow AI: A simmering threat to assurance and security in critical infrastructure* \[Preprint\]. arXiv:2606.00088.
-
-InnovationAus. (2026, June 4). *Government AI agents add risk of cascading errors.*
-
-Australian Signals Directorate / ACSC, with CISA, NSA, Canadian Centre for Cyber Security, NZ NCSC, and UK NCSC. (2026, April 30). *Careful adoption of agentic AI services.*
-
-InnovationAus. (2026, June 1). *DTA promises sovereignty in whole-of-government tech deals.*
-
-*Prompts for public-sector LLMs should be governed as commons* \[Preprint\]. (2026, June 3). arXiv.
-
-*Trustworthy AI Posture (TAIP): A framework for continuous AI assurance of agentic systems* \[Preprint\]. (2026). arXiv:2603.03340.
+- Baruwal Chhetri, M., Tariq, S., Aamir, T., Grobler, M., Thapa, C., & Singh, R. (2026). *From frontier to shadow AI: A simmering threat to assurance and security in critical infrastructure* \[Preprint\]. arXiv:2606.00088.
+- InnovationAus. (2026, June 4). *Government AI agents add risk of cascading errors.*
+- Australian Signals Directorate / ACSC, with CISA, NSA, Canadian Centre for Cyber Security, NZ NCSC, and UK NCSC. (2026, April 30). *Careful adoption of agentic AI services.*
+- InnovationAus. (2026, June 1). *DTA promises sovereignty in whole-of-government tech deals.*
+- *Prompts for public-sector LLMs should be governed as commons* \[Preprint\]. (2026, June 3). arXiv.
+- *Trustworthy AI Posture (TAIP): A framework for continuous AI assurance of agentic systems* \[Preprint\]. (2026). arXiv:2603.03340.

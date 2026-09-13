@@ -28,16 +28,10 @@ There is an argument that the problem here is one of institutional design as wel
 The fire weather attribution and resourcing article I wrote separately described how the climate science has settled and the bill for the resourcing is now due. Emergency broadcasting is one of the places where that bill is most clearly visible and least well understood. AusAlert is good, and it was overdue. Paying for it while allowing the analogue backbone behind it to corrode is not modernisation. It is a narrower set of things that will work on the day that matters, and the corners that get cut in the middle of a bad fire season are the ones that decide whether a warning gets translated into action or is just another notification on a phone that is already out of battery.
 
 ## References
-Australian Broadcasting Corporation. (2026). *Annual report and parliamentary submission*. ABC.
-
-Backhaus, B. and Foxwell-Norton, K. (2026, March 18). *ABC Canberra emergency broadcasters and Black Summer: Institutional capital in crisis communication*. Journal of Australian Media Studies.
-
-Freeman, J., Hess, K. and Waller, L. (2018). *Local radio and regional emergencies*. Deakin University.
-
-Government News. (2026, February 10). *Emergency management agency under budget pressure*. Government News.
-
-National Emergency Management Agency. (2026). *AusAlert launch announcement*. Commonwealth of Australia.
-
-Royal Commission into National Natural Disaster Arrangements. (2020). *Final report*. Commonwealth of Australia.
-
-Ruby Cha Cha. (2020). *Black Summer media usage survey*. Ruby Cha Cha Consulting.
+- Australian Broadcasting Corporation. (2026). *Annual report and parliamentary submission*. ABC.
+- Backhaus, B. and Foxwell-Norton, K. (2026, March 18). *ABC Canberra emergency broadcasters and Black Summer: Institutional capital in crisis communication*. Journal of Australian Media Studies.
+- Freeman, J., Hess, K. and Waller, L. (2018). *Local radio and regional emergencies*. Deakin University.
+- Government News. (2026, February 10). *Emergency management agency under budget pressure*. Government News.
+- National Emergency Management Agency. (2026). *AusAlert launch announcement*. Commonwealth of Australia.
+- Royal Commission into National Natural Disaster Arrangements. (2020). *Final report*. Commonwealth of Australia.
+- Ruby Cha Cha. (2020). *Black Summer media usage survey*. Ruby Cha Cha Consulting.

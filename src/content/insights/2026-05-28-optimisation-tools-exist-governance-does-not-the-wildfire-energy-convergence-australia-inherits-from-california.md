@@ -28,18 +28,11 @@ The recurring lesson from sustained fire seasons is that institutional design la
 Australia does not lack the analysis. It lacks the body authorised to act on it.
 
 ## References
-Australian Energy Market Commission. (2024). *Grid resilience reform: Position paper*. AEMC.
-
-Buzby, R. (2026a). Sub-Minute Detection, Multi-Year Adoption: The wildfire procurement gap. *[russellbuzby.com](https://russellbuzby.com/2026/05/19/sub-minute-detection-multi-year-adoption-the-wildfire-procurement-gap/)*.
-
-Buzby, R. (2026b). The Widening Protection Gap: Climate risk repricing and the limits of Australian public policy. *[russellbuzby.com](https://russellbuzby.com/2026/04/23/the-widening-protection-gap-climate-risk-repricing-and-the-limits-of-australian-public-policy/)*.
-
-Buzby, R. (2026c). The Photogenic Fire Gets the Helicopters: Social media and wildifre resource management. *[russellbuzby.com](https://russellbuzby.com/2026/05/20/the-photogenic-fire-gets-the-helicopters-social-media-and-wildfire-resource-management/)*.
-
-California ISO. (2026). *2026 Summer loads and resources assessment*. California Independent System Operator.
-
-Pearl, B. D., Warner, J. G., & Lee, H. W. (2026). Automating the wildfire detection and scheduling pipeline with maneuverable Earth observation satellites. *arXiv preprint* arXiv:2602.08924. <https://arxiv.org/abs/2602.08924>
-
-Productivity Commission. (2023). *Review of natural disaster funding arrangements*. Commonwealth of Australia.
-
-Tapia, T., Piansky, R., Dvorkin, Y., & Watson, J.-P. (2026). Robust capacity expansion under wildfire ignition risk and high renewable penetration. *arXiv preprint* arXiv:2605.07880. <https://arxiv.org/abs/2605.07880>
+- Australian Energy Market Commission. (2024). *Grid resilience reform: Position paper*. AEMC.
+- Buzby, R. (2026a). Sub-Minute Detection, Multi-Year Adoption: The wildfire procurement gap. *[russellbuzby.com](https://russellbuzby.com/2026/05/19/sub-minute-detection-multi-year-adoption-the-wildfire-procurement-gap/)*.
+- Buzby, R. (2026b). The Widening Protection Gap: Climate risk repricing and the limits of Australian public policy. *[russellbuzby.com](https://russellbuzby.com/2026/04/23/the-widening-protection-gap-climate-risk-repricing-and-the-limits-of-australian-public-policy/)*.
+- Buzby, R. (2026c). The Photogenic Fire Gets the Helicopters: Social media and wildifre resource management. *[russellbuzby.com](https://russellbuzby.com/2026/05/20/the-photogenic-fire-gets-the-helicopters-social-media-and-wildfire-resource-management/)*.
+- California ISO. (2026). *2026 Summer loads and resources assessment*. California Independent System Operator.
+- Pearl, B. D., Warner, J. G., & Lee, H. W. (2026). Automating the wildfire detection and scheduling pipeline with maneuverable Earth observation satellites. *arXiv preprint* arXiv:2602.08924. <https://arxiv.org/abs/2602.08924>
+- Productivity Commission. (2023). *Review of natural disaster funding arrangements*. Commonwealth of Australia.
+- Tapia, T., Piansky, R., Dvorkin, Y., & Watson, J.-P. (2026). Robust capacity expansion under wildfire ignition risk and high renewable penetration. *arXiv preprint* arXiv:2605.07880. <https://arxiv.org/abs/2605.07880>

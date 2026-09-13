@@ -22,16 +22,10 @@ There is also a rollout lesson hiding in the Microsoft data. If adoption travels
 Technical debt at least leaves a trail in the repository, where a determined team can find and refactor it. Knowledge debt accrues in people, invisible to every dashboard, discoverable only at the moment of need, which is the most expensive possible time. The 24 per cent is real, and it is bankable this quarter. The understanding it borrows against falls due later, with interest, on someone else’s watch. Ship faster by all means. But the expertise that used to arrive as a free by-product of the typing now has to be built deliberately, as a deliverable in its own right, because the alternative is a workforce that gets more productive every quarter at work it understands less every year.
 
 ## References
-*Adoption and impact of command-line AI coding agents: A study of Microsoft’s early 2026 rollout of Claude Code and GitHub Copilot CLI.* (2026, July 1). arXiv:2607.01418. <https://arxiv.org/abs/2607.01418>
-
-*Agents that teach: Towards designing incidental learning back into AI-assisted software development.* (2026, July 7). arXiv:2607.06101. <https://arxiv.org/abs/2607.06101>
-
-Becker, J., Rush, N., Barnes, E., & Rein, D. (2025). *Measuring the impact of early-2025 AI on experienced open-source developer productivity.* arXiv:2507.09089. <https://arxiv.org/abs/2507.09089>
-
-*CSTutorBench: Benchmarking small language models as tutors for block-based programming.* (2026, July 6). arXiv:2607.05571. <https://arxiv.org/abs/2607.05571>
-
-*How AI impacts skill formation.* (2026, January 28). arXiv:2601.20245. <https://arxiv.org/abs/2601.20245>
-
-*Prompt Coach: An empirical evaluation of an agentic tutor for learning prompt engineering in software development.*(2026, July 7). arXiv:2607.06074. <https://arxiv.org/abs/2607.06074>
-
-Stack Overflow. (2025). *2025 Developer Survey: AI.* <https://survey.stackoverflow.co/2025/ai/>
+- *Adoption and impact of command-line AI coding agents: A study of Microsoft’s early 2026 rollout of Claude Code and GitHub Copilot CLI.* (2026, July 1). arXiv:2607.01418. <https://arxiv.org/abs/2607.01418>
+- *Agents that teach: Towards designing incidental learning back into AI-assisted software development.* (2026, July 7). arXiv:2607.06101. <https://arxiv.org/abs/2607.06101>
+- Becker, J., Rush, N., Barnes, E., & Rein, D. (2025). *Measuring the impact of early-2025 AI on experienced open-source developer productivity.* arXiv:2507.09089. <https://arxiv.org/abs/2507.09089>
+- *CSTutorBench: Benchmarking small language models as tutors for block-based programming.* (2026, July 6). arXiv:2607.05571. <https://arxiv.org/abs/2607.05571>
+- *How AI impacts skill formation.* (2026, January 28). arXiv:2601.20245. <https://arxiv.org/abs/2601.20245>
+- *Prompt Coach: An empirical evaluation of an agentic tutor for learning prompt engineering in software development.*(2026, July 7). arXiv:2607.06074. <https://arxiv.org/abs/2607.06074>
+- Stack Overflow. (2025). *2025 Developer Survey: AI.* <https://survey.stackoverflow.co/2025/ai/>

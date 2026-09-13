@@ -24,14 +24,9 @@ For Australian fire management the implication is concrete. Fuel-treatment prior
 A risk map carries an air of authority that its underlying uncertainty does not justify. It looks settled, and it guides budgets for years. The FSim update is a useful corrective, because it shows that a careful, well-built model can move an entire region’s risk profile by more than half in one refresh without anything physical having changed except our ability to see it. The honest question for any risk assessment is not whether the model is sound. It is how much the world has moved since the model last looked.
 
 ## References
-*Risk assessment in the Pyrocene: rapid changes in models and predictions complicate US policies to prioritize forest and fuel management.* (2026). Landscape and Urban Planning, 105695. <https://doi.org/10.1016/j.landurbplan.2026.105695>
-
-*Wildfire smoke offsets decades of progress in reducing ozone exposure across the United States.* (2026) \[Preprint\]. EarthArXiv. <https://doi.org/10.31223/x5vj5k>
-
-*Growing impacts of fire smoke on ozone pollution and associated mortality burden in the United States.* (2026). Science Advances. <https://doi.org/10.1126/sciadv.aec2903>
-
-*Deep learning forecasting closes wildfire information gaps* \[Preprint\]. (2026, May 28). OpenAlex.
-
-*Compound drought-heat extremes and wildfire response* \[Preprint\]. (2026, May 24). OpenAlex.
-
-*Wildfire suppression and federal spending, 2020-2100* \[Preprint\]. (2026, May 28). OpenAlex.
+- *Risk assessment in the Pyrocene: rapid changes in models and predictions complicate US policies to prioritize forest and fuel management.* (2026). Landscape and Urban Planning, 105695. <https://doi.org/10.1016/j.landurbplan.2026.105695>
+- *Wildfire smoke offsets decades of progress in reducing ozone exposure across the United States.* (2026) \[Preprint\]. EarthArXiv. <https://doi.org/10.31223/x5vj5k>
+- *Growing impacts of fire smoke on ozone pollution and associated mortality burden in the United States.* (2026). Science Advances. <https://doi.org/10.1126/sciadv.aec2903>
+- *Deep learning forecasting closes wildfire information gaps* \[Preprint\]. (2026, May 28). OpenAlex.
+- *Compound drought-heat extremes and wildfire response* \[Preprint\]. (2026, May 24). OpenAlex.
+- *Wildfire suppression and federal spending, 2020-2100* \[Preprint\]. (2026, May 28). OpenAlex.

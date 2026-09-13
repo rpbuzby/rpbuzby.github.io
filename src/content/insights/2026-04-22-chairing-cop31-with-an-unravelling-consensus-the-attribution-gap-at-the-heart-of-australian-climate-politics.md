@@ -30,16 +30,10 @@ On the policy side, the implication is more awkward. The science is settled, as 
 The optimistic reading is that the Bergquist and Klas research at least identifies the leak. You cannot fix a mechanism until you know where it is breaking, and subjective attribution through a nationally-identified political lens is a clearer diagnosis than “the electorate is not concerned enough”. The pessimistic reading is that the repair job is harder than any of the current climate communication budgets assume, because it means building trusted local attribution voices rather than commissioning more infographics from Canberra. Either way, the COP31 chair is arriving at a moment when Australia’s diplomatic posture is running out ahead of its domestic consensus. The conference will happen; the consensus may or may not catch up; the distance between them is what the next couple of years of policy conversation will be about.
 
 ## References
-Australia Institute. (2025). *Climate of the nation*. The Australia Institute.
-
-Bergquist, M. and colleagues. (2025). *Extreme weather event attribution predicts climate policy support across the world*. Nature Climate Change. <https://doi.org/10.1038/s41558-025-02372-4>
-
-Climate Action Tracker. (2025). *Australia policy rating update*. Climate Action Tracker.
-
-Klas, A. and colleagues. (2022). *Investigating how economic and national identity loss messages impact climate change policy support*. Climatic Change. <https://doi.org/10.1007/s10584-022-03472-2>
-
-Lowy Institute. (2025). *Lowy Institute Poll 2025*. Lowy Institute for International Policy.
-
-Nationally representative Australian study on national identity and bushfire attribution. (2026, March 20). OpenAlex.
-
-World Weather Attribution. (2026, January 22). *Human-induced climate change made the January 2026 Victorian heatwave around five times more likely*.
+- Australia Institute. (2025). *Climate of the nation*. The Australia Institute.
+- Bergquist, M. and colleagues. (2025). *Extreme weather event attribution predicts climate policy support across the world*. Nature Climate Change. <https://doi.org/10.1038/s41558-025-02372-4>
+- Climate Action Tracker. (2025). *Australia policy rating update*. Climate Action Tracker.
+- Klas, A. and colleagues. (2022). *Investigating how economic and national identity loss messages impact climate change policy support*. Climatic Change. <https://doi.org/10.1007/s10584-022-03472-2>
+- Lowy Institute. (2025). *Lowy Institute Poll 2025*. Lowy Institute for International Policy.
+- Nationally representative Australian study on national identity and bushfire attribution. (2026, March 20). OpenAlex.
+- World Weather Attribution. (2026, January 22). *Human-induced climate change made the January 2026 Victorian heatwave around five times more likely*.

@@ -24,14 +24,9 @@ None of this makes restructuring wrong. Structures accumulate their own dead wei
 I write separately about knowledge debt in software teams, where AI-assisted speed accumulates code that nobody on the team deeply understands. Restructures run the same dynamic at organisational scale and human speed. In both cases the output metrics improve immediately while the understanding that sustains them drains away, and in both cases the bill arrives later, at interest. An organisation can be reorganised in a quarter and the media release drafted in an afternoon. What the organisation knew took decades to compound, and some of it, as Queensland is about to discover, does not grow back. The budget papers have already told us what the round trip costs. The only question a restructure business case really needs to answer is whether anyone has read them.
 
 ## References
-Ball, E., & Williams, N. (2026, July 2). *Evolving the Service Standard for the future of public services.* Government Digital Service Blog. <https://gds.blog.gov.uk/2026/07/02/evolving-the-service-standard-for-the-future-of-public-services/>
-
-Chichava, A. D., Zaqueu, L. C. M. A., & Sitoe, M. D. (2026, July 1). *Human resource management practices and institutional performance in the African public sector: A systematic review of evidence and policy implications (2010-2025)* \[Preprint\]. Research Square. <https://doi.org/10.21203/rs.3.rs-10203525/v1>
-
-Commonwealth of Australia. (2026). *Budget paper no. 4: Agency resourcing 2026-27* (Preface). <https://budget.gov.au/content/bp4/download/bp4_02_preface.pdf>
-
-de Kleyn, L., & Fletcher, A. (2026, July 2). *Strengthening collaboration in emergency management – A case study of the Northern Victorian Emergency Management Cluster: Insights into training* \[Report\]. La Trobe University. <https://doi.org/10.26181/32871134>
-
-Edwards, G. (2026, July 2). *Prevention or patch-up? Years of decline to follow public-sector restructures.* The Mandarin. <https://www.themandarin.com.au/315496-prevention-or-patch-up-years-of-decline-to-follow-public-sector-restructures/>
-
-Thomas, T. (2026, July 1). *Exploration sprints: Testing whether a different approach is actually viable.* Government Digital Service Blog. <https://gds.blog.gov.uk/2026/07/01/exploration-sprints-testing-whether-a-different-approach-is-actually-viable/>
+- Ball, E., & Williams, N. (2026, July 2). *Evolving the Service Standard for the future of public services.* Government Digital Service Blog. <https://gds.blog.gov.uk/2026/07/02/evolving-the-service-standard-for-the-future-of-public-services/>
+- Chichava, A. D., Zaqueu, L. C. M. A., & Sitoe, M. D. (2026, July 1). *Human resource management practices and institutional performance in the African public sector: A systematic review of evidence and policy implications (2010-2025)* \[Preprint\]. Research Square. <https://doi.org/10.21203/rs.3.rs-10203525/v1>
+- Commonwealth of Australia. (2026). *Budget paper no. 4: Agency resourcing 2026-27* (Preface). <https://budget.gov.au/content/bp4/download/bp4_02_preface.pdf>
+- de Kleyn, L., & Fletcher, A. (2026, July 2). *Strengthening collaboration in emergency management – A case study of the Northern Victorian Emergency Management Cluster: Insights into training* \[Report\]. La Trobe University. <https://doi.org/10.26181/32871134>
+- Edwards, G. (2026, July 2). *Prevention or patch-up? Years of decline to follow public-sector restructures.* The Mandarin. <https://www.themandarin.com.au/315496-prevention-or-patch-up-years-of-decline-to-follow-public-sector-restructures/>
+- Thomas, T. (2026, July 1). *Exploration sprints: Testing whether a different approach is actually viable.* Government Digital Service Blog. <https://gds.blog.gov.uk/2026/07/01/exploration-sprints-testing-whether-a-different-approach-is-actually-viable/>

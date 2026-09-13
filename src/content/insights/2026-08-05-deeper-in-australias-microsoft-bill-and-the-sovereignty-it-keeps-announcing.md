@@ -30,16 +30,10 @@ The A\$1.55 million training fund Microsoft attached to the arrangement, coverin
 Australia spent July announcing that it intends to govern artificial intelligence in the national interest, and also signing up to five more years of somebody else’s. The legislation behind that announcement is promised for early 2027, and the arrangement it sits beside runs to 2031.
 
 ## References
-ASPI (2026, 17 July). As Australia prepares for the AI future, its plan for sovereign capability is unclear. The Strategist. <https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/>
-
-Canberra Times (2026). Secret caps and ‘black holes’: DTA locks public service into new five-year Microsoft mega-deal. <https://www.canberratimes.com.au/story/9187393/dtas-new-microsoft-deal-to-transform-federal-it/>
-
-GAO (2026, 23 July). Technology Modernization Fund: Small Savings Achieved So Far, but Substantial Future Savings Expected. GAO-26-107737. <https://gao.gov/products/gao-26-107737>
-
-InnovationAus (2026a, 27 July). \$1bn in a month: Govt’s Microsoft bill skyrockets. <https://innovationaus.com/1bn-in-a-month-govts-microsoft-bill-skyrockets>
-
-InnovationAus (2026b, 23 July). Procurement key to closing deep tech’s ‘missing middle’. <https://innovationaus.com/procurement-key-to-closing-deep-techs-missing-middle>
-
-InnovationAus (2026c, 22 July). Partial Zero Trust is no longer good enough. <https://innovationaus.com/partial-zero-trust-is-no-longer-good-enough>
-
-The New Daily (2026, 15 July). PM outlines standards for AI, data centres in major speech. <https://www.thenewdaily.com.au/life/tech/2026/07/15/pm-standards-ai-data-centres>
+- ASPI (2026, 17 July). As Australia prepares for the AI future, its plan for sovereign capability is unclear. The Strategist. <https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/>
+- Canberra Times (2026). Secret caps and ‘black holes’: DTA locks public service into new five-year Microsoft mega-deal. <https://www.canberratimes.com.au/story/9187393/dtas-new-microsoft-deal-to-transform-federal-it/>
+- GAO (2026, 23 July). Technology Modernization Fund: Small Savings Achieved So Far, but Substantial Future Savings Expected. GAO-26-107737. <https://gao.gov/products/gao-26-107737>
+- InnovationAus (2026a, 27 July). \$1bn in a month: Govt’s Microsoft bill skyrockets. <https://innovationaus.com/1bn-in-a-month-govts-microsoft-bill-skyrockets>
+- InnovationAus (2026b, 23 July). Procurement key to closing deep tech’s ‘missing middle’. <https://innovationaus.com/procurement-key-to-closing-deep-techs-missing-middle>
+- InnovationAus (2026c, 22 July). Partial Zero Trust is no longer good enough. <https://innovationaus.com/partial-zero-trust-is-no-longer-good-enough>
+- The New Daily (2026, 15 July). PM outlines standards for AI, data centres in major speech. <https://www.thenewdaily.com.au/life/tech/2026/07/15/pm-standards-ai-data-centres>

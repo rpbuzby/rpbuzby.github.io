@@ -28,16 +28,10 @@ The submarine revision still matters most, because it tests whether bipartisan s
 An alliance is usually described as a way of sharing capability. It is just as much a way of distributing risk, and the revised deal shows who carries that risk when a schedule slips. The boat that disappeared from the plan did not take the cost with it. It simply moved the cost onto the partner least able to insist otherwise, and called the result a partnership.
 
 ## References
-USNI News. (2026, June 1). *U.S. will sell 3 in-service Virginia subs to Australia instead of 1 new, 2 in-service.*
-
-Australian Submarine Agency. (2026). *Australia’s nuclear-powered submarines* (AUKUS Pillar I pathway).
-
-Al Jazeera. (2026, June 11). *Britain’s defence secretary Healey quits over defence spending.*
-
-CBS News. (2026, June 11). *UK defense chief John Healey resigns, says military funding plan “falls well short.”*
-
-The Nightly. (2026, May 31 – June 5). *Coverage of the AUKUS submarine revision and fiscal risk.*
-
-ASPI The Strategist. (2026, June 1-2). *AUKUS beyond submarines; Pillar II flagship and seabed initiatives.*
-
-Lowy Institute. (2026, June 3-4). *The Interpreter on the AUKUS Pillar II step to operational capability.*
+- USNI News. (2026, June 1). *U.S. will sell 3 in-service Virginia subs to Australia instead of 1 new, 2 in-service.*
+- Australian Submarine Agency. (2026). *Australia’s nuclear-powered submarines* (AUKUS Pillar I pathway).
+- Al Jazeera. (2026, June 11). *Britain’s defence secretary Healey quits over defence spending.*
+- CBS News. (2026, June 11). *UK defense chief John Healey resigns, says military funding plan “falls well short.”*
+- The Nightly. (2026, May 31 – June 5). *Coverage of the AUKUS submarine revision and fiscal risk.*
+- ASPI The Strategist. (2026, June 1-2). *AUKUS beyond submarines; Pillar II flagship and seabed initiatives.*
+- Lowy Institute. (2026, June 3-4). *The Interpreter on the AUKUS Pillar II step to operational capability.*

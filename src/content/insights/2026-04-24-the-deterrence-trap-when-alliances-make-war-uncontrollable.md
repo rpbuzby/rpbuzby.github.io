@@ -22,16 +22,10 @@ The NDS does not engage with this problem. It treats deterrence as an unqualifie
 I wrote [earlier](https://russellbuzby.com/2026/04/17/unprecedented-threat-incremental-response-the-2026-nds-vs-iip/) about the gap between the NDS’s threat assessment and its investment priorities. The strategy-investment mismatch matters, but the deterrence-entrapment question may matter more. Australia can address a funding shortfall in the next biennial review. It cannot easily address a structural vulnerability in the alliance architecture itself, because the vulnerability is inseparable from the architecture’s core function. The strategic task for a middle power like Australia is to build enough commitment to deter without building the kind of system that turns a manageable crisis into an uncontrollable one. Clark’s sleepwalkers did not lack intelligence or intention. They lacked a system that gave them room to stop. Whether the alliance web being woven across the Indo-Pacific leaves that room is the question the next National Defence Strategy should answer before it needs to.
 
 ## References
-Allison, G. (2017). *Destined for War: Can America and China Escape Thucydides’s Trap?* Houghton Mifflin Harcourt.
-
-Australian Government (2026). *National Defence Strategy 2026*. Department of Defence.
-
-Clark, C. (2012). *The Sleepwalkers: How Europe Went to War in 1914*. Allen Lane.
-
-Kagan, D. (1969). *The Outbreak of the Peloponnesian War*. Cornell University Press.
-
-Schroeder, P. (1994). *The Transformation of European Politics, 1763-1848*. Oxford University Press.
-
-Snyder, G. (1984). “The Security Dilemma in Alliance Politics.” *World Politics*, 36(4), 461-495.
-
-Taylor, A.J.P. (1954). *The Struggle for Mastery in Europe, 1848-1918*. Oxford University Press.
+- Allison, G. (2017). *Destined for War: Can America and China Escape Thucydides’s Trap?* Houghton Mifflin Harcourt.
+- Australian Government (2026). *National Defence Strategy 2026*. Department of Defence.
+- Clark, C. (2012). *The Sleepwalkers: How Europe Went to War in 1914*. Allen Lane.
+- Kagan, D. (1969). *The Outbreak of the Peloponnesian War*. Cornell University Press.
+- Schroeder, P. (1994). *The Transformation of European Politics, 1763-1848*. Oxford University Press.
+- Snyder, G. (1984). “The Security Dilemma in Alliance Politics.” *World Politics*, 36(4), 461-495.
+- Taylor, A.J.P. (1954). *The Struggle for Mastery in Europe, 1848-1918*. Oxford University Press.

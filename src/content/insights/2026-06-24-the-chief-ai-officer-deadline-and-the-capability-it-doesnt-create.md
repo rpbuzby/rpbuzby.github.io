@@ -28,22 +28,13 @@ The most uncomfortable point lies in which chairs get filled, and how. An empty 
 A mandate measures intent. Appointing from existing staff with no new funding measures something smaller: a willingness to be seen to comply by the deadline. That deadline, on 30 June, will mostly be met on paper. Whether anything actually changes on 1 July is the question that matters, and for most agencies the honest answer will be “not much”.
 
 ## References
-Department of Finance. (2025). *Establishing Chief AI Officers for the APS.*
-
-Digital Transformation Agency. (2025). *Australian Public Service AI Plan 2025; Policy for the responsible use of AI in government* (v2.0).
-
-iTnews. (2025, December). *Federal chief AI officer roles set to go to existing APS staffers.*
-
-InnovationAus. (2026, May 28). *Public sector AI uplift “patchy” but progress is made.*
-
-InnovationAus. (2026, May 24). *Tasmania looks to tech uplift to ease budget pain.*
-
-The Mandarin. (2026, May 27). *Queensland’s digital mandarins talk AI.*
-
-CLEAR-AU. (2026, May 25). *A citizen-facing responsible AI framework for Australia* \[Preprint\]. Zenodo/OpenAlex.
-
-Australian Government. (2026, April 1). *Response to the Senate Select Committee on Adopting Artificial Intelligence.*
-
-*AI in public administration in Karnataka* \[Preprint\]. (2026, May 31). OpenAlex.
-
-*Evaluation of AI ethics tools for Portuguese-language models* \[Preprint\]. (2026, May 29). arXiv.
+- Department of Finance. (2025). *Establishing Chief AI Officers for the APS.*
+- Digital Transformation Agency. (2025). *Australian Public Service AI Plan 2025; Policy for the responsible use of AI in government* (v2.0).
+- iTnews. (2025, December). *Federal chief AI officer roles set to go to existing APS staffers.*
+- InnovationAus. (2026, May 28). *Public sector AI uplift “patchy” but progress is made.*
+- InnovationAus. (2026, May 24). *Tasmania looks to tech uplift to ease budget pain.*
+- The Mandarin. (2026, May 27). *Queensland’s digital mandarins talk AI.*
+- CLEAR-AU. (2026, May 25). *A citizen-facing responsible AI framework for Australia* \[Preprint\]. Zenodo/OpenAlex.
+- Australian Government. (2026, April 1). *Response to the Senate Select Committee on Adopting Artificial Intelligence.*
+- *AI in public administration in Karnataka* \[Preprint\]. (2026, May 31). OpenAlex.
+- *Evaluation of AI ethics tools for Portuguese-language models* \[Preprint\]. (2026, May 29). arXiv.

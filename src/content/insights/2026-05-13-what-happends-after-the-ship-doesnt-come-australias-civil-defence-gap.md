@@ -31,14 +31,9 @@ I have written separately about the gap between Australia’s defence AI policy 
 The 2026 NDS named the gap in civil preparedness. The next document has to fill it. That follow-up needs four things at minimum: an institution with cabinet-level access; a dedicated budget line; a published doctrine for pre-emptive mobilisation; and a pathway from federal authority to household-level action. None of those things exists yet at the scale the strategic framing of the NDS implies they need to. Calling national defence whole-of-nation does not make it whole-of-nation until the parts of the nation outside Defence have something they can actually do.
 
 ## References
-CFA News. (2026, January). *Country Fire Authority pre-emptive mobilisation ahead of catastrophic fire day, 9 January 2026*. Country Fire Authority.
-
-Department of Defence. (2026). *2026 National Defence Strategy and Integrated Investment Program*. Commonwealth of Australia.
-
-Lowy Institute. (2026). *Canberra can’t want the alliance more than Washington does*. The Interpreter.
-
-Lowy Institute. (2026). *Taiwan’s mobilisation model holds lessons for Australia*. The Interpreter.
-
-Post-disaster shelter paper. (2026). *Prolonged displacement, underinsurance, and Bushfire Attack Level rating cost effects on household recovery in Australia*. OpenAlex.
-
-Thompson, M. (2026). *Si vis pacem, para bellum: Europe is relearning civil defence*. Substack.
+- CFA News. (2026, January). *Country Fire Authority pre-emptive mobilisation ahead of catastrophic fire day, 9 January 2026*. Country Fire Authority.
+- Department of Defence. (2026). *2026 National Defence Strategy and Integrated Investment Program*. Commonwealth of Australia.
+- Lowy Institute. (2026). *Canberra can’t want the alliance more than Washington does*. The Interpreter.
+- Lowy Institute. (2026). *Taiwan’s mobilisation model holds lessons for Australia*. The Interpreter.
+- Post-disaster shelter paper. (2026). *Prolonged displacement, underinsurance, and Bushfire Attack Level rating cost effects on household recovery in Australia*. OpenAlex.
+- Thompson, M. (2026). *Si vis pacem, para bellum: Europe is relearning civil defence*. Substack.

@@ -28,10 +28,7 @@ For management consultants and change practitioners following this discussion, t
 Recruitment headlines make good press coverage. Retention rates measured twelve months after a disaster tell you whether the system behind the headlines actually works, and coordination quality between agencies and across jurisdictions is what mostly determines the retention rate. The 3,400 figure from this January’s surge will be a useful leading indicator for both, if anyone bothers to track it carefully enough to see how many of those volunteers are still on a roster in March 2027.
 
 ## References
-Country Fire Authority. (2026). *Post-January 2026 volunteer recruitment figures*. CFA Victoria.
-
-Australasian Fire and Emergency Service Authorities Council. (2026). *National aerial firefighting and coordination arrangements*. AFAC / NAFC.
-
-CORIN framework authors. (2026). *Coordination architecture for wildfire governance: a Canadian perspective*. Zenodo.
-
-Victorian Government. (2026, January). *State of Disaster declarations and response coordination for the January 2026 bushfires*.
+- Country Fire Authority. (2026). *Post-January 2026 volunteer recruitment figures*. CFA Victoria.
+- Australasian Fire and Emergency Service Authorities Council. (2026). *National aerial firefighting and coordination arrangements*. AFAC / NAFC.
+- CORIN framework authors. (2026). *Coordination architecture for wildfire governance: a Canadian perspective*. Zenodo.
+- Victorian Government. (2026, January). *State of Disaster declarations and response coordination for the January 2026 bushfires*.

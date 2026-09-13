@@ -28,10 +28,7 @@ The international coordination framework has to adapt to concurrency as well, an
 Better prediction works best inside a coordination framework that has already adapted to concurrency. Building that adapted framework is the harder problem, and it is the one that remains mostly unsolved. The scientific case is settled. The Australian fuel moisture product is real. The Portuguese coordination experiment is available to study. What is missing is the political and operational will to rebuild the international resource-sharing architecture on an assumption of overlap rather than an assumption of sequence, and until that rebuild happens every fire season is going to be a slightly sharper test of an architecture that was designed for a climate context that no longer exists.
 
 ## References
-*High-Resolution Monitoring of Live Fuel Moisture Content Across Australia*. (2026). <https://doi.org/10.3390/rs18071049>
-
-*Human-induced climate change intensifies spatially compounding fire weather extremes across European countries*. (2026, April 2). <https://doi.org/10.1038/s44304-026-00201-y>
-
-OECD. (2026). *Towards an integrated rural fire management framework in Portugal*. OECD. <https://doi.org/10.1787/9cb528df-en>
-
-Yin, C. and colleagues. (2026, February 18). *Increasing synchronicity of global extreme fire weather*. Science Advances. <https://doi.org/10.1126/sciadv.adx8813>
+- *High-Resolution Monitoring of Live Fuel Moisture Content Across Australia*. (2026). <https://doi.org/10.3390/rs18071049>
+- *Human-induced climate change intensifies spatially compounding fire weather extremes across European countries*. (2026, April 2). <https://doi.org/10.1038/s44304-026-00201-y>
+- OECD. (2026). *Towards an integrated rural fire management framework in Portugal*. OECD. <https://doi.org/10.1787/9cb528df-en>
+- Yin, C. and colleagues. (2026, February 18). *Increasing synchronicity of global extreme fire weather*. Science Advances. <https://doi.org/10.1126/sciadv.adx8813>

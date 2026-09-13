@@ -26,8 +26,6 @@ The efficiency story can obscure an equity dimension. A 4.2% discount is a trans
 None of this diminishes the core finding, which deserves to travel well beyond fire policy. Australian governments spend a great deal of effort on regulation that is expensive to design and harder to enforce, while a cheaper instrument sits underused. Telling people the truth about their risk, in a form they encounter at the moment of decision, changes behaviour at a fraction of the cost of mandating it. The WA experience puts a number on that effect for the first time, and 4.2% is a large return for the price of an honest map. The instrument works. The responsibility it creates is making sure the map keeps telling the truth as the risk it describes keeps changing.
 
 ## References
-Gonzalez Valencia, \[et al.\]. (2026). *A discontinuity analysis of the 2015 introduction of bushfire prone area maps.* Risk Analysis. <https://doi.org/10.1111/risa.70276>
-
-*Wildfire-induced elemental changes in drinking water reservoir sediments.* (2026, June 1). Natural Hazards Research.
-
-*Measuring fuel connectivity in coastal mallee shrublands using terrestrial mobile LiDAR.* (2026, June 3). Fire Ecology.
+- Gonzalez Valencia, \[et al.\]. (2026). *A discontinuity analysis of the 2015 introduction of bushfire prone area maps.* Risk Analysis. <https://doi.org/10.1111/risa.70276>
+- *Wildfire-induced elemental changes in drinking water reservoir sediments.* (2026, June 1). Natural Hazards Research.
+- *Measuring fuel connectivity in coastal mallee shrublands using terrestrial mobile LiDAR.* (2026, June 3). Fire Ecology.

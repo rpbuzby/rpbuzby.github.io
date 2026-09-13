@@ -34,10 +34,7 @@ Emergency management practitioners have known this for years without being able 
 The attribution debate is the easier argument to have. The resourcing argument is the one that actually decides what happens in the next bad summer.
 
 ## References
-CFA Victoria. (2026, March 12). *Get Fire Ready program evaluation*. Country Fire Authority, Victoria.
-
-Turco, M. and colleagues. (2026). *The emerging human fingerprint on global extreme fire weather*. Science Advances, 12, eadx9845. <https://doi.org/10.1126/sciadv.adx9845>
-
-World Weather Attribution. (2026, January 22). *Human-induced climate change made the January 2026 Victorian heatwave around five times more likely*. World Weather Attribution.
-
-Yin, C. and colleagues. (2026, February 18). *Increasing synchronicity of global extreme fire weather*. Science Advances. <https://doi.org/10.1126/sciadv.adx8813>
+- CFA Victoria. (2026, March 12). *Get Fire Ready program evaluation*. Country Fire Authority, Victoria.
+- Turco, M. and colleagues. (2026). *The emerging human fingerprint on global extreme fire weather*. Science Advances, 12, eadx9845. <https://doi.org/10.1126/sciadv.adx9845>
+- World Weather Attribution. (2026, January 22). *Human-induced climate change made the January 2026 Victorian heatwave around five times more likely*. World Weather Attribution.
+- Yin, C. and colleagues. (2026, February 18). *Increasing synchronicity of global extreme fire weather*. Science Advances. <https://doi.org/10.1126/sciadv.adx8813>

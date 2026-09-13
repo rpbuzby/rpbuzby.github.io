@@ -28,10 +28,7 @@ Wildfire researchers will find the Waterloo reverse-audit concept immediately ac
 Governance gets tested at the moment of maximum public visibility, not at the moment of maximum operational risk. Those two moments used to coincide more often than they now do, and the Waterloo paper provides the empirical case that they have separated enough to demand institutional attention. The research is recent and the finding is counterintuitive. The countermeasures themselves are concrete, and the data necessary for replication in Australian conditions is available. The question for Australian agencies is whether the institutional discipline to act on the finding exists, or whether the next major fire season will produce another set of allocation decisions that look, in retrospect, more like a response to attention than a response to risk.
 
 ## References
-Brazilian Indigenous fire management review. (2026). *Bridging knowledges through fire: Indigenous fire management in Brazil*. Semantic Scholar.
-
-Canadian fire attitudes paper. (2026). *Fire, Bugs, and Logging: What the Public Thinks About Forest Disturbance and Management in Canada*. Semantic Scholar.
-
-CIFOR-ICRAF. (2026). *Integration of traditional and Indigenous knowledge with AI for fire management*.
-
-University of Waterloo. (2026). *The wildfire paradox: How social media quickens response but strains resources*. Sage journal article EXPRESS.
+- Brazilian Indigenous fire management review. (2026). *Bridging knowledges through fire: Indigenous fire management in Brazil*. Semantic Scholar.
+- Canadian fire attitudes paper. (2026). *Fire, Bugs, and Logging: What the Public Thinks About Forest Disturbance and Management in Canada*. Semantic Scholar.
+- CIFOR-ICRAF. (2026). *Integration of traditional and Indigenous knowledge with AI for fire management*.
+- University of Waterloo. (2026). *The wildfire paradox: How social media quickens response but strains resources*. Sage journal article EXPRESS.

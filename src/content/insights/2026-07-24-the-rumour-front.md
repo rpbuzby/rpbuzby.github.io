@@ -30,58 +30,31 @@ Little of the answer needs inventing. The Red Cross and Red Crescent World Disas
 Anyone who has stood in a brigade shed has done all of this already. We test pumps before the season and rehearse the radio call we hope never to make. Rumour management belongs on the same list: a monitored channel, a designated owner, pre-agreed holding lines, relationships with local page moderators and community leaders built before disaster strikes. The AusAlert test on 27 July will prove the message can reach every compatible phone in the country. Whether the message is believed cannot be tested on a Monday afternoon. Belief has to be banked before the fire starts. That makes it preparedness, and preparedness is ours to build.
 
 ## References
-AAP FactCheck (2020). Are arson figures on social media a bushfire beat-up? <https://www.aap.com.au/factcheck/are-arson-figures-on-social-media-a-bushfire-beat-up/>
-
-AAP FactCheck (2026). Footage of green treetops after bushfire sparks conspiracy theories. <https://www.aap.com.au/factcheck/footage-of-green-treetops-after-bushfire-sparks-conspiracy-theories/>
-
-ACMA (2025a, 12 September). ACMA releases fourth disinformation report. Australian Communications and Media Authority. <https://www.acma.gov.au/articles/2025-09/acma-releases-fourth-disinformation-report>
-
-ACMA (2025b). Communications and media in Australia: How we encounter misinformation. Australian Communications and Media Authority. <https://www.acma.gov.au/publications/2025-11/report/communications-and-media-australia-how-we-encounter-misinformation>
-
-AIDR (2021). Public Information and Warnings Handbook (2nd ed.). Australian Institute for Disaster Resilience. <https://knowledge.aidr.org.au/resources/public-information-and-warnings-handbook/>
-
-Axios (2024, 14 October). Safety concerns prompt FEMA to make “operational adjustments” in hurricane response. <https://www.axios.com/2024/10/14/fema-threats-hurricane-recovery-misinformation>
-
-Carson, A. & Phillips, J. (2025, 24 September). Facebook data reveal the devastating real-world harms caused by the spread of misinformation. The Conversation. <https://theconversation.com/facebook-data-reveal-the-devastating-real-world-harms-caused-by-the-spread-of-misinformation-265742>
-
-Department of Health, Disability and Ageing (2026, 14 July). Get ready for the AusAlert national test. <https://www.health.gov.au/news/get-ready-for-the-ausalert-national-test>
-
-E&E News (2024, 8 October). “The worst I have ever seen”: Disinformation chaos hammers FEMA. Politico’s E&E News. <https://www.eenews.net/articles/the-worst-i-have-ever-seen-disinformation-chaos-hammers-fema/>
-
-EMPA (2026). EMPA Australia 2026 conference program. Emergency Media and Public Affairs. <https://www.empa.org.au/events/empa-australia-2026>
-
-FEMA (2024). Hurricane rumor response. <https://www.fema.gov/disaster/recover/rumor/hurricane-rumor-response>
-
-Forbes (2024, 4 October). Marjorie Taylor Greene appears to claim Democrats ‘control the weather’ after Hurricane Helene strikes southeast. <https://www.forbes.com/sites/tylerroush/2024/10/04/marjorie-taylor-greene-appears-to-claim-democrats-control-the-weather-after-hurricane-helene-strikes-southeast/>
-
-Graham, T. & Keller, T. R. (2020, 10 January). Bushfires, bots and arson claims: Australia flung in the global disinformation spotlight. The Conversation. <https://theconversation.com/bushfires-bots-and-arson-claims-australia-flung-in-the-global-disinformation-spotlight-129556>
-
-IFRC (2026). World Disasters Report 2026: Truth, Trust and Humanitarian Action in the Age of Harmful Information. International Federation of Red Cross and Red Crescent Societies. <https://wdr26.org/en>
-
-King, D. & Gurtner, Y. (2025). Information and communication for disaster resilience. Australian Journal of Emergency Management, 40(3), 17–28. <https://knowledge.aidr.org.au/resources/ajem-july-2025-information-and-communication-for-disaster-resilience/>
-
-NEMA (2025a). Australian Government Disaster Response Plan (COMDISPLAN 2025). National Emergency Management Agency. <https://www.nema.gov.au/sites/default/files/2025-07/Australian%20Government%20Disaster%20Response%20Plan%202025%20(COMDISPLAN).pdf>
-
-NEMA (2025b). Reflections from the 2025 EMPA conference. National Emergency Management Agency. <https://www.nema.gov.au/about-us/media-centre/reflections-2025-empa-conference>
-
-NEMA (2026). AusAlert. National Emergency Management Agency. <https://www.nema.gov.au/our-work/risk-reduction/ausalert>
-
-Risk Frontiers (2026). The early January 2026 Victorian grassfires and bushfires. <https://riskfrontiers.com/insights/vic-bushfires-january-2026/>
-
-Rowland, M. (2024, 24 November). Communications Legislation Amendment (Combatting Misinformation and Disinformation) Bill 2024 \[media release\]. <https://minister.infrastructure.gov.au/rowland/media-release/communications-legislation-amendment-combatting-misinformation-and-disinformation-bill-2024>
-
-Royal Commission into National Natural Disaster Arrangements (2020). Report. <https://naturaldisaster.royalcommission.gov.au/>
-
-Smith, N. (2025, 11 March). Why conspiracy theories and misinformation spread in the long wait for Cyclone Alfred. The Conversation. <https://theconversation.com/why-conspiracy-theories-and-misinformation-spread-in-the-long-wait-for-cyclone-alfred-251899>
-
-The Hill (2025, 2 May). Trump budget would eliminate CISA disinformation offices, alleging censorship. <https://thehill.com/policy/technology/5279753-trump-proposes-cisa-disinformation/>
-
-Trijsburg, I. & Richardson, J. (2024, 11 December). Australia isn’t immune to disaster disinformation. Pursuit, University of Melbourne. <https://pursuit.unimelb.edu.au/articles/australia-isnt-immune-to-disaster-disinformation>
-
-University of Canberra News & Media Research Centre (2026). Digital News Report: Australia 2026. <https://www.canberra.edu.au/research/centres/nmrc/digital-news-report-australia>
-
-van der Linden, S., Leiserowitz, A., Rosenthal, S. & Maibach, E. (2017). Inoculating the public against misinformation about climate change. Global Challenges, 1(2). <https://doi.org/10.1002/gch2.201600008>
-
-Weber, D., Falzon, L., Mitchell, L. & Nasim, M. (2022). Promoting and countering misinformation during Australia’s 2019–2020 bushfires: a case study of polarisation. Social Network Analysis and Mining, 12, 64. <https://doi.org/10.1007/s13278-022-00892-x>
-
-WHO (n.d.). Infodemic. World Health Organization. <https://www.who.int/health-topics/infodemic>
+- AAP FactCheck (2020). Are arson figures on social media a bushfire beat-up? <https://www.aap.com.au/factcheck/are-arson-figures-on-social-media-a-bushfire-beat-up/>
+- AAP FactCheck (2026). Footage of green treetops after bushfire sparks conspiracy theories. <https://www.aap.com.au/factcheck/footage-of-green-treetops-after-bushfire-sparks-conspiracy-theories/>
+- ACMA (2025a, 12 September). ACMA releases fourth disinformation report. Australian Communications and Media Authority. <https://www.acma.gov.au/articles/2025-09/acma-releases-fourth-disinformation-report>
+- ACMA (2025b). Communications and media in Australia: How we encounter misinformation. Australian Communications and Media Authority. <https://www.acma.gov.au/publications/2025-11/report/communications-and-media-australia-how-we-encounter-misinformation>
+- AIDR (2021). Public Information and Warnings Handbook (2nd ed.). Australian Institute for Disaster Resilience. <https://knowledge.aidr.org.au/resources/public-information-and-warnings-handbook/>
+- Axios (2024, 14 October). Safety concerns prompt FEMA to make “operational adjustments” in hurricane response. <https://www.axios.com/2024/10/14/fema-threats-hurricane-recovery-misinformation>
+- Carson, A. & Phillips, J. (2025, 24 September). Facebook data reveal the devastating real-world harms caused by the spread of misinformation. The Conversation. <https://theconversation.com/facebook-data-reveal-the-devastating-real-world-harms-caused-by-the-spread-of-misinformation-265742>
+- Department of Health, Disability and Ageing (2026, 14 July). Get ready for the AusAlert national test. <https://www.health.gov.au/news/get-ready-for-the-ausalert-national-test>
+- E&E News (2024, 8 October). “The worst I have ever seen”: Disinformation chaos hammers FEMA. Politico’s E&E News. <https://www.eenews.net/articles/the-worst-i-have-ever-seen-disinformation-chaos-hammers-fema/>
+- EMPA (2026). EMPA Australia 2026 conference program. Emergency Media and Public Affairs. <https://www.empa.org.au/events/empa-australia-2026>
+- FEMA (2024). Hurricane rumor response. <https://www.fema.gov/disaster/recover/rumor/hurricane-rumor-response>
+- Forbes (2024, 4 October). Marjorie Taylor Greene appears to claim Democrats ‘control the weather’ after Hurricane Helene strikes southeast. <https://www.forbes.com/sites/tylerroush/2024/10/04/marjorie-taylor-greene-appears-to-claim-democrats-control-the-weather-after-hurricane-helene-strikes-southeast/>
+- Graham, T. & Keller, T. R. (2020, 10 January). Bushfires, bots and arson claims: Australia flung in the global disinformation spotlight. The Conversation. <https://theconversation.com/bushfires-bots-and-arson-claims-australia-flung-in-the-global-disinformation-spotlight-129556>
+- IFRC (2026). World Disasters Report 2026: Truth, Trust and Humanitarian Action in the Age of Harmful Information. International Federation of Red Cross and Red Crescent Societies. <https://wdr26.org/en>
+- King, D. & Gurtner, Y. (2025). Information and communication for disaster resilience. Australian Journal of Emergency Management, 40(3), 17–28. <https://knowledge.aidr.org.au/resources/ajem-july-2025-information-and-communication-for-disaster-resilience/>
+- NEMA (2025a). Australian Government Disaster Response Plan (COMDISPLAN 2025). National Emergency Management Agency. <https://www.nema.gov.au/sites/default/files/2025-07/Australian%20Government%20Disaster%20Response%20Plan%202025%20(COMDISPLAN).pdf>
+- NEMA (2025b). Reflections from the 2025 EMPA conference. National Emergency Management Agency. <https://www.nema.gov.au/about-us/media-centre/reflections-2025-empa-conference>
+- NEMA (2026). AusAlert. National Emergency Management Agency. <https://www.nema.gov.au/our-work/risk-reduction/ausalert>
+- Risk Frontiers (2026). The early January 2026 Victorian grassfires and bushfires. <https://riskfrontiers.com/insights/vic-bushfires-january-2026/>
+- Rowland, M. (2024, 24 November). Communications Legislation Amendment (Combatting Misinformation and Disinformation) Bill 2024 \[media release\]. <https://minister.infrastructure.gov.au/rowland/media-release/communications-legislation-amendment-combatting-misinformation-and-disinformation-bill-2024>
+- Royal Commission into National Natural Disaster Arrangements (2020). Report. <https://naturaldisaster.royalcommission.gov.au/>
+- Smith, N. (2025, 11 March). Why conspiracy theories and misinformation spread in the long wait for Cyclone Alfred. The Conversation. <https://theconversation.com/why-conspiracy-theories-and-misinformation-spread-in-the-long-wait-for-cyclone-alfred-251899>
+- The Hill (2025, 2 May). Trump budget would eliminate CISA disinformation offices, alleging censorship. <https://thehill.com/policy/technology/5279753-trump-proposes-cisa-disinformation/>
+- Trijsburg, I. & Richardson, J. (2024, 11 December). Australia isn’t immune to disaster disinformation. Pursuit, University of Melbourne. <https://pursuit.unimelb.edu.au/articles/australia-isnt-immune-to-disaster-disinformation>
+- University of Canberra News & Media Research Centre (2026). Digital News Report: Australia 2026. <https://www.canberra.edu.au/research/centres/nmrc/digital-news-report-australia>
+- van der Linden, S., Leiserowitz, A., Rosenthal, S. & Maibach, E. (2017). Inoculating the public against misinformation about climate change. Global Challenges, 1(2). <https://doi.org/10.1002/gch2.201600008>
+- Weber, D., Falzon, L., Mitchell, L. & Nasim, M. (2022). Promoting and countering misinformation during Australia’s 2019–2020 bushfires: a case study of polarisation. Social Network Analysis and Mining, 12, 64. <https://doi.org/10.1007/s13278-022-00892-x>
+- WHO (n.d.). Infodemic. World Health Organization. <https://www.who.int/health-topics/infodemic>

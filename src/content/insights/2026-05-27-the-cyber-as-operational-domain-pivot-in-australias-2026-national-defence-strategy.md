@@ -26,12 +26,8 @@ For consultants, the advisory market this opens up is wider than the cyber capab
 The dollar figures will not be the thing the next five years are judged on. The judgement will rest on whether the cyber operator workforce can be stood up at scale, whether the agencies can hold their dual remits together under cyber operational pressure, and whether the supply chain can deliver cyber tools at the tempo a warfighting domain demands. The cyber doctrine is the easy part. The establishment file is where the cyber strategy lives or dies.
 
 ## References
-Australian National Audit Office. (2023). *Administration of the Australian Government Security Vetting Agency*. Commonwealth of Australia. <https://www.anao.gov.au>
-
-Department of Defence. (2026). *2026 National Defence Strategy*. Commonwealth of Australia. <https://www.defence.gov.au>
-
-Department of Home Affairs. (2022). *Security of Critical Infrastructure Act 2018 (as amended 2022)*. Commonwealth of Australia. <https://www.homeaffairs.gov.au>
-
-Government of Australia. (2026). *2026 Integrated Investment Program*. Commonwealth of Australia. <https://www.defence.gov.au>
-
-Jeffrey, H. (2026, May 11). NDS 2026 – More resourcing for a complex cyber threat environment. *The Strategist*, Australian Strategic Policy Institute. <https://www.aspistrategist.org.au>
+- Australian National Audit Office. (2023). *Administration of the Australian Government Security Vetting Agency*. Commonwealth of Australia. <https://www.anao.gov.au>
+- Department of Defence. (2026). *2026 National Defence Strategy*. Commonwealth of Australia. <https://www.defence.gov.au>
+- Department of Home Affairs. (2022). *Security of Critical Infrastructure Act 2018 (as amended 2022)*. Commonwealth of Australia. <https://www.homeaffairs.gov.au>
+- Government of Australia. (2026). *2026 Integrated Investment Program*. Commonwealth of Australia. <https://www.defence.gov.au>
+- Jeffrey, H. (2026, May 11). NDS 2026 – More resourcing for a complex cyber threat environment. *The Strategist*, Australian Strategic Policy Institute. <https://www.aspistrategist.org.au>

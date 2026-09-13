@@ -28,12 +28,8 @@ The political reading is different. The studies I have cited above, together, fr
 The deeper question is whether the EU AI Act’s enforcement date will be treated by public sector deployers as a deadline (with an enforcement risk that motivates investment) or as a symbolic milestone (after which the policy framework continues to evolve but the underlying operational practice remains unchanged). The studies suggest the second outcome is the more likely one without targeted intervention. Rhetorical commitment to responsible AI is not the same as demonstrable compliance. Enforcement is weeks away. The advisory work has to start now to arrive in time to make any difference at the August date, and the procurement work to acquire that advisory capability is its own delay function on top.
 
 ## References
-Çelik, T. et al. (2026, 19 May). *Human and Institutional Capacity in Public Sector AI Adoption: Evidence from OECD OPSI Cases*. Igdir Sosyal Bilimler Dergisi. <https://doi.org/10.54600/igdirsosbilder.1874248>
-
-de Lima, R. et al. (2026, 18 May). *Operationalizing AI Ethics in the Brazilian Public Sector: An Empirical Study of Practitioners’ Motivations, Perceptions, and Expectations*. Zenodo. <https://doi.org/10.5281/zenodo.20262393>
-
-European Commission. *AI Act implementation timeline*. AI Act Service Desk. <https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act>
-
-Pan, S., Gong, X., Xia, F., Sun, J., Xu, Z., & Zhu, L. (2026, 28 April). *The Creation and Analysis of Government AI Transparency Statements in Australia*. arXiv:2604.26075
-
-Sajja, R. et al. (2026, 21 May). *Public evidence for AI Act deployer obligations before enforcement: A baseline from Estonia, EU procurement, and AI policy documents*. Zenodo. <https://doi.org/10.5281/zenodo.20329189>
+- Çelik, T. et al. (2026, 19 May). *Human and Institutional Capacity in Public Sector AI Adoption: Evidence from OECD OPSI Cases*. Igdir Sosyal Bilimler Dergisi. <https://doi.org/10.54600/igdirsosbilder.1874248>
+- de Lima, R. et al. (2026, 18 May). *Operationalizing AI Ethics in the Brazilian Public Sector: An Empirical Study of Practitioners’ Motivations, Perceptions, and Expectations*. Zenodo. <https://doi.org/10.5281/zenodo.20262393>
+- European Commission. *AI Act implementation timeline*. AI Act Service Desk. <https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act>
+- Pan, S., Gong, X., Xia, F., Sun, J., Xu, Z., & Zhu, L. (2026, 28 April). *The Creation and Analysis of Government AI Transparency Statements in Australia*. arXiv:2604.26075
+- Sajja, R. et al. (2026, 21 May). *Public evidence for AI Act deployer obligations before enforcement: A baseline from Estonia, EU procurement, and AI policy documents*. Zenodo. <https://doi.org/10.5281/zenodo.20329189>

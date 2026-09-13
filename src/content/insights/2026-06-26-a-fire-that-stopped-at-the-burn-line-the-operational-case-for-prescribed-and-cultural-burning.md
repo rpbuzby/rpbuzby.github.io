@@ -24,16 +24,10 @@ Put the threads together and the case for burning becomes multi-dimensional in a
 That governance gap is where the early-season warning bites hardest. A treated burn line stopped a fire at Staffordshire Reef because someone planned and lit that burn in a prior window, under arrangements that allowed it. The evidence for doing more of that work is now operational rather than theoretical, drawn from a fire that happened rather than a curve that was fitted. What remains scarce is the authority to act on the evidence and the incentive to act before the season rather than during it. With Victoria already warning that the season is coming early, that window is days and weeks, not the comfortable months agencies are used to planning around.
 
 ## References
-CFA News. (2026, May 26). *Staffordshire Reef Road fire stifled by previous planned burn.*
-
-CFA News. (2026, May 28). *Victoria to prepare for an early bushfire season.*
-
-*Outlawing of cultural burning on Noongar Boodja, 1847* \[Preprint\]. (2026, May 25). OpenAlex.
-
-*Mammal change in Garig Gunak Barlu National Park and the late dry-season fire regime* \[Preprint\]. (2026, May 26). OpenAlex.
-
-*Repeat prescribed burns in California national park forests* \[Preprint\]. (2026, May 28). OpenAlex.
-
-*Economics of climate change adaptation through land use* \[Preprint\]. (2026, May 25). OpenAlex.
-
-*Prescribed burning frequency in tallgrass prairie* \[Preprint\]. (2026, May 27). OpenAlex.
+- CFA News. (2026, May 26). *Staffordshire Reef Road fire stifled by previous planned burn.*
+- CFA News. (2026, May 28). *Victoria to prepare for an early bushfire season.*
+- *Outlawing of cultural burning on Noongar Boodja, 1847* \[Preprint\]. (2026, May 25). OpenAlex.
+- *Mammal change in Garig Gunak Barlu National Park and the late dry-season fire regime* \[Preprint\]. (2026, May 26). OpenAlex.
+- *Repeat prescribed burns in California national park forests* \[Preprint\]. (2026, May 28). OpenAlex.
+- *Economics of climate change adaptation through land use* \[Preprint\]. (2026, May 25). OpenAlex.
+- *Prescribed burning frequency in tallgrass prairie* \[Preprint\]. (2026, May 27). OpenAlex.

@@ -26,12 +26,8 @@ None of which resolves the question the second freeze actually poses, which is w
 Two Big Four freezes in three years is the clearest possible signal that the controls switch on only after the misconduct is already public, and a control that waits for a scandal to activate is reaction dressed as oversight. Whether the response this time finally builds real oversight, or simply dispatches another reaction and waits for the third firm, is the only question that will matter in three years.
 
 ## References
-Department of Finance (Commonwealth). (2026). *KPMG engagement stand-down, 16 June to 30 September 2026.*
-
-The Conversation. (2026, June 16). *KPMG lost its clients’ trust, yet kept winning government contracts. Here’s what needs to change.*
-
-The Canberra Times / PS News. (2026, June). *KPMG federal contracts frozen; the contract-extension loophole and expiring audit deals.*
-
-*AI-driven anti-corruption in public procurement across four EU countries* \[Preprint\]. (2026, June).
-
-*Competencies for effective public procurement* \[Preprint\]. (2026, June).
+- Department of Finance (Commonwealth). (2026). *KPMG engagement stand-down, 16 June to 30 September 2026.*
+- The Conversation. (2026, June 16). *KPMG lost its clients’ trust, yet kept winning government contracts. Here’s what needs to change.*
+- The Canberra Times / PS News. (2026, June). *KPMG federal contracts frozen; the contract-extension loophole and expiring audit deals.*
+- *AI-driven anti-corruption in public procurement across four EU countries* \[Preprint\]. (2026, June).
+- *Competencies for effective public procurement* \[Preprint\]. (2026, June).

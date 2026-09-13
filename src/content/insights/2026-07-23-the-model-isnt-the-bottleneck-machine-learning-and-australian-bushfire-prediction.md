@@ -26,16 +26,10 @@ What turns a maturing research field into an operational capability is a step Au
 For the people who fund this work, that points to an uncomfortable reallocation. The instinct is to fund the next model, because a new model is a visible deliverable with a performance number attached. The evidence from this year’s research says the higher return sits in the parts that do not demo as well: the standardised and machine-ready datasets, and the interpretability layers that let a practitioner trust and defend an output. Australia already has accurate wildfire models in abundance. What it lacks is the data foundations and the explanation tools that would let the accurate models it already has reach the people whose job is to act on them. The model was always going to be the easy part. The hard part is feeding it the right data and explaining what it says, and that is the work that turns an accurate system into one a fire crew can actually use.
 
 ## References
-*CanadaFireSat: Towards high-resolution wildfire forecasting with multiple modalities.* (2026). ISPRS Journal of Photogrammetry and Remote Sensing. <https://doi.org/10.1016/j.isprsjprs.2026.05.050>
-
-European Meteorological Society. (2026). *A Random Forest-based early warning system for wildfire risk in the Southern Aegean and Western Mediterranean regions of Turkiye.* EMS Annual Meeting 2026. <https://doi.org/10.5194/ems2026-399>
-
-*A Review of Machine Learning Approaches for Wildfire Prediction and Management in Australia: Challenges, Data Integration and Future Directions.* (2026). European Journal of Forest Engineering. <https://doi.org/10.33904/ejfe.1606577>
-
-*Global review of wildfire prediction using spatio artificial intelligence models.* (2026). <https://doi.org/10.1007/s44415-026-00083-y>
-
-*Integrating national forest inventory, airborne lidar, and satellite imagery for wall-to-wall mapping of forest structure with computer vision* \[VibrantForests\]. (2026). arXiv:2606.20291.
-
-Natural Hazards Research Australia. (2026a, June). *Leading to impact: NHRF26.*
-
-*WildfireCube: A dense spatiotemporal tensor to support multi-regime wildfire spread modeling at 30 m/3 h resolution.*(2026). Semantic Scholar.
+- *CanadaFireSat: Towards high-resolution wildfire forecasting with multiple modalities.* (2026). ISPRS Journal of Photogrammetry and Remote Sensing. <https://doi.org/10.1016/j.isprsjprs.2026.05.050>
+- European Meteorological Society. (2026). *A Random Forest-based early warning system for wildfire risk in the Southern Aegean and Western Mediterranean regions of Turkiye.* EMS Annual Meeting 2026. <https://doi.org/10.5194/ems2026-399>
+- *A Review of Machine Learning Approaches for Wildfire Prediction and Management in Australia: Challenges, Data Integration and Future Directions.* (2026). European Journal of Forest Engineering. <https://doi.org/10.33904/ejfe.1606577>
+- *Global review of wildfire prediction using spatio artificial intelligence models.* (2026). <https://doi.org/10.1007/s44415-026-00083-y>
+- *Integrating national forest inventory, airborne lidar, and satellite imagery for wall-to-wall mapping of forest structure with computer vision* \[VibrantForests\]. (2026). arXiv:2606.20291.
+- Natural Hazards Research Australia. (2026a, June). *Leading to impact: NHRF26.*
+- *WildfireCube: A dense spatiotemporal tensor to support multi-regime wildfire spread modeling at 30 m/3 h resolution.*(2026). Semantic Scholar.

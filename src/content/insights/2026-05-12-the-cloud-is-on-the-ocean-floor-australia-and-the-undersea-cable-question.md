@@ -30,14 +30,9 @@ For consultants and policy professionals working at the defence and critical inf
 The internet has a coastline. Most of Australia’s policy treats it as if it does not, and the gap between the policy treatment and the threat picture is widening rather than narrowing. The most useful starting point would be to name the cable infrastructure problem in the same documents that already name energy security and fuel security alongside critical mineral supply chains, and to begin building the institutional capacity that the threat picture suggests is now required.
 
 ## References
-Bulletin of the Atomic Scientists. (2026, February). *Seabed zero: Baltic sabotage and the global risks to undersea infrastructure*.
-
-Center for Strategic and International Studies. (2026). *Invisible and Vital: Undersea Cables and Transatlantic Security*.
-
-Department of Defence. (2026). *2026 National Defence Strategy and Integrated Investment Program*. Commonwealth of Australia.
-
-Georgetown Journal of International Affairs. (2026, February). *Critical Undersea Infrastructures: A Framework to Address Threats in a Post-Physical Context*.
-
-Hormuz cable analysis. (2026). *The Strait of Hormuz undersea cable network and concentrated chokepoint risk*. OpenAlex (Zenodo deposit).
-
-Iran threatens 17 undersea cables carrying 30 per cent of global traffic. (2026). *Asian Bureau of Hardware Security analysis*.
+- Bulletin of the Atomic Scientists. (2026, February). *Seabed zero: Baltic sabotage and the global risks to undersea infrastructure*.
+- Center for Strategic and International Studies. (2026). *Invisible and Vital: Undersea Cables and Transatlantic Security*.
+- Department of Defence. (2026). *2026 National Defence Strategy and Integrated Investment Program*. Commonwealth of Australia.
+- Georgetown Journal of International Affairs. (2026, February). *Critical Undersea Infrastructures: A Framework to Address Threats in a Post-Physical Context*.
+- Hormuz cable analysis. (2026). *The Strait of Hormuz undersea cable network and concentrated chokepoint risk*. OpenAlex (Zenodo deposit).
+- Iran threatens 17 undersea cables carrying 30 per cent of global traffic. (2026). *Asian Bureau of Hardware Security analysis*.

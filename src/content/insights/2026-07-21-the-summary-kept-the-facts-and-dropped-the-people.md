@@ -24,16 +24,10 @@ For agencies, the operational takeaway fits in one question: when AI touches pub
 The reason this matters more in the AI era than it did for human summarisers is scale with consistency. A tired policy officer misreads submissions randomly. A pipeline drops them systematically, the same style of voice, every consultation, every agency, with no one deciding it. Consultation exists so that disagreement can reach decision-makers in a form that could change the decision. A summary that filters the disagreement leaves government with something worse than silence: its own assumptions, played back in the public’s voice, with a participation number attached.
 
 ## References
-Grattan, M. (2026, July 9). *Grattan on Friday: AI’s opportunities and risks front and centre on Albanese government’s agenda.* The Conversation. <https://theconversation.com/grattan-on-friday-ais-opportunities-and-risks-front-and-centre-on-albanese-governments-agenda-286043>
-
-*Institutional red-teaming: Deployment rules, not just models, causally shape multi-agent AI safety.* (2026). arXiv:2607.07695. <https://arxiv.org/abs/2607.07695>
-
-Mahajan, S. (2026). *Participatory provenance as representational auditing for AI-mediated public consultation.*arXiv:2604.20711. <https://arxiv.org/abs/2604.20711>
-
-*Public concerns about emotion recognition systems: A thematic analysis.* (2026). Digital Society. <https://doi.org/10.1007/s44206-026-00272-4>
-
-*Runtime assurance for enterprise agentic AI systems: A policy-gated control model with quantitative autonomy-risk scoring.* (2026). World Journal of Advanced Research and Reviews, 31(1), 512-522. <https://doi.org/10.30574/wjarr.2026.31.1.1872>
-
-Weatherall, K. (2026, July 10). *Australia’s government has woken up to the risks of AI. More ambition is needed.* The Conversation. <https://theconversation.com/australias-government-has-woken-up-to-the-risks-of-ai-more-ambition-is-needed-287059>
-
-*Who governs parliamentary AI? Accountability gaps in the institutional use of AI.* (2026). AI Law Politics, 2(1), 94-108. <https://doi.org/10.5709/alp-02.01.2026-07>
+- Grattan, M. (2026, July 9). *Grattan on Friday: AI’s opportunities and risks front and centre on Albanese government’s agenda.* The Conversation. <https://theconversation.com/grattan-on-friday-ais-opportunities-and-risks-front-and-centre-on-albanese-governments-agenda-286043>
+- *Institutional red-teaming: Deployment rules, not just models, causally shape multi-agent AI safety.* (2026). arXiv:2607.07695. <https://arxiv.org/abs/2607.07695>
+- Mahajan, S. (2026). *Participatory provenance as representational auditing for AI-mediated public consultation.*arXiv:2604.20711. <https://arxiv.org/abs/2604.20711>
+- *Public concerns about emotion recognition systems: A thematic analysis.* (2026). Digital Society. <https://doi.org/10.1007/s44206-026-00272-4>
+- *Runtime assurance for enterprise agentic AI systems: A policy-gated control model with quantitative autonomy-risk scoring.* (2026). World Journal of Advanced Research and Reviews, 31(1), 512-522. <https://doi.org/10.30574/wjarr.2026.31.1.1872>
+- Weatherall, K. (2026, July 10). *Australia’s government has woken up to the risks of AI. More ambition is needed.* The Conversation. <https://theconversation.com/australias-government-has-woken-up-to-the-risks-of-ai-more-ambition-is-needed-287059>
+- *Who governs parliamentary AI? Accountability gaps in the institutional use of AI.* (2026). AI Law Politics, 2(1), 94-108. <https://doi.org/10.5709/alp-02.01.2026-07>

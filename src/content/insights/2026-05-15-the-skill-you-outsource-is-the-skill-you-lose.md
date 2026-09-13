@@ -31,12 +31,8 @@ Government leaders can take a practical step here. The step is to commission an 
 Cognitive offloading is fine until the offload is the only way back. The path dependence finding says the moment of “only way back” is closer than most organisations realise, and that the road there has been steadily built by the convenience of letting the model do the thinking. Letting that road continue to extend without active counter-balance is the choice with the highest long-term cost.
 
 ## References
-Deloitte. (2026). *Scaling the public sector’s human edge: Making human-AI collaboration work*. Government Trends 2026.
-
-Gartner. (2026). *Strategic predictions on AI workforce capability: AI-free skills assessments forecast*.
-
-Path dependence under adaptive AI delegation. (2026). arXiv preprint.
-
-ACM Communications. (2026). *The AI Deskilling Paradox*.
-
-San Diego Business Journal. (2026). *AI Is Deskilling Your Workforce*.
+- Deloitte. (2026). *Scaling the public sector’s human edge: Making human-AI collaboration work*. Government Trends 2026.
+- Gartner. (2026). *Strategic predictions on AI workforce capability: AI-free skills assessments forecast*.
+- Path dependence under adaptive AI delegation. (2026). arXiv preprint.
+- ACM Communications. (2026). *The AI Deskilling Paradox*.
+- San Diego Business Journal. (2026). *AI Is Deskilling Your Workforce*.

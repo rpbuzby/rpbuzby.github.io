@@ -28,12 +28,8 @@ The hopeful reading is that the Commonwealth is moving deliberately. The strateg
 Which of these readings turns out to be accurate will be visible in the kinds of second-order decisions that rarely make it into ministerial speeches. A first test is whether the Anthropic MOU generates specific joint projects with named milestones and budgets, rather than remaining a general cooperation banner. A second is the operational authority of the AI Safety Institute: a real remit over agency deployments, or an advisory voice with no enforcement. A third is how the procurement framework handles the bilateral-MOU-preferred-partner question explicitly, because the question will not go away just because the framework is silent on it. And the Chief AI Officer role in each agency will either be resourced to exercise real oversight, or become a compliance coordinator layered on top of existing delivery. The machinery is being built, and whether it has teeth is the question that matters.
 
 ## References
-Australian Government. (2025, December). *National AI Plan*. Commonwealth of Australia.
-
-European Union. (2024). *Artificial Intelligence Act*. Official Journal of the European Union.
-
-Hubbard, P. (2026, April). *Remarks on delivery structures for whole-of-government AI adoption*. Department of Finance.
-
-Minister for Industry and Science. (2026, April 1). *Australian Government signs MOU with Anthropic*. Commonwealth of Australia. <https://industry.gov.au/news/australian-government-has-signed-memorandum-understanding-mou-global-ai-innovator-anthropic>
-
-United States Government. (2025). *National AI Policy Framework*. White House.
+- Australian Government. (2025, December). *National AI Plan*. Commonwealth of Australia.
+- European Union. (2024). *Artificial Intelligence Act*. Official Journal of the European Union.
+- Hubbard, P. (2026, April). *Remarks on delivery structures for whole-of-government AI adoption*. Department of Finance.
+- Minister for Industry and Science. (2026, April 1). *Australian Government signs MOU with Anthropic*. Commonwealth of Australia. <https://industry.gov.au/news/australian-government-has-signed-memorandum-understanding-mou-global-ai-innovator-anthropic>
+- United States Government. (2025). *National AI Policy Framework*. White House.

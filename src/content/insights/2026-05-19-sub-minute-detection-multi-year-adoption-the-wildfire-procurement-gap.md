@@ -30,18 +30,11 @@ For consultants and policy professionals working at the wildfire-policy boundary
 The bottleneck moved. The procurement playbook has not yet caught up with where the bottleneck moved to, and the longer that takes, the larger the operational gap between Australian agencies and the US deployments now setting the contemporary benchmark.
 
 ## References
-Black Summer pyroconvective paper. (2026). *Quantification of fire-generated wind speeds during 2019-20 Australian bushfires*. OpenAlex.
-
-Geospatial Awareness Layer. (2026). *LLM agents grounded in structured earth observation data for wildfire response*. arXiv preprint.
-
-Google. (2025). *FireSat constellation prototype launch*.
-
-Integrated Wildfire Management ConOps. (2026). *Stakeholder-assisted Concept of Operations for cross-agency wildfire coordination platforms*. Semantic Scholar.
-
-LA County fuel paper. (2026). *Pre-fire fuel conditions as the dominant driver of burn severity in the 2025 Los Angeles fires*. Semantic Scholar.
-
-LEO satellite wildfire detection. (2026). *Sub-70-second wildfire detection latency with orbital edge computing and deep learning*. arXiv.
-
-UAS thermal infrared. (2026). *Drone thermal sensing and random forest ML for fire spread prediction*. OpenAlex.
-
-Washington Times. (2026, May 4). *States across the wildfire-prone Western US are using AI for early detection*.
+- Black Summer pyroconvective paper. (2026). *Quantification of fire-generated wind speeds during 2019-20 Australian bushfires*. OpenAlex.
+- Geospatial Awareness Layer. (2026). *LLM agents grounded in structured earth observation data for wildfire response*. arXiv preprint.
+- Google. (2025). *FireSat constellation prototype launch*.
+- Integrated Wildfire Management ConOps. (2026). *Stakeholder-assisted Concept of Operations for cross-agency wildfire coordination platforms*. Semantic Scholar.
+- LA County fuel paper. (2026). *Pre-fire fuel conditions as the dominant driver of burn severity in the 2025 Los Angeles fires*. Semantic Scholar.
+- LEO satellite wildfire detection. (2026). *Sub-70-second wildfire detection latency with orbital edge computing and deep learning*. arXiv.
+- UAS thermal infrared. (2026). *Drone thermal sensing and random forest ML for fire spread prediction*. OpenAlex.
+- Washington Times. (2026, May 4). *States across the wildfire-prone Western US are using AI for early detection*.

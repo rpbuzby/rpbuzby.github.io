@@ -28,10 +28,7 @@ There is a more constructive way to read all of this than the usual fatalism abo
 A handful of hot days now drive close to half the forest that burns. That fact should frighten anyone responsible for a fire season and, at the same time, should focus them, because it tells them precisely which days to fear and which country to watch. The science has narrowed the threat to something close to addressable. The open question is the familiar one: whether the resourcing narrows with it, or whether we keep spreading suppression evenly across a risk that has stopped being evenly spread.
 
 ## References
-*Heatwaves enable wildfire activity in the western United States.* (2026). Science Advances. <https://doi.org/10.1126/sciadv.aea1277> (University of California, Merced)
-
-*MEDFATELAND ecohydrological modelling of forest density after land abandonment* \[Preprint\]. (2026, June).
-
-Bushfire and Natural Hazards CRC. (2026). *Shared responsibility in bushfire risk management.*
-
-Country Fire Authority (Victoria). (2026). *2025-26 bushfire season records.*
+- *Heatwaves enable wildfire activity in the western United States.* (2026). Science Advances. <https://doi.org/10.1126/sciadv.aea1277> (University of California, Merced)
+- *MEDFATELAND ecohydrological modelling of forest density after land abandonment* \[Preprint\]. (2026, June).
+- Bushfire and Natural Hazards CRC. (2026). *Shared responsibility in bushfire risk management.*
+- Country Fire Authority (Victoria). (2026). *2025-26 bushfire season records.*

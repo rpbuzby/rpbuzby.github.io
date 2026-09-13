@@ -24,22 +24,13 @@ The practical shift is to treat transparency as a design property of the system 
 Australia has done the hard first mile. The register exists, the statements exist, the deadlines are being met, and agencies deserve the credit for that, because plenty of governments have neither. The remaining mile is the one the illusion hides. Ninety-four published statements answer the auditor’s question in full. The citizen’s question (what is this system doing to me, and what can I do about it?) is still mostly unanswered, and no volume of compliant artefacts will answer it by accumulation. Transparency earns its name at the moment the person with the most to lose can use it. Until then it is documentation, and documentation was never the point.
 
 ## References
-*AI transparency: Governance compliance or stakeholder requirements?* (2026). arXiv:2606.30652. <https://arxiv.org/abs/2606.30652>
-
-*Compelled but not cooperative: Public trust and engagement character in AI-enabled government.* (2026). AMCIS 2026 Proceedings. <https://aisel.aisnet.org/amcis2026/egov/sig_egov/3>
-
-*Concepts of AI-enabled digital government in an AI-society.* (2026). AMCIS 2026 Proceedings. <https://aisel.aisnet.org/amcis2026/egov/sig_egov/1>
-
-Digital Transformation Agency. (2025). *Policy for the responsible use of AI in government (v2.0).*<https://www.digital.gov.au/ai/ai-in-government-policy>
-
-Digital Transformation Agency. (2026, March 31). *New central register of AI transparency statements for Commonwealth entities.* <https://www.dta.gov.au/articles/new-central-register-ai-transparency-statements-commonwealth-entities>
-
-*Ethical AI communication and public trust: Examining the role of transparency in digital media.* (2026). COMMUSTY, 5(1). <https://doi.org/10.38043/commusty.v5i1.7780>
-
-Johnson, C. (2026, February 26). *Public service struggles with AI transparency reporting.* Region Canberra. <https://region.com.au/public-service-struggles-with-ai-transparency-reporting/945811/>
-
-*Public sector machinewashing: A double-edged sword.* (2026). PACIS 2026 Proceedings. <https://aisel.aisnet.org/pacis2026/di_entren/di_entren/10>
-
-*A technical typology of AI systems in public administration.* (2026). arXiv:2606.31755. <https://arxiv.org/abs/2606.31755>
-
-*The UAE created a Federal AI Authority on June 14.* (2026). \[Preprint\]. Zenodo. <https://doi.org/10.5281/zenodo.21122896>
+- *AI transparency: Governance compliance or stakeholder requirements?* (2026). arXiv:2606.30652. <https://arxiv.org/abs/2606.30652>
+- *Compelled but not cooperative: Public trust and engagement character in AI-enabled government.* (2026). AMCIS 2026 Proceedings. <https://aisel.aisnet.org/amcis2026/egov/sig_egov/3>
+- *Concepts of AI-enabled digital government in an AI-society.* (2026). AMCIS 2026 Proceedings. <https://aisel.aisnet.org/amcis2026/egov/sig_egov/1>
+- Digital Transformation Agency. (2025). *Policy for the responsible use of AI in government (v2.0).*<https://www.digital.gov.au/ai/ai-in-government-policy>
+- Digital Transformation Agency. (2026, March 31). *New central register of AI transparency statements for Commonwealth entities.* <https://www.dta.gov.au/articles/new-central-register-ai-transparency-statements-commonwealth-entities>
+- *Ethical AI communication and public trust: Examining the role of transparency in digital media.* (2026). COMMUSTY, 5(1). <https://doi.org/10.38043/commusty.v5i1.7780>
+- Johnson, C. (2026, February 26). *Public service struggles with AI transparency reporting.* Region Canberra. <https://region.com.au/public-service-struggles-with-ai-transparency-reporting/945811/>
+- *Public sector machinewashing: A double-edged sword.* (2026). PACIS 2026 Proceedings. <https://aisel.aisnet.org/pacis2026/di_entren/di_entren/10>
+- *A technical typology of AI systems in public administration.* (2026). arXiv:2606.31755. <https://arxiv.org/abs/2606.31755>
+- *The UAE created a Federal AI Authority on June 14.* (2026). \[Preprint\]. Zenodo. <https://doi.org/10.5281/zenodo.21122896>

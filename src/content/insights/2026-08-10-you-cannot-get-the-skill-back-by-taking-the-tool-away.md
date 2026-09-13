@@ -30,16 +30,10 @@ There is a version of the next decade where the APS gets smaller because governm
 The PBO gave Australia a number. The more useful contribution this month came from a dynamical systems paper nobody in Canberra has read, and it says that the sequence in which you do this decides whether it can be undone.
 
 ## References
-Competitive and Complementary Tools (2026). arXiv:2607.18460. <https://arxiv.org/abs/2607.18460>
-
-Region (2026, 14 July). PBO says Labor’s surplus requires 41,000 APS job cuts. <https://region.com.au/pbo-says-labors-surplus-requires-41000-aps-job-cuts/982234/>
-
-Resisting the Machine: Explaining Employee AI Resistance Using PMT and TTAT (2026). AMCIS 2026. <https://aisel.aisnet.org/treos_amcis2026/188>
-
-The Mandarin (2026a, 15 July). Burnout in the public sector is about how work is experienced. <https://themandarin.com.au/316358-burnout-in-the-public-sector-is-about-how-work-is-experienced>
-
-The Mandarin (2026b, 16 July). Bargaining, budgets, and fat cats: A perfect storm is on the way. <https://themandarin.com.au/316352-bargaining-budgets-and-fat-cats-a-perfect-storm-is-on-the-way>
-
-The Mandarin (2026c, 15 July). Government’s road to surplus could run through APS ranks. <https://themandarin.com.au/316311-governments-road-to-surplus-could-run-through-aps-ranks>
-
-When Not to Automate: A Formal Protocol for Human Preservation in AI-Optimized Organizations (2026). arXiv:2607.15944. <https://arxiv.org/abs/2607.15944>
+- Competitive and Complementary Tools (2026). arXiv:2607.18460. <https://arxiv.org/abs/2607.18460>
+- Region (2026, 14 July). PBO says Labor’s surplus requires 41,000 APS job cuts. <https://region.com.au/pbo-says-labors-surplus-requires-41000-aps-job-cuts/982234/>
+- Resisting the Machine: Explaining Employee AI Resistance Using PMT and TTAT (2026). AMCIS 2026. <https://aisel.aisnet.org/treos_amcis2026/188>
+- The Mandarin (2026a, 15 July). Burnout in the public sector is about how work is experienced. <https://themandarin.com.au/316358-burnout-in-the-public-sector-is-about-how-work-is-experienced>
+- The Mandarin (2026b, 16 July). Bargaining, budgets, and fat cats: A perfect storm is on the way. <https://themandarin.com.au/316352-bargaining-budgets-and-fat-cats-a-perfect-storm-is-on-the-way>
+- The Mandarin (2026c, 15 July). Government’s road to surplus could run through APS ranks. <https://themandarin.com.au/316311-governments-road-to-surplus-could-run-through-aps-ranks>
+- When Not to Automate: A Formal Protocol for Human Preservation in AI-Optimized Organizations (2026). arXiv:2607.15944. <https://arxiv.org/abs/2607.15944>

@@ -32,20 +32,12 @@ There is a version of the next eighteen months where Australia legislates a seri
 Australia is about to write a mandatory AI standard for the whole economy. On the current settings it will not cover the people writing it, and that is the detail every reader will notice first.
 
 ## References
-ASPI (2026, 17 July). As Australia prepares for the AI future, its plan for sovereign capability is unclear. The Strategist. <https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/>
-
-Gilbert + Tobin (2026). Australian Government announces mandatory AI standards for large-scale data centres and new Office of AI. <https://www.gtlaw.com.au/insights/australian-government-announces-mandatory-ai-standards-for-large-scale-data-centres-and-new-office-of-ai>
-
-InnovationAus (2026a, 28 July). Politicians skirt bounds of government AI policy. <https://innovationaus.com/pollies-skirt-bounds-of-government-ai-policy>
-
-InnovationAus (2026b, 27 July). NSW Coalition pledges to protect jobs in AI productivity push. <https://innovationaus.com/nsw-coalition-pledges-to-protect-jobs-in-ai-productivity-push>
-
-The Conversation (2026, 22 July). Australia just outlined more ‘AI safety’ priorities, but is the plan actually coherent? <https://theconversation.com/australia-just-outlined-more-ai-safety-priorities-but-is-the-plan-actually-coherent-287882>
-
-The Mandarin (2026a, 27 July). DTA’s IT policy management ‘dangerously incompetent’, claims senator. <https://themandarin.com.au/317040-dtas-it-policy-management-dangerously-incompetent-claims-senator>
-
-The Mandarin (2026b, 28 July). Why AI ambition is outpacing readiness, and what public sector leaders can do about it. <https://themandarin.com.au/316986-why-ai-ambition-is-outpacing-readiness-and-what-public-sector-leaders-can-do-about-it>
-
-The New Daily (2026, 15 July). PM outlines standards for AI, data centres in major speech. <https://www.thenewdaily.com.au/life/tech/2026/07/15/pm-standards-ai-data-centres>
-
-Why Public Service AI Governance Frameworks Risk Failing in the Age of General-Purpose AI: Lessons from Policing (2026). arXiv:2607.25648. <https://arxiv.org/abs/2607.25648>
+- ASPI (2026, 17 July). As Australia prepares for the AI future, its plan for sovereign capability is unclear. The Strategist. <https://www.aspistrategist.org.au/as-australia-prepares-for-the-ai-future-its-plan-for-sovereign-capability-is-unclear/>
+- Gilbert + Tobin (2026). Australian Government announces mandatory AI standards for large-scale data centres and new Office of AI. <https://www.gtlaw.com.au/insights/australian-government-announces-mandatory-ai-standards-for-large-scale-data-centres-and-new-office-of-ai>
+- InnovationAus (2026a, 28 July). Politicians skirt bounds of government AI policy. <https://innovationaus.com/pollies-skirt-bounds-of-government-ai-policy>
+- InnovationAus (2026b, 27 July). NSW Coalition pledges to protect jobs in AI productivity push. <https://innovationaus.com/nsw-coalition-pledges-to-protect-jobs-in-ai-productivity-push>
+- The Conversation (2026, 22 July). Australia just outlined more ‘AI safety’ priorities, but is the plan actually coherent? <https://theconversation.com/australia-just-outlined-more-ai-safety-priorities-but-is-the-plan-actually-coherent-287882>
+- The Mandarin (2026a, 27 July). DTA’s IT policy management ‘dangerously incompetent’, claims senator. <https://themandarin.com.au/317040-dtas-it-policy-management-dangerously-incompetent-claims-senator>
+- The Mandarin (2026b, 28 July). Why AI ambition is outpacing readiness, and what public sector leaders can do about it. <https://themandarin.com.au/316986-why-ai-ambition-is-outpacing-readiness-and-what-public-sector-leaders-can-do-about-it>
+- The New Daily (2026, 15 July). PM outlines standards for AI, data centres in major speech. <https://www.thenewdaily.com.au/life/tech/2026/07/15/pm-standards-ai-data-centres>
+- Why Public Service AI Governance Frameworks Risk Failing in the Age of General-Purpose AI: Lessons from Policing (2026). arXiv:2607.25648. <https://arxiv.org/abs/2607.25648>
