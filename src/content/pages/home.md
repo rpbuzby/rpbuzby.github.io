@@ -1,5 +1,5 @@
 ---
-headline: "Helping leaders navigate complexity and deliver benefits that last."
+headline: "Helping leaders deliver benefits that last."
 byline: "Russell Buzby · Senior Manager, Parbery Consulting"
 lede: "I’m a management consultant and change leader living on Yuin country with more than 20 years of experience advising government and complex organisations through reform, transformation and implementation."
 buttons:

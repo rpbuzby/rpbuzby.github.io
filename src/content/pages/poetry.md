@@ -1,8 +1,8 @@
 ---
 title: "Poetry"
-headline: "Poems from Braidwood, in the southern tablelands of New South Wales."
+headline: "Poems from Braidwood."
 description: "Poems from Braidwood, in the southern tablelands of New South Wales: the land, the people on it, and what fire and weather do to both."
-lede: "The land, the people on it, and what fire and weather do to both."
+lede: "The southern tablelands of New South Wales: the land, the people on it, and what fire and weather do to both."
 epigraph: "This is the only poem in all the entries that pierced the regions of my soul. I don’t know why, and I don’t want to reason with it. I trust the primal tellings it conjured in me. I’m in gratitude to the poet."
 epigraph_cite:
   - "Patrick Jones, judge, on ‘Bogong’"

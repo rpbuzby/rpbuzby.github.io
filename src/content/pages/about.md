@@ -1,6 +1,6 @@
 ---
 title: "About"
-headline: "Twenty years of helping leaders and organisations work through complexity."
+headline: "Twenty years working through complexity."
 description: "Twenty years of helping leaders and organisations work through complexity, across government consulting, higher education leadership and financial services."
 lede: "My career has taken me across government consulting, higher education leadership, and financial services, and the common thread has always been the same: translating intent into practical, sustainable outcomes."
 capabilities:

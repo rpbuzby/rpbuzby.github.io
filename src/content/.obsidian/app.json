@@ -5,5 +5,7 @@
   "useMarkdownLinks": true,
   "readableLineLength": true,
   "spellcheck": true,
-  "spellcheckLanguages": ["en-AU"]
+  "spellcheckLanguages": [
+    "en-AU"
+  ]
 }
