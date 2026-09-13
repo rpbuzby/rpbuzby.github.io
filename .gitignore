@@ -8,3 +8,4 @@ dist/
 src/content/.obsidian/*
 !src/content/.obsidian/app.json
 !src/content/.obsidian/core-plugins.json
+.impeccable/

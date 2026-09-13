@@ -18,7 +18,7 @@ instagram_buttons:
 bio50: "Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia, and turns out with the local bushfire brigade when the pager goes. He won the Venie Holmgren Environmental Poetry Prize for ‘Bogong’, was shortlisted for the Bridport and Robert Gray prizes, and appears in Cordite Poetry Review."
 bio100: "Russell Buzby lives and writes on Ngunnawal and Yuin Country at Braidwood, in the southern tablelands of New South Wales. This year his poems have gone further afield: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, others were shortlisted for the Bridport Prize and the Robert Gray Prize and longlisted for the Winchester Poetry Prize, and ‘The singing, not the song’ appears in Cordite Poetry Review. He turns out with the local bushfire brigade when the pager goes, and what he writes keeps circling back to the land, the people on it, and what fire and weather do to both."
 photograph_note: "The headshot above is available in full colour and at print resolution on request. Festival photographs are by Jeffrey Chua for Words in Winter 2026."
-contact_note: "Through the [contact page](/contact/), or by email for submissions correspondence."
+contact_note: "By email to [rpbuzby@me.com](mailto:rpbuzby@me.com) for submissions correspondence, or through the [contact page](/contact/)."
 ---
 ## Where the poems come from
 

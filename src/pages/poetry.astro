@@ -4,6 +4,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import NewsList from '../components/NewsList.astro';
 import Buttons from '../components/Buttons.astro';
+import { getImage } from 'astro:assets';
 import { pageNote, sitePhoto, inline } from '../lib/site';
 
 const { data: d, Content } = await pageNote('poetry');
@@ -13,12 +14,16 @@ const bios = [
   { id: 'bio50', label: 'Bio – 50 words', text: d.bio50 },
   { id: 'bio100', label: 'Bio – 100 words', text: d.bio100 },
 ].filter((b) => b.text);
+const og = d.headshot ? await getImage({ src: sitePhoto(d.headshot.image), width: 1200, height: 630, format: 'jpg' }) : null;
+const ogUrl = og ? new URL(og.src, Astro.site).href : undefined;
+const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they come from'], ['#press', 'For editors']];
 ---
-<Base title={d.title} description={d.description ?? d.lede ?? d.headline}>
+<Base title={d.title} description={d.description ?? d.lede ?? d.headline} image={ogUrl}>
   <section class="epigraph">
     <div class="stack">
       <h1>{d.headline}</h1>
       {d.lede && <p class="lede measure">{d.lede}</p>}
+      <p class="jumps">{jumps.map(([h, l]) => <a href={h}>{l}</a>)}</p>
       {d.epigraph && (
         <blockquote>{d.epigraph}
           {d.epigraph_cite && <cite>{d.epigraph_cite.map((l, i) => <>{i > 0 && <br />}{l}</>)}</cite>}
@@ -32,14 +37,15 @@ const bios = [
     )}
   </section>
 
-  <section>
+  <section id="poems">
     <div class="section-head"><h2>Published and placed</h2></div>
     <div class="poems">
       {rendered.map(({ p, Content: Poem }) => (
         <article class="poem">
           <div>
             <h3>{p.data.title}</h3>
-            <p class="status">{p.data.status}{p.data.detail && <><br />{p.data.detail}</>}</p>
+            <p class="status">{p.data.status}</p>
+            {p.data.detail && <p class="detail">{p.data.detail}</p>}
           </div>
           <div class="stack">
             <Poem />
@@ -58,12 +64,12 @@ const bios = [
     </section>
   )}
 
-  <section class="news">
+  <section class="news" id="news">
     <div class="section-head"><h2>Recent news</h2></div>
     <NewsList />
   </section>
 
-  <section class="origin">
+  <section class="origin" id="origin">
     {d.origin_photo && (
       <figure>
         <Image src={sitePhoto(d.origin_photo.image)} alt={d.origin_photo.alt} width={900} />
@@ -76,12 +82,12 @@ const bios = [
     </div>
   </section>
 
-  <section>
+  <section id="press">
     <div class="section-head"><h2>Bios, photograph, contact</h2></div>
     <div class="bios">
       {bios.map((b) => (
         <div class="bio">
-          <div class="top"><h3>{b.label}</h3><button class="copy" type="button" data-copy={b.id} id={`copy-${b.id}`}>Copy</button></div>
+          <div class="top"><h3>{b.label}</h3><button class="copy" type="button" data-copy={b.id} id={`copy-${b.id}`} aria-live="polite">Copy</button></div>
           <p id={b.id}>{b.text}</p>
         </div>
       ))}

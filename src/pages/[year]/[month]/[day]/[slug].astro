@@ -2,7 +2,9 @@
 import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
+import Buttons from '../../../../components/Buttons.astro';
 import { publishedInsights, insightParams, insightPath, fmtDate } from '../../../../lib/insights';
+import { sitePhoto } from '../../../../lib/site';
 
 export async function getStaticPaths() {
   const posts = await publishedInsights();
@@ -25,17 +27,26 @@ const ogUrl = new URL(og.src, Astro.site).href;
         <span class="sep">·</span>{d.themes.join(' · ')}
       </p>
       <h1>{d.title}</h1>
+      <p class="byline">Russell Buzby · Braidwood, New South Wales</p>
     </header>
     <figure class="article-hero">
-      <Image src={d.image} alt="" width={1600} height={800} loading="eager" fetchpriority="high" />
+      <Image src={d.image} alt={d.title} width={1600} height={800} loading="eager" fetchpriority="high" />
       {d.imageCredit && <figcaption>{d.imageCredit}</figcaption>}
     </figure>
     <div class="article-body">
       <Content />
     </div>
+    <aside class="author" aria-label="About the author">
+      <Image src={sitePhoto('poet-headshot.jpg')} alt="Russell Buzby" width={192} height={192} />
+      <div class="stack">
+        <p class="name">Russell Buzby</p>
+        <p>Senior Manager at Parbery Consulting, advising Commonwealth leaders on complex reform. Captain in the NSW Rural Fire Service at Braidwood, and a poet: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize.</p>
+        <Buttons links={[{ label: 'All insights', url: '/insights/' }, { label: 'About', url: '/about/' }, { label: 'Poetry', url: '/poetry/' }]} />
+      </div>
+    </aside>
     <nav class="article-nav" aria-label="More articles">
-      {older ? <a href={insightPath(older)}><span class="label">Earlier</span><span class="t">{older.data.title}</span></a> : <span></span>}
-      {newer ? <a href={insightPath(newer)}><span class="label">Later</span><span class="t">{newer.data.title}</span></a> : <span></span>}
+      {older && <a href={insightPath(older)}><span class="label">Earlier</span><span class="t">{older.data.title}</span></a>}
+      {newer && <a class="later" href={insightPath(newer)}><span class="label">Later</span><span class="t">{newer.data.title}</span></a>}
     </nav>
   </article>
 </Base>

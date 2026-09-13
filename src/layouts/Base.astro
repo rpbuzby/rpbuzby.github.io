@@ -53,7 +53,7 @@ const nav = [
         <a class="brand" href="/">Russell Buzby</a>
         <nav class="nav" aria-label="Site">
           {nav.map((n) => (
-            <a href={n.href} aria-current={n.match(path) ? 'page' : undefined}>{n.label}</a>
+            <a href={n.href} aria-current={n.match(path) ? 'page' : undefined} data-home={n.href === '/' ? '' : undefined}>{n.label}</a>
           ))}
         </nav>
       </header>

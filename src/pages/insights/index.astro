@@ -22,7 +22,7 @@ const firstMonth = first ? new Intl.DateTimeFormat('en-AU', { month: 'long', yea
       ))}
     </div>
     <div class="posts" id="posts">
-      {posts.map((e, i) => <PostCard entry={e} eager={i < 3} />)}
+      {posts.map((e, i) => <PostCard entry={e} eager={i < 3} level={2} />)}
     </div>
     <p class="empty" id="empty" hidden>No articles in that theme yet.</p>
   </section>

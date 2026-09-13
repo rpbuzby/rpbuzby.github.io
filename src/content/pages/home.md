@@ -1,7 +1,7 @@
 ---
-headline: "Helping leaders deliver benefits that last."
+headline: "Reform for the Commonwealth, written from Braidwood."
 byline: "Russell Buzby · Senior Manager, Parbery Consulting"
-lede: "I’m a management consultant and change leader living on Yuin country with more than 20 years of experience advising government and complex organisations through reform, transformation and implementation."
+lede: "I advise Commonwealth leaders on complex change at Parbery Consulting, and I turn out with the Braidwood bushfire brigade when the pager goes. My poems have started to travel too: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize."
 buttons:
   - { label: "Read my insights", url: "/insights/" }
   - { label: "Get in touch", url: "/contact/" }
@@ -20,6 +20,4 @@ poetry:
     - { label: "Published and placed poems", url: "/poetry/" }
     - { label: "Read ‘Bogong’", url: "https://holmgren.com.au/poem/bogong-by-russell-buzby/" }
 ---
-My work sits at the intersection of strategy and delivery. I help senior leaders clarify direction, engage stakeholders, manage risk and translate policy and organisational intent into practical outcomes. My background spans government consulting, executive leadership in higher education, and legal and compliance management in financial services.
-
-Outside the boardroom, I serve as a Captain in the NSW Rural Fire Service, where I’ve learned that real leadership is tested under pressure, not in planning sessions.
+My work sits at the intersection of strategy and delivery: helping senior leaders clarify direction, engage stakeholders, manage risk and translate policy intent into practical outcomes. Twenty years across government consulting, higher education leadership and financial services, and a fireground that taught me leadership is tested under pressure, not in planning sessions.

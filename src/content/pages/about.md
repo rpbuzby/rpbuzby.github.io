@@ -16,6 +16,7 @@ buttons:
   - { label: "Read my insights", url: "/insights/" }
   - { label: "Get in touch", url: "/contact/" }
 photos:
+  - { image: "headshot.jpg", alt: "Russell Buzby, management consultant and change leader", caption: "Russell Buzby, Senior Manager, Parbery Consulting." }
   - { image: "rfs-hose.jpg", alt: "Russell Buzby with NSW Rural Fire Service", caption: "With the NSW Rural Fire Service." }
   - { image: "rfs-radio.jpg", alt: "Russell Buzby on the radio in a NSW RFS vehicle", caption: "On the radio in a NSW RFS vehicle." }
 ---
@@ -33,6 +34,6 @@ This breadth of experience gives me a perspective that most consultants in a sin
 
 ## Beyond the boardroom
 
-I’m also a Captain in the NSW Rural Fire Service, serving on Yuin country. The fireground has shaped how I think about leadership, decision-making and communication in ways that no boardroom ever could. When lives and property are on the line, you learn to think clearly under pressure, communicate with precision and lead people through uncertainty with calm authority.
+I’m also a Captain in the NSW Rural Fire Service, serving on Yuin Country. The fireground has shaped how I think about leadership, decision-making and communication in ways that no boardroom ever could. When lives and property are on the line, you learn to think clearly under pressure, communicate with precision and lead people through uncertainty with calm authority.
 
 I bring that same approach to my consulting work: a bias toward action, sound judgement under pressure, and a focus on outcomes that are credible and grounded in operational reality.

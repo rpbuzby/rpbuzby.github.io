@@ -6,8 +6,9 @@ lede: "If you’d like to connect, discuss an idea, or explore working together,
 buttons:
   - { label: "Connect on LinkedIn", url: "https://www.linkedin.com/in/russell-buzby/" }
 details:
+  - { label: "Email", text: "[rpbuzby@me.com](mailto:rpbuzby@me.com)" }
   - { label: "LinkedIn", text: "[linkedin.com/in/russell-buzby](https://www.linkedin.com/in/russell-buzby/)" }
   - { label: "Instagram", text: "[@rpbuzby](https://www.instagram.com/rpbuzby/), poems read aloud" }
-  - { label: "Poetry", text: "Bios and photograph for editors are on the [Poetry page](/poetry/). Submissions correspondence by email." }
+  - { label: "Poetry", text: "Bios and photograph for editors are on the [Poetry page](/poetry/#press). Submissions correspondence by email." }
   - { label: "Based", text: "Braidwood, southern tablelands of New South Wales" }
 ---

@@ -6,8 +6,10 @@ interface Props {
   entry: Insight;
   eager?: boolean;
   clamp?: number; // characters of summary to show; 0 = all
+  level?: 2 | 3; // heading level for the title, by where the card sits
 }
-const { entry, eager = false, clamp = 0 } = Astro.props;
+const { entry, eager = false, clamp = 0, level = 3 } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
 const href = insightPath(entry);
 const d = entry.data;
 let summary = d.summary;
@@ -23,7 +25,7 @@ const cats = d.themes.map(themeSlug).join(' ');
       <time datetime={d.date.toISOString().slice(0, 10)}>{fmtDate(d.date)}</time>
       <span class="sep">·</span>{d.themes.join(' · ')}
     </p>
-    <h3><a href={href}>{d.title}</a></h3>
+    <H class="post-title"><a href={href}>{d.title}</a></H>
     <p class="excerpt">{summary}</p>
   </div>
 </article>
