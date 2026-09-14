@@ -10,3 +10,4 @@ src/content/.obsidian/*
 !src/content/.obsidian/core-plugins.json
 .impeccable/
 .lighthouse/
+.pipeline/
