@@ -212,7 +212,7 @@ Voice file: {voice}
 Standing rules: ~/.claude/CLAUDE.md (image sourcing, fact-check, humanise grader, read-aloud, curly quotes, \
 no em dashes, Australian English).
 
-Do these in order and stop if a step cannot be completed honestly:
+{stage_note}Do these in order and stop if a step cannot be completed honestly:
 
 1. IMAGE. If the frontmatter `image` is TBD, or names a file that does not exist in the images folder, source \
 one under the standing image rule: NSW RFS Flickr (pre-2019 archive) is the required primary source for fire, \
@@ -224,7 +224,12 @@ the frontmatter. Never invent an asset ID or a credit; if no usable image can be
 2. FACT-CHECK. Run the /fact-check skill over the article body. Fix anything it finds against the sources \
 in the reference list; if a load-bearing claim cannot be verified, write `stage_note:` explaining it and stop.
 3. GRADER. Run `python3 {grader} "{article}"` and fix every failing hard gate in the body (not the \
-frontmatter), re-running until it is clean. Keep the argument intact; fix the prose.
+frontmatter), re-running until every hard gate passes (ignore `no-markdown-headings`; advisory warnings are \
+fine). Keep the argument intact; fix the prose. Two gates need a particular method: `vocabulary-diversity` \
+(type-token ratio under 0.40) is cleared by cutting sentences that repeat vocabulary already used, trimming \
+the body by 5 to 10 per cent rather than swapping in synonyms; `no-triad-density` is cleared by turning \
+lists of three into two items or four, except inside verbatim quotations. Do not stop at 61/63: a hard gate \
+left failing means the article is not queued.
 4. READ-ALOUD. Run `python3 {readaloud} "{article}"` and fix the high-confidence flags where a fix does not \
 break a grader gate; re-run the grader after.
 5. SUMMARY. Write a `summary:` field in the frontmatter: one or two sentences, 25 to 45 words, stating the \
@@ -251,7 +256,9 @@ def stage_one(article: Path, dry: bool) -> bool:
         if not CLAUDE_BIN.exists():
             log("claude binary missing; cannot stage")
             return False
+        note = str(d.get("stage_note", "")).strip()
         prompt = STAGE_PROMPT.format(
+            stage_note=(f"A previous attempt failed its gates: {note}. Fix that first.\n\n" if note else ""),
             article=str(article), images=str(IMAGES), number=f"{n:03d}",
             voice=str(VAULT / "Automation/Projects/Articles/voice.md"),
             grader=str(GRADER), readaloud=str(READALOUD), themes=", ".join(f'"{t}"' for t in THEMES),
@@ -322,7 +329,11 @@ def stage_one(article: Path, dry: bool) -> bool:
         notify("Insights pipeline ⚠️", f"{article.name} did not pass the gates; see stage_note in the vault file")
         return False
 
-    # ---- copy into the queue
+    # ---- copy into the queue (and clear any old stage_note in the vault file)
+    if d.get("stage_note"):
+        vt = article.read_text(encoding="utf-8")
+        vt = re.sub(r"^stage_note:.*\n?", "", vt, count=1, flags=re.M)
+        article.write_text(vt, encoding="utf-8")
     QUEUE.mkdir(parents=True, exist_ok=True)
     title = normalise(curly(str(d["title"])))
     slug = slugify(title)
