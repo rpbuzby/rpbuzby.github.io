@@ -33,7 +33,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
     </div>
     {d.headshot && (
       <figure>
-        <Image src={sitePhoto(d.headshot.image)} alt={d.headshot.alt} width={900} loading="eager" />
+        <Image src={sitePhoto(d.headshot.image)} alt={d.headshot.alt} width={900} widths={[400, 700, 900]} sizes="(max-width: 860px) 100vw, 40vw" loading="eager" />
       </figure>
     )}
   </section>
@@ -60,7 +60,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
   {d.gallery && d.gallery.length > 0 && (
     <section class="gallery" aria-label="Photographs">
       {d.gallery.map((g) => (
-        <figure><Image src={sitePhoto(g.image)} alt={g.alt} width={1000} />{g.caption && <figcaption>{g.caption}</figcaption>}</figure>
+        <figure><Image src={sitePhoto(g.image)} alt={g.alt} width={1000} widths={[400, 700, 1000]} sizes="(max-width: 860px) 100vw, 50vw" />{g.caption && <figcaption>{g.caption}</figcaption>}</figure>
       ))}
     </section>
   )}
@@ -73,7 +73,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
   <section class="origin" id="origin">
     {d.origin_photo && (
       <figure>
-        <Image src={sitePhoto(d.origin_photo.image)} alt={d.origin_photo.alt} width={900} />
+        <Image src={sitePhoto(d.origin_photo.image)} alt={d.origin_photo.alt} width={900} widths={[400, 700, 900]} sizes="(max-width: 860px) 100vw, 40vw" />
         {d.origin_photo.caption && <figcaption>{d.origin_photo.caption}</figcaption>}
       </figure>
     )}

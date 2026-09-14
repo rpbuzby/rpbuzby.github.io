@@ -22,7 +22,7 @@ const { data: d, Content } = await pageNote('about');
     </div>
     <div class="photos">
       {(d.photos ?? []).map((p) => (
-        <figure><Image src={sitePhoto(p.image)} alt={p.alt} width={1000} />{p.caption && <figcaption>{p.caption}</figcaption>}</figure>
+        <figure><Image src={sitePhoto(p.image)} alt={p.alt} width={1000} widths={[400, 700, 1000]} sizes="(max-width: 860px) 100vw, 40vw" />{p.caption && <figcaption>{p.caption}</figcaption>}</figure>
       ))}
     </div>
   </section>

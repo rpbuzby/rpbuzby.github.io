@@ -25,14 +25,14 @@ const doors = [
       <Buttons links={d.buttons} />
     </div>
     <figure>
-      <Image src={sitePhoto('poet-headshot.jpg')} alt="Russell Buzby" width={1200} loading="eager" fetchpriority="high" />
+      <Image src={sitePhoto('poet-headshot.jpg')} alt="Russell Buzby" width={1200} widths={[400, 800, 1200]} sizes="(max-width: 860px) 100vw, 40vw" loading="eager" fetchpriority="high" />
     </figure>
   </section>
 
   <section class="registers" aria-label="Consulting and poetry">
     {doors.map((r) => (
       <div class="register">
-        <Image src={r.image} alt={r.alt} width={1000} style={`object-position: ${r.pos};`} />
+        <Image src={r.image} alt={r.alt} width={1000} widths={[400, 700, 1000]} sizes="(max-width: 860px) 100vw, 50vw" style={`object-position: ${r.pos};`} />
         <div class="stack">
           <h2>{r.title}</h2>
           <p class="lede">{r.lede}</p>
