@@ -57,6 +57,7 @@ SITE = "https://russellbuzby.com"
 STAGE_TIMEOUT_S = 2700   # 45 min per article
 MAX_STAGE_PER_RUN = 2    # scheduled runs; `stage --all` lifts it
 MAX_QUEUE = 10           # do not stage more than this many ahead
+MAX_ATTEMPTS = 2         # Claude tries per article before it is parked with hold: true for Russell
 THEMES = ["Emergency Management & Resilience", "AI in Government", "Defence", "Change & Transformation"]
 TAG_TO_THEME = [
     ("emergency", THEMES[0]), ("bushfire", THEMES[0]), ("wildfire", THEMES[0]), ("resilience", THEMES[0]),
@@ -80,6 +81,19 @@ def log(msg: str) -> None:
     print(line)
     with LOG.open("a") as f:
         f.write(line + "\n")
+
+
+def obsidian_url(path: Path) -> str:
+    """obsidian:// link that opens a vault file when the notification is clicked."""
+    import urllib.parse
+    rel = path.relative_to(VAULT).as_posix()
+    return "obsidian://open?vault=Vault&file=" + urllib.parse.quote(rel)
+
+
+def obsidian_url_repo(path: Path) -> str:
+    import urllib.parse
+    rel = path.relative_to(REPO / "src/content").as_posix()
+    return "obsidian://open?vault=content&file=" + urllib.parse.quote(rel)
 
 
 def notify(title: str, message: str, open_url: str = "") -> None:
@@ -271,7 +285,7 @@ def stage_one(article: Path, dry: bool) -> bool:
             res = subprocess.run(cmd, cwd=str(HOME), env=env, timeout=STAGE_TIMEOUT_S, capture_output=True, text=True)
         except subprocess.TimeoutExpired:
             log(f"stage TIMEOUT on {article.name}")
-            notify("Insights pipeline ⚠️", f"Prep of {article.name} timed out; will retry next run")
+            notify(f"Insights: {n:03d} timed out", f"{d.get('title', article.name)}: Claude run hit 45 min; will retry next slot · click to open", open_url=obsidian_url(article))
             return False
         log(f"claude exit {res.returncode}; tail: {(res.stdout or '').strip()[-300:]}")
         if res.returncode != 0:
@@ -320,19 +334,27 @@ def stage_one(article: Path, dry: bool) -> bool:
         tmp.unlink(missing_ok=True)
 
     if problems:
-        log("stage gates FAILED: " + " | ".join(problems))
+        attempts = int(str(d.get("stage_attempts", "0")) or 0) + 1
+        why = " | ".join(problems)
+        log(f"stage gates FAILED (attempt {attempts}): {why}")
         text = article.read_text(encoding="utf-8")
-        text = set_fm_field(text, "stage_note", yq("GATES FAILED " + dt.date.today().isoformat() + ": " + " | ".join(problems)))
+        text = set_fm_field(text, "stage_note", yq(f"GATES FAILED {dt.date.today().isoformat()} (attempt {attempts}): {why}"))
+        text = set_fm_field(text, "stage_attempts", str(attempts))
         if d.get("status") == "ready":
             text = set_fm_field(text, "status", "draft")
+        parked = attempts >= MAX_ATTEMPTS
+        if parked:
+            text = set_fm_field(text, "hold", "true")
         article.write_text(text, encoding="utf-8")
-        notify("Insights pipeline ⚠️", f"{article.name} did not pass the gates; see stage_note in the vault file")
+        head = f"{n:03d} parked after {attempts} tries" if parked else f"{n:03d} held back (try {attempts} of {MAX_ATTEMPTS})"
+        notify(f"Insights: {head}", f"{d.get('title', article.name)}: {why}"[:230] + (" · click to open" if len(why) < 200 else " · click to open"),
+               open_url=obsidian_url(article))
         return False
 
     # ---- copy into the queue (and clear any old stage_note in the vault file)
-    if d.get("stage_note"):
+    if d.get("stage_note") or d.get("stage_attempts"):
         vt = article.read_text(encoding="utf-8")
-        vt = re.sub(r"^stage_note:.*\n?", "", vt, count=1, flags=re.M)
+        vt = re.sub(r"^(stage_note|stage_attempts):.*\n?", "", vt, flags=re.M)
         article.write_text(vt, encoding="utf-8")
     QUEUE.mkdir(parents=True, exist_ok=True)
     title = normalise(curly(str(d["title"])))
@@ -351,7 +373,7 @@ def stage_one(article: Path, dry: bool) -> bool:
     git("add", str(qmd), str(qimg))
     git("commit", "-q", "-m", f"Queue: {title}")
     log(f"queued {qmd.name}")
-    notify("Insights pipeline", f"Queued for release: {title}")
+    notify(f"Insights: {n:03d} queued", f"{title} · click to open the queued copy", open_url=obsidian_url_repo(qmd))
     return True
 
 
