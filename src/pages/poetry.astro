@@ -34,6 +34,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
     {d.headshot && (
       <figure>
         <Image src={sitePhoto(d.headshot.image)} alt={d.headshot.alt} width={900} widths={[400, 700, 900]} sizes="(max-width: 860px) 100vw, 40vw" loading="eager" />
+        {d.headshot.caption && <figcaption>{d.headshot.caption}</figcaption>}
       </figure>
     )}
   </section>

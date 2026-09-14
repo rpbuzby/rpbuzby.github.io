@@ -7,7 +7,7 @@ epigraph: "This is the only poem in all the entries that pierced the regions of 
 epigraph_cite:
   - "Patrick Jones, judge, on ‘Bogong’"
   - "2026 Venie Holmgren Environmental Poetry Prize"
-headshot: { image: "poet-headshot.jpg", alt: "Russell Buzby" }
+headshot: { image: "poet-headshot.jpg", alt: "Russell Buzby", caption: "Russell Buzby, 2026. Available at print resolution on request." }
 gallery:
   - { image: "holmgren.jpg", alt: "David Holmgren and Russell Buzby at the announcement", caption: "David Holmgren and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter." }
   - { image: "omara.jpg", alt: "Judge Peter O’Mara and Russell Buzby at the announcement", caption: "Judge Peter O’Mara and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter." }
