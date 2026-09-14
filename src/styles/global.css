@@ -172,7 +172,7 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .epigraph img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 60% 20%; }
 .poems { display: grid; gap: 0; }
 .poem { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--s2) var(--col-gap); padding-block: var(--s3); border-bottom: 1px solid var(--line); }
-.poem h3 { font-size: clamp(1.7rem, 2.6vw, 2.1rem); font-style: italic; font-weight: 600; }
+.poem h3 { font-size: clamp(1.4rem, 2vw, 1.6rem); font-style: italic; font-weight: 600; }
 .poem .status { font-family: var(--mono); font-size: .88rem; letter-spacing: 0; color: var(--ember); margin-top: .5rem; line-height: 1.6; }
 .poem .detail { font-size: .92rem; color: var(--stone); margin-top: .25rem; line-height: 1.5; }
 .jumps { display: flex; flex-wrap: wrap; gap: .2rem 1.4rem; font-family: var(--ui); font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
