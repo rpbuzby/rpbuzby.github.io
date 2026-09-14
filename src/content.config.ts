@@ -6,7 +6,6 @@ export const THEMES = [
   'AI in Government',
   'Defence',
   'Change & Transformation',
-  'Leadership',
 ] as const;
 
 // Insights: one markdown file per article, named YYYY-MM-DD-slug.md.

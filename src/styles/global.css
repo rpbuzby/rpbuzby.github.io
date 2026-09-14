@@ -91,6 +91,8 @@ p { margin: 0; }
 /* pages */
 .page { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 7vw, 6rem); display: grid; gap: var(--s6); }
 section { display: grid; gap: var(--s3); }
+.page-poetry { gap: var(--s5); }
+.page-poetry > section > h2:first-child { margin-bottom: calc(var(--s1) * -1); }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: .9rem; }
 .section-head .more { font-family: var(--ui); font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--stone); min-height: 2.75rem; display: inline-flex; align-items: center; margin-block: calc((2.75rem - 1.4em) / -2); }
 @media (hover: hover) and (pointer: fine) { .section-head .more:hover { color: var(--ember); } }
@@ -170,14 +172,14 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .epigraph img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 60% 20%; }
 .poems { display: grid; gap: 0; }
 .poem { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--s2) var(--col-gap); padding-block: var(--s3); border-bottom: 1px solid var(--line); }
-.poem h3 { font-size: clamp(1.6rem, 2.4vw, 1.9rem); font-style: italic; font-weight: 500; }
+.poem h3 { font-size: clamp(1.7rem, 2.6vw, 2.1rem); font-style: italic; font-weight: 600; }
 .poem .status { font-family: var(--mono); font-size: .88rem; letter-spacing: 0; color: var(--ember); margin-top: .5rem; line-height: 1.6; }
 .poem .detail { font-size: .92rem; color: var(--stone); margin-top: .25rem; line-height: 1.5; }
 .jumps { display: flex; flex-wrap: wrap; gap: .2rem 1.4rem; font-family: var(--ui); font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
 .jumps a { text-decoration: none; color: var(--stone); border-bottom: 1px solid transparent; display: inline-flex; align-items: center; min-height: 2.5rem; transition: color 150ms ease, border-color 150ms ease; }
 @media (hover: hover) and (pointer: fine) { .jumps a:hover { color: var(--ink); border-bottom-color: var(--ember); } }
 .poem .stack { gap: var(--s2); }
-.poem .stack p { max-width: 52ch; }
+.poem .stack p { max-width: 52ch; font-size: .98rem; color: var(--stone); }
 .poem .btns { padding-top: .3rem; }
 .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
 .gallery figure { margin: 0; }
@@ -222,6 +224,9 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 .refs ol { margin: 0; padding-left: 1.6em; display: grid; gap: .5rem; font-size: .9rem; color: var(--stone); line-height: 1.5; max-width: var(--measure); }
 .refs a { color: var(--stone); text-decoration-color: var(--line); overflow-wrap: anywhere; }
 @media (hover: hover) and (pointer: fine) { .refs a:hover { color: var(--ink); text-decoration-color: var(--ember); } }
+.share { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.share .label { margin-right: .5rem; }
+.share a.chip { text-decoration: none; display: inline-flex; align-items: center; }
 .author { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: var(--s3); align-items: center; border-top: 1px solid var(--line); padding-top: var(--s3); }
 .author img { width: 96px; height: 96px; object-fit: cover; object-position: 60% 20%; border-radius: 50%; }
 .author .stack { gap: .6rem; }

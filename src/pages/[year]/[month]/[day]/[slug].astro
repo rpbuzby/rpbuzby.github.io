@@ -57,6 +57,13 @@ const ogUrl = new URL(og.src, Astro.site).href;
     <div class="article-body" id="body">
       <Content />
     </div>
+    <div class="share" data-url={new URL(insightPath(entry), Astro.site).href} data-title={d.title}>
+      <span class="label">Share</span>
+      <button class="chip" type="button" id="copy-link">Copy link</button>
+      <a class="chip" href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(new URL(insightPath(entry), Astro.site).href)}`} target="_blank" rel="noopener">LinkedIn<span class="sr">, opens in a new tab</span></a>
+      <a class="chip" href={`mailto:?subject=${encodeURIComponent(d.title)}&body=${encodeURIComponent(new URL(insightPath(entry), Astro.site).href)}`}>Email</a>
+      <button class="chip" type="button" id="share-native" hidden>Share…</button>
+    </div>
     <aside class="author" aria-label="About the author">
       <Image src={sitePhoto('poet-headshot.jpg')} alt="Russell Buzby" width={192} height={192} />
       <div class="stack">
@@ -78,3 +85,18 @@ const ogUrl = new URL(og.src, Astro.site).href;
   </article>
 </Base>
 )}
+
+<script>
+  const box = document.querySelector<HTMLElement>('.share');
+  if (box) {
+    const url = box.dataset.url!, title = box.dataset.title!;
+    const copy = document.getElementById('copy-link') as HTMLButtonElement;
+    const show = (msg: string) => { copy.textContent = msg; setTimeout(() => { copy.textContent = 'Copy link'; }, 2000); };
+    copy.addEventListener('click', () => {
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(() => show('Link copied'), () => show('Could not copy'));
+      else show('Could not copy');
+    });
+    const nat = document.getElementById('share-native') as HTMLButtonElement;
+    if (navigator.share) { nat.hidden = false; nat.addEventListener('click', () => { navigator.share({ title, url }).catch(() => {}); }); }
+  }
+</script>

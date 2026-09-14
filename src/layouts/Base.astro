@@ -2,12 +2,13 @@
 import '../styles/global.css';
 
 interface Props {
+  pageClass?: string;
   title?: string;
   description: string;
   image?: string; // absolute URL for social cards
   type?: 'website' | 'article';
 }
-const { title, description, image, type = 'website' } = Astro.props;
+const { title, description, image, type = 'website', pageClass } = Astro.props;
 const fullTitle = title ? `${title} · Russell Buzby` : 'Russell Buzby';
 const path = Astro.url.pathname;
 const canonical = new URL(path, Astro.site);
@@ -58,7 +59,7 @@ const nav = [
           ))}
         </nav>
       </header>
-      <main class="page" id="main">
+      <main class:list={['page', pageClass]} id="main">
         <slot />
       </main>
       <footer>

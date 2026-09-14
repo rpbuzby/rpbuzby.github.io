@@ -19,7 +19,7 @@ const og = d.headshot ? await getImage({ src: sitePhoto(d.headshot.image), width
 const ogUrl = og ? new URL(og.src, Astro.site).href : undefined;
 const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they come from'], ['#press', 'For editors']];
 ---
-<Base title={d.title} description={d.description ?? d.lede ?? d.headline} image={ogUrl}>
+<Base title={d.title} description={d.description ?? d.lede ?? d.headline} image={ogUrl} pageClass="page-poetry">
   <section class="epigraph">
     <div class="stack">
       <h1>{d.headline}</h1>
@@ -39,7 +39,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
   </section>
 
   <section id="poems">
-    <div class="section-head"><h2>Published and placed</h2></div>
+    <h2>Published and placed</h2>
     <div class="poems">
       {rendered.map(({ p, Content: Poem }) => (
         <article class="poem">
@@ -66,7 +66,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
   )}
 
   <section class="news" id="news">
-    <div class="section-head"><h2>Recent news</h2></div>
+    <h2>Recent news</h2>
     <NewsList />
   </section>
 
@@ -84,7 +84,7 @@ const jumps = [['#poems', 'Poems'], ['#news', 'News'], ['#origin', 'Where they c
   </section>
 
   <section id="press">
-    <div class="section-head"><h2>Bios, photograph, contact</h2></div>
+    <h2>Bios, photograph, contact</h2>
     <div class="bios">
       {bios.map((b) => (
         <div class="bio">

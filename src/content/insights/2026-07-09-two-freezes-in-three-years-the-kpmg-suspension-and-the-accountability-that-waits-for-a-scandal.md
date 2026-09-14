@@ -3,7 +3,7 @@ title: "Two Freezes in Three Years: The KPMG suspension and the accountability t
 date: 2026-07-09
 summary: "Finance has barred new KPMG engagements until 30 September, three years after PwC was frozen out, and close to $200 million in expiring audit work may survive through extensions. Both cases were caught by a whistleblower; the standing controls were not doing the catching."
 themes:
-  - "Leadership"
+  - "Change & Transformation"
 image: ../../assets/insights/two-freezes-in-three-years-the-kpmg-suspension-and-the-accountability-that-waits-for-a-scandal.jpg
 wordpress: "https://russellbuzby.com/2026/07/09/two-freezes-in-three-years-the-kpmg-suspension-and-the-accountability-that-waits-for-a-scandal/"
 ---
