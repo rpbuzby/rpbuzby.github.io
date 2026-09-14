@@ -17,7 +17,7 @@ re-run:
            article to Posts/Archive/, and notify.
   run      stage (bounded) then release.  status  prints the queue.
 
-Controls: `hold: true` in a vault article's frontmatter keeps it out of the pipeline;
+Releases happen on weekdays only. Controls: `hold: true` in a vault article's frontmatter keeps it out of the pipeline;
 a file named PAUSE in .pipeline/ stops releases; --dry-run shows what would happen.
 Stdlib only. Runs on the logged-in Claude subscription (never API keys).
 """
@@ -55,8 +55,8 @@ READALOUD = HOME / ".agents/skills/read-aloud/read_aloud.py"
 CHECK_BLURBS = REPO / "scripts/check_blurbs.py"
 SITE = "https://russellbuzby.com"
 STAGE_TIMEOUT_S = 2700   # 45 min per article
-MAX_STAGE_PER_RUN = 1
-MAX_QUEUE = 3            # do not stage more than this many ahead
+MAX_STAGE_PER_RUN = 2    # scheduled runs; `stage --all` lifts it
+MAX_QUEUE = 10           # do not stage more than this many ahead
 THEMES = ["Emergency Management & Resilience", "AI in Government", "Defence", "Change & Transformation"]
 TAG_TO_THEME = [
     ("emergency", THEMES[0]), ("bushfire", THEMES[0]), ("wildfire", THEMES[0]), ("resilience", THEMES[0]),
@@ -344,15 +344,17 @@ def stage_one(article: Path, dry: bool) -> bool:
     return True
 
 
-def stage(dry: bool) -> int:
+def stage(dry: bool, all_: bool = False) -> int:
     cands = vault_candidates()
     q = queued()
     log(f"stage: {len(cands)} candidate(s) in vault, {len(q)} queued")
-    if len(q) >= MAX_QUEUE:
+    room = MAX_QUEUE - len(q)
+    if room <= 0:
         log("queue full; not staging")
         return 0
+    limit = len(cands) if all_ else MAX_STAGE_PER_RUN
     done = 0
-    for a in cands[:MAX_STAGE_PER_RUN]:
+    for a in cands[:min(limit, room)]:
         if stage_one(a, dry):
             done += 1
     return done
@@ -365,6 +367,9 @@ def release(dry: bool, force: bool = False) -> bool:
     iso = today.isoformat()
     if PAUSE.exists():
         log("PAUSE file present; no release")
+        return False
+    if not force and today.weekday() >= 5:
+        log("weekend; no release")
         return False
     if not force and RELEASE_STAMP.exists() and RELEASE_STAMP.read_text().strip() == iso:
         log("already released today")
@@ -453,7 +458,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["run", "stage", "release", "status"])
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--force", action="store_true", help="release even if one went out today")
+    ap.add_argument("--force", action="store_true", help="release even if one went out today or it is a weekend")
+    ap.add_argument("--all", action="store_true", help="stage every candidate, not just the per-run limit")
     a = ap.parse_args()
     if a.command == "status":
         status()
@@ -466,7 +472,7 @@ def main() -> int:
         return 0
     git("pull", "-q", "--rebase")
     if a.command in ("run", "stage"):
-        stage(a.dry_run)
+        stage(a.dry_run, a.all)
     if a.command in ("run", "release"):
         release(a.dry_run, a.force)
     return 0
