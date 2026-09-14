@@ -3,10 +3,9 @@ title: "The Tankers Arrived Before the Plan Did"
 summary: "Australia’s fire agencies already share one incident management system, so when coordination fails it is because no procedure says who owns the decision. Four different problems sit under that one word, and automation cannot supply the missing owner."
 themes:
   - "Emergency Management & Resilience"
-image: ./078-the-tankers-arrived-before-the-plan-did.jpg
+image: ../../assets/insights/the-tankers-arrived-before-the-plan-did.jpg
 imageCredit: "NSW RFS via the official NSW RFS Flickr (https://www.flickr.com/photos/nswrfs/35204488513/), All Rights Reserved - ‘4 | Canada deployment - Briefing 180717’, a pre-deployment briefing on 18 July 2017 for the NSW RFS deployment to Canada, a seated room of personnel in visibly different agency uniforms. 1024x683, the Flickr size cap for this account (the 1600px and 2048px variants return HTTP 410)."
-queue: 78
-vault: "078-fire-season-coordination.md"
+date: 2026-09-14
 ---
 Three large air tankers and their lead plane were sent to the Tenterfield area on 31 October 2023, close to the New South Wales border with Queensland. Up to 21 Rural Fire Service aircraft were working the firegrounds there that afternoon, those four among them, and Queensland was flying its own on the other side of the line. The tankers arrived without a target. The air attack supervisor coordinating aircraft overhead did not know they were inbound. Several times that day, crews came closer to other aircraft than was safe (Australian Transport Safety Bureau, 2025).
 
