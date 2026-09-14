@@ -1,25 +1,37 @@
 ---
-title: "Poetry"
-headline: "Poems from Braidwood."
+title: Poetry
+headline: Poems from Braidwood.
 description: "Poems from Braidwood, in the southern tablelands of New South Wales: the land, the people on it, and what fire and weather do to both."
 lede: "The southern tablelands of New South Wales: the land, the people on it, and what fire and weather do to both."
-epigraph: "This is the only poem in all the entries that pierced the regions of my soul. I don’t know why, and I don’t want to reason with it. I trust the primal tellings it conjured in me. I’m in gratitude to the poet."
+epigraph: This is the only poem in all the entries that pierced the regions of my soul. I don’t know why, and I don’t want to reason with it. I trust the primal tellings it conjured in me. I’m in gratitude to the poet.
 epigraph_cite:
-  - "Patrick Jones, judge, on ‘Bogong’"
-  - "2026 Venie Holmgren Environmental Poetry Prize"
-headshot: { image: "poet-headshot.jpg", alt: "Russell Buzby", caption: "Russell Buzby, 2026. Available at print resolution on request." }
+  - Patrick Jones, judge, on ‘Bogong’
+  - 2026 Venie Holmgren Environmental Poetry Prize
+headshot:
+  image: poet-headshot.jpg
+  alt: Russell Buzby
+  caption: Russell Buzby, 2026. Available at print resolution on request.
 gallery:
-  - { image: "holmgren.jpg", alt: "David Holmgren and Russell Buzby at the announcement", caption: "David Holmgren and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter." }
-  - { image: "omara.jpg", alt: "Judge Peter O’Mara and Russell Buzby at the announcement", caption: "Judge Peter O’Mara and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter." }
-origin_photo: { image: "words-in-winter.jpg", alt: "Russell Buzby at the Words in Winter festival, Daylesford", caption: "Words in Winter 2026, Daylesford. Photo: Jeffrey Chua." }
+  - image: holmgren.jpg
+    alt: David Holmgren and Russell Buzby at the announcement
+    caption: "David Holmgren and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter."
+  - image: omara.jpg
+    alt: Judge Peter O’Mara and Russell Buzby at the announcement
+    caption: "Judge Peter O’Mara and Russell Buzby at the announcement. Photo: Jeffrey Chua, Words in Winter."
+origin_photo:
+  image: words-in-winter.jpg
+  alt: Russell Buzby at the Words in Winter festival, Daylesford
+  caption: "Words in Winter 2026, Daylesford. Photo: Jeffrey Chua."
 instagram_buttons:
-  - { label: "Watch ‘Bogong’", url: "https://www.instagram.com/reel/Dc5PtIAiqzH/" }
-  - { label: "Follow @rpbuzby", url: "https://www.instagram.com/rpbuzby/" }
-bio25: "Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize."
-bio50: "Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia, and turns out with the local bushfire brigade when the pager goes. He won the Venie Holmgren Environmental Poetry Prize for ‘Bogong’, was shortlisted for the Bridport and Robert Gray prizes, and appears in Cordite Poetry Review."
+  - label: Watch ‘Bogong’
+    url: https://www.instagram.com/reel/Dc5PtIAiqzH/
+  - label: Follow @rpbuzby
+    url: https://www.instagram.com/rpbuzby/
+bio25: Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize.
+bio50: Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia, and turns out with the local bushfire brigade when the pager goes. He won the Venie Holmgren Environmental Poetry Prize for ‘Bogong’, was shortlisted for the Bridport and Robert Gray prizes, and appears in Cordite Poetry Review.
 bio100: "Russell Buzby lives and writes on Ngunnawal and Yuin Country at Braidwood, in the southern tablelands of New South Wales. This year his poems have gone further afield: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, others were shortlisted for the Bridport Prize and the Robert Gray Prize and longlisted for the Winchester Poetry Prize, and ‘The singing, not the song’ appears in Cordite Poetry Review. He turns out with the local bushfire brigade when the pager goes, and what he writes keeps circling back to the land, the people on it, and what fire and weather do to both."
-photograph_note: "The headshot above is available in full colour and at print resolution on request. Festival photographs are by Jeffrey Chua for Words in Winter 2026."
-contact_note: "By email to [rpbuzby@me.com](mailto:rpbuzby@me.com) for submissions correspondence, or through the [contact page](/contact/)."
+photograph_note: The headshot above is available at print resolution on request. Festival photographs are by Jeffrey Chua for Words in Winter 2026.
+contact_note: By email to [rpbuzby@me.com](mailto:rpbuzby@me.com) for submissions correspondence, or through the [contact page](/contact/).
 ---
 ## Where the poems come from
 
