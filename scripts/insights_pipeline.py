@@ -192,6 +192,15 @@ def online() -> bool:
         return False
 
 
+def caption_from_credit(credit: str) -> str:
+    """Fallback public caption from a vault provenance record: 'Photo by X on Pexels (...)' -> 'Photo: X on Pexels.'"""
+    head = re.split(r"\s+-\s+|\. ", credit, maxsplit=1)[0]
+    head = re.sub(r"\s*\((?:https?://)[^)]*\)", "", head)
+    head = re.sub(r",\s*(Pexels licence|free to use|Commonwealth of Australia Copyright|Defence Imagery terms of use|All Rights Reserved)[^,]*", "", head, flags=re.I)
+    head = re.sub(r"^Photo by\s+", "Photo: ", head).strip().rstrip(".,")
+    return (head + ".") if head and len(head.split()) <= 25 else ""
+
+
 # ----------------------------------------------------------------------------- queue views
 
 def vault_candidates() -> list[Path]:
@@ -232,8 +241,12 @@ no em dashes, Australian English).
 one under the standing image rule: NSW RFS Flickr (pre-2019 archive) is the required primary source for fire, \
 bushfire or emergency topics; Pexels free-use for everything else, and as the documented fallback. Download it \
 to the images folder as `{number}-<short-slug>.jpg` at 1600px on the long side (use sips to resize if needed), \
-and write `image:` (the filename) and `image_credit:` (photographer or agency, the asset URL, the licence) in \
-the frontmatter. Never invent an asset ID or a credit; if no usable image can be verified, write \
+and write `image:` (the filename), `image_credit:` (the full provenance record for the vault: photographer or \
+agency, the asset URL, the licence, why it was chosen, any resize) and `image_caption:` (the PUBLIC caption that \
+prints under the photo on the site: one line, at most 20 words, of the form "Photo: <photographer or agency>, \
+<source>." plus at most one short phrase of what or when, e.g. "Photo: NSW Rural Fire Service, via the NSW RFS \
+Flickr archive. Pre-deployment briefing, July 2017." Never put URLs, licence terms, resize notes, HTTP results or \
+selection reasoning in the caption) in the frontmatter. Never invent an asset ID or a credit; if no usable image can be verified, write \
 `stage_note: "IMAGE NOT SOURCED: <why>"` in the frontmatter and stop.
 2. FACT-CHECK. Run the /fact-check skill over the article body. Fix anything it finds against the sources \
 in the reference list; if a load-bearing claim cannot be verified, write `stage_note:` explaining it and stop.
@@ -308,6 +321,9 @@ def stage_one(article: Path, dry: bool) -> bool:
     credit = str(d.get("image_credit", ""))
     if not credit or credit.upper().startswith(("NOT YET", "TBD")):
         problems.append("image_credit unset")
+    caption = str(d.get("image_caption", "")).strip() or caption_from_credit(credit)
+    if not caption or len(caption.split()) > 25 or re.search(r"http|resized|brief|attempt|licen[cs]e|variant|preview", caption, re.I):
+        problems.append(f"image_caption unusable: {caption[:80]!r}")
     summary = str(d.get("summary", "")).strip()
     if not (18 <= len(summary.split()) <= 50):
         problems.append(f"summary is {len(summary.split())} words")
@@ -368,7 +384,7 @@ def stage_one(article: Path, dry: bool) -> bool:
     if refs and not re.search(r"^## References\s*$", body, re.M):
         body += "\n\n## References\n" + "\n".join("- " + normalise(r) for r in refs) + "\n"
     front = ["---", f"title: {yq(title)}", f"summary: {yq(normalise(curly(summary)))}", "themes:", f"  - {yq(d['theme'])}",
-             f"image: ./{qimg.name}", f"imageCredit: {yq(normalise(curly(credit)))}", f"queue: {n}", f"vault: {yq(article.name)}", "---", ""]
+             f"image: ./{qimg.name}", f"imageCredit: {yq(normalise(curly(caption)))}", f"queue: {n}", f"vault: {yq(article.name)}", "---", ""]
     qmd.write_text("\n".join(front) + body + "\n", encoding="utf-8")
     git("add", str(qmd), str(qimg))
     git("commit", "-q", "-m", f"Queue: {title}")

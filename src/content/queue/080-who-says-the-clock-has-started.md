@@ -4,7 +4,7 @@ summary: "Australia withdrew its ten-year warning assumption in 2020 and has res
 themes:
   - "Defence"
 image: ./080-who-says-the-clock-has-started.jpg
-imageCredit: "Photo by LAC Jonathon McCaffrey, Department of Defence image library (https://images.defence.gov.au/assets/S20262203), Commonwealth of Australia Copyright, Defence Imagery terms of use - ‘A National Advanced Surface to Air Missile System in front of the 16th Regiment, Royal Australian Artillery Headquarters at RAAF Base Edinburgh, South Australia’, 21 July 2026, from the series marking Final Operational Capability for Army’s Short Range Ground Based Air Defence project. Canister launcher elevated with its Hawkei-mounted launcher and the Australian flag behind it. Resized to 1600x1067 from the 2400x1601 preview."
+imageCredit: "Photo: LAC Jonathon McCaffrey, Department of Defence. NASAMS launcher at RAAF Base Edinburgh, July 2026."
 queue: 80
 vault: "080-warning-time-interceptor-queue.md"
 ---

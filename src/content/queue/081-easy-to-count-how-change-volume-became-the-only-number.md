@@ -4,7 +4,7 @@ summary: "Change management counts the volume of change and says capacity is the
 themes:
   - "Change & Transformation"
 image: ./081-easy-to-count-how-change-volume-became-the-only-number.jpg
-imageCredit: "Photo by CadoMaestro on Pexels (https://www.pexels.com/photo/people-sitting-on-chairs-beside-their-desks-in-an-office-1170412/), Pexels licence, free to use - an ordinary open-plan office with staff working at desks and an empty workstation in the foreground. Matches the first preference in the concept brief: the people absorbing the changes rather than the technology. Resized to 1600x1064 from the 4256x2832 original."
+imageCredit: "Photo: CadoMaestro on Pexels."
 queue: 81
 vault: "081-change-capacity-measure.md"
 ---

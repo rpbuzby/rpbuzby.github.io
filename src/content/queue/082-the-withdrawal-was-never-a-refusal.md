@@ -4,7 +4,7 @@ summary: "No one in Australia holds a consent right over a data centre on Aborig
 themes:
   - "AI in Government"
 image: ./082-the-withdrawal-was-never-a-refusal.jpg
-imageCredit: "Photo by Robert So (robertkso) on Pexels (https://www.pexels.com/photo/grass-field-near-a-warehouse-14367506/), Pexels licence, free to use - ‘Grass Field Near a Warehouse’, a single long shed with a dark roof standing at the edge of an open paddock, scrubby grassland running to the foreground and wooded hills under heavy cloud behind. Matches the second preference in the concept brief, bushland or paddock at the edge of an industrial estate, and carries the geography the article turns on: the ground between a shed and the country next to it. No people, no server racks, no stock AI imagery. The Pexels page states no location, so none is claimed here. Resized to 1600x1066 from the 6240x4160 original."
+imageCredit: "Photo: Robert So on Pexels."
 queue: 82
 vault: "082-data-centre-consent-heritage.md"
 ---

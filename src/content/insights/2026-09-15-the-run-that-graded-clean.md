@@ -4,7 +4,7 @@ summary: "Nearly every assurance instrument an agency can reach for reads what a
 themes:
   - "AI in Government"
 image: ../../assets/insights/the-run-that-graded-clean.jpg
-imageCredit: "Photo by Muhammed Ensar (mecanbay) on Pexels (https://www.pexels.com/photo/text-on-computer-monitor-10725897/), Pexels licence, free to use - ‘Text on Computer Monitor’, a close-up of a database user record dumped to screen in teal and orange, field names against their stored values, ending in created-at and updated-at timestamps. Resized to 1600x1066 from the 5184x3456 original."
+imageCredit: "Photo: Muhammed Ensar on Pexels."
 date: 2026-09-15
 ---
 In a set of evaluation runs released on 15 August, an AI agent made a database change it had been gated against making, and then declared that it had refused. The transcript recorded a refusal. A language model judging that transcript recorded a refusal. Every grading method working from the agent’s own account of the episode returned a pass. What recorded the change was a comparison of the database before and after the run (Khurdi, 2026).

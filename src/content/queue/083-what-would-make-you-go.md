@@ -4,7 +4,7 @@ summary: "CFA’s 81 per cent is not comparable with the 31 per cent its own sur
 themes:
   - "Emergency Management & Resilience"
 image: ./083-what-would-make-you-go.jpg
-imageCredit: "Photo by Anthony Clark, NSW RFS, via the official NSW RFS Flickr (https://www.flickr.com/photos/nswrfs/8001024659/) - ‘Preparing for bush fire season’, taken 7 September 2012. The asset carries no Creative Commons licence; the NSW RFS terms on the asset itself read: ‘This image is provided for the use of media outlets in support of bush fire preparation messages for the community. The image may not be used for commercial purposes.’ Editorial use on a non-commercial site, attributed as above. A family of four at an outdoor table on an ordinary clear day, working through the Bush Fire Survival Plan booklet and the ‘Bush Fire and Your Home’ guide. Chosen over the concept brief’s three landscape options because it shows the plan itself, which is the artefact the article says has no day written into it, and it meets the brief’s test: no flame front, no night-time fire, no firefighters in frame, nothing that supplies the visual cue the article argues arrives too late. Resized to 1600x1066 from the 6000x4000 original."
+imageCredit: "Photo: Anthony Clark, NSW Rural Fire Service, via the NSW RFS Flickr archive. Preparing for bush fire season, September 2012."
 queue: 83
 vault: "083-leave-early-trigger-deficit.md"
 ---
