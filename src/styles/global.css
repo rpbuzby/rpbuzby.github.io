@@ -165,7 +165,7 @@ figcaption { font-family: var(--body); font-size: .82rem; color: var(--stone); m
 @media (hover: hover) and (pointer: fine) { .evidence a:hover .t { text-decoration: underline; text-decoration-color: var(--ember); } }
 
 /* poetry */
-.epigraph { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--col-gap); align-items: center; }
+.epigraph { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--col-gap); align-items: start; }
 .epigraph blockquote { position: relative; margin: 1.2rem 0 0; padding-left: 2.2rem; border-left: 1px solid var(--ember); font-family: var(--display); font-style: italic; font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.35; font-weight: 400; max-width: 40ch; }
 .epigraph blockquote::before { content: "“"; position: absolute; left: .55rem; top: -.1em; color: var(--ember); font-size: 2.2em; line-height: 1; }
 .epigraph cite { display: block; font-style: normal; font-family: var(--ui); font-size: .9rem; color: var(--stone); margin-top: 1.4rem; line-height: 1.6; }
