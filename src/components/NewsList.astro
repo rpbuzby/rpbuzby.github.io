@@ -6,7 +6,7 @@ const { limit } = Astro.props;
 const items = (await getCollection('news')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const shown = limit ? items.slice(0, limit) : items;
 const rendered = await Promise.all(shown.map(async (n) => ({ n, Content: (await render(n)).Content })));
-const month = (d: Date) => new Intl.DateTimeFormat('en-AU', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(d);
+const month = (d: Date) => new Intl.DateTimeFormat('en-AU', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
 ---
 <ul>
   {rendered.map(({ n, Content }) => (
