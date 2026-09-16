@@ -3,10 +3,9 @@ title: "Easy to Count: How Change Volume Became the Only Number"
 summary: "Change management counts the volume of change and says capacity is the half nobody measures. Australia has measured it for years: 48 per cent of public servants told the 2025 APS Employee Census change is managed well, and nobody sequences off that number."
 themes:
   - "Change & Transformation"
-image: ./081-easy-to-count-how-change-volume-became-the-only-number.jpg
+image: ../../assets/insights/easy-to-count-how-change-volume-became-the-only-number.jpg
 imageCredit: "Photo: CadoMaestro on Pexels."
-queue: 81
-vault: "081-change-capacity-measure.md"
+date: 2026-09-17
 ---
 Prosci published a post on 22 August with a title that gives away the argument: “Change Fatigue in the Age of AI: The Half of Saturation Nobody Measures” (Prosci, 2026). It contains no statistics of any kind, which for a change management post is unusual enough to be worth noticing. What it has instead is an inequality.
 
