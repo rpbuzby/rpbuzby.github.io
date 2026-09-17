@@ -6,6 +6,7 @@ themes:
 image: ../../assets/insights/who-says-the-clock-has-started.jpg
 imageCredit: "Photo: LAC Jonathon McCaffrey, Department of Defence. NASAMS launcher at RAAF Base Edinburgh, July 2026."
 date: 2026-09-16
+draft: true
 ---
 On 23 August, Michael Pezzullo opened an essay on The Strategist with a planning assumption rather than a threat. “Before 2020, Australian defence strategy was predicated on a planning assumption that we would have at least 10 years’ warning of an impending war” (Pezzullo, 2026). He is a former deputy secretary of defence and led the Home Affairs department until November 2023, so he is describing machinery he used to run.
 
