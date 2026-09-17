@@ -55,6 +55,36 @@ TAG_TO_THEME = [
 ]
 
 
+def bullet_references(body):
+    """Canonicalise a '## References' section to markdown list items.
+
+    The site renders the small numbered reference block from '- ' items only
+    (src/lib/refs.ts); paragraph-style entries fall through to body text.
+    """
+    m = re.search(r'^## References\s*$', body, re.M)
+    if not m:
+        return body
+    head, tail = body[:m.end()], body[m.end():]
+    after = ''
+    nxt = re.search(r'^## ', tail, re.M)
+    if nxt:
+        after, tail = tail[nxt.start():], tail[:nxt.start()]
+    lines = tail.split('\n')
+    if any(l.lstrip().startswith('- ') for l in lines):
+        return body
+    entries, buf = [], []
+    for l in lines:
+        if l.strip():
+            buf.append(l.strip())
+        elif buf:
+            entries.append(' '.join(buf)); buf = []
+    if buf:
+        entries.append(' '.join(buf))
+    if not entries:
+        return body
+    return head + '\n' + '\n'.join('- ' + e for e in entries) + '\n' + ('\n' + after if after else '')
+
+
 def die(msg: str) -> None:
     print(f'error: {msg}', file=sys.stderr)
     sys.exit(1)
@@ -196,6 +226,7 @@ def main() -> None:
     refs = fm.get('references') or []
     if refs and not re.search(r'^## References\s*$', body, re.M):
         body += '\n\n## References\n' + '\n'.join('- ' + normalise(r) for r in refs) + '\n'
+    body = bullet_references(body)
 
     out_md = os.path.join(CONTENT, f'{date}-{slug}.md')
     out_img = os.path.join(ASSETS, img_name)

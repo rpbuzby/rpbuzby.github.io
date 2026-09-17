@@ -41,28 +41,16 @@ Warning time never promised ten years of grace. The number was an estimate of ho
 
 ## References
 
-Axe, D. (2026, August 20). *The anti-ballistic missile shortage.* The Strategist. https://www.aspistrategist.org.au/the-anti-ballistic-missile-shortage/
-
-Cancian, M. F., & Park, C. H. (2026a, May 27). *Rebuilding U.S. missile inventory: A multiyear project.* Center for Strategic and International Studies. https://www.csis.org/analysis/rebuilding-us-missile-inventory-multiyear-project
-
-Cancian, M. F., & Park, C. H. (2026b, July 27). *Renewed Iran war would test diminished interceptor inventories.* Center for Strategic and International Studies. https://www.csis.org/analysis/renewed-iran-war-would-test-diminished-interceptor-inventories
-
-Cohen, L. (2026, April 20). *NDS 2026: The three ways to count Australian defence spending.* The Strategist. https://www.aspistrategist.org.au/nds-2026-the-three-ways-to-count-australian-defence-spending/
-
-Cohen, Z., Sciutto, J., & Britzky, H. (2026, August 4). *Nearly 80% of interceptors for a key missile defense system depleted, sources say.* CNN. https://www.cnn.com/2026/08/04/politics/us-iran-key-missile-interceptors-low
-
-Davis, M. (2026, April 17). *NDS 2026: IIP prioritises uncrewed systems, strike and air-and-missile defence.* The Strategist. https://www.aspistrategist.org.au/nds-2026-iip-prioritises-uncrewed-systems-strike-and-air-and-missile-defence/
-
-Department of Defence. (2020). *2020 Defence Strategic Update.* Australian Government.
-
-Government Accountability Office. (2026a, August 20). *Army modernization: Better schedule and cost information needed to support scaling battlefield network* (GAO-26-108019). https://www.gao.gov/products/gao-26-108019
-
-Government Accountability Office. (2026b, August 21). *Installation maintenance: Better information on risks and challenges needed to improve oversight of DOD facility conditions* (GAO-26-107255). https://www.gao.gov/products/gao-26-107255
-
-Jones, M. (2026, April 23). *NDS 2026: GWEO gets priority, with little published detail.* The Strategist. https://www.aspistrategist.org.au/nds-2026-gweo-gets-priority-with-little-published-detail/
-
-Mulrine Grobe, A. (2026, August 17). *Restocking US missile interceptors will take years. China and Russia are watching.* The Christian Science Monitor. https://www.csmonitor.com/USA/Military/2026/0817/us-missile-shortage-iran-russia-china
-
-Pezzullo, M. (2026, August 23). *War-warning assessment in Australia’s ‘most dangerous times’.* The Strategist. https://www.aspistrategist.org.au/war-warning-assessment-in-australias-most-dangerous-times/
-
-Ryan, M. (2026, April 16). *More ambition, same architecture.* https://mickryan.substack.com/p/more-ambition-same-architecture-australias
+- Axe, D. (2026, August 20). *The anti-ballistic missile shortage.* The Strategist. https://www.aspistrategist.org.au/the-anti-ballistic-missile-shortage/
+- Cancian, M. F., & Park, C. H. (2026a, May 27). *Rebuilding U.S. missile inventory: A multiyear project.* Center for Strategic and International Studies. https://www.csis.org/analysis/rebuilding-us-missile-inventory-multiyear-project
+- Cancian, M. F., & Park, C. H. (2026b, July 27). *Renewed Iran war would test diminished interceptor inventories.* Center for Strategic and International Studies. https://www.csis.org/analysis/renewed-iran-war-would-test-diminished-interceptor-inventories
+- Cohen, L. (2026, April 20). *NDS 2026: The three ways to count Australian defence spending.* The Strategist. https://www.aspistrategist.org.au/nds-2026-the-three-ways-to-count-australian-defence-spending/
+- Cohen, Z., Sciutto, J., & Britzky, H. (2026, August 4). *Nearly 80% of interceptors for a key missile defense system depleted, sources say.* CNN. https://www.cnn.com/2026/08/04/politics/us-iran-key-missile-interceptors-low
+- Davis, M. (2026, April 17). *NDS 2026: IIP prioritises uncrewed systems, strike and air-and-missile defence.* The Strategist. https://www.aspistrategist.org.au/nds-2026-iip-prioritises-uncrewed-systems-strike-and-air-and-missile-defence/
+- Department of Defence. (2020). *2020 Defence Strategic Update.* Australian Government.
+- Government Accountability Office. (2026a, August 20). *Army modernization: Better schedule and cost information needed to support scaling battlefield network* (GAO-26-108019). https://www.gao.gov/products/gao-26-108019
+- Government Accountability Office. (2026b, August 21). *Installation maintenance: Better information on risks and challenges needed to improve oversight of DOD facility conditions* (GAO-26-107255). https://www.gao.gov/products/gao-26-107255
+- Jones, M. (2026, April 23). *NDS 2026: GWEO gets priority, with little published detail.* The Strategist. https://www.aspistrategist.org.au/nds-2026-gweo-gets-priority-with-little-published-detail/
+- Mulrine Grobe, A. (2026, August 17). *Restocking US missile interceptors will take years. China and Russia are watching.* The Christian Science Monitor. https://www.csmonitor.com/USA/Military/2026/0817/us-missile-shortage-iran-russia-china
+- Pezzullo, M. (2026, August 23). *War-warning assessment in Australia’s ‘most dangerous times’.* The Strategist. https://www.aspistrategist.org.au/war-warning-assessment-in-australias-most-dangerous-times/
+- Ryan, M. (2026, April 16). *More ambition, same architecture.* https://mickryan.substack.com/p/more-ambition-same-architecture-australias

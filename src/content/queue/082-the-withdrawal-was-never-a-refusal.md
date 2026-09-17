@@ -56,30 +56,17 @@ Nobody in Australia holds a consent right over a data centre on Aboriginal cultu
 
 ## References
 
-Aboriginal and Torres Strait Islander Heritage Protection Act 1984 (Cth). Compilation C2016C00937. https://www.legislation.gov.au/C2004A02942/latest/text
-
-Aboriginal Heritage Act 1972 (WA). Version 04-n0-00, as at 28 May 2026. https://www.legislation.wa.gov.au/
-
-Department of Industry, Science and Resources. (2026, March 23). *Expectations of data centres and AI infrastructure developers.* Australian Government. https://www.industry.gov.au/publications/expectations-data-centres-and-ai-infrastructure-developers
-
-Department of Planning, Lands and Heritage. (2023). *Consultation policy for section 18 applications.* Government of Western Australia. https://www.wa.gov.au/organisation/department-of-planning-lands-and-heritage
-
-Energieeffizienzgesetz (EnEfG) 2023 (Germany), § 11 Klimaneutrale Rechenzentren. https://www.gesetze-im-internet.de/enefg/__11.html
-
-Environment Protection and Biodiversity Conservation Act 1999 (Cth). Compilation No. 69, 1 July 2026 (C2026C00292). https://www.legislation.gov.au/C2004A00485/latest/text
-
-Environment Protection Reform Act 2025 (Cth) No. 68, 2025. https://www.legislation.gov.au/
-
-Harb, J. I., & Ryan, S. (2026, August 28). The fight over AI data centres is becoming Australia’s next Indigenous policy challenge. *The Conversation.* https://theconversation.com/the-fight-over-ai-data-centres-is-becoming-australias-next-indigenous-policy-challenge-289623
-
-Native Title Act 1993 (Cth). Compilation No. 50 (C2024C00224). https://www.legislation.gov.au/C2004A04665/latest/text
-
-Noroozinejad, E. (2026, August 27). Australia’s backdown on data centres allows them to use energy from coal and gas. Here’s what that means. *The Conversation.* https://theconversation.com/australias-backdown-on-data-centres-allows-them-to-use-energy-from-coal-and-gas-heres-what-that-means-290613
-
-Parliament of Victoria. (2026). *Fully assess planning decision for a proposed Victorian AI Hub* (Legislative Council petition #770). https://www.parliament.vic.gov.au/get-involved/petitions/fully-assess-planning-decision-for-a-proposed-victorian-ai-hub/
-
-Prime Minister of Australia. (2026, August 26). *Meeting of National Cabinet.* https://www.pm.gov.au/media/meeting-national-cabinet-26-august-26
-
-Sadler, D. (2026, May 19). Perth data centre plan withdrawn. *Information Age.* Australian Computer Society.
-
-Urbis. (2025). *Archaeological site identification survey, Lots 14 and 15 Stirling Crescent, Hazelmere* (Draft). Prepared for GreenSquareDC. City of Swan consultation portal.
+- Aboriginal and Torres Strait Islander Heritage Protection Act 1984 (Cth). Compilation C2016C00937. https://www.legislation.gov.au/C2004A02942/latest/text
+- Aboriginal Heritage Act 1972 (WA). Version 04-n0-00, as at 28 May 2026. https://www.legislation.wa.gov.au/
+- Department of Industry, Science and Resources. (2026, March 23). *Expectations of data centres and AI infrastructure developers.* Australian Government. https://www.industry.gov.au/publications/expectations-data-centres-and-ai-infrastructure-developers
+- Department of Planning, Lands and Heritage. (2023). *Consultation policy for section 18 applications.* Government of Western Australia. https://www.wa.gov.au/organisation/department-of-planning-lands-and-heritage
+- Energieeffizienzgesetz (EnEfG) 2023 (Germany), § 11 Klimaneutrale Rechenzentren. https://www.gesetze-im-internet.de/enefg/__11.html
+- Environment Protection and Biodiversity Conservation Act 1999 (Cth). Compilation No. 69, 1 July 2026 (C2026C00292). https://www.legislation.gov.au/C2004A00485/latest/text
+- Environment Protection Reform Act 2025 (Cth) No. 68, 2025. https://www.legislation.gov.au/
+- Harb, J. I., & Ryan, S. (2026, August 28). The fight over AI data centres is becoming Australia’s next Indigenous policy challenge. *The Conversation.* https://theconversation.com/the-fight-over-ai-data-centres-is-becoming-australias-next-indigenous-policy-challenge-289623
+- Native Title Act 1993 (Cth). Compilation No. 50 (C2024C00224). https://www.legislation.gov.au/C2004A04665/latest/text
+- Noroozinejad, E. (2026, August 27). Australia’s backdown on data centres allows them to use energy from coal and gas. Here’s what that means. *The Conversation.* https://theconversation.com/australias-backdown-on-data-centres-allows-them-to-use-energy-from-coal-and-gas-heres-what-that-means-290613
+- Parliament of Victoria. (2026). *Fully assess planning decision for a proposed Victorian AI Hub* (Legislative Council petition #770). https://www.parliament.vic.gov.au/get-involved/petitions/fully-assess-planning-decision-for-a-proposed-victorian-ai-hub/
+- Prime Minister of Australia. (2026, August 26). *Meeting of National Cabinet.* https://www.pm.gov.au/media/meeting-national-cabinet-26-august-26
+- Sadler, D. (2026, May 19). Perth data centre plan withdrawn. *Information Age.* Australian Computer Society.
+- Urbis. (2025). *Archaeological site identification survey, Lots 14 and 15 Stirling Crescent, Hazelmere* (Draft). Prepared for GreenSquareDC. City of Swan consultation portal.

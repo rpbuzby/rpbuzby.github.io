@@ -63,20 +63,12 @@ The census question is that same measure at national scale, asked annually and s
 
 ## References
 
-Australian Public Service Commission. (2025). *2025 APS Employee Census: APS overall results.* Australian Government. https://www.apsc.gov.au/
-
-Chen, F.-H. (2026). Governing artificial intelligence-enabled labour surveillance: A multi-level framework for legal, organisational and collective governance in the digital workplace. *Journal of Industrial Relations.* Advance online publication. https://doi.org/10.1177/00221856261478209
-
-Department of Finance. (2026). *Establishing Chief AI Officers in the APS.* Australian Government. https://www.govai.gov.au/blog/article-establishing-chief-ai-officers-aps
-
-Digital Transformation Agency. (2026). *AI impact assessment tool: Introduction.* Australian Government. https://www.digital.gov.au/ai/impact-assessment-tool/introduction
-
-Prosci. (2026, August 22). *Change fatigue in the age of AI: The half of saturation nobody measures.* https://www.prosci.com/blog/change-fatigue-in-the-age-of-ai-change
-
-Prosci. (n.d.). *6 strategies for reducing change saturation.* https://www.prosci.com/blog/6-strategies-for-reducing-change-saturation
-
-PricewaterhouseCoopers. (2024). *Global Workforce Hopes and Fears Survey 2024.* https://www.pwc.com/gx/en/issues/workforce/hopes-and-fears.html
-
-SAP. (2026, July 20). *Australia's AI report card: Improving but could do better.* https://news.sap.com/australia/2026/07/20/australias-ai-report-card-improving-but-could-do-better/
-
-Westfall, B. (2022, June 6). *Change fatigue in the workplace.* Capterra. https://www.capterra.com/resources/change-fatigue-in-the-workplace/
+- Australian Public Service Commission. (2025). *2025 APS Employee Census: APS overall results.* Australian Government. https://www.apsc.gov.au/
+- Chen, F.-H. (2026). Governing artificial intelligence-enabled labour surveillance: A multi-level framework for legal, organisational and collective governance in the digital workplace. *Journal of Industrial Relations.* Advance online publication. https://doi.org/10.1177/00221856261478209
+- Department of Finance. (2026). *Establishing Chief AI Officers in the APS.* Australian Government. https://www.govai.gov.au/blog/article-establishing-chief-ai-officers-aps
+- Digital Transformation Agency. (2026). *AI impact assessment tool: Introduction.* Australian Government. https://www.digital.gov.au/ai/impact-assessment-tool/introduction
+- Prosci. (2026, August 22). *Change fatigue in the age of AI: The half of saturation nobody measures.* https://www.prosci.com/blog/change-fatigue-in-the-age-of-ai-change
+- Prosci. (n.d.). *6 strategies for reducing change saturation.* https://www.prosci.com/blog/6-strategies-for-reducing-change-saturation
+- PricewaterhouseCoopers. (2024). *Global Workforce Hopes and Fears Survey 2024.* https://www.pwc.com/gx/en/issues/workforce/hopes-and-fears.html
+- SAP. (2026, July 20). *Australia's AI report card: Improving but could do better.* https://news.sap.com/australia/2026/07/20/australias-ai-report-card-improving-but-could-do-better/
+- Westfall, B. (2022, June 6). *Change fatigue in the workplace.* Capterra. https://www.capterra.com/resources/change-fatigue-in-the-workplace/

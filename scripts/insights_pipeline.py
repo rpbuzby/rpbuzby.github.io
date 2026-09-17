@@ -168,6 +168,38 @@ def normalise(s: str) -> str:
     return s
 
 
+def bullet_references(body: str) -> str:
+    """Canonicalise a '## References' section to markdown list items.
+
+    The site renders the small numbered reference block from '- ' items only
+    (src/lib/refs.ts); a draft that writes the entries as blank-line-separated
+    paragraphs would otherwise fall through to full-size body text.
+    """
+    m = re.search(r"^## References\s*$", body, re.M)
+    if not m:
+        return body
+    head, tail = body[: m.end()], body[m.end():]
+    after = ""
+    nxt = re.search(r"^## ", tail, re.M)
+    if nxt:
+        after, tail = tail[nxt.start():], tail[: nxt.start()]
+    lines = tail.split("\n")
+    if any(l.lstrip().startswith("- ") for l in lines):
+        return body
+    entries, buf = [], []
+    for l in lines:
+        if l.strip():
+            buf.append(l.strip())
+        elif buf:
+            entries.append(" ".join(buf))
+            buf = []
+    if buf:
+        entries.append(" ".join(buf))
+    if not entries:
+        return body
+    return head + "\n" + "\n".join("- " + e for e in entries) + "\n" + ("\n" + after if after else "")
+
+
 def slugify(title: str) -> str:
     import unicodedata
     s = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode()
@@ -383,6 +415,7 @@ def stage_one(article: Path, dry: bool) -> bool:
     body = normalise(body).strip()
     if refs and not re.search(r"^## References\s*$", body, re.M):
         body += "\n\n## References\n" + "\n".join("- " + normalise(r) for r in refs) + "\n"
+    body = bullet_references(body)
     front = ["---", f"title: {yq(title)}", f"summary: {yq(normalise(curly(summary)))}", "themes:", f"  - {yq(d['theme'])}",
              f"image: ./{qimg.name}", f"imageCredit: {yq(normalise(curly(caption)))}", f"queue: {n}", f"vault: {yq(article.name)}", "---", ""]
     qmd.write_text("\n".join(front) + body + "\n", encoding="utf-8")
@@ -453,6 +486,11 @@ def release(dry: bool, force: bool = False) -> bool:
     fm = re.sub(r"^queue:.*\n?", "", fm, flags=re.M)
     fm = re.sub(r"^vault:.*\n?", "", fm, flags=re.M)
     fm = fm.rstrip() + f"\ndate: {iso}"
+    body = bullet_references(body)
+    if re.search(r"^## References\s*$", body, re.M) and not re.search(r"^- ", body, re.M):
+        log("references section is not a list; release aborted")
+        notify("Insights pipeline \u26a0\ufe0f", f"{qmd.name}: references would render as body text; release skipped")
+        return False
     ASSETS.mkdir(parents=True, exist_ok=True)
     shutil.move(str(qimg), out_img)
     out_md.write_text(f"---\n{fm}\n---\n{body}", encoding="utf-8")

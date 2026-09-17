@@ -46,16 +46,10 @@ The question this season actually poses is not whether Victorians believe in lea
 
 ## References
 
-Australian Fire and Emergency Service Authorities Council. (2026, August 19). *Seasonal Bushfire Outlook Spring 2026.* AFAC. https://www.afac.com.au/public-resources/seasonal-bushfire-outlook-spring-2026
-
-Bureau of Meteorology. (2026, September 1). *Southern hemisphere monitoring: Pacific, Indian and Southern ocean regions.* Australian Government. http://www.bom.gov.au/climate/enso/
-
-Country Fire Authority. (2025, September 1). *Nearly half of Victorians are without a bushfire plan.* CFA News. https://news.cfa.vic.gov.au/news/nearly-half-of-victorians-are-without-a-bushfire-plan
-
-Country Fire Authority. (2026, September 1). *More than 80 per cent would wait too long to leave during bushfire.* CFA News. https://news.cfa.vic.gov.au/more-than-80-per-cent-would-wait-too-long-to-leave-during-bushfire
-
-Strahan, K., & Gilbert, J. (2021a). Protective decision-making in bushfire part 1: A rapid systematic review of the ‘wait and see’ literature. *Fire, 4*(1), 4. https://doi.org/10.3390/fire4010004
-
-Strahan, K., & Gilbert, J. (2021b). Protective decision-making in bushfire part 2: A rapid systematic review of the ‘leave early’ literature. *Fire, 4*(3), 42. https://doi.org/10.3390/fire4030042
-
-Whittaker, J., Taylor, M., & Bearman, C. (2020). Why don’t bushfire warnings work as intended? Responses to official warnings during bushfires in New South Wales, Australia. *International Journal of Disaster Risk Reduction, 45*, 101476. https://doi.org/10.1016/j.ijdrr.2020.101476
+- Australian Fire and Emergency Service Authorities Council. (2026, August 19). *Seasonal Bushfire Outlook Spring 2026.* AFAC. https://www.afac.com.au/public-resources/seasonal-bushfire-outlook-spring-2026
+- Bureau of Meteorology. (2026, September 1). *Southern hemisphere monitoring: Pacific, Indian and Southern ocean regions.* Australian Government. http://www.bom.gov.au/climate/enso/
+- Country Fire Authority. (2025, September 1). *Nearly half of Victorians are without a bushfire plan.* CFA News. https://news.cfa.vic.gov.au/news/nearly-half-of-victorians-are-without-a-bushfire-plan
+- Country Fire Authority. (2026, September 1). *More than 80 per cent would wait too long to leave during bushfire.* CFA News. https://news.cfa.vic.gov.au/more-than-80-per-cent-would-wait-too-long-to-leave-during-bushfire
+- Strahan, K., & Gilbert, J. (2021a). Protective decision-making in bushfire part 1: A rapid systematic review of the ‘wait and see’ literature. *Fire, 4*(1), 4. https://doi.org/10.3390/fire4010004
+- Strahan, K., & Gilbert, J. (2021b). Protective decision-making in bushfire part 2: A rapid systematic review of the ‘leave early’ literature. *Fire, 4*(3), 42. https://doi.org/10.3390/fire4030042
+- Whittaker, J., Taylor, M., & Bearman, C. (2020). Why don’t bushfire warnings work as intended? Responses to official warnings during bushfires in New South Wales, Australia. *International Journal of Disaster Risk Reduction, 45*, 101476. https://doi.org/10.1016/j.ijdrr.2020.101476
