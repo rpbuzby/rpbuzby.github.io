@@ -3,10 +3,9 @@ title: "The Withdrawal Was Never a Refusal"
 summary: "No one in Australia holds a consent right over a data centre on Aboriginal cultural heritage, at any level of government. Nothing announced for the coming framework creates one, and the case cited as the exception was a withdrawal over generator noise."
 themes:
   - "AI in Government"
-image: ./082-the-withdrawal-was-never-a-refusal.jpg
+image: ../../assets/insights/the-withdrawal-was-never-a-refusal.jpg
 imageCredit: "Photo: Robert So on Pexels."
-queue: 82
-vault: "082-data-centre-consent-heritage.md"
+date: 2026-09-18
 ---
 On 14 May 2026 a Swiss-backed developer called GreenSquareDC withdrew its own planning application for a 120 megawatt data centre at Hazelmere, on the eastern edge of Perth. The Metro Outer Joint Development Assessment Panel was due to determine it the following Tuesday. The panel never ruled.
 
