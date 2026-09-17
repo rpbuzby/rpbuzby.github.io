@@ -6,6 +6,7 @@ themes:
   - "Defence"
 image: ../../assets/insights/seven-thousand-kilometres-past-the-press-conference.jpg
 wordpress: "https://russellbuzby.com/2026/07/16/seven-thousand-kilometres-past-the-press-conference/"
+draft: true
 ---
 Anthony Albanese and Sitiveni Rabuka signed two treaties at State House in Suva on Monday 6 July. The Ocean of Peace Alliance committed Australia and Fiji to mutual defence, and the Vuvale Union attached more than A\$1 billion in Australian economic investment over the coming decade (Defence Ministers, 2026). The official release described the moment plainly: Fiji’s first alliance, and Australia’s fourth. Hours later, a Chinese nuclear-powered submarine launched a ballistic missile that travelled roughly 7,000 kilometres southeast across the Pacific and splashed down near Nauru and Tuvalu (Defense News, 2026). Canberra received several hours’ notice. The rest of the region received a demonstration.
 

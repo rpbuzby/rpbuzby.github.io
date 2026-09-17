@@ -6,6 +6,7 @@ themes:
   - "Defence"
 image: ../../assets/insights/unprecedented-threat-incremental-response-the-2026-nds-vs-iip.jpg
 wordpress: "https://russellbuzby.com/2026/04/17/unprecedented-threat-incremental-response-the-2026-nds-vs-iip/"
+draft: true
 ---
 The 2026 National Defence Strategy describes Australia’s strategic environment as the most dangerous since the Second World War. The concept of deterioration, which anchored the 2024 edition, is declared no longer adequate. The rules-based order is “in transition,” the end state “difficult to predict,” and exposure to military coercion will reach levels not seen in eighty years. The Integrated Investment Program backs this assessment with \$425 billion in capability investment over the decade, drawn from a total defence portfolio of \$887 billion through 2035-36. On paper, the scale of the response matches the scale of the threat assessment.
 

@@ -6,6 +6,7 @@ themes:
   - "Defence"
 image: ../../assets/insights/from-rules-to-power-the-doctrinal-shift-in-australias-2026-national-defence-strategy.jpg
 wordpress: "https://russellbuzby.com/2026/04/28/from-rules-to-power-the-doctrinal-shift-in-australias-2026-national-defence-strategy/"
+draft: true
 ---
 The most consequential change in Australia’s 2026 National Defence Strategy is not the AU\$425 billion of capability investment to 2035-36, nor the AU\$30 billion in extra spending across the forward estimates. It is a single phrase. The 2024 NDS framed the Australian Defence Force’s central task as helping to maintain a “rules-based order” in the Indo-Pacific. The 2026 NDS reframes it as contributing to a “favourable regional balance of power.” ASPI’s read of the published documents on 22 April 2026 called this an understated but consequential reframing of the political objective underpinning the ADF’s five key tasks. The drafters knew what they were doing.
 

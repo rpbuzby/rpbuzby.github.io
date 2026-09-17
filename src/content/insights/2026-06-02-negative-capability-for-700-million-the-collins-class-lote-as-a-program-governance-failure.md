@@ -6,6 +6,7 @@ themes:
   - "Defence"
 image: ../../assets/insights/negative-capability-for-700-million-the-collins-class-lote-as-a-program-governance-failure.jpg
 wordpress: "https://russellbuzby.com/2026/06/02/negative-capability-for-700-million-the-collins-class-lote-as-a-program-governance-failure/"
+draft: true
 ---
 Australia’s National Audit Office released a performance audit in late May 2026 on the Collins-class Life of Type Extension design contract. The headline finding is uncomfortable. Defence spent close to A\$700 million on the design phase of the upgrade. The contract grew from approximately A\$125 million in 2022 to A\$813 million across fifty-three contract changes over four years. The submarines are now less capable and less available than they were before the work started.
 

@@ -6,6 +6,7 @@ themes:
   - "Defence"
 image: ../../assets/insights/the-boat-that-disappeared-what-the-revised-aukus-submarine-deal-reveals-about-alliance-risk.jpg
 wordpress: "https://russellbuzby.com/2026/06/30/the-boat-that-disappeared-what-the-revised-aukus-submarine-deal-reveals-about-alliance-risk/"
+draft: true
 ---
 The clearest signal in the revised AUKUS submarine deal is the boat that is no longer there. On 30 May, at the Shangri-La Dialogue in Singapore, the three AUKUS governments rewrote Pillar I of the agreement. Australia will now buy three in-service Virginia-class submarines from the United States Navy, in place of the two used boats plus one newly built submarine it was originally promised. The new build has quietly vanished from the plan, and the reason is not strategy. American shipyards cannot produce Virginia-class boats fast enough to meet their own fleet needs and AUKUS at the same time, so the submarine that was meant to be brand new was never likely to arrive on schedule.
 
