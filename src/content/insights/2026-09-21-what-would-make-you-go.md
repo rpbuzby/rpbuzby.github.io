@@ -3,10 +3,9 @@ title: "What Would Make You Go?"
 summary: "CFA’s 81 per cent is not comparable with the 31 per cent its own survey reported a year earlier, so the season’s headline figure rests on a rewritten question. Australian research has said since 2020 that what households lack is a named trigger."
 themes:
   - "Emergency Management & Resilience"
-image: ./083-what-would-make-you-go.jpg
+image: ../../assets/insights/what-would-make-you-go.jpg
 imageCredit: "Photo: Anthony Clark, NSW Rural Fire Service, via the NSW RFS Flickr archive. Preparing for bush fire season, September 2012."
-queue: 83
-vault: "083-leave-early-trigger-deficit.md"
+date: 2026-09-21
 ---
 “Leaving early means leaving the area before a fire starts, not when you can see flames or smell smoke.” That sentence belongs to CFA Chief Officer Jason Heffernan, and it is the most exact description available of what Australia’s central bushfire safety message asks a household to do. It does not ask anyone to leave when things deteriorate. It asks them to leave on a quiet morning, from a house under no visible threat, on the strength of a forecast.
 
