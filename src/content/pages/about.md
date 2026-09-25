@@ -41,4 +41,4 @@ I’m also a Captain in the NSW Rural Fire Service, serving on Yuin Country. The
 
 I bring that same approach to my consulting work: a bias toward action, and a focus on outcomes that are credible and grounded in operational reality.
 
-The other thing I do at Braidwood is write. My poems circle the same country the brigade covers, and in 2026 they started to travel. ‘Bogong’ won the Venie Holmgren Environmental Poetry Prize, and others were placed in the Bridport, Robert Gray and Winchester prizes. The consulting and the poems ask the same thing of me: precision, and an ear for how words sound to the people who have to hear them. There is more on the [Poetry page](/poetry/).
+The other thing I do at Braidwood is write. My poems circle the same country the brigade covers, and in 2026 they started to travel. ‘Bogong’ won the Venie Holmgren Environmental Poetry Prize, and others were shortlisted or longlisted for the Bridport, Robert Gray, Wells and Winchester prizes. The consulting and the poems ask the same thing of me: precision, and an ear for how words sound to the people who have to hear them. There is more on the [Poetry page](/poetry/).
