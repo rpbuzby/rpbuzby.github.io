@@ -19,7 +19,8 @@ re-run:
            the freshest weekly brief (Research/YYYY-MM-DD LinkedIn post notes.md) and have a
            headless Claude run draft the article and its LinkedIn teaser under the
            /linkedin-to-article skill. One topic per run; the next run stages what it wrote. A topic
-           that touches the no-AUKUS rule is skipped before any drafting and noted in notes.md.
+           the publication screen catches is skipped before any drafting and noted in notes.md.
+           The screen is a private note in the vault, kept out of this public repo on purpose.
   run      stage (bounded), release, then draft.  status  prints the queue.
 
 Every run starts by finishing the vault record of any release that could not write it back: macOS
@@ -68,13 +69,7 @@ RESEARCH = VAULT / "Research"
 DRAFT_TIMEOUT_S = 5400   # 90 min per topic
 DRAFT_STOCK = 3          # draft only while fewer than this many articles are queued or waiting in Posts
 BRIEF_MAX_AGE_DAYS = 14  # a weekly brief goes stale; leftover topics of an older one are never drafted
-# Standing rule, 18 Sep 2026: nothing on AUKUS or its adjacent framings goes out under Russell's name. Measured
-# 5 Oct 2026: fires on all 6 articles pulled under the rule and on none of the 72 live ones (bare "submarine"
-# was dropped because the subsea-cable article uses it). A hit never passes: it holds the piece for a person.
-AUKUS_RULE = re.compile(
-    r"\b(AUKUS|SSN[- ]AUKUS|Virginia[- ]class|Collins[- ]class|SRF[- ]West|Submarine Rotational Force|HMAS Stirling"
-    r"|Australian Submarine Agency|Osborne|Henderson|Pillar (?:II|I|1|2|One|Two)"
-    r"|(?i:nuclear[- ]powered submarines?|submarine (?:pathway|workforce|program(?:me)?|industrial base|agency|yard|construction|capability|fleet)))\b")
+SCREEN = ARTICLES / "publication-screen.md"  # private note in the vault: what never goes out, one `re:` pattern per line
 CLAUDE_BIN = HOME / ".local/bin/claude"
 GRADER = HOME / ".agents/skills/humanise/grade.py"
 READALOUD = HOME / ".agents/skills/read-aloud/read_aloud.py"
@@ -88,7 +83,7 @@ THEMES = ["Emergency Management & Resilience", "AI in Government", "Defence", "C
 TAG_TO_THEME = [
     ("emergency", THEMES[0]), ("bushfire", THEMES[0]), ("wildfire", THEMES[0]), ("resilience", THEMES[0]),
     ("disaster", THEMES[0]), ("fire", THEMES[0]), ("ai", THEMES[1]), ("artificial intelligence", THEMES[1]),
-    ("automation", THEMES[1]), ("defence", THEMES[2]), ("aukus", THEMES[2]), ("military", THEMES[2]),
+    ("automation", THEMES[1]), ("defence", THEMES[2]), ("military", THEMES[2]),
     ("change", THEMES[3]), ("transformation", THEMES[3]), ("reform", THEMES[3]), ("public sector", THEMES[3]),
     ("leadership", THEMES[3]), ("workforce", THEMES[3]),
 ]
@@ -237,12 +232,24 @@ def prose_only(body: str) -> str:
     return body[: m.start()].rstrip() + "\n" if m else body
 
 
-def aukus_hits(text: str) -> list[str]:
-    """Terms of the no-AUKUS rule found in the text, in order of first appearance."""
+def screen_hits(text: str) -> list[str]:
+    """Terms of the publication screen found in the text, in order of first appearance.
+
+    The screen is a private note in the vault, one `re:` pattern per line (case-sensitive unless it
+    starts with `(?i)`). A missing or empty screen is an error, so the run stops and says so: an
+    unreadable screen must never mean that nothing is screened.
+    """
+    patterns = [line[3:].strip() for line in read_vault(SCREEN).splitlines() if line.startswith("re:") and line[3:].strip()]
+    if not patterns:
+        raise VaultUnreadable(f"{SCREEN.name} holds no patterns")
+    found: list[tuple[int, str]] = []
+    for pat in patterns:
+        flags = re.I if pat.startswith("(?i)") else 0
+        found += [(m.start(), m.group(0)) for m in re.finditer(r"\b(?:" + pat.replace("(?i)", "", 1) + r")\b", text, flags)]
     seen: list[str] = []
-    for m in AUKUS_RULE.finditer(text):
-        if m.group(1).lower() not in (s.lower() for s in seen):
-            seen.append(m.group(1))
+    for _, term in sorted(found):
+        if term.lower() not in (s.lower() for s in seen):
+            seen.append(term)
     return seen
 
 
@@ -396,8 +403,8 @@ Article: {article}
 Images folder: {images}
 Voice file: {voice}
 Standing rules: ~/.claude/CLAUDE.md (image sourcing, fact-check, humanise grader, read-aloud, curly quotes, \
-no em dashes, Australian English). Its no-AUKUS rule is absolute: if this article touches AUKUS or an adjacent \
-framing, write `stage_note: "NO-AUKUS RULE: <what>"` and stop. Never reword around it.
+no em dashes, Australian English). The screen at {screen} sets out what never goes out under Russell's name and \
+is absolute: if this article falls under it, write `stage_note: "SCREENED: <what>"` and stop. Never reword around it.
 
 {stage_note}Do these in order and stop if a step cannot be completed honestly:
 
@@ -450,7 +457,7 @@ def stage_one(article: Path, dry: bool) -> bool:
         note = str(d.get("stage_note", "")).strip()
         prompt = STAGE_PROMPT.format(
             stage_note=(f"A previous attempt failed its gates: {note}. Fix that first.\n\n" if note else ""),
-            article=str(article), images=str(IMAGES), number=f"{n:03d}",
+            article=str(article), images=str(IMAGES), number=f"{n:03d}", screen=str(SCREEN),
             voice=str(VAULT / "Automation/Projects/Articles/voice.md"),
             grader=str(GRADER), readaloud=str(READALOUD), themes=", ".join(f'"{t}"' for t in THEMES),
         )
@@ -500,10 +507,10 @@ def stage_one(article: Path, dry: bool) -> bool:
         problems.append(f"already on the site as {live.name}")
     # grader on the body
     body = split_fm(read_vault(article))[1]
-    flagged = aukus_hits("\n".join([str(d.get("title", "")), summary, prose_only(body)]
+    flagged = screen_hits("\n".join([str(d.get("title", "")), summary, prose_only(body)]
                                    + [read_vault(t) for t in list_vault(TEASERS, f"{n:03d}")]))
     if flagged:
-        problems.append("no-AUKUS rule: " + ", ".join(flagged))
+        problems.append("screen: " + ", ".join(flagged))
     tmp = STATE / f"grade-{n:03d}.md"
     STATE.mkdir(exist_ok=True)
     tmp.write_text(prose_only(body), encoding="utf-8")
@@ -529,11 +536,11 @@ def stage_one(article: Path, dry: bool) -> bool:
         text = set_fm_field(text, "stage_attempts", str(attempts))
         if d.get("status") == "ready":
             text = set_fm_field(text, "status", "draft")
-        parked = attempts >= MAX_ATTEMPTS or bool(flagged)   # a no-AUKUS hit gets no second try: a retry would only reword around it
+        parked = attempts >= MAX_ATTEMPTS or bool(flagged)   # a screen hit gets no second try: a retry would only reword around it
         if parked:
             text = set_fm_field(text, "hold", "true")
         article.write_text(text, encoding="utf-8")
-        head = (f"{n:03d} held under the no-AUKUS rule" if flagged else f"{n:03d} parked after {attempts} tries" if parked
+        head = (f"{n:03d} held by the screen" if flagged else f"{n:03d} parked after {attempts} tries" if parked
                 else f"{n:03d} held back (try {attempts} of {MAX_ATTEMPTS})")
         notify(f"Insights: {head}", f"{d.get('title', article.name)}: {why}"[:230] + (" · click to open" if len(why) < 200 else " · click to open"),
                open_url=obsidian_url(article))
@@ -778,9 +785,9 @@ Result file: {result}
 Follow the /linkedin-to-article skill for the workflow, the Articles project files (context.md, voice.md, notes.md in \
 {articles}) for voice and conventions, and the standing rules in ~/.claude/CLAUDE.md. In order, stopping where a step says stop:
 
-1. SCREEN. The no-AUKUS rule is absolute. If the topic is about AUKUS or an adjacent framing (the submarine pathway, its \
-workforce or industrial base, Osborne, Henderson, SSN-AUKUS, Virginia-class transfers, SRF-West, Pillar I or II), or cannot be \
-argued without that material, write the result file with outcome "screened" and stop. Never draft a de-named version.
+1. SCREEN. Read {screen}. It sets out what never goes out under Russell's name, and it is absolute. If the topic falls \
+under it, or cannot be argued without that material, write the result file with outcome "screened" and stop. Never draft \
+a version that only avoids the listed words.
 2. OVERLAP AND TIMELINESS (skill Step 2.5). Check this topic's specific hooks against the last 12 `Articles produced` entries \
 in notes.md and against those articles' `source_notes`. If it is spent, or its news hook has gone stale and no argument \
 outlives it, bank the unused material in notes.md, write the result file with outcome "cut" and stop. If it is pivotable, \
@@ -911,7 +918,7 @@ def draft_one(brief: Path, n: int, heading: str, number: int) -> tuple[str, str,
     result = STATE / "draft-result.json"
     result.unlink(missing_ok=True)
     prompt = DRAFT_PROMPT.format(brief=str(brief), brief_name=brief.name, n=n, heading=heading, number=f"{number:03d}",
-                                 posts=str(POSTS), teasers=str(TEASERS), articles=str(ARTICLES), result=str(result))
+                                 posts=str(POSTS), teasers=str(TEASERS), articles=str(ARTICLES), result=str(result), screen=str(SCREEN))
     cmd = ["/usr/bin/caffeinate", "-i", str(CLAUDE_BIN), "-p", prompt,
            "--model", "claude-opus-5", "--permission-mode", "acceptEdits",
            "--allowedTools"] + ALLOWED_TOOLS
@@ -955,12 +962,12 @@ def draft(dry: bool) -> int:
         log(f"draft: {stock} article(s) in hand; nothing to draft")
         return 0
     for brief, n, heading, text in waiting_topics():
-        flagged = aukus_hits(heading + "\n" + text)
+        flagged = screen_hits(heading + "\n" + text)
         if flagged:
-            log(f"draft: Topic {n} of {brief.name} skipped under the no-AUKUS rule ({', '.join(flagged)})")
+            log(f"draft: Topic {n} of {brief.name} skipped by the screen ({', '.join(flagged)})")
             if not dry:
-                note_topic(brief, n, "screened", "no-AUKUS rule: " + ", ".join(flagged))
-                bank_skip(brief, n, heading, "skipped under the no-AUKUS rule (the brief section mentions " + ", ".join(flagged) + ")")
+                note_topic(brief, n, "screened", "publication screen: " + ", ".join(flagged))
+                bank_skip(brief, n, heading, "skipped by the publication screen (the brief section mentions " + ", ".join(flagged) + ")")
             continue
         number = next_number()
         log(f"draft: {stock} in hand; Topic {n} of {brief.name} -> article {number:03d}: {heading}")
@@ -1025,7 +1032,7 @@ def status() -> None:
         waiting = []
     print(f"Brief topics waiting (one is drafted per run while fewer than {DRAFT_STOCK} articles are in hand):")
     for brief, n, heading, text in waiting:
-        skip = "   [no-AUKUS rule: will be skipped]" if aukus_hits(heading + "\n" + text) else ""
+        skip = "   [screened: will be skipped]" if screen_hits(heading + "\n" + text) else ""
         print(f"  {brief.name[:10]} Topic {n}: {heading[:70]}{skip}")
     print(f"Last release: {RELEASE_STAMP.read_text().strip() if RELEASE_STAMP.exists() else '-'}   Paused: {PAUSE.exists()}   Drafting off: {NO_DRAFT.exists()}")
 

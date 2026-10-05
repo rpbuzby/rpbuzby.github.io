@@ -47,7 +47,6 @@ TAG_TO_THEME = [
     ('ai', 'AI in Government'),
     ('artificial intelligence', 'AI in Government'),
     ('defence', 'Defence'),
-    ('aukus', 'Defence'),
     ('change', 'Change & Transformation'),
     ('transformation', 'Change & Transformation'),
     ('reform', 'Change & Transformation'),

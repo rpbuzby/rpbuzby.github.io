@@ -31,6 +31,7 @@ ip.notify = lambda title, message, open_url="": NOTES.append((title, message))
 ip.log = LOGGED.append
 ip.git = lambda *args: types.SimpleNamespace(returncode=0, stdout="", stderr="")
 ip.online = lambda: True
+REAL_STAGE_ONE = ip.stage_one
 ip.stage_one = lambda article, dry: False       # never start a real Claude run from a test
 ip.CLAUDE_BIN = Path("/nonexistent/claude")
 
@@ -59,10 +60,16 @@ def sandbox() -> Path:
     ip.RELEASE_STAMP = ip.STATE / "last_release"
     ip.PAUSE = ip.STATE / "PAUSE"
     ip.LEDGER = ip.STATE / "published.json"
-    paths = (ip.ARCHIVE, ip.IMAGES, ip.TEASERS / "Archive", ip.QUEUE, ip.INSIGHTS, ip.ASSETS, ip.STATE)
+    ip.BRIEF_LEDGER = ip.STATE / "briefs.json"
+    ip.NO_DRAFT = ip.STATE / "NO-DRAFT"
+    ip.ARTICLES = vault / "Automation/Projects/Articles"
+    ip.RESEARCH = vault / "Research"
+    ip.SCREEN = ip.ARTICLES / "publication-screen.md"
+    paths = (ip.ARCHIVE, ip.IMAGES, ip.TEASERS / "Archive", ip.QUEUE, ip.INSIGHTS, ip.ASSETS, ip.STATE, ip.RESEARCH)
     assert all(root in p.parents for p in paths), "sandbox paths escaped the temp folder"
     for p in paths:
         p.mkdir(parents=True)
+    ip.SCREEN.write_text("# Screen (test fixture)\n\nre: ZEPHYR\nre: (?i)blue heron (?:program|project)\n", encoding="utf-8")
     NOTES.clear()
     LOGGED.clear()
     return root
@@ -218,6 +225,81 @@ ip.LOCK = root / "pipeline.lock"
 sys.argv = ["insights_pipeline.py", "stage", "--dry-run"]
 ip.main()
 check("a run makes its first vault read before its first git call", events[:2] == ["vault", "git"])
+
+# 10. the publication screen: read from a private note, case rule respected, and it fails closed
+sandbox()
+check("the screen fires on its patterns", ip.screen_hits("The ZEPHYR timetable moved.") == ["ZEPHYR"] and ip.screen_hits("a Blue Heron Program review") == ["Blue Heron Program"])
+check("and on nothing in the look-alike set", not ip.screen_hits("A zephyr blew in. The blue herons left. ZEPHYRS is another word."))
+ip.SCREEN.write_text("# no patterns here\n", encoding="utf-8")
+try:
+    ip.screen_hits("anything"); empty_ok = False
+except ip.VaultUnreadable:
+    empty_ok = True
+ip.SCREEN.unlink()
+try:
+    ip.screen_hits("anything"); missing_ok = False
+except ip.VaultUnreadable:
+    missing_ok = True
+check("an empty or missing screen is an error, never a pass", empty_ok and missing_ok)
+
+# 11. weekly briefs: topics are read whichever dash the heading uses, and only fresh briefs count
+sandbox()
+day = dt.date.today()
+fresh = ip.RESEARCH / f"{day.isoformat()} LinkedIn post notes.md"
+stale = ip.RESEARCH / f"{(day - dt.timedelta(days=20)).isoformat()} LinkedIn post notes.md"
+fresh.write_text("# LinkedIn post notes\n\nPreamble.\n\n## Topic 1 — Already written up\n\nText.\n\n## Topic 2 – The ZEPHYR workforce question\n\nText.\n\n"
+                 "## Topic 3 — A clean topic\n\nText three.\n\n## Topic 4 – Another clean topic\n\nText four.\n\n## Cross-cutting thread, if you want a fifth\n\nNot a topic.\n", encoding="utf-8")
+stale.write_text("## Topic 1 — Too old to draft\n\nText.\n", encoding="utf-8")
+(ip.ARTICLES / "notes.md").write_text("# Standing Notes\n\n## Articles produced\n\n1. **Something**\n", encoding="utf-8")
+article("070-written-up.md", "Already Written Up", folder=ip.ARCHIVE, status="published", linkedin_source=f'"Topic 1 of `{fresh.name}`"')
+check("a brief's topics are read under em and en dashes, the fifth thread ignored", [n for n, _, _ in ip.brief_topics(fresh)] == [1, 2, 3, 4])
+check("a topic an article already claims is not waiting, and a stale brief is ignored",
+      [(b.name, n) for b, n, _, _ in ip.waiting_topics()] == [(fresh.name, 2), (fresh.name, 3), (fresh.name, 4)])
+
+# 12. drafting: a screened topic is skipped with no Claude run and noted, then clean topics are drafted one per run
+calls = []
+def fake_draft_one(brief, n, heading, number):
+    calls.append((n, number))
+    name = f"{number:03d}-drafted-topic-{n}.md"
+    article(name, f"Drafted Topic {n}", status="draft", linkedin_source=f'"Topic {n} of `{brief.name}`"')
+    return "drafted", "ok", name, f"Drafted Topic {n}"
+ip.draft_one = fake_draft_one
+ip.CLAUDE_BIN = Path(sys.executable)
+made = ip.draft(dry=False)
+check("a screened topic is skipped before drafting and recorded",
+      ip.brief_ledger().get(f"{day.isoformat()}#2", {}).get("outcome") == "screened" and "Topic 2" in (ip.ARTICLES / "notes.md").read_text(encoding="utf-8"))
+check("the next clean topic is drafted under the next free number, one per run", made == 1 and calls == [(3, 71)])
+ip.draft(dry=False)
+check("the following run takes the following topic", calls == [(3, 71), (4, 72)])
+ip.draft(dry=False)
+check("and nothing is drafted once no topic is waiting", calls == [(3, 71), (4, 72)] and any("no brief topic is waiting" in m for m in LOGGED))
+article("073-third-in-hand.md", "Third In Hand", status="draft")
+(ip.RESEARCH / f"{(day - dt.timedelta(days=1)).isoformat()} LinkedIn post notes.md").write_text("## Topic 1 — Would be drafted if stock were low\n\nText.\n", encoding="utf-8")
+ip.draft(dry=False)
+check("with three articles in hand nothing more is drafted", calls == [(3, 71), (4, 72)])
+(ip.POSTS / "073-third-in-hand.md").unlink()
+(ip.STATE / "NO-DRAFT").write_text("", encoding="utf-8")
+ip.draft(dry=False)
+check("a NO-DRAFT file stops drafting", calls == [(3, 71), (4, 72)])
+(ip.STATE / "NO-DRAFT").unlink()
+ip.SCREEN.unlink()
+try:
+    ip.draft(dry=False); closed = False
+except ip.VaultUnreadable:
+    closed = True
+check("without its screen the drafting step refuses to run", closed and calls == [(3, 71), (4, 72)])
+
+# 13. the stage gate: an article the screen catches is held at once, with no second try
+sandbox()
+(ip.IMAGES / "074-x.jpg").write_bytes(b"jpg")
+held = article("074-trips-the-screen.md", "A Piece The Screen Should Catch", status="ready", image="074-x.jpg",
+               image_credit='"Photo by someone on Pexels"', image_caption='"Photo: someone, via Pexels."', theme='"Defence"',
+               summary='"' + " ".join(["word"] * 30) + '"')
+held.write_text(held.read_text(encoding="utf-8").replace("Body.", "The ZEPHYR timetable moved again, and the plan with it."), encoding="utf-8")
+queued_it = REAL_STAGE_ONE(held, False)
+fm = frontmatter(held)
+check("an article the screen catches is held at once and never queued",
+      queued_it is False and fm.get("hold") == "true" and "screen: ZEPHYR" in str(fm.get("stage_note")) and not list(ip.QUEUE.glob("074-*")))
 
 for root in ROOTS:
     shutil.rmtree(root, ignore_errors=True)
