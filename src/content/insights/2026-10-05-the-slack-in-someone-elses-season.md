@@ -3,10 +3,9 @@ title: "The Slack in Someone Else’s Season"
 summary: "Australia’s fire season still falls outside the Northern Hemisphere’s, so reciprocal deployment holds. What has changed is that our partners now peak together, which leaves less spare capacity to lend us, and resourcing submissions still count borrowed capability as capability held."
 themes:
   - "Emergency Management & Resilience"
-image: ./084-the-slack-in-someone-elses-season.jpg
+image: ../../assets/insights/the-slack-in-someone-elses-season.jpg
 imageCredit: "Photo: NSW Rural Fire Service, via the NSW RFS Flickr archive. Crews departing Sydney for British Columbia, August 2017."
-queue: 84
-vault: "084-fire-synchronicity-mutual-aid.md"
+date: 2026-10-05
 ---
 The worry most people carry about fire and climate change is that the seasons converge. That the Northern Hemisphere will burn while we burn, the aircraft will be committed elsewhere, and the arrangement Australia relies on will stop working. It is an intuitive fear, repeated in enough inquiries to feel settled.
 
