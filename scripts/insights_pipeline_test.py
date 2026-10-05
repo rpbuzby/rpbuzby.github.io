@@ -247,7 +247,7 @@ check("an empty or missing screen is an error, never a pass", empty_ok and missi
 sandbox()
 day = dt.date.today()
 fresh = ip.RESEARCH / f"{day.isoformat()} LinkedIn post notes.md"
-stale = ip.RESEARCH / f"{(day - dt.timedelta(days=20)).isoformat()} LinkedIn post notes.md"
+stale = ip.RESEARCH / f"{(day - dt.timedelta(days=40)).isoformat()} LinkedIn post notes.md"
 fresh.write_text("# LinkedIn post notes\n\nPreamble.\n\n## Topic 1 — Already written up\n\nText.\n\n## Topic 2 – The ZEPHYR workforce question\n\nText.\n\n"
                  "## Topic 3 — A clean topic\n\nText three.\n\n## Topic 4 – Another clean topic\n\nText four.\n\n## Cross-cutting thread, if you want a fifth\n\nNot a topic.\n", encoding="utf-8")
 stale.write_text("## Topic 1 — Too old to draft\n\nText.\n", encoding="utf-8")
@@ -309,6 +309,23 @@ day = dt.date.today()
 (ip.RESEARCH / f"{(day - dt.timedelta(days=9)).isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Oldest one\n\nText.\n\n## Topic 2: Oldest two\n\nText.\n", encoding="utf-8")
 (ip.RESEARCH / f"{(day - dt.timedelta(days=2)).isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Middle one\n\nText.\n", encoding="utf-8")
 check("the oldest brief still in date is drafted first", [h for _, _, h, _ in ip.waiting_topics()] == ["Oldest one", "Oldest two", "Middle one", "Newest one"])
+
+# 13c. timing: time-sensitive topics are drafted first, and time-sensitive articles released first
+sandbox()
+day = dt.date.today()
+(ip.RESEARCH / f"{(day - dt.timedelta(days=9)).isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Old and keeps\n\nTiming: keeps\n", encoding="utf-8")
+(ip.RESEARCH / f"{day.isoformat()} LinkedIn post notes.md").write_text(
+    "## Topic 1: New and keeps\n\nText.\n\n## Topic 2: New and urgent\n\n**Timing:** by 2026-10-08\n\n## Topic 3: New and less urgent\n\nTiming: by 2026-10-20\n", encoding="utf-8")
+check("time-sensitive topics are drafted first, earliest date first, then oldest brief first",
+      [h for _, _, h, _ in ip.waiting_topics()] == ["New and urgent", "New and less urgent", "Old and keeps", "New and keeps"])
+check("the drafter is told never to cut a topic for being late", "Never cut a topic for being late" in ip.DRAFT_PROMPT and "release_by" in ip.DRAFT_PROMPT)
+queue_item(96, "An Evergreen Piece", "096-a.md")
+late = queue_item(97, "A Timely Piece", "097-b.md")
+late.write_text(late.read_text(encoding="utf-8").replace("queue: 97", "queue: 97\nrelease_by: 2026-10-01"), encoding="utf-8")
+check("a time-sensitive article is released ahead of a lower-numbered evergreen one",
+      ip.release(dry=False, force=True) and (ip.INSIGHTS / f"{TODAY}-a-timely-piece.md").exists()
+      and "release_by" not in (ip.INSIGHTS / f"{TODAY}-a-timely-piece.md").read_text(encoding="utf-8")
+      and (ip.QUEUE / "096-an-evergreen-piece.md").exists())
 
 # 14. the weekly-brief backstop: it waits for the desktop task, then writes the brief itself
 sandbox()

@@ -74,7 +74,7 @@ RESEARCH = VAULT / "Research"
 DRAFT_TIMEOUT_S = 5400   # 90 min per topic
 BRIEF_TIMEOUT_S = 3600   # 60 min for the weekly brief
 DRAFT_STOCK = 3          # draft only while fewer than this many articles are queued or waiting in Posts
-BRIEF_MAX_AGE_DAYS = 14  # a weekly brief goes stale; leftover topics of an older one are never drafted
+BRIEF_MAX_AGE_DAYS = 28  # topics of an older brief are never drafted; RB would rather late than never, so this is generous
 SCREEN = ARTICLES / "publication-screen.md"  # private note in the vault: what never goes out, one `re:` pattern per line
 CLAUDE_BIN = HOME / ".local/bin/claude"
 GRADER = HOME / ".agents/skills/humanise/grade.py"
@@ -395,8 +395,24 @@ def vault_candidates() -> list[Path]:
     return vault_survey()[0]
 
 
+def release_by(p: Path) -> str:
+    """A queued article's `release_by` date, or "" if it keeps."""
+    try:
+        v = str(parse_fm(split_fm(p.read_text(encoding="utf-8"))[0]).get("release_by", "")).strip()
+    except (OSError, ValueError):
+        return ""
+    return v if re.fullmatch(r"\d{4}-\d{2}-\d{2}", v) else ""
+
+
 def queued() -> list[Path]:
-    return sorted(QUEUE.glob("[0-9][0-9][0-9]-*.md"), key=number_of) if QUEUE.exists() else []
+    """Queued articles in release order: time-sensitive ones first, earliest `release_by` first, then by number.
+
+    A timely piece goes out in its window and the evergreen ones behind it move back a day or two.
+    """
+    if not QUEUE.exists():
+        return []
+    q = sorted(QUEUE.glob("[0-9][0-9][0-9]-*.md"), key=number_of)
+    return sorted(q, key=lambda p: (0, release_by(p)) if release_by(p) else (1, ""))
 
 
 # ----------------------------------------------------------------------------- stage
@@ -570,7 +586,11 @@ def stage_one(article: Path, dry: bool) -> bool:
         body += "\n\n## References\n" + "\n".join("- " + normalise(r) for r in refs) + "\n"
     body = bullet_references(body)
     front = ["---", f"title: {yq(title)}", f"summary: {yq(normalise(curly(summary)))}", "themes:", f"  - {yq(d['theme'])}",
-             f"image: ./{qimg.name}", f"imageCredit: {yq(normalise(curly(caption)))}", f"queue: {n}", f"vault: {yq(article.name)}", "---", ""]
+             f"image: ./{qimg.name}", f"imageCredit: {yq(normalise(curly(caption)))}", f"queue: {n}", f"vault: {yq(article.name)}"]
+    release_by = str(d.get("release_by", "")).strip()
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", release_by):
+        front.append(f"release_by: {release_by}")
+    front += ["---", ""]
     qmd.write_text("\n".join(front) + body + "\n", encoding="utf-8")
     git("add", str(qmd), str(qimg))
     git("commit", "-q", "-m", f"Queue: {title}")
@@ -736,6 +756,7 @@ def release(dry: bool, force: bool = False) -> bool:
     fm, body = split_fm(text)
     fm = re.sub(r"^image:.*$", f"image: ../../assets/insights/{out_img.name}", fm, flags=re.M)
     fm = re.sub(r"^queue:.*\n?", "", fm, flags=re.M)
+    fm = re.sub(r"^release_by:.*\n?", "", fm, flags=re.M)
     fm = re.sub(r"^vault:.*\n?", "", fm, flags=re.M)
     fm = fm.rstrip() + f"\ndate: {iso}"
     body = bullet_references(body)
@@ -794,10 +815,12 @@ Follow the /linkedin-to-article skill for the workflow, the Articles project fil
 1. SCREEN. Read {screen}. It sets out what never goes out under Russell's name, and it is absolute. If the topic falls \
 under it, or cannot be argued without that material, write the result file with outcome "screened" and stop. Never draft \
 a version that only avoids the listed words.
-2. OVERLAP AND TIMELINESS (skill Step 2.5). Check this topic's specific hooks against the last 12 `Articles produced` entries \
-in notes.md and against those articles' `source_notes`. If it is spent, or its news hook has gone stale and no argument \
-outlives it, bank the unused material in notes.md, write the result file with outcome "cut" and stop. If it is pivotable, \
-pivot to unused material and record the exclusions in `source_notes`.
+2. OVERLAP (skill Step 2.5). Check this topic's specific hooks against the last 12 `Articles produced` entries in \
+notes.md and against those articles' `source_notes`. If it is spent, meaning its hooks are already published, bank the \
+unused material in notes.md, write the result file with outcome "cut" and stop. If it is pivotable, pivot to unused \
+material and record the exclusions in `source_notes`. Never cut a topic for being late: Russell would rather an article go \
+out a few days after its news than not at all. If the hook has passed, draft it anyway for a reader arriving now, saying \
+when things happened instead of presenting them as this week's news.
 3. VERIFY FIRST. Before drafting, build a claim sheet in {articles}/Research/ (one file: every claim with its URL and a \
 verification status, and a research-flags section at the end) from the digests and from primary sources. The brief is a \
 lead, never a source: briefs have carried invented authors, wrong figures and items that do not exist. Draft only from what \
@@ -805,7 +828,9 @@ the claim sheet verifies.
 4. ARTICLE. Write it to the article path: 1,100 to 1,300 words in the body (ceiling 1,500), frontmatter as the skill sets out \
 (title, `status: draft`, date, `image: TBD`, word_count, references, tags, `linkedin_source: "Topic {n} of `{brief_name}`"`, \
 source_notes), no subheadings, then `## References` as `- ` list items in APA style. Vary the title construction against the \
-last five. Hyperlink any cross-reference to its live russellbuzby.com URL after checking it resolves.
+last five. Hyperlink any cross-reference to its live russellbuzby.com URL after checking it resolves. If the piece is \
+time-sensitive, add `release_by: YYYY-MM-DD` to the frontmatter: the last date it should go out to stay timely, which \
+may already have passed. The pipeline releases such pieces ahead of ones that keep. Leave it out for a piece that keeps.
 5. TEASER. Write it to the teaser path: a no-graphic LinkedIn post of 150 to 280 words in Russell's voice that makes the \
 article's point and leads to it, with frontmatter shaped like the newest teaser in that folder (`status: draft`, an empty \
 `article_url:` that the pipeline fills on release, word_count, sources, source_notes). Vary the sign-off against the last \
@@ -878,9 +903,18 @@ def note_topic(brief: Path, n: int | str, outcome: str, detail: str = "", articl
     BRIEF_LEDGER.write_text(json.dumps(book, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def topic_timing(text: str) -> str:
+    """The `Timing: by YYYY-MM-DD` date of a brief topic, or "" for one that keeps or carries no timing line."""
+    m = re.search(r"^\W*Timing\W*\s*(?:by|post by|decays by)\s*(\d{4}-\d{2}-\d{2})", text, re.M | re.I)
+    return m.group(1) if m else ""
+
+
 def waiting_topics() -> list[tuple[Path, int, str, str]]:
-    """Brief topics nothing has dealt with yet, oldest brief first, so a brief is used up before it goes stale:
-    (brief, number, heading, text)."""
+    """Brief topics nothing has dealt with yet, in drafting order: (brief, number, heading, text).
+
+    Topics a brief marks time-sensitive come first, earliest date first. The rest follow oldest brief
+    first, so a brief is used up before it ages out.
+    """
     done, book, out = topics_with_articles(), brief_ledger(), []
     for brief in reversed(recent_briefs()):
         for n, heading, text in brief_topics(brief):
@@ -888,7 +922,8 @@ def waiting_topics() -> list[tuple[Path, int, str, str]]:
             settled = rec and (rec["outcome"] != "failed" or rec.get("tries", 0) >= MAX_ATTEMPTS)
             if (brief.name[:10], n) not in done and not settled:
                 out.append((brief, n, heading, text))
-    return out
+    timed = sorted((w for w in out if topic_timing(w[3])), key=lambda w: topic_timing(w[3]))
+    return timed + [w for w in out if not topic_timing(w[3])]
 
 
 def next_number() -> int:
@@ -1033,8 +1068,8 @@ against a primary source. Digest summaries have been wrong before; where one is,
 not verify as unverified. Never invent an author, a figure, a date or a document.
 7. Write notes, not posts and not articles, in this shape, which a script parses: a first line `# LinkedIn post notes: week \
 to <date>`, a `Source digests:` line, the "Avoiding" line, then one section per topic headed `## Topic N: <headline>` with 300 \
-to 500 words on what happened, why it matters to this audience and why now, followed by its sources with URLs and its \
-verification notes. Close with `## Left out by the screen` if anything was, and `## What was absent this week`.
+to 500 words on what happened, why it matters to this audience and why now, a line `Timing: by YYYY-MM-DD` (the last \
+date an article on it is still timely) or `Timing: keeps`, then its sources with URLs and its verification notes. Close with `## Left out by the screen` if anything was, and `## What was absent this week`.
 8. Write the result file as JSON: {{"outcome": "written" | "exists" | "stopped", "topics": <number>, "detail": "<one sentence>"}}.
 
 Australian English and curly quotes. Apart from the brief, the result file and the one line in notes.md, touch nothing, and \
