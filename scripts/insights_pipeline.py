@@ -19,7 +19,7 @@ re-run:
            Sydney time, when it is open. Once the newest brief is a week old and noon has passed
            in Sydney, a headless Claude run writes it here instead, with five or six topics.
   draft    Keep the queue fed. While fewer than three articles are in hand, take the next topic of
-           the freshest weekly brief (Research/YYYY-MM-DD LinkedIn post notes.md) and have a
+           the oldest weekly brief still in date (Research/YYYY-MM-DD LinkedIn post notes.md) and have a
            headless Claude run draft the article and its LinkedIn teaser under the
            /linkedin-to-article skill. One topic per run; the next run stages what it wrote. A topic
            the publication screen catches is skipped before any drafting and noted in notes.md.
@@ -879,9 +879,10 @@ def note_topic(brief: Path, n: int | str, outcome: str, detail: str = "", articl
 
 
 def waiting_topics() -> list[tuple[Path, int, str, str]]:
-    """Brief topics nothing has dealt with yet, freshest brief first: (brief, number, heading, text)."""
+    """Brief topics nothing has dealt with yet, oldest brief first, so a brief is used up before it goes stale:
+    (brief, number, heading, text)."""
     done, book, out = topics_with_articles(), brief_ledger(), []
-    for brief in recent_briefs():
+    for brief in reversed(recent_briefs()):
         for n, heading, text in brief_topics(brief):
             rec = book.get(f"{brief.name[:10]}#{n}")
             settled = rec and (rec["outcome"] != "failed" or rec.get("tries", 0) >= MAX_ATTEMPTS)

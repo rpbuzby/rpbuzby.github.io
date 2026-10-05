@@ -302,6 +302,14 @@ fm = frontmatter(held)
 check("an article the screen catches is held at once and never queued",
       queued_it is False and fm.get("hold") == "true" and "screen: ZEPHYR" in str(fm.get("stage_note")) and not list(ip.QUEUE.glob("074-*")))
 
+# 13b. drafting order: the oldest brief still in date goes first, topic by topic
+sandbox()
+day = dt.date.today()
+(ip.RESEARCH / f"{day.isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Newest one\n\nText.\n", encoding="utf-8")
+(ip.RESEARCH / f"{(day - dt.timedelta(days=9)).isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Oldest one\n\nText.\n\n## Topic 2: Oldest two\n\nText.\n", encoding="utf-8")
+(ip.RESEARCH / f"{(day - dt.timedelta(days=2)).isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Middle one\n\nText.\n", encoding="utf-8")
+check("the oldest brief still in date is drafted first", [h for _, _, h, _ in ip.waiting_topics()] == ["Oldest one", "Oldest two", "Middle one", "Newest one"])
+
 # 14. the weekly-brief backstop: it waits for the desktop task, then writes the brief itself
 sandbox()
 def sydney(y, m, d, h):
