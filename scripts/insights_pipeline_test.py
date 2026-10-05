@@ -202,6 +202,17 @@ with contextlib.redirect_stderr(io.StringIO()):
     outcome = ip.guarded("stage", lambda: 1 / 0)
 check("a crashing step is logged and notified, not fatal", outcome == "crashed" and bool(NOTES) and any("CRASHED" in m for m in LOGGED))
 
+# 9. the root cause: a run must read the vault before it runs git, or macOS takes the job for git
+root = sandbox()
+events: list[str] = []
+real_list_vault = ip.list_vault
+ip.list_vault = lambda folder, number="": (events.append("vault"), real_list_vault(folder, number))[1]
+ip.git = lambda *args: (events.append("git"), types.SimpleNamespace(returncode=0, stdout="", stderr=""))[1]
+ip.LOCK = root / "pipeline.lock"
+sys.argv = ["insights_pipeline.py", "stage", "--dry-run"]
+ip.main()
+check("a run makes its first vault read before its first git call", events[:2] == ["vault", "git"])
+
 for root in ROOTS:
     shutil.rmtree(root, ignore_errors=True)
 print(f"\n{'FAIL' if FAILS else 'PASS'}: {len(FAILS)} failed" + (": " + "; ".join(FAILS) if FAILS else ""))

@@ -267,6 +267,19 @@ def list_vault(folder: Path, number: str = "") -> list[Path]:
     return sorted((folder / n for n in names if pat.match(n)), key=number_of)
 
 
+def claim_vault() -> None:
+    """Make this run's first vault read now, before anything executes git.
+
+    /usr/bin/python3 and /usr/bin/git are one file under two names (the Xcode tool shim, 78 hard
+    links) and only the python3 name holds Full Disk Access. macOS settles which name a process
+    answers to at its first protected read: one that has already run git is taken for /usr/bin/git
+    and refused for good, and one let in stays in whatever it runs afterwards. The pull at the top of
+    every run is what blinded this job from 24 Sep to 5 Oct 2026. A refusal here means some other
+    process ran git in the last few seconds; only a fresh run can try again.
+    """
+    list_vault(POSTS)
+
+
 def vault_alert(e: VaultUnreadable) -> None:
     log(f"VAULT UNREADABLE ({e}); staging and vault records wait for the next run")
     notify("Insights pipeline ⚠️", f"macOS would not let the job read the vault ({e}). Nothing staged; the next slot retries.")
@@ -758,9 +771,12 @@ def main() -> int:
     except OSError:
         log("another run is in progress; exiting")
         return 0
+    outcomes = [guarded("vault", claim_vault)]      # before the first git call: see claim_vault()
+    vault_up = outcomes[0] == "ok"
     git("pull", "-q", "--rebase")
-    outcomes = [guarded("vault records", lambda: reconcile(a.dry_run))]
-    if a.command in ("run", "stage") and outcomes[0] != "no vault":
+    if vault_up:
+        outcomes.append(guarded("vault records", lambda: reconcile(a.dry_run)))
+    if a.command in ("run", "stage") and vault_up:
         outcomes.append(guarded("stage", lambda: stage(a.dry_run, a.all)))
     if a.command in ("run", "release"):
         outcomes.append(guarded("release", lambda: release(a.dry_run, a.force)))
