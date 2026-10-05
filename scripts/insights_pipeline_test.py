@@ -334,6 +334,13 @@ check("a failing backstop tries twice for a given week and then stops", len(runs
 (ip.STATE / "NO-BRIEF").write_text("", encoding="utf-8")
 ip.brief(dry=False)
 check("a NO-BRIEF file stops the backstop", len(runs) == 3)
+(ip.STATE / "NO-BRIEF").unlink()
+(ip.RESEARCH / "2026-10-13 LinkedIn post notes.md").write_text("## Topic 1: Forced mid-week\n\nText.\n", encoding="utf-8")
+sydney(2026, 10, 18, 13)
+check("a brief written mid-week does not put off the next Sunday's backstop", ip.brief_due() == dt.date(2026, 10, 18))
+sydney(2026, 10, 15, 9)
+ip.brief(dry=False, force=True)
+check("a forced run writes a brief dated today even when none is due", ip.brief_due() is None and len(runs) == 4 and "2026-10-15 LinkedIn post notes.md" in runs[3])
 
 for root in ROOTS:
     shutil.rmtree(root, ignore_errors=True)

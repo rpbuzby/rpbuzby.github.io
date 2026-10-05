@@ -1047,10 +1047,11 @@ def sydney_now() -> dt.datetime:
 
 
 def brief_due() -> dt.date | None:
-    """The Sydney date to put on a new weekly brief if one is overdue, else None.
+    """The Sydney date to put on a new weekly brief if this week's is missing, else None.
 
-    The desktop task writes the brief on Sunday morning, Sydney time. This backstop waits until the
-    newest brief is a week old and noon has passed there, so the desktop task always goes first.
+    The week starts on Sunday, when the desktop task writes the brief in the morning, Sydney time. This
+    backstop waits until noon has passed on that Sunday, so the desktop task always goes first, and it
+    is satisfied by any brief dated that Sunday or later.
     """
     try:
         names = os.listdir(RESEARCH)
@@ -1058,19 +1059,20 @@ def brief_due() -> dt.date | None:
         raise VaultUnreadable(f"cannot list {RESEARCH.name}/: {e.strerror}") from e
     dates = [dt.date.fromisoformat(m.group(1)) for m in (re.match(r"^(\d{4}-\d{2}-\d{2}) LinkedIn post notes\.md$", n) for n in names) if m]
     now = sydney_now()
-    age = (now.date() - max(dates)).days if dates else 8
-    return now.date() if age > 7 or (age == 7 and now.hour >= 12) else None
+    sunday = now.date() - dt.timedelta(days=(now.weekday() + 1) % 7)
+    past_noon = now.date() > sunday or now.hour >= 12
+    return now.date() if past_noon and not any(d >= sunday for d in dates) else None
 
 
-def brief(dry: bool) -> int:
-    """Write the weekly brief with a headless Claude run when the desktop task has not."""
-    if NO_BRIEF.exists():
+def brief(dry: bool, force: bool = False) -> int:
+    """Write the weekly brief with a headless Claude run when the desktop task has not, or now if forced."""
+    if NO_BRIEF.exists() and not force:
         return 0
-    due = brief_due()
-    if due is None or brief_ledger().get(f"{due.isoformat()}#brief", {}).get("tries", 0) >= MAX_ATTEMPTS:
+    due = sydney_now().date() if force else brief_due()
+    if due is None or (not force and brief_ledger().get(f"{due.isoformat()}#brief", {}).get("tries", 0) >= MAX_ATTEMPTS):
         return 0
     target = RESEARCH / f"{due.isoformat()} LinkedIn post notes.md"
-    log(f"brief: the weekly brief is due and the desktop task has not written it; writing {target.name}")
+    log(f"brief: {'forced' if force else 'the weekly brief is due and the desktop task has not written it'}; writing {target.name}")
     if dry:
         print(f"  would write {target.name}")
         return 0
@@ -1149,7 +1151,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["run", "stage", "release", "brief", "draft", "status"])
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--force", action="store_true", help="release even if one went out today or it is a weekend")
+    ap.add_argument("--force", action="store_true", help="release even if one went out today or it is a weekend; with `brief`, write a brief now whether or not one is due")
     ap.add_argument("--all", action="store_true", help="stage every candidate, not just the per-run limit")
     a = ap.parse_args()
     if a.command == "status":
@@ -1171,7 +1173,7 @@ def main() -> int:
     if a.command in ("run", "release"):
         outcomes.append(guarded("release", lambda: release(a.dry_run, a.force)))
     if a.command in ("run", "brief") and vault_up:
-        outcomes.append(guarded("brief", lambda: brief(a.dry_run)))
+        outcomes.append(guarded("brief", lambda: brief(a.dry_run, a.force and a.command == "brief")))
     if a.command in ("run", "draft") and vault_up:      # last: it is the long step, and nothing waits on it
         outcomes.append(guarded("draft", lambda: draft(a.dry_run)))
     return 1 if "crashed" in outcomes else 0
