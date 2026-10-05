@@ -50,11 +50,11 @@ The Medical Costs Finder ran for seven years on the assumption that people would
 
 ## References
 
+- Brookes, J. (2026, February 23). ‘Real legal risk’: Tech wreck suppliers to stay hidden. *InnovationAus.* https://www.innovationaus.com/real-legal-risk-tech-wreck-suppliers-to-stay-hidden/
 - Butler, M. (2026, September 16). *Better transparency and choice in health care* [Media release]. https://www.markbutler.net.au/news/media-releases/better-transparency-and-choice-in-health-care
 - Digital Transformation Agency. (2026a, July). *Digital Seller Underperformance Policy.* Australian Government. https://www.digital.gov.au/digital-seller-underperformance-policy
 - Digital Transformation Agency. (2026b). *Digital Seller Underperformance Policy: industry consultation summary.* Australian Government. https://www.digital.gov.au/policy/dsup/industry-consultation-summary
 - *Health Legislation Amendment (Improving Choice and Transparency for Private Health Consumers) Act 2026* (Cth) No. 90, 2026. https://www.legislation.gov.au/C2026A00090
 - Hendry, J. (2026, February 19). Tech lobby sounds alarm on Canberra’s contractor blacklist plan. *InnovationAus.* https://www.innovationaus.com/tech-lobby-sounds-alarm-on-canberras-contractor-blacklist-plan/
 - Medical Costs Finder. (2026). *For medical specialists.* Department of Health. https://medicalcostsfinder.health.gov.au/medical-specialists/
-- ‘Real legal risk’: Tech wreck suppliers to stay hidden. (2026, February 23). *InnovationAus.* https://www.innovationaus.com/real-legal-risk-tech-wreck-suppliers-to-stay-hidden/
 
