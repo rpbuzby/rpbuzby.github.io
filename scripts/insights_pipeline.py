@@ -15,7 +15,12 @@ re-run:
            dated today, commit and push (GitHub Pages rebuilds in about a minute), write the
            live URL back into the vault article and its LinkedIn teaser, move the vault
            article to Posts/Archive/, and notify.
-  run      stage (bounded) then release.  status  prints the queue.
+  draft    Keep the queue fed. While fewer than three articles are in hand, take the next topic of
+           the freshest weekly brief (Research/YYYY-MM-DD LinkedIn post notes.md) and have a
+           headless Claude run draft the article and its LinkedIn teaser under the
+           /linkedin-to-article skill. One topic per run; the next run stages what it wrote. A topic
+           that touches the no-AUKUS rule is skipped before any drafting and noted in notes.md.
+  run      stage (bounded), release, then draft.  status  prints the queue.
 
 Every run starts by finishing the vault record of any release that could not write it back: macOS
 sometimes refuses the job a read of the iCloud vault, and .pipeline/published.json remembers what
@@ -23,7 +28,7 @@ went live so an article is never queued a second time. An unreadable vault is lo
 never taken for an empty one.
 
 Releases happen on weekdays only. Controls: `hold: true` in a vault article's frontmatter keeps it out of the pipeline;
-a file named PAUSE in .pipeline/ stops releases; --dry-run shows what would happen.
+a file named PAUSE in .pipeline/ stops releases and one named NO-DRAFT stops drafting; --dry-run shows what would happen.
 Stdlib only. Runs on the logged-in Claude subscription (never API keys).
 """
 from __future__ import annotations
@@ -56,6 +61,20 @@ LOCK = Path("/tmp/insights-pipeline.lock")
 RELEASE_STAMP = STATE / "last_release"      # YYYY-MM-DD
 PAUSE = STATE / "PAUSE"
 LEDGER = STATE / "published.json"           # vault filename -> {url, date, slug, recorded}, written straight after each push
+NO_DRAFT = STATE / "NO-DRAFT"
+BRIEF_LEDGER = STATE / "briefs.json"        # "<brief date>#<topic>" -> {outcome, detail, article, date, tries}
+ARTICLES = VAULT / "Automation/Projects/Articles"
+RESEARCH = VAULT / "Research"
+DRAFT_TIMEOUT_S = 5400   # 90 min per topic
+DRAFT_STOCK = 3          # draft only while fewer than this many articles are queued or waiting in Posts
+BRIEF_MAX_AGE_DAYS = 14  # a weekly brief goes stale; leftover topics of an older one are never drafted
+# Standing rule, 18 Sep 2026: nothing on AUKUS or its adjacent framings goes out under Russell's name. Measured
+# 5 Oct 2026: fires on all 6 articles pulled under the rule and on none of the 72 live ones (bare "submarine"
+# was dropped because the subsea-cable article uses it). A hit never passes: it holds the piece for a person.
+AUKUS_RULE = re.compile(
+    r"\b(AUKUS|SSN[- ]AUKUS|Virginia[- ]class|Collins[- ]class|SRF[- ]West|Submarine Rotational Force|HMAS Stirling"
+    r"|Australian Submarine Agency|Osborne|Henderson|Pillar (?:II|I|1|2|One|Two)"
+    r"|(?i:nuclear[- ]powered submarines?|submarine (?:pathway|workforce|program(?:me)?|industrial base|agency|yard|construction|capability|fleet)))\b")
 CLAUDE_BIN = HOME / ".local/bin/claude"
 GRADER = HOME / ".agents/skills/humanise/grade.py"
 READALOUD = HOME / ".agents/skills/read-aloud/read_aloud.py"
@@ -218,6 +237,15 @@ def prose_only(body: str) -> str:
     return body[: m.start()].rstrip() + "\n" if m else body
 
 
+def aukus_hits(text: str) -> list[str]:
+    """Terms of the no-AUKUS rule found in the text, in order of first appearance."""
+    seen: list[str] = []
+    for m in AUKUS_RULE.finditer(text):
+        if m.group(1).lower() not in (s.lower() for s in seen):
+            seen.append(m.group(1))
+    return seen
+
+
 def slugify(title: str) -> str:
     import unicodedata
     s = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode()
@@ -368,7 +396,8 @@ Article: {article}
 Images folder: {images}
 Voice file: {voice}
 Standing rules: ~/.claude/CLAUDE.md (image sourcing, fact-check, humanise grader, read-aloud, curly quotes, \
-no em dashes, Australian English).
+no em dashes, Australian English). Its no-AUKUS rule is absolute: if this article touches AUKUS or an adjacent \
+framing, write `stage_note: "NO-AUKUS RULE: <what>"` and stop. Never reword around it.
 
 {stage_note}Do these in order and stop if a step cannot be completed honestly:
 
@@ -471,6 +500,10 @@ def stage_one(article: Path, dry: bool) -> bool:
         problems.append(f"already on the site as {live.name}")
     # grader on the body
     body = split_fm(read_vault(article))[1]
+    flagged = aukus_hits("\n".join([str(d.get("title", "")), summary, prose_only(body)]
+                                   + [read_vault(t) for t in list_vault(TEASERS, f"{n:03d}")]))
+    if flagged:
+        problems.append("no-AUKUS rule: " + ", ".join(flagged))
     tmp = STATE / f"grade-{n:03d}.md"
     STATE.mkdir(exist_ok=True)
     tmp.write_text(prose_only(body), encoding="utf-8")
@@ -496,11 +529,12 @@ def stage_one(article: Path, dry: bool) -> bool:
         text = set_fm_field(text, "stage_attempts", str(attempts))
         if d.get("status") == "ready":
             text = set_fm_field(text, "status", "draft")
-        parked = attempts >= MAX_ATTEMPTS
+        parked = attempts >= MAX_ATTEMPTS or bool(flagged)   # a no-AUKUS hit gets no second try: a retry would only reword around it
         if parked:
             text = set_fm_field(text, "hold", "true")
         article.write_text(text, encoding="utf-8")
-        head = f"{n:03d} parked after {attempts} tries" if parked else f"{n:03d} held back (try {attempts} of {MAX_ATTEMPTS})"
+        head = (f"{n:03d} held under the no-AUKUS rule" if flagged else f"{n:03d} parked after {attempts} tries" if parked
+                else f"{n:03d} held back (try {attempts} of {MAX_ATTEMPTS})")
         notify(f"Insights: {head}", f"{d.get('title', article.name)}: {why}"[:230] + (" · click to open" if len(why) < 200 else " · click to open"),
                open_url=obsidian_url(article))
         return False
@@ -728,6 +762,228 @@ def release(dry: bool, force: bool = False) -> bool:
     return True
 
 
+# ----------------------------------------------------------------------------- draft
+
+DRAFT_PROMPT = """You are drafting one article, and its LinkedIn teaser, for russellbuzby.com from one topic of Russell's \
+weekly research brief. This is a headless run (launchd com.russell.insights-publish). Russell is not at the keyboard and \
+will not read the draft before a second headless run fact-checks it again, sources its image and queues it for release, so \
+what you write is what goes out under his name. Work on this topic only.
+
+Brief: {brief}
+Topic: Topic {n}: {heading}
+Article: {posts}/{number}-<short-slug>.md
+Teaser: {teasers}/{number}-<the same short-slug>.md
+Result file: {result}
+
+Follow the /linkedin-to-article skill for the workflow, the Articles project files (context.md, voice.md, notes.md in \
+{articles}) for voice and conventions, and the standing rules in ~/.claude/CLAUDE.md. In order, stopping where a step says stop:
+
+1. SCREEN. The no-AUKUS rule is absolute. If the topic is about AUKUS or an adjacent framing (the submarine pathway, its \
+workforce or industrial base, Osborne, Henderson, SSN-AUKUS, Virginia-class transfers, SRF-West, Pillar I or II), or cannot be \
+argued without that material, write the result file with outcome "screened" and stop. Never draft a de-named version.
+2. OVERLAP AND TIMELINESS (skill Step 2.5). Check this topic's specific hooks against the last 12 `Articles produced` entries \
+in notes.md and against those articles' `source_notes`. If it is spent, or its news hook has gone stale and no argument \
+outlives it, bank the unused material in notes.md, write the result file with outcome "cut" and stop. If it is pivotable, \
+pivot to unused material and record the exclusions in `source_notes`.
+3. VERIFY FIRST. Before drafting, build a claim sheet in {articles}/Research/ (one file: every claim with its URL and a \
+verification status, and a research-flags section at the end) from the digests and from primary sources. The brief is a \
+lead, never a source: briefs have carried invented authors, wrong figures and items that do not exist. Draft only from what \
+the claim sheet verifies.
+4. ARTICLE. Write it to the article path: 1,100 to 1,300 words in the body (ceiling 1,500), frontmatter as the skill sets out \
+(title, `status: draft`, date, `image: TBD`, word_count, references, tags, `linkedin_source: "Topic {n} of `{brief_name}`"`, \
+source_notes), no subheadings, then `## References` as `- ` list items in APA style. Vary the title construction against the \
+last five. Hyperlink any cross-reference to its live russellbuzby.com URL after checking it resolves.
+5. TEASER. Write it to the teaser path: a no-graphic LinkedIn post of 150 to 280 words in Russell's voice that makes the \
+article's point and leads to it, with frontmatter shaped like the newest teaser in that folder (`status: draft`, an empty \
+`article_url:` that the pipeline fills on release, word_count, sources, source_notes). Vary the sign-off against the last \
+few teasers, never say "this week's article", and never "link in comments".
+6. GATES, on the article and then the teaser: /fact-check in apply mode; the humanise grader on the body only until every \
+hard gate passes; the portfolio habit audit (habits.py --last 12 --draft); the read-aloud pre-pass; the semantic pass (skill \
+Step 5.7) on the article. Re-grade after every fix. A load-bearing claim that cannot be verified is cut or recast; if the \
+article cannot stand without it, delete nothing, write the result file with outcome "stopped" and stop.
+7. RECORD. Add the `Articles produced` entry (number {number}) and a short note on the run to notes.md. Leave the image to the \
+staging run.
+8. RESULT. Write the result file as JSON: {{"outcome": "drafted" | "cut" | "screened" | "stopped", "article": "<article \
+filename, or empty>", "title": "<title, or empty>", "detail": "<one sentence>"}}.
+
+Set no status other than `draft`, touch no other article, and do not queue, commit, push or publish anything.
+Report in six lines: outcome, title, word count, fact-check result, grader score, anything left open."""
+
+
+def recent_briefs() -> list[Path]:
+    """Weekly briefs still fresh enough to draft from, newest first."""
+    try:
+        names = os.listdir(RESEARCH)
+    except OSError as e:
+        raise VaultUnreadable(f"cannot list {RESEARCH.name}/: {e.strerror}") from e
+    today, out = dt.date.today(), []
+    for name in names:
+        m = re.match(r"^(\d{4}-\d{2}-\d{2}) LinkedIn post notes\.md$", name)
+        if m and -1 <= (today - dt.date.fromisoformat(m.group(1))).days <= BRIEF_MAX_AGE_DAYS:
+            out.append(RESEARCH / name)
+    return sorted(out, reverse=True)
+
+
+def brief_topics(brief: Path) -> list[tuple[int, str, str]]:
+    """(number, heading, text) for each `## Topic N` section of a weekly brief."""
+    out = []
+    for part in re.split(r"^## ", read_vault(brief), flags=re.M)[1:]:
+        m = re.match(r"Topic (\d+)\s*[—–:-]\s*(.+)", part)
+        if m:
+            out.append((int(m.group(1)), m.group(2).strip(), part))
+    return out
+
+
+def topics_with_articles() -> set[tuple[str, int]]:
+    """(brief date, topic number) for every topic an article already claims in its linkedin_source."""
+    out = set()
+    for folder in (POSTS, ARCHIVE):
+        for p in list_vault(folder):
+            try:
+                src = str(parse_fm(split_fm(read_vault(p))[0]).get("linkedin_source", ""))
+            except ValueError:
+                continue
+            day, topic = re.search(r"(\d{4}-\d{2}-\d{2}) LinkedIn post notes", src), re.search(r"Topic (\d+)", src)
+            if day and topic:
+                out.add((day.group(1), int(topic.group(1))))
+    return out
+
+
+def brief_ledger() -> dict:
+    """What became of brief topics, by "<brief date>#<topic>": {outcome, detail, article, date, tries}."""
+    try:
+        return json.loads(BRIEF_LEDGER.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def note_topic(brief: Path, n: int, outcome: str, detail: str = "", article: str = "") -> None:
+    book, key = brief_ledger(), f"{brief.name[:10]}#{n}"
+    tries = book.get(key, {}).get("tries", 0) + (1 if outcome == "failed" else 0)
+    book[key] = {"outcome": outcome, "detail": detail, "article": article, "date": dt.date.today().isoformat(), "tries": tries}
+    STATE.mkdir(exist_ok=True)
+    BRIEF_LEDGER.write_text(json.dumps(book, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def waiting_topics() -> list[tuple[Path, int, str, str]]:
+    """Brief topics nothing has dealt with yet, freshest brief first: (brief, number, heading, text)."""
+    done, book, out = topics_with_articles(), brief_ledger(), []
+    for brief in recent_briefs():
+        for n, heading, text in brief_topics(brief):
+            rec = book.get(f"{brief.name[:10]}#{n}")
+            settled = rec and (rec["outcome"] != "failed" or rec.get("tries", 0) >= MAX_ATTEMPTS)
+            if (brief.name[:10], n) not in done and not settled:
+                out.append((brief, n, heading, text))
+    return out
+
+
+def next_number() -> int:
+    """The next free article number across the vault's articles and teasers and the queue."""
+    used = [number_of(p) for p in queued()]
+    for folder in (POSTS, ARCHIVE, TEASERS, TEASERS / "Archive"):
+        try:
+            used += [number_of(p) for p in list_vault(folder)]
+        except VaultUnreadable:
+            if folder in (POSTS, ARCHIVE):
+                raise
+    return max(used or [0]) + 1
+
+
+def bank_skip(brief: Path, n: int, heading: str, why: str) -> None:
+    """Note a topic skipped at selection in the Articles notes, where the standing rule asks for it."""
+    notes, head = ARTICLES / "notes.md", "## Topics the pipeline skipped at selection"
+    line = f"- {dt.date.today():%-d %b %Y}: Topic {n} of `{brief.name}` (“{heading}”): {why}."
+    text = read_vault(notes)
+    if head in text:
+        before, after = text.split(head, 1)
+        text = before + head + "\n\n" + line + "\n" + after.lstrip("\n")
+    else:
+        text = text.rstrip("\n") + f"\n\n{head}\n\n{line}\n"
+    try:
+        notes.write_text(text, encoding="utf-8")
+    except OSError as e:
+        raise VaultUnreadable(f"cannot write {notes.name}: {e.strerror}") from e
+
+
+def draft_one(brief: Path, n: int, heading: str, number: int) -> tuple[str, str, str, str]:
+    """Have a headless Claude run draft one brief topic. Returns (outcome, detail, article filename, title);
+    the outcome is drafted, cut, screened, stopped or failed."""
+    result = STATE / "draft-result.json"
+    result.unlink(missing_ok=True)
+    prompt = DRAFT_PROMPT.format(brief=str(brief), brief_name=brief.name, n=n, heading=heading, number=f"{number:03d}",
+                                 posts=str(POSTS), teasers=str(TEASERS), articles=str(ARTICLES), result=str(result))
+    cmd = ["/usr/bin/caffeinate", "-i", str(CLAUDE_BIN), "-p", prompt,
+           "--model", "claude-opus-5", "--permission-mode", "acceptEdits",
+           "--allowedTools"] + ALLOWED_TOOLS
+    env = dict(os.environ, PATH=f"{HOME}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin")
+    try:
+        res = subprocess.run(cmd, cwd=str(HOME), env=env, timeout=DRAFT_TIMEOUT_S, capture_output=True, text=True)
+    except subprocess.TimeoutExpired:
+        log(f"draft TIMEOUT on Topic {n} of {brief.name}")
+        return "failed", f"Claude run hit {DRAFT_TIMEOUT_S // 60} min", "", ""
+    log(f"claude exit {res.returncode}; tail: {(res.stdout or '').strip()[-300:]}")
+    if res.returncode != 0:
+        err = (res.stderr or "").strip()[-300:]
+        log(f"stderr: {err}")
+        if re.search(r"log ?in|OAuth|authentication|401", err + (res.stdout or ""), re.I):
+            notify("Insights pipeline ⚠️", "Claude login has expired; run `claude /login` in a terminal")
+        return "failed", f"Claude exited {res.returncode}", "", ""
+    try:
+        out = json.loads(result.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return "failed", "the run left no readable result file", "", ""
+    outcome, name = str(out.get("outcome", "")), str(out.get("article", ""))
+    if outcome == "drafted":
+        try:
+            there = bool(re.match(rf"^{number:03d}-.*\.md$", name)) and (POSTS / name).exists()
+        except OSError as e:
+            raise VaultUnreadable(f"cannot find {name}: {e.strerror}") from e
+        if not there:
+            return "failed", f"the run reported {name or 'no article'} but no such file is in Posts", "", ""
+    elif outcome not in ("cut", "screened", "stopped"):
+        return "failed", f"the run reported an unknown outcome {outcome!r}", "", ""
+    return outcome, str(out.get("detail", ""))[:300], name if outcome == "drafted" else "", str(out.get("title", ""))
+
+
+def draft(dry: bool) -> int:
+    """Keep the queue fed: while fewer than DRAFT_STOCK articles are in hand, draft the next waiting brief topic."""
+    if NO_DRAFT.exists():
+        log("NO-DRAFT file present; not drafting")
+        return 0
+    stock = len(queued()) + len(vault_survey()[0])
+    if stock >= DRAFT_STOCK:
+        log(f"draft: {stock} article(s) in hand; nothing to draft")
+        return 0
+    for brief, n, heading, text in waiting_topics():
+        flagged = aukus_hits(heading + "\n" + text)
+        if flagged:
+            log(f"draft: Topic {n} of {brief.name} skipped under the no-AUKUS rule ({', '.join(flagged)})")
+            if not dry:
+                note_topic(brief, n, "screened", "no-AUKUS rule: " + ", ".join(flagged))
+                bank_skip(brief, n, heading, "skipped under the no-AUKUS rule (the brief section mentions " + ", ".join(flagged) + ")")
+            continue
+        number = next_number()
+        log(f"draft: {stock} in hand; Topic {n} of {brief.name} -> article {number:03d}: {heading}")
+        if dry:
+            print(f"  would draft article {number:03d} from Topic {n} of {brief.name}")
+            return 0
+        if not CLAUDE_BIN.exists():
+            log("claude binary missing; cannot draft")
+            return 0
+        outcome, detail, name, title = draft_one(brief, n, heading, number)
+        note_topic(brief, n, outcome, detail, name)
+        log(f"draft outcome: {outcome}" + (f" {name}" if name else "") + (f" ({detail})" if detail else ""))
+        if outcome == "drafted":
+            notify(f"Insights: {number:03d} drafted", f"{title or name} · the next run prepares it · click to open", open_url=obsidian_url(POSTS / name))
+        elif outcome == "failed":
+            notify("Insights pipeline ⚠️", f"Drafting Topic {n} of {brief.name[:10]} failed: {detail}"[:230])
+        else:
+            notify(f"Insights: brief topic {outcome}", f"Topic {n} of {brief.name[:10]}: {detail}"[:230])
+        return 1 if outcome == "drafted" else 0
+    log("draft: no brief topic is waiting")
+    return 0
+
+
 # ----------------------------------------------------------------------------- main
 
 def guarded(name: str, step) -> str:
@@ -763,12 +1019,20 @@ def status() -> None:
     print("Queued (next to release first):")
     for p in queued():
         print(f"  {p.name}")
-    print(f"Last release: {RELEASE_STAMP.read_text().strip() if RELEASE_STAMP.exists() else '-'}   Paused: {PAUSE.exists()}")
+    try:
+        waiting = waiting_topics()
+    except VaultUnreadable:
+        waiting = []
+    print(f"Brief topics waiting (one is drafted per run while fewer than {DRAFT_STOCK} articles are in hand):")
+    for brief, n, heading, text in waiting:
+        skip = "   [no-AUKUS rule: will be skipped]" if aukus_hits(heading + "\n" + text) else ""
+        print(f"  {brief.name[:10]} Topic {n}: {heading[:70]}{skip}")
+    print(f"Last release: {RELEASE_STAMP.read_text().strip() if RELEASE_STAMP.exists() else '-'}   Paused: {PAUSE.exists()}   Drafting off: {NO_DRAFT.exists()}")
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["run", "stage", "release", "status"])
+    ap.add_argument("command", choices=["run", "stage", "release", "draft", "status"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="release even if one went out today or it is a weekend")
     ap.add_argument("--all", action="store_true", help="stage every candidate, not just the per-run limit")
@@ -791,6 +1055,8 @@ def main() -> int:
         outcomes.append(guarded("stage", lambda: stage(a.dry_run, a.all)))
     if a.command in ("run", "release"):
         outcomes.append(guarded("release", lambda: release(a.dry_run, a.force)))
+    if a.command in ("run", "draft") and vault_up:      # last: it is the long step, and nothing waits on it
+        outcomes.append(guarded("draft", lambda: draft(a.dry_run)))
     return 1 if "crashed" in outcomes else 0
 
 
