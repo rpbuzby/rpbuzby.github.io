@@ -62,6 +62,7 @@ def sandbox() -> Path:
     ip.LEDGER = ip.STATE / "published.json"
     ip.BRIEF_LEDGER = ip.STATE / "briefs.json"
     ip.NO_DRAFT = ip.STATE / "NO-DRAFT"
+    ip.NO_BRIEF = ip.STATE / "NO-BRIEF"
     ip.ARTICLES = vault / "Automation/Projects/Articles"
     ip.RESEARCH = vault / "Research"
     ip.SCREEN = ip.ARTICLES / "publication-screen.md"
@@ -300,6 +301,39 @@ queued_it = REAL_STAGE_ONE(held, False)
 fm = frontmatter(held)
 check("an article the screen catches is held at once and never queued",
       queued_it is False and fm.get("hold") == "true" and "screen: ZEPHYR" in str(fm.get("stage_note")) and not list(ip.QUEUE.glob("074-*")))
+
+# 14. the weekly-brief backstop: it waits for the desktop task, then writes the brief itself
+sandbox()
+def sydney(y, m, d, h):
+    ip.sydney_now = lambda: dt.datetime(y, m, d, h, 0)
+(ip.RESEARCH / "2026-10-04 LinkedIn post notes.md").write_text("## Topic 1: One\n\nText.\n", encoding="utf-8")
+sydney(2026, 10, 9, 15);  midweek = ip.brief_due()
+sydney(2026, 10, 11, 11); sunday_morning = ip.brief_due()
+sydney(2026, 10, 11, 12); sunday_noon = ip.brief_due()
+sydney(2026, 10, 13, 3);  later = ip.brief_due()
+check("the brief backstop is due only once the newest brief is a week old and Sunday noon has passed in Sydney",
+      midweek is None and sunday_morning is None and sunday_noon == dt.date(2026, 10, 11) and later == dt.date(2026, 10, 13))
+runs = []
+def fake_headless(prompt, timeout):
+    runs.append(prompt)
+    target = ip.RESEARCH / "2026-10-11 LinkedIn post notes.md"
+    target.write_text("# LinkedIn post notes: week to 11 October 2026\n\n" + "".join(f"## Topic {k}: Headline {k}\n\nText.\n\n" for k in range(1, 6)), encoding="utf-8")
+    return types.SimpleNamespace(returncode=0, stdout="", stderr="")
+ip.headless = fake_headless
+ip.CLAUDE_BIN = Path(sys.executable)
+sydney(2026, 10, 11, 14)
+wrote = ip.brief(dry=False)
+check("when it is due the backstop writes the brief once, in a shape the drafter can parse",
+      wrote == 1 and len(runs) == 1 and len(ip.brief_topics(ip.RESEARCH / "2026-10-11 LinkedIn post notes.md")) == 5 and ip.brief(dry=False) == 0 and len(runs) == 1)
+check("its prompt names the screen file and asks for five or six topics", str(ip.SCREEN) in runs[0] and "five or six topics" in runs[0])
+(ip.RESEARCH / "2026-10-11 LinkedIn post notes.md").unlink()
+ip.headless = lambda prompt, timeout: (runs.append(prompt), None)[1]
+ip.brief(dry=False); ip.brief(dry=False); ip.brief(dry=False)
+check("a failing backstop tries twice for a given week and then stops", len(runs) == 3 and ip.brief_ledger()["2026-10-11#brief"]["tries"] == 2)
+(ip.STATE / "briefs.json").unlink()
+(ip.STATE / "NO-BRIEF").write_text("", encoding="utf-8")
+ip.brief(dry=False)
+check("a NO-BRIEF file stops the backstop", len(runs) == 3)
 
 for root in ROOTS:
     shutil.rmtree(root, ignore_errors=True)

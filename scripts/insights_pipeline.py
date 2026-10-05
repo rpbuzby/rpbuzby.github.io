@@ -15,13 +15,16 @@ re-run:
            dated today, commit and push (GitHub Pages rebuilds in about a minute), write the
            live URL back into the vault article and its LinkedIn teaser, move the vault
            article to Posts/Archive/, and notify.
+  brief    Backstop for the weekly brief. The Claude desktop app writes it on Sunday morning,
+           Sydney time, when it is open. Once the newest brief is a week old and noon has passed
+           in Sydney, a headless Claude run writes it here instead, with five or six topics.
   draft    Keep the queue fed. While fewer than three articles are in hand, take the next topic of
            the freshest weekly brief (Research/YYYY-MM-DD LinkedIn post notes.md) and have a
            headless Claude run draft the article and its LinkedIn teaser under the
            /linkedin-to-article skill. One topic per run; the next run stages what it wrote. A topic
            the publication screen catches is skipped before any drafting and noted in notes.md.
            The screen is a private note in the vault, kept out of this public repo on purpose.
-  run      stage (bounded), release, then draft.  status  prints the queue.
+  run      stage (bounded), release, brief, then draft.  status  prints the queue.
 
 Every run starts by finishing the vault record of any release that could not write it back: macOS
 sometimes refuses the job a read of the iCloud vault, and .pipeline/published.json remembers what
@@ -29,7 +32,7 @@ went live so an article is never queued a second time. An unreadable vault is lo
 never taken for an empty one.
 
 Releases happen on weekdays only. Controls: `hold: true` in a vault article's frontmatter keeps it out of the pipeline;
-a file named PAUSE in .pipeline/ stops releases and one named NO-DRAFT stops drafting; --dry-run shows what would happen.
+a file named PAUSE in .pipeline/ stops releases, NO-DRAFT stops drafting and NO-BRIEF stops the brief backstop; --dry-run shows what would happen.
 Stdlib only. Runs on the logged-in Claude subscription (never API keys).
 """
 from __future__ import annotations
@@ -45,6 +48,7 @@ import subprocess
 import sys
 import traceback
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 HOME = Path.home()
 REPO = Path(__file__).resolve().parent.parent
@@ -63,10 +67,12 @@ RELEASE_STAMP = STATE / "last_release"      # YYYY-MM-DD
 PAUSE = STATE / "PAUSE"
 LEDGER = STATE / "published.json"           # vault filename -> {url, date, slug, recorded}, written straight after each push
 NO_DRAFT = STATE / "NO-DRAFT"
+NO_BRIEF = STATE / "NO-BRIEF"
 BRIEF_LEDGER = STATE / "briefs.json"        # "<brief date>#<topic>" -> {outcome, detail, article, date, tries}
 ARTICLES = VAULT / "Automation/Projects/Articles"
 RESEARCH = VAULT / "Research"
 DRAFT_TIMEOUT_S = 5400   # 90 min per topic
+BRIEF_TIMEOUT_S = 3600   # 60 min for the weekly brief
 DRAFT_STOCK = 3          # draft only while fewer than this many articles are queued or waiting in Posts
 BRIEF_MAX_AGE_DAYS = 14  # a weekly brief goes stale; leftover topics of an older one are never drafted
 SCREEN = ARTICLES / "publication-screen.md"  # private note in the vault: what never goes out, one `re:` pattern per line
@@ -864,7 +870,7 @@ def brief_ledger() -> dict:
         return {}
 
 
-def note_topic(brief: Path, n: int, outcome: str, detail: str = "", article: str = "") -> None:
+def note_topic(brief: Path, n: int | str, outcome: str, detail: str = "", article: str = "") -> None:
     book, key = brief_ledger(), f"{brief.name[:10]}#{n}"
     tries = book.get(key, {}).get("tries", 0) + (1 if outcome == "failed" else 0)
     book[key] = {"outcome": outcome, "detail": detail, "article": article, "date": dt.date.today().isoformat(), "tries": tries}
@@ -912,6 +918,25 @@ def bank_skip(brief: Path, n: int, heading: str, why: str) -> None:
         raise VaultUnreadable(f"cannot write {notes.name}: {e.strerror}") from e
 
 
+def headless(prompt: str, timeout: int) -> subprocess.CompletedProcess | None:
+    """One headless Claude run on the logged-in subscription. Returns the finished process, or None if it timed out."""
+    cmd = ["/usr/bin/caffeinate", "-i", str(CLAUDE_BIN), "-p", prompt,
+           "--model", "claude-opus-5", "--permission-mode", "acceptEdits",
+           "--allowedTools"] + ALLOWED_TOOLS
+    env = dict(os.environ, PATH=f"{HOME}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin")
+    try:
+        res = subprocess.run(cmd, cwd=str(HOME), env=env, timeout=timeout, capture_output=True, text=True)
+    except subprocess.TimeoutExpired:
+        return None
+    log(f"claude exit {res.returncode}; tail: {(res.stdout or '').strip()[-300:]}")
+    if res.returncode != 0:
+        err = (res.stderr or "").strip()[-300:]
+        log(f"stderr: {err}")
+        if re.search(r"log ?in|OAuth|authentication|401", err + (res.stdout or ""), re.I):
+            notify("Insights pipeline ⚠️", "Claude login has expired; run `claude /login` in a terminal")
+    return res
+
+
 def draft_one(brief: Path, n: int, heading: str, number: int) -> tuple[str, str, str, str]:
     """Have a headless Claude run draft one brief topic. Returns (outcome, detail, article filename, title);
     the outcome is drafted, cut, screened, stopped or failed."""
@@ -919,21 +944,11 @@ def draft_one(brief: Path, n: int, heading: str, number: int) -> tuple[str, str,
     result.unlink(missing_ok=True)
     prompt = DRAFT_PROMPT.format(brief=str(brief), brief_name=brief.name, n=n, heading=heading, number=f"{number:03d}",
                                  posts=str(POSTS), teasers=str(TEASERS), articles=str(ARTICLES), result=str(result), screen=str(SCREEN))
-    cmd = ["/usr/bin/caffeinate", "-i", str(CLAUDE_BIN), "-p", prompt,
-           "--model", "claude-opus-5", "--permission-mode", "acceptEdits",
-           "--allowedTools"] + ALLOWED_TOOLS
-    env = dict(os.environ, PATH=f"{HOME}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin")
-    try:
-        res = subprocess.run(cmd, cwd=str(HOME), env=env, timeout=DRAFT_TIMEOUT_S, capture_output=True, text=True)
-    except subprocess.TimeoutExpired:
+    res = headless(prompt, DRAFT_TIMEOUT_S)
+    if res is None:
         log(f"draft TIMEOUT on Topic {n} of {brief.name}")
         return "failed", f"Claude run hit {DRAFT_TIMEOUT_S // 60} min", "", ""
-    log(f"claude exit {res.returncode}; tail: {(res.stdout or '').strip()[-300:]}")
     if res.returncode != 0:
-        err = (res.stderr or "").strip()[-300:]
-        log(f"stderr: {err}")
-        if re.search(r"log ?in|OAuth|authentication|401", err + (res.stdout or ""), re.I):
-            notify("Insights pipeline ⚠️", "Claude login has expired; run `claude /login` in a terminal")
         return "failed", f"Claude exited {res.returncode}", "", ""
     try:
         out = json.loads(result.read_text(encoding="utf-8"))
@@ -991,6 +1006,98 @@ def draft(dry: bool) -> int:
     return 0
 
 
+# ----------------------------------------------------------------------------- brief
+
+BRIEF_PROMPT = """You are writing Russell's weekly research brief: the notes that he, or a later headless run, turns into \
+articles for russellbuzby.com and their LinkedIn teasers. This is a headless run (launchd com.russell.insights-publish), the \
+backstop for the Claude desktop task that normally writes the brief on Sunday morning. Nobody reviews it before articles are \
+drafted from it, so what you assert here is what gets written up.
+
+Write: {target}
+Digests: the daily `YYYY-MM-DD research digest.md` files of the last seven days in {research} (older ones are in {archive})
+Result file: {result}
+
+1. If the file to write already exists, write the result file with outcome "exists" and stop.
+2. Read the week's digests. Note any day that is missing or empty.
+3. Choose five or six topics for Russell's audience: Australian Government and Defence, other management consultants, and \
+wildfire researchers. Each must be relevant, important and timely, and each must be able to hold an 1,100-word article with \
+an argument of its own. Five or six, so that a working week of articles survives the cuts made later.
+4. SCREEN at selection. Read {screen}. It sets out what never goes out under Russell's name, and it is absolute. Do not \
+propose a topic that falls under it or that needs that material to work. Leave it out, give it one line under "Left out by the \
+screen", and add the same line to {articles}/notes.md under the heading "## Topics the pipeline skipped at selection".
+5. Avoid what is spent. Read the three most recent `LinkedIn post notes` files in {research} and the last 12 `Articles \
+produced` entries in {articles}/notes.md, and do not repeat their hooks. Open the brief with an "Avoiding" line naming them.
+6. Verify before you write. Supplement the digests with recent news and research, and check each topic's load-bearing facts \
+against a primary source. Digest summaries have been wrong before; where one is, say so in the topic. Mark what you could \
+not verify as unverified. Never invent an author, a figure, a date or a document.
+7. Write notes, not posts and not articles, in this shape, which a script parses: a first line `# LinkedIn post notes: week \
+to <date>`, a `Source digests:` line, the "Avoiding" line, then one section per topic headed `## Topic N: <headline>` with 300 \
+to 500 words on what happened, why it matters to this audience and why now, followed by its sources with URLs and its \
+verification notes. Close with `## Left out by the screen` if anything was, and `## What was absent this week`.
+8. Write the result file as JSON: {{"outcome": "written" | "exists" | "stopped", "topics": <number>, "detail": "<one sentence>"}}.
+
+Australian English and curly quotes. Apart from the brief, the result file and the one line in notes.md, touch nothing, and \
+do not draft, queue, commit or publish anything.
+Report in four lines: outcome, topics chosen, digests read, anything unverified."""
+
+
+def sydney_now() -> dt.datetime:
+    """Briefs are dated and timed by Sydney, whatever zone the Mac happens to be in."""
+    return dt.datetime.now(ZoneInfo("Australia/Sydney"))
+
+
+def brief_due() -> dt.date | None:
+    """The Sydney date to put on a new weekly brief if one is overdue, else None.
+
+    The desktop task writes the brief on Sunday morning, Sydney time. This backstop waits until the
+    newest brief is a week old and noon has passed there, so the desktop task always goes first.
+    """
+    try:
+        names = os.listdir(RESEARCH)
+    except OSError as e:
+        raise VaultUnreadable(f"cannot list {RESEARCH.name}/: {e.strerror}") from e
+    dates = [dt.date.fromisoformat(m.group(1)) for m in (re.match(r"^(\d{4}-\d{2}-\d{2}) LinkedIn post notes\.md$", n) for n in names) if m]
+    now = sydney_now()
+    age = (now.date() - max(dates)).days if dates else 8
+    return now.date() if age > 7 or (age == 7 and now.hour >= 12) else None
+
+
+def brief(dry: bool) -> int:
+    """Write the weekly brief with a headless Claude run when the desktop task has not."""
+    if NO_BRIEF.exists():
+        return 0
+    due = brief_due()
+    if due is None or brief_ledger().get(f"{due.isoformat()}#brief", {}).get("tries", 0) >= MAX_ATTEMPTS:
+        return 0
+    target = RESEARCH / f"{due.isoformat()} LinkedIn post notes.md"
+    log(f"brief: the weekly brief is due and the desktop task has not written it; writing {target.name}")
+    if dry:
+        print(f"  would write {target.name}")
+        return 0
+    if not CLAUDE_BIN.exists():
+        log("claude binary missing; cannot write the brief")
+        return 0
+    result = STATE / "brief-result.json"
+    result.unlink(missing_ok=True)
+    res = headless(BRIEF_PROMPT.format(target=str(target), research=str(RESEARCH), archive=str(RESEARCH / "Archive"),
+                                       articles=str(ARTICLES), screen=str(SCREEN), result=str(result)), BRIEF_TIMEOUT_S)
+    try:
+        topics = len(brief_topics(target)) if res is not None and res.returncode == 0 and target.exists() else 0
+    except OSError as e:
+        raise VaultUnreadable(f"cannot find {target.name}: {e.strerror}") from e
+    if topics >= 3:
+        note_topic(target, "brief", "written", f"{topics} topics")
+        log(f"brief: {target.name} written with {topics} topics")
+        notify("Insights: weekly brief written", f"{topics} topics, by the pipeline's backstop \u00b7 click to open", open_url=obsidian_url(target))
+        return 1
+    detail = ("the Claude run timed out" if res is None else f"Claude exited {res.returncode}" if res.returncode
+              else "no brief with three or more topics was written")
+    note_topic(target, "brief", "failed", detail)
+    log(f"brief FAILED: {detail}")
+    notify("Insights pipeline \u26a0\ufe0f", f"The weekly brief backstop failed: {detail}")
+    return 0
+
+
 # ----------------------------------------------------------------------------- main
 
 def guarded(name: str, step) -> str:
@@ -1027,9 +1134,10 @@ def status() -> None:
     for p in queued():
         print(f"  {p.name}")
     try:
-        waiting = waiting_topics()
+        waiting, due = waiting_topics(), brief_due()
     except VaultUnreadable:
-        waiting = []
+        waiting, due = [], None
+    print("Weekly brief backstop: " + (f"due, would write {due.isoformat()}" if due else "not due") + ("   (off: NO-BRIEF)" if NO_BRIEF.exists() else ""))
     print(f"Brief topics waiting (one is drafted per run while fewer than {DRAFT_STOCK} articles are in hand):")
     for brief, n, heading, text in waiting:
         skip = "   [screened: will be skipped]" if screen_hits(heading + "\n" + text) else ""
@@ -1039,7 +1147,7 @@ def status() -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["run", "stage", "release", "draft", "status"])
+    ap.add_argument("command", choices=["run", "stage", "release", "brief", "draft", "status"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="release even if one went out today or it is a weekend")
     ap.add_argument("--all", action="store_true", help="stage every candidate, not just the per-run limit")
@@ -1062,6 +1170,8 @@ def main() -> int:
         outcomes.append(guarded("stage", lambda: stage(a.dry_run, a.all)))
     if a.command in ("run", "release"):
         outcomes.append(guarded("release", lambda: release(a.dry_run, a.force)))
+    if a.command in ("run", "brief") and vault_up:
+        outcomes.append(guarded("brief", lambda: brief(a.dry_run)))
     if a.command in ("run", "draft") and vault_up:      # last: it is the long step, and nothing waits on it
         outcomes.append(guarded("draft", lambda: draft(a.dry_run)))
     return 1 if "crashed" in outcomes else 0
