@@ -17,6 +17,11 @@ re-run:
            article to Posts/Archive/, and notify.
   run      stage (bounded) then release.  status  prints the queue.
 
+Every run starts by finishing the vault record of any release that could not write it back: macOS
+sometimes refuses the job a read of the iCloud vault, and .pipeline/published.json remembers what
+went live so an article is never queued a second time. An unreadable vault is logged and notified,
+never taken for an empty one.
+
 Releases happen on weekdays only. Controls: `hold: true` in a vault article's frontmatter keeps it out of the pipeline;
 a file named PAUSE in .pipeline/ stops releases; --dry-run shows what would happen.
 Stdlib only. Runs on the logged-in Claude subscription (never API keys).
@@ -32,6 +37,7 @@ import re
 import shutil
 import subprocess
 import sys
+import traceback
 from pathlib import Path
 
 HOME = Path.home()
@@ -49,6 +55,7 @@ LOG = STATE / "pipeline.log"
 LOCK = Path("/tmp/insights-pipeline.lock")
 RELEASE_STAMP = STATE / "last_release"      # YYYY-MM-DD
 PAUSE = STATE / "PAUSE"
+LEDGER = STATE / "published.json"           # vault filename -> {url, date, slug, recorded}, written straight after each push
 CLAUDE_BIN = HOME / ".local/bin/claude"
 GRADER = HOME / ".agents/skills/humanise/grade.py"
 READALOUD = HOME / ".agents/skills/read-aloud/read_aloud.py"
@@ -233,22 +240,94 @@ def caption_from_credit(credit: str) -> str:
     return (head + ".") if head and len(head.split()) <= 25 else ""
 
 
+# ----------------------------------------------------------------------------- vault access
+
+class VaultUnreadable(Exception):
+    """macOS refused a read of the vault. Nothing can be assumed about it this run, least of all that it is empty."""
+
+
+def read_vault(path: Path) -> str:
+    try:
+        return path.read_text(encoding="utf-8")
+    except OSError as e:
+        raise VaultUnreadable(f"cannot read {path.name}: {e.strerror}") from e
+
+
+def list_vault(folder: Path, number: str = "") -> list[Path]:
+    """Numbered notes in a vault folder, lowest first; only those for one article number when given.
+
+    Lists the folder directly. Path.glob() swallows PermissionError, so a vault the job was refused
+    came back as an empty one and was logged as "0 candidate(s)" for eleven days (24 Sep to 4 Oct 2026).
+    """
+    try:
+        names = os.listdir(folder)
+    except OSError as e:
+        raise VaultUnreadable(f"cannot list {folder.name}/: {e.strerror}") from e
+    pat = re.compile("^" + (re.escape(number) if number else "[0-9]{3}") + r"-.*\.md$")
+    return sorted((folder / n for n in names if pat.match(n)), key=number_of)
+
+
+def vault_alert(e: VaultUnreadable) -> None:
+    log(f"VAULT UNREADABLE ({e}); staging and vault records wait for the next run")
+    notify("Insights pipeline ⚠️", f"macOS would not let the job read the vault ({e}). Nothing staged; the next slot retries.")
+
+
 # ----------------------------------------------------------------------------- queue views
 
-def vault_candidates() -> list[Path]:
-    """Numbered vault articles not yet queued or published, not on hold, lowest number first."""
-    out = []
+def slug_of(title: str) -> str:
+    """The URL slug a vault title publishes under."""
+    return slugify(normalise(curly(str(title))))
+
+
+def live_copy(slug: str) -> Path | None:
+    """The insights file already using this slug, under any date and pulled or not; None if there is none."""
+    hits = sorted(INSIGHTS.glob(f"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-{slug}.md")) if slug else []
+    return hits[-1] if hits else None
+
+
+def ledger() -> dict:
+    """Releases by vault filename: {url, date, slug, recorded}. `recorded` turns true once the vault says so too."""
+    try:
+        return json.loads(LEDGER.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def save_ledger(book: dict) -> None:
+    STATE.mkdir(exist_ok=True)
+    LEDGER.write_text(json.dumps(book, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def vault_survey() -> tuple[list[Path], list[tuple[Path, Path]]]:
+    """Numbered vault articles still to stage (lowest first), and those held back because their title is already live.
+
+    Anything the ledger shows as released is left to reconcile(). A title that is already on the site
+    with no ledger entry may or may not be the same article, so it is never queued and a person decides.
+    """
+    todo, clashes = [], []
     queued = {number_of(p) for p in QUEUE.glob("*.md")} if QUEUE.exists() else set()
-    for p in sorted(POSTS.glob("[0-9][0-9][0-9]-*.md"), key=number_of):
-        d = parse_fm(split_fm(p.read_text(encoding="utf-8"))[0])
+    released = ledger()
+    for p in list_vault(POSTS):
+        d = parse_fm(split_fm(read_vault(p))[0])
+        if p.name in released:
+            continue
         if str(d.get("hold", "")).lower() == "true":
             continue
         if d.get("status") == "published" or d.get("url"):
             continue
         if number_of(p) in queued:
             continue
-        out.append(p)
-    return out
+        live = live_copy(slug_of(d.get("title", "")))
+        if live:
+            clashes.append((p, live))
+            continue
+        todo.append(p)
+    return todo, clashes
+
+
+def vault_candidates() -> list[Path]:
+    """Numbered vault articles not yet queued or published, not on hold, lowest number first."""
+    return vault_survey()[0]
 
 
 def queued() -> list[Path]:
@@ -306,7 +385,7 @@ Report in five lines: image source, fact-check result, grader score, read-aloud 
 def stage_one(article: Path, dry: bool) -> bool:
     """Run the headless Claude prep on one vault article, then verify and copy it into the queue."""
     n = number_of(article)
-    d = parse_fm(split_fm(article.read_text(encoding="utf-8"))[0])
+    d = parse_fm(split_fm(read_vault(article))[0])
     log(f"stage {article.name}: status={d.get('status')} image={d.get('image')}")
     if d.get("status") != "ready":
         if dry:
@@ -339,7 +418,7 @@ def stage_one(article: Path, dry: bool) -> bool:
             if re.search(r"log ?in|OAuth|authentication|401", err + (res.stdout or ""), re.I):
                 notify("Insights pipeline ⚠️", "Claude login has expired; run `claude /login` in a terminal")
             return False
-        d = parse_fm(split_fm(article.read_text(encoding="utf-8"))[0])
+        d = parse_fm(split_fm(read_vault(article))[0])
 
     # ---- deterministic gates on what Claude left behind
     problems = []
@@ -363,8 +442,11 @@ def stage_one(article: Path, dry: bool) -> bool:
         problems.append("summary typography (straight quote, dash or question)")
     if d.get("theme") not in THEMES:
         problems.append(f"theme not set: {d.get('theme')}")
+    live = live_copy(slug_of(d.get("title", "")))
+    if live:
+        problems.append(f"already on the site as {live.name}")
     # grader on the body
-    body = split_fm(article.read_text(encoding="utf-8"))[1]
+    body = split_fm(read_vault(article))[1]
     tmp = STATE / f"grade-{n:03d}.md"
     STATE.mkdir(exist_ok=True)
     tmp.write_text(body, encoding="utf-8")
@@ -385,7 +467,7 @@ def stage_one(article: Path, dry: bool) -> bool:
         attempts = int(str(d.get("stage_attempts", "0")) or 0) + 1
         why = " | ".join(problems)
         log(f"stage gates FAILED (attempt {attempts}): {why}")
-        text = article.read_text(encoding="utf-8")
+        text = read_vault(article)
         text = set_fm_field(text, "stage_note", yq(f"GATES FAILED {dt.date.today().isoformat()} (attempt {attempts}): {why}"))
         text = set_fm_field(text, "stage_attempts", str(attempts))
         if d.get("status") == "ready":
@@ -401,12 +483,12 @@ def stage_one(article: Path, dry: bool) -> bool:
 
     # ---- copy into the queue (and clear any old stage_note in the vault file)
     if d.get("stage_note") or d.get("stage_attempts"):
-        vt = article.read_text(encoding="utf-8")
+        vt = read_vault(article)
         vt = re.sub(r"^(stage_note|stage_attempts):.*\n?", "", vt, flags=re.M)
         article.write_text(vt, encoding="utf-8")
     QUEUE.mkdir(parents=True, exist_ok=True)
     title = normalise(curly(str(d["title"])))
-    slug = slugify(title)
+    slug = slug_of(d["title"])
     ext = img.suffix.lower() or ".jpg"
     qmd = QUEUE / f"{n:03d}-{slug}.md"
     qimg = QUEUE / f"{n:03d}-{slug}{ext}"
@@ -427,9 +509,18 @@ def stage_one(article: Path, dry: bool) -> bool:
 
 
 def stage(dry: bool, all_: bool = False) -> int:
-    cands = vault_candidates()
+    try:
+        cands, clashes = vault_survey()
+    except VaultUnreadable as e:
+        vault_alert(e)
+        return 0
     q = queued()
     log(f"stage: {len(cands)} candidate(s) in vault, {len(q)} queued")
+    for p, live in clashes:
+        log(f"{p.name} has the title of {live.name}, already on the site; not queued")
+        if not dry:
+            notify(f"Insights: {number_of(p):03d} not queued", f"Same title as {live.name}, already on the site. Retitle it, or mark it published · click to open",
+                   open_url=obsidian_url(p))
     room = MAX_QUEUE - len(q)
     if room <= 0:
         log("queue full; not staging")
@@ -437,9 +528,92 @@ def stage(dry: bool, all_: bool = False) -> int:
     limit = len(cands) if all_ else MAX_STAGE_PER_RUN
     done = 0
     for a in cands[:min(limit, room)]:
-        if stage_one(a, dry):
-            done += 1
+        try:
+            if stage_one(a, dry):
+                done += 1
+        except VaultUnreadable as e:
+            vault_alert(e)
+            break
     return done
+
+
+# ----------------------------------------------------------------------------- vault record
+
+def set_teaser_url(number: str, url: str) -> None:
+    """Fill article_url on this article's LinkedIn teaser, wherever it has been filed."""
+    for folder in (TEASERS, TEASERS / "Archive"):
+        try:
+            teasers = list_vault(folder, number)
+        except VaultUnreadable:
+            if folder == TEASERS:
+                raise
+            continue
+        for t in teasers:
+            old = read_vault(t)
+            new = set_fm_field(old, "article_url", url)
+            if new == old:
+                continue
+            try:
+                t.write_text(new, encoding="utf-8")
+            except OSError as e:
+                raise VaultUnreadable(f"cannot write {t.name}: {e.strerror}") from e
+            log(f"teaser {t.name}: article_url set")
+
+
+def write_back(name: str, url: str, iso: str) -> None:
+    """Record a release in the vault: url and status on the article, the article into Archive/, the link on its teaser.
+
+    Safe to repeat. The Posts copy goes only after the Archive copy is written, so a run that dies
+    part-way leaves the next one something to finish.
+    """
+    src, dest = POSTS / name, ARCHIVE / name
+    try:
+        here = src if src.exists() else dest if dest.exists() else None
+    except OSError as e:
+        raise VaultUnreadable(f"cannot find {name}: {e.strerror}") from e
+    if here is None:
+        log(f"vault: {name} is in neither Posts/ nor Archive/; teaser only")
+    else:
+        old = read_vault(here)
+        text = old
+        for key, value in (("url", url), ("status", "published"), ("published_date", iso)):
+            text = set_fm_field(text, key, value)
+        if here == src or text != old:
+            try:
+                ARCHIVE.mkdir(exist_ok=True)
+                dest.write_text(text, encoding="utf-8")
+                if here == src:
+                    src.unlink()
+            except OSError as e:
+                raise VaultUnreadable(f"cannot archive {name}: {e.strerror}") from e
+            log(f"vault: {name} -> Archive/ with url")
+    set_teaser_url(name[:3], url)
+
+
+def reconcile(dry: bool) -> None:
+    """Finish the vault record of every release the ledger shows as unrecorded, or as back in Posts.
+
+    A release that could not write back used to leave its article in Posts looking unpublished, and
+    the next run would have queued it and sent it out a second time (5 Oct 2026).
+    """
+    book = ledger()
+    for name, rec in book.items():
+        try:
+            pending = not rec.get("recorded") or (POSTS / name).exists()
+        except OSError as e:
+            raise VaultUnreadable(f"cannot find {name}: {e.strerror}") from e
+        if not pending:
+            continue
+        insight = INSIGHTS / f"{rec['date']}-{rec['slug']}.md"
+        if not insight.exists() or str(parse_fm(split_fm(insight.read_text(encoding="utf-8"))[0]).get("draft", "")).lower() == "true":
+            log(f"{name} was released and has since been pulled from the site; vault record left alone")
+            continue
+        if dry:
+            print(f"  would finish the vault record for {name}")
+            continue
+        write_back(name, rec["url"], rec["date"])
+        rec["recorded"] = True
+        save_ledger(book)
 
 
 # ----------------------------------------------------------------------------- release
@@ -460,7 +634,18 @@ def release(dry: bool, force: bool = False) -> bool:
     if not q:
         log("queue empty; nothing to release")
         return False
-    qmd = q[0]
+    # an article never goes out twice: pass over anything queued whose slug is already on the site
+    qmd = None
+    for cand in q:
+        live = live_copy(cand.stem[4:])
+        if live is None:
+            qmd = cand
+            break
+        log(f"{cand.name} is already live as {live.name}; not released again")
+        if not dry:
+            notify("Insights pipeline ⚠️", f"{cand.name} is already on the site as {live.name}; delete the queued copy")
+    if qmd is None:
+        return False
     text = qmd.read_text(encoding="utf-8")
     d = parse_fm(split_fm(text)[0])
     slug = qmd.stem[4:]
@@ -471,10 +656,6 @@ def release(dry: bool, force: bool = False) -> bool:
     log(f"release {qmd.name} -> {url}")
     if dry:
         print(f"  would publish {qmd.name} as {out_md.name}, image {out_img.name}")
-        return False
-    if out_md.exists():
-        log(f"{out_md.name} already exists; aborting")
-        notify("Insights pipeline ⚠️", f"{out_md.name} already exists; release skipped")
         return False
     if not online():
         log("offline; leaving the release to the next slot")
@@ -504,37 +685,57 @@ def release(dry: bool, force: bool = False) -> bool:
         return False
     RELEASE_STAMP.write_text(iso)
     log(f"pushed; live in about a minute at {url}")
-
-    # write back to the vault: url, status, archive; and the teaser
-    vault_file = POSTS / str(d.get("vault", ""))
-    if vault_file.exists():
-        vt = vault_file.read_text(encoding="utf-8")
-        vt = set_fm_field(vt, "url", url)
-        vt = set_fm_field(vt, "status", "published")
-        vt = set_fm_field(vt, "published_date", iso)
-        ARCHIVE.mkdir(exist_ok=True)
-        (ARCHIVE / vault_file.name).write_text(vt, encoding="utf-8")
-        vault_file.unlink()
-        log(f"vault: {vault_file.name} -> Archive/ with url")
-    for t in TEASERS.glob(f"{qmd.stem[:3]}-*.md"):
-        tt = t.read_text(encoding="utf-8")
-        if re.search(r"^article_url:", tt, re.M):
-            tt = set_fm_field(tt, "article_url", url)
-        else:
-            tt = set_fm_field(tt, "article_url", url)
-        t.write_text(tt, encoding="utf-8")
-        log(f"teaser {t.name}: article_url set")
+    vault_name = str(d.get("vault", ""))
+    if vault_name:
+        book = ledger()
+        book[vault_name] = {"url": url, "date": iso, "slug": slug, "recorded": False}
+        save_ledger(book)
     notify("Insights published", str(d["title"]), open_url=url)
+
+    # the vault record comes last: macOS can refuse the read, and the ledger lets the next run finish it
+    try:
+        if vault_name:
+            reconcile(dry=False)
+        else:
+            set_teaser_url(qmd.stem[:3], url)
+    except VaultUnreadable as e:
+        log(f"vault record deferred ({e}); the next run retries it")
+        notify("Insights pipeline ⚠️", f"{d['title']} is live, but the vault could not be updated ({e}). The next run retries.")
     return True
 
 
 # ----------------------------------------------------------------------------- main
 
+def guarded(name: str, step) -> str:
+    """Run one step. A crash is logged and notified, and does not stop the steps after it."""
+    try:
+        step()
+        return "ok"
+    except VaultUnreadable as e:
+        vault_alert(e)
+        return "no vault"
+    except Exception as e:
+        traceback.print_exc()
+        log(f"{name} CRASHED: {type(e).__name__}: {e}")
+        notify("Insights pipeline ⚠️", f"{name} crashed ({type(e).__name__}: {str(e)[:150]}); see /tmp/insights-publish.err")
+        return "crashed"
+
+
 def status() -> None:
+    try:
+        todo, clashes = vault_survey()
+        rows = [(p, parse_fm(split_fm(read_vault(p))[0])) for p in todo]
+    except VaultUnreadable as e:
+        print(f"VAULT UNREADABLE: {e}")
+        rows, clashes = [], []
     print("Vault candidates (next to stage first):")
-    for p in vault_candidates():
-        d = parse_fm(split_fm(p.read_text(encoding="utf-8"))[0])
+    for p, d in rows:
         print(f"  {p.name:50s} status={d.get('status'):8s} image={str(d.get('image'))[:30]}")
+    for p, live in clashes:
+        print(f"Not queued, same title as {live.name}: {p.name}")
+    for name, rec in ledger().items():
+        if not rec.get("recorded"):
+            print(f"Live, vault record still to write: {name} -> {rec['url']}")
     print("Queued (next to release first):")
     for p in queued():
         print(f"  {p.name}")
@@ -558,11 +759,12 @@ def main() -> int:
         log("another run is in progress; exiting")
         return 0
     git("pull", "-q", "--rebase")
-    if a.command in ("run", "stage"):
-        stage(a.dry_run, a.all)
+    outcomes = [guarded("vault records", lambda: reconcile(a.dry_run))]
+    if a.command in ("run", "stage") and outcomes[0] != "no vault":
+        outcomes.append(guarded("stage", lambda: stage(a.dry_run, a.all)))
     if a.command in ("run", "release"):
-        release(a.dry_run, a.force)
-    return 0
+        outcomes.append(guarded("release", lambda: release(a.dry_run, a.force)))
+    return 1 if "crashed" in outcomes else 0
 
 
 if __name__ == "__main__":
