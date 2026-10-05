@@ -207,6 +207,17 @@ def bullet_references(body: str) -> str:
     return head + "\n" + "\n".join("- " + e for e in entries) + "\n" + ("\n" + after if after else "")
 
 
+def prose_only(body: str) -> str:
+    """The article without its reference list, which is what the grader's gates are for.
+
+    House rule (linkedin-to-article skill): always grade the body only, references stripped. Counting
+    them pulled vocabulary-diversity under its line for two articles whose prose passed 63/63 (085 and
+    086, 5 Oct 2026), a failure the prep run could not see because it grades the prose alone.
+    """
+    m = re.search(r"^#{2,3}\s*References\s*$", body, re.M)
+    return body[: m.start()].rstrip() + "\n" if m else body
+
+
 def slugify(title: str) -> str:
     import unicodedata
     s = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode()
@@ -462,7 +473,7 @@ def stage_one(article: Path, dry: bool) -> bool:
     body = split_fm(read_vault(article))[1]
     tmp = STATE / f"grade-{n:03d}.md"
     STATE.mkdir(exist_ok=True)
-    tmp.write_text(body, encoding="utf-8")
+    tmp.write_text(prose_only(body), encoding="utf-8")
     try:
         g = subprocess.run([sys.executable, str(GRADER), str(tmp)], capture_output=True, text=True, timeout=300)
         js = json.loads(g.stdout[g.stdout.find("{"):])

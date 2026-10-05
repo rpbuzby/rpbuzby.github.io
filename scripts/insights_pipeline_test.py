@@ -202,6 +202,12 @@ with contextlib.redirect_stderr(io.StringIO()):
     outcome = ip.guarded("stage", lambda: 1 / 0)
 check("a crashing step is logged and notified, not fatal", outcome == "crashed" and bool(NOTES) and any("CRASHED" in m for m in LOGGED))
 
+# 8b. the grader gate reads the prose, not the reference list (house rule: grade the body only)
+check("the reference list is stripped before grading",
+      ip.prose_only("First paragraph.\n\nSecond.\n\n## References\n- Someone. (2026). *A title.* https://example.org\n") == "First paragraph.\n\nSecond.\n"
+      and ip.prose_only("Body.\n\n### References\n\nEntry one.\n\nEntry two.\n") == "Body.\n"
+      and ip.prose_only("No list here, though the word References appears.\n") == "No list here, though the word References appears.\n")
+
 # 9. the root cause: a run must read the vault before it runs git, or macOS takes the job for git
 root = sandbox()
 events: list[str] = []
