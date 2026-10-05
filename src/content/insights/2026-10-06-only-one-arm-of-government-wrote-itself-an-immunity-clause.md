@@ -3,10 +3,9 @@ title: "Only One Arm of Government Wrote Itself an Immunity Clause"
 summary: "Seven years of voluntary fee disclosure got 106 of roughly 6,300 specialists to publish, so the Commonwealth legislated the power to do it for them, with immunity attached. Ten weeks earlier the DTA kept its supplier register inside government on the same legal risk."
 themes:
   - "Change & Transformation"
-image: ./085-only-one-arm-of-government-wrote-itself-an-immunity-clause.jpg
+image: ../../assets/insights/only-one-arm-of-government-wrote-itself-an-immunity-clause.jpg
 imageCredit: "Photo: Tima Miroshnichenko on Pexels."
-queue: 85
-vault: "085-transparency-asymmetry-immunity-clause.md"
+date: 2026-10-06
 ---
 By the end of 2022, six doctors had voluntarily published their fees on the Medical Costs Finder. The site had been running since December 2019 and had cost, on the government’s own account, about $24 million to set up.
 
