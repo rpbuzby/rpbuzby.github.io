@@ -3,10 +3,9 @@ title: "Who Is Rostered to Read the Trace?"
 summary: "Commonwealth guidance tells agencies how to produce an execution trace, and none of the eight mandatory AI requirements asks them to reconstruct what an agent did. When assessment fell behind, the department swapped its Medicare fraud model for a statistical one instead of adding assessors."
 themes:
   - "AI in Government"
-image: ./086-who-is-rostered-to-read-the-trace.jpg
+image: ../../assets/insights/who-is-rostered-to-read-the-trace.jpg
 imageCredit: "Photo: Mikhail Nilov, via Pexels. One person at a workstation of dense on-screen text."
-queue: 86
-vault: "086-trace-assurance-reading-capacity.md"
+date: 2026-10-07
 ---
 A Commonwealth artificial intelligence model built to detect Medicare fraud stopped being used in December 2025. The Auditor-General’s explanation runs to a single clause: the resourcing required for manual assessment of fraud and non-compliance “signals” could not keep up with the volume of potential matters generated.
 
