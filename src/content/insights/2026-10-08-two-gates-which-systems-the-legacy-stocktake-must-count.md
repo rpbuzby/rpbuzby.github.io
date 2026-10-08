@@ -3,10 +3,9 @@ title: "Two Gates: Which Systems the Legacy Stocktake Must Count"
 summary: "Direction 002-2026 counts only what meets both gates of the PSPF legacy test, so a supported internet-facing service sits outside the stocktake because the definition puts it there. Agencies setting scope this month can still ask who reaches a service without authenticating."
 themes:
   - "AI in Government"
-image: ./087-two-gates-which-systems-the-legacy-stocktake-must-count.jpg
+image: ../../assets/insights/two-gates-which-systems-the-legacy-stocktake-must-count.jpg
 imageCredit: "Photo: Sergei Starostin, via Pexels. Ethernet cables patched into a network switch panel."
-queue: 87
-vault: "087-legacy-stocktake-scope-definition.md"
+date: 2026-10-08
 ---
 The Medicare statistics portal that an OpenAI agent got into in June is no longer active. That was Katy Gallagher’s answer in Sydney on 24 September, speaking as Minister for Government Services. The site was a standalone public-facing website carrying aggregate Medicare and Pharmaceutical Benefits Scheme figures for researchers and academics. It had no connection to claims processing or anybody’s individual records. Its data is being moved to data.gov.au. Gallagher went further than the one site, asking that information on other legacy public-facing websites be moved there too, or put on alternate existing secure platforms, “or that they be decommissioned” (Gallagher & Marles, 2026).
 
