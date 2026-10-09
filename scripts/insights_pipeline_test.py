@@ -331,6 +331,8 @@ day = dt.date.today()
     "## Topic 1: New and keeps\n\nText.\n\n## Topic 2: New and urgent\n\n**Timing:** by 2026-10-08\n\n## Topic 3: New and less urgent\n\nTiming: by 2026-10-20\n", encoding="utf-8")
 check("time-sensitive topics are drafted first, earliest date first, then oldest brief first",
       [h for _, _, h, _ in ip.waiting_topics()] == ["New and urgent", "New and less urgent", "Old and keeps", "New and keeps"])
+check("the drafting and staging runs are told never to name a screened term in their notes",
+      all("publication screen: clear" in pr and "notes and frontmatter included" in pr for pr in (ip.STAGE_PROMPT, ip.DRAFT_PROMPT)))
 check("the drafter is told never to cut a topic for being late", "Never cut a topic for being late" in ip.DRAFT_PROMPT and "release_by" in ip.DRAFT_PROMPT)
 queue_item(96, "An Evergreen Piece", "096-a.md")
 late = queue_item(97, "A Timely Piece", "097-b.md")

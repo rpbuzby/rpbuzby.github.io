@@ -478,17 +478,18 @@ def claude_ready() -> bool:
         return _CLAUDE_OK
     clicked = RETRY_NOW.exists()
     RETRY_NOW.unlink(missing_ok=True)
+    started = dt.datetime.now()
     ok, why = canary(CANARY_CLICK_TIMEOUT_S if clicked else CANARY_TIMEOUT_S)
+    secs = (dt.datetime.now() - started).seconds
     _CLAUDE_OK, state, today = ok, canary_state(), dt.date.today().isoformat()
     STATE.mkdir(exist_ok=True)
     if ok:
-        if state.get("failing"):
-            log("check: Claude can read the vault again")
-            if clicked:
-                notify("Insights: Claude is working again", "It can read the vault, so this run carries on")
+        log(f"check: Claude {pin_record().get('version', '?')} read the vault in {secs} s" + (" (working again)" if state.get("failing") else ""))
+        if clicked and state.get("failing"):
+            notify("Insights: Claude is working again", "It can read the vault, so this run carries on")
         CANARY_STATE.write_text(json.dumps({"ok": today}) + "\n", encoding="utf-8")
         return True
-    log(f"check FAILED ({why}): Claude cannot read the vault; staging, the brief and drafting wait for the next run")
+    log(f"check FAILED after {secs} s ({why}): Claude cannot read the vault; staging, the brief and drafting wait for the next run")
     texts = {
         "stalled": "Claude couldn\u2019t read the vault, so nothing was drafted or prepared. Click to try again, then click Allow if macOS asks about \u201cclaude\u201d and iCloud Drive.",
         "offline": "No internet connection, so nothing was drafted or prepared. Click to try again.",
@@ -643,7 +644,11 @@ Images folder: {images}
 Voice file: {voice}
 Standing rules: ~/.claude/CLAUDE.md (image sourcing, fact-check, humanise grader, read-aloud, curly quotes, \
 no em dashes, Australian English). The screen at {screen} sets out what never goes out under Russell's name and \
-is absolute: if this article falls under it, write `stage_note: "SCREENED: <what>"` and stop. Never reword around it.
+is absolute: if this article falls under it, write `stage_note: "SCREENED: <what>"` and stop. Never reword around it. \
+Apart from that stage_note, never write a screened term into the article or its teaser, notes and frontmatter included: \
+the release gate reads the teaser file whole and holds the article on any match. Record your own check, if at all, as \
+`publication screen: clear`, and reword the same way any earlier note (a frontmatter field, never the article or post \
+text) that names a screened term.
 
 {stage_note}Do these in order and stop if a step cannot be completed honestly:
 
@@ -1033,7 +1038,9 @@ Follow the /linkedin-to-article skill for the workflow, the Articles project fil
 
 1. SCREEN. Read {screen}. It sets out what never goes out under Russell's name, and it is absolute. If the topic falls \
 under it, or cannot be argued without that material, write the result file with outcome "screened" and stop. Never draft \
-a version that only avoids the listed words.
+a version that only avoids the listed words. Never write a screened term anywhere in the article or the teaser, notes \
+and frontmatter included: the release gate reads the teaser file whole and holds the article on any match. Record the \
+check, if at all, as `publication screen: clear`.
 2. OVERLAP (skill Step 2.5). Check this topic's specific hooks against the last 12 `Articles produced` entries in \
 notes.md and against those articles' `source_notes`. If it is spent, meaning its hooks are already published, bank the \
 unused material in notes.md, write the result file with outcome "cut" and stop. If it is pivotable, pivot to unused \
