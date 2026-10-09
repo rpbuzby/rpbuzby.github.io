@@ -23,16 +23,19 @@ import insights_pipeline as ip
 
 FAILS: list[str] = []
 NOTES: list[tuple[str, str]] = []
+EXECS: list[str] = []          # what each banner runs when clicked, in step with NOTES
 LOGGED: list[str] = []
 ROOTS: list[Path] = []
 TODAY = dt.date.today().isoformat()
 
-ip.notify = lambda title, message, open_url="": NOTES.append((title, message))
+ip.notify = lambda title, message, open_url="", execute="": (NOTES.append((title, message)), EXECS.append(execute))
 ip.log = LOGGED.append
 ip.git = lambda *args: types.SimpleNamespace(returncode=0, stdout="", stderr="")
 ip.online = lambda: True
 REAL_STAGE_ONE = ip.stage_one
 ip.stage_one = lambda article, dry: False       # never start a real Claude run from a test
+REAL_CANARY = ip.canary
+ip.canary = lambda timeout=0: (True, "ok")      # nor a real vault check
 ip.CLAUDE_BIN = Path("/nonexistent/claude")
 
 
@@ -66,12 +69,22 @@ def sandbox() -> Path:
     ip.ARTICLES = vault / "Automation/Projects/Articles"
     ip.RESEARCH = vault / "Research"
     ip.SCREEN = ip.ARTICLES / "publication-screen.md"
+    ip.CANARY = ip.ARTICLES / ".pipeline-canary"
+    ip.CANARY_STATE = ip.STATE / "canary.json"
+    ip.RETRY_NOW = ip.STATE / "RETRY-NOW"
+    ip.REFRESH_NOW = ip.STATE / "REFRESH-NOW"
+    ip.PIN_DIR = root / "pin"
+    ip.CLAUDE_PREV = ip.PIN_DIR / "claude.prev"
+    ip.PIN_RECORD = ip.PIN_DIR / "pin.json"
+    ip.CLAUDE_VERSIONS = root / "versions"
+    ip._CLAUDE_OK = None
     paths = (ip.ARCHIVE, ip.IMAGES, ip.TEASERS / "Archive", ip.QUEUE, ip.INSIGHTS, ip.ASSETS, ip.STATE, ip.RESEARCH)
     assert all(root in p.parents for p in paths), "sandbox paths escaped the temp folder"
     for p in paths:
         p.mkdir(parents=True)
     ip.SCREEN.write_text("# Screen (test fixture)\n\nre: ZEPHYR\nre: (?i)blue heron (?:program|project)\n", encoding="utf-8")
     NOTES.clear()
+    EXECS.clear()
     LOGGED.clear()
     return root
 
@@ -366,6 +379,107 @@ check("a brief written mid-week does not put off the next Sunday's backstop", ip
 sydney(2026, 10, 15, 9)
 ip.brief(dry=False, force=True)
 check("a forced run writes a brief dated today even when none is due", ip.brief_due() is None and len(runs) == 4 and "2026-10-15 LinkedIn post notes.md" in runs[3])
+
+# 15. the vault check: a stalled or offline Claude charges nothing, banners once a day, and a click retries through launchd
+root = sandbox()
+fake = root / "fake-claude"
+def fake_bin(body: str) -> None:
+    fake.write_text("#!/bin/sh\n" + body + "\n", encoding="utf-8")
+    fake.chmod(0o755)
+ip.CLAUDE_BIN = fake
+fake_bin(f'cat "{ip.CANARY}"')
+passed = REAL_CANARY(timeout=30)
+fake_bin("sleep 5")
+stalled = REAL_CANARY(timeout=1)
+fake_bin("echo \"API Error: Can't reach the API server (ENOTFOUND)\"; exit 1")
+offline = REAL_CANARY(timeout=30)
+check("the vault check passes only when Claude reads its token back, and tells a stall from no internet",
+      passed == (True, "ok") and stalled == (False, "stalled") and offline == (False, "offline"))
+sandbox()
+ip.CLAUDE_BIN = Path(sys.executable)
+ip.canary = lambda timeout=0: (False, "stalled")
+(ip.RESEARCH / f"{dt.date.today().isoformat()} LinkedIn post notes.md").write_text("## Topic 1: Waits for Claude\n\nText.\n", encoding="utf-8")
+before = len(calls)
+ip.draft(dry=False)
+check("a failed vault check drafts nothing and charges the topic nothing",
+      len(calls) == before and ip.brief_ledger() == {} and any("no try charged" in m for m in LOGGED))
+waiting = article("080-waits-for-claude.md", "Waits For Claude", status="draft")
+check("staging waits too, with nothing charged", REAL_STAGE_ONE(waiting, False) is False and "stage_note" not in frontmatter(waiting))
+runs.clear()
+ip.headless = lambda prompt, timeout: (runs.append(prompt), None)[1]
+ip.brief(dry=False, force=True)
+check("and so does the brief backstop", runs == [] and not any(k.endswith("#brief") for k in ip.brief_ledger()))
+ip._CLAUDE_OK = None
+ip.draft(dry=False)
+stall_banners = [k for k, (_, m) in enumerate(NOTES) if "couldn’t read the vault" in m]
+check("one banner a day says what to click, and clicking it starts the launchd job",
+      len(stall_banners) == 1 and "launchctl kickstart" in EXECS[stall_banners[0]] and "RETRY-NOW" in EXECS[stall_banners[0]])
+ip.RETRY_NOW.write_text("", encoding="utf-8")
+ip._CLAUDE_OK = None
+ip.draft(dry=False)
+check("but every clicked retry gets an answer", len([m for _, m in NOTES if "couldn’t read the vault" in m]) == 2 and not ip.RETRY_NOW.exists())
+ip.canary = lambda timeout=0: (False, "offline")
+ip._CLAUDE_OK = None
+NOTES.clear()
+ip.draft(dry=False)
+check("being offline is logged, not bannered", not NOTES and len(calls) == before)
+ip.canary = lambda timeout=0: (True, "ok")
+ip._CLAUDE_OK = None
+ip.draft(dry=False)
+check("once the check passes the topic is drafted and the failure is cleared", len(calls) == before + 1 and "failing" not in ip.canary_state())
+
+# 15b. the pinned copy: refreshed at most weekly, outside the morning agent's hours, rolled back if macOS holds it up
+root = sandbox()
+ip.CLAUDE_BIN = ip.PIN_DIR / "claude"
+assert ip.PIN_DIR.parent == root, "the pinned folder escaped the temp folder"
+ip.CLAUDE_VERSIONS.mkdir()
+for v in ("2.1.9", "2.1.10"):
+    (ip.CLAUDE_VERSIONS / v).write_text(f"binary {v}", encoding="utf-8")
+ip.signed = lambda p: True
+ip.local_hour = lambda: 22
+ip.canary = lambda timeout=0: (True, "ok")
+pinned = lambda: ip.CLAUDE_BIN.read_text(encoding="utf-8")
+ip.refresh_claude()
+check("a missing pinned copy is installed from the newest release (2.1.10 beats 2.1.9)", pinned() == "binary 2.1.10" and ip.pin_record()["version"] == "2.1.10")
+(ip.CLAUDE_VERSIONS / "2.1.11").write_text("binary 2.1.11", encoding="utf-8")
+ip.refresh_claude()
+check("a newer release waits until the copy is a week old", pinned() == "binary 2.1.10")
+week_old = (dt.date.today() - dt.timedelta(days=8)).isoformat()
+ip.save_pin(dict(ip.pin_record(), refreshed=week_old))
+ip.local_hour = lambda: 10
+ip.refresh_claude()
+check("and never in the morning agent's hours", pinned() == "binary 2.1.10")
+ip.local_hour = lambda: 22
+ip.refresh_claude()
+check("then it is copied in, checked and recorded, with the old copy kept",
+      pinned() == "binary 2.1.11" and ip.CLAUDE_PREV.read_text(encoding="utf-8") == "binary 2.1.10" and ip.pin_record()["version"] == "2.1.11")
+(ip.CLAUDE_VERSIONS / "2.1.12").write_text("binary 2.1.12", encoding="utf-8")
+ip.save_pin(dict(ip.pin_record(), refreshed=week_old))
+ip.canary = lambda timeout=0: (False, "stalled")
+NOTES.clear(); EXECS.clear()
+ip.refresh_claude()
+check("a release macOS holds up is rolled back, marked, and named in a banner whose click refreshes it",
+      pinned() == "binary 2.1.11" and ip.pin_record().get("blocked") == "2.1.12" and any("2.1.12" in m for _, m in NOTES) and "REFRESH-NOW" in EXECS[-1])
+NOTES.clear()
+ip.refresh_claude()
+check("and is not tried again unprompted", pinned() == "binary 2.1.11" and not NOTES)
+ip.REFRESH_NOW.write_text("", encoding="utf-8")
+ip.canary = lambda timeout=0: (True, "ok")
+ip.local_hour = lambda: 10
+ip.refresh_claude()
+check("until a clicked banner asks for it, at any hour", pinned() == "binary 2.1.12" and "blocked" not in ip.pin_record() and not ip.REFRESH_NOW.exists())
+ip.signed = lambda p: False
+(ip.CLAUDE_VERSIONS / "2.1.13").write_text("half-written", encoding="utf-8")
+ip.REFRESH_NOW.write_text("", encoding="utf-8")
+ip.refresh_claude()
+check("a copy that does not verify is never installed", pinned() == "binary 2.1.12" and not (ip.PIN_DIR / "claude.tmp").exists())
+decoy = root / "decoy"
+decoy.write_text("decoy", encoding="utf-8")
+ip.CLAUDE_BIN, ip.signed = decoy, (lambda p: True)
+ip.REFRESH_NOW.write_text("", encoding="utf-8")
+ip.refresh_claude()
+check("and nothing outside the pinned folder is ever replaced", decoy.read_text(encoding="utf-8") == "decoy")
+ip.CLAUDE_BIN = Path("/nonexistent/claude")
 
 for root in ROOTS:
     shutil.rmtree(root, ignore_errors=True)

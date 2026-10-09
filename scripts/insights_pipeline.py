@@ -31,6 +31,14 @@ sometimes refuses the job a read of the iCloud vault, and .pipeline/published.js
 went live so an article is never queued a second time. An unreadable vault is logged and notified,
 never taken for an empty one.
 
+Headless runs use a pinned copy of Claude Code (~/.local/share/claude-headless/claude), never the
+auto-updated one. macOS ties its iCloud Drive permission to a binary's path and every update installs
+a new path, so from 6 to 9 Oct 2026 each run sat waiting on a permission dialog nobody was there to
+click. The copy is refreshed at most once a week, outside the morning agent's hours (it runs the same
+copy), and rolled back if the new release cannot read the vault. Before a run's first Claude step, a
+short check has the copy read a vault file. If it cannot, the Claude steps wait for the next run, no
+topic or article is charged a try, and one banner a day says what to click.
+
 Releases happen on weekdays only. Controls: `hold: true` in a vault article's frontmatter keeps it out of the pipeline;
 a file named PAUSE in .pipeline/ stops releases, NO-DRAFT stops drafting and NO-BRIEF stops the brief backstop; --dry-run shows what would happen.
 Stdlib only. Runs on the logged-in Claude subscription (never API keys).
@@ -43,6 +51,8 @@ import fcntl
 import json
 import os
 import re
+import secrets
+import shlex
 import shutil
 import subprocess
 import sys
@@ -76,7 +86,19 @@ BRIEF_TIMEOUT_S = 3600   # 60 min for the weekly brief
 DRAFT_STOCK = 3          # draft only while fewer than this many articles are queued or waiting in Posts
 BRIEF_MAX_AGE_DAYS = 28  # topics of an older brief are never drafted; RB would rather late than never, so this is generous
 SCREEN = ARTICLES / "publication-screen.md"  # private note in the vault: what never goes out, one `re:` pattern per line
-CLAUDE_BIN = HOME / ".local/bin/claude"
+CLAUDE_VERSIONS = HOME / ".local/share/claude/versions"  # where Claude Code's auto-updater installs each release
+PIN_DIR = HOME / ".local/share/claude-headless"           # the pinned copy every headless run uses: see refresh_claude()
+CLAUDE_BIN = PIN_DIR / "claude"
+CLAUDE_PREV = PIN_DIR / "claude.prev"                     # the copy before the last refresh, for a roll-back
+PIN_RECORD = PIN_DIR / "pin.json"                         # {version, refreshed, prev, blocked}
+PIN_REFRESH_DAYS = 7
+CANARY = ARTICLES / ".pipeline-canary"                    # a fresh token goes here before each vault check
+CANARY_TIMEOUT_S = 120        # a healthy check takes seconds; a stalled one is waiting on a macOS dialog
+CANARY_CLICK_TIMEOUT_S = 300  # after a banner click Russell is at the Mac: time to click Allow
+CANARY_STATE = STATE / "canary.json"
+RETRY_NOW = STATE / "RETRY-NOW"                           # left by a clicked banner; the run that follows reports how it went
+REFRESH_NOW = STATE / "REFRESH-NOW"                       # left by a clicked banner: refresh the pinned copy now
+JOB = "com.russell.insights-publish"
 GRADER = HOME / ".agents/skills/humanise/grade.py"
 READALOUD = HOME / ".agents/skills/read-aloud/read_aloud.py"
 CHECK_BLURBS = REPO / "scripts/check_blurbs.py"
@@ -123,13 +145,15 @@ def obsidian_url_repo(path: Path) -> str:
     return "obsidian://open?vault=content&file=" + urllib.parse.quote(rel)
 
 
-def notify(title: str, message: str, open_url: str = "") -> None:
+def notify(title: str, message: str, open_url: str = "", execute: str = "") -> None:
     tn = "/opt/homebrew/bin/terminal-notifier"
     if not Path(tn).exists():
         return
     cmd = [tn, "-title", title, "-message", message, "-group", "com.russell.insights-publish", "-ignoreDnD"]
     if open_url:
         cmd += ["-open", open_url]
+    if execute:
+        cmd += ["-execute", execute]
     try:
         subprocess.run(cmd, timeout=30, capture_output=True)
     except Exception as e:  # best effort
@@ -337,6 +361,199 @@ def vault_alert(e: VaultUnreadable) -> None:
     notify("Insights pipeline ⚠️", f"macOS would not let the job read the vault ({e}). Nothing staged; the next slot retries.")
 
 
+# ----------------------------------------------------------------------------- headless Claude
+
+_CLAUDE_OK: bool | None = None   # this run's vault check: it runs at most once a run
+
+
+def version_key(name: str) -> tuple[int, ...]:
+    return tuple(int(x) for x in re.findall(r"\d+", name))
+
+
+def newest_claude() -> Path | None:
+    """The newest release Claude Code's auto-updater has installed, or None."""
+    try:
+        found = [p for p in CLAUDE_VERSIONS.iterdir() if re.fullmatch(r"\d+(?:\.\d+)+", p.name) and p.is_file()]
+    except OSError:
+        return None
+    return max(found, key=lambda p: version_key(p.name), default=None)
+
+
+def pin_record() -> dict:
+    """{version, refreshed, prev, blocked} for the pinned copy."""
+    try:
+        return json.loads(PIN_RECORD.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def save_pin(rec: dict) -> None:
+    PIN_DIR.mkdir(parents=True, exist_ok=True)
+    PIN_RECORD.write_text(json.dumps(rec, indent=1) + "\n", encoding="utf-8")
+
+
+def signed(path: Path) -> bool:
+    return subprocess.run(["/usr/bin/codesign", "--verify", "--strict", str(path)], capture_output=True).returncode == 0
+
+
+def install_pin(src: Path) -> bool:
+    """Put one release at the pinned path in a single rename, keeping the current copy as claude.prev.
+
+    The path is never missing, and a run already going keeps the file it started with. Returns False,
+    with nothing changed, if the copy does not verify (the updater may still be writing it).
+    """
+    PIN_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = PIN_DIR / "claude.tmp"
+    shutil.copy2(src, tmp)
+    if not signed(tmp):
+        tmp.unlink(missing_ok=True)
+        log(f"claude: the copy of {src.name} does not verify; the pinned copy is unchanged")
+        return False
+    if CLAUDE_BIN.exists():
+        CLAUDE_PREV.unlink(missing_ok=True)
+        os.link(CLAUDE_BIN, CLAUDE_PREV)
+    os.replace(tmp, CLAUDE_BIN)
+    return True
+
+
+def local_hour() -> int:
+    return dt.datetime.now().hour
+
+
+def retry_cmd(flag: Path) -> str:
+    """What a banner click runs: leave a flag for the run, then start the launchd job at once.
+
+    It goes through launchd, so macOS sees the same process it sees at 04:40, and its dialog lets in the right one.
+    """
+    return f"/usr/bin/touch {shlex.quote(str(flag))}; /bin/launchctl kickstart gui/{os.getuid()}/{JOB}"
+
+
+def canary(timeout: int = CANARY_TIMEOUT_S) -> tuple[bool, str]:
+    """Have the pinned copy read a vault file it has not seen before. Returns (ok, why).
+
+    why is "ok", "missing", "stalled" (no answer in time: almost always macOS holding the run on its
+    iCloud Drive dialog for a binary it has not seen before), "offline", "login", or a short error.
+    Haiku, because the check is one read.
+    """
+    if not CLAUDE_BIN.exists():
+        return False, "missing"
+    token = "canary-" + secrets.token_hex(4)
+    try:
+        CANARY.write_text(token + "\n", encoding="utf-8")
+    except OSError as e:
+        raise VaultUnreadable(f"cannot write {CANARY.name}: {e.strerror}") from e
+    prompt = f"Use the Read tool to read {CANARY} and reply with only its first line, exactly as written."
+    cmd = ["/usr/bin/caffeinate", "-i", str(CLAUDE_BIN), "-p", prompt, "--model", "haiku",
+           "--permission-mode", "acceptEdits", "--allowedTools", "Read"]
+    env = dict(os.environ, PATH=f"{HOME}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin")
+    try:
+        res = subprocess.run(cmd, cwd=str(HOME), env=env, timeout=timeout, capture_output=True, text=True)
+    except subprocess.TimeoutExpired:
+        return False, "stalled"
+    said = (res.stdout or "") + (res.stderr or "")
+    if res.returncode == 0 and token in (res.stdout or ""):
+        return True, "ok"
+    if re.search(r"ENOTFOUND|reach the API|ECONNREFUSED|ECONNRESET|ETIMEDOUT", said):
+        return False, "offline"
+    if re.search(r"log ?in|OAuth|authentication|401", said, re.I):
+        return False, "login"
+    return False, f"exit {res.returncode}: {said.strip()[-120:]}"
+
+
+def canary_state() -> dict:
+    try:
+        return json.loads(CANARY_STATE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def claude_ready() -> bool:
+    """True when the headless Claude can read the vault. Checked once a run, before its first Claude step.
+
+    A failed check charges nothing: the steps that need Claude wait for the next run, and one banner
+    a day says what to click (every time after a banner click, when Russell is watching).
+    """
+    global _CLAUDE_OK
+    if _CLAUDE_OK is not None:
+        return _CLAUDE_OK
+    clicked = RETRY_NOW.exists()
+    RETRY_NOW.unlink(missing_ok=True)
+    ok, why = canary(CANARY_CLICK_TIMEOUT_S if clicked else CANARY_TIMEOUT_S)
+    _CLAUDE_OK, state, today = ok, canary_state(), dt.date.today().isoformat()
+    STATE.mkdir(exist_ok=True)
+    if ok:
+        if state.get("failing"):
+            log("check: Claude can read the vault again")
+            if clicked:
+                notify("Insights: Claude is working again", "It can read the vault, so this run carries on")
+        CANARY_STATE.write_text(json.dumps({"ok": today}) + "\n", encoding="utf-8")
+        return True
+    log(f"check FAILED ({why}): Claude cannot read the vault; staging, the brief and drafting wait for the next run")
+    texts = {
+        "stalled": "Claude couldn\u2019t read the vault, so nothing was drafted or prepared. Click to try again, then click Allow if macOS asks about \u201cclaude\u201d and iCloud Drive.",
+        "offline": "No internet connection, so nothing was drafted or prepared. Click to try again.",
+        "login": "Claude login has expired; run `claude /login` in a terminal",
+        "missing": f"The headless Claude copy is missing from {PIN_DIR}; the next run reinstalls it.",
+    }
+    text = texts.get(why, f"Claude\u2019s vault check failed ({why}). Click to try again.")
+    if clicked or (why != "offline" and state.get("notified") != today):
+        notify("Insights pipeline \u26a0\ufe0f", text[:230], execute="" if why in ("login", "missing") else retry_cmd(RETRY_NOW))
+        state["notified"] = today
+    state.update(failing=why, failed=state.get("failed") or today)
+    CANARY_STATE.write_text(json.dumps(state) + "\n", encoding="utf-8")
+    return False
+
+
+def refresh_claude() -> None:
+    """Keep the pinned copy within about a week of the newest Claude Code release.
+
+    macOS ties its iCloud Drive permission to a binary's path, and the auto-updater installs each
+    release at a new one (versions/X.Y.Z), so every update left the headless runs waiting on a dialog
+    nobody was there to click: 14 runs stalled from 6 to 9 Oct 2026. The pinned copy keeps one path for
+    every release. At most once a week, and outside the morning agent's hours (it runs the same copy),
+    the newest release is copied over it and checked. If the check fails the copy is rolled back, and
+    a release macOS held up is not tried again until a newer one arrives or Russell clicks the banner.
+    """
+    global _CLAUDE_OK
+    if CLAUDE_BIN.parent != PIN_DIR:   # only ever replace the pinned copy
+        return
+    forced = REFRESH_NOW.exists()
+    REFRESH_NOW.unlink(missing_ok=True)
+    newest, rec, today = newest_claude(), pin_record(), dt.date.today().isoformat()
+    if newest is None:
+        return
+    if not CLAUDE_BIN.exists():
+        if install_pin(newest):
+            save_pin({"version": newest.name, "refreshed": today})
+            log(f"claude: installed the pinned copy ({newest.name})")
+        return
+    if version_key(newest.name) <= version_key(rec.get("version", "0")):
+        return
+    if not forced:
+        if rec.get("blocked") == newest.name or 5 <= local_hour() < 16:   # the morning agent runs 05:50 to 15:00
+            return
+        last = rec.get("refreshed", "")
+        if last and (dt.date.today() - dt.date.fromisoformat(last)).days < PIN_REFRESH_DAYS:
+            return
+    old = rec.get("version", "?")
+    if not install_pin(newest):
+        return
+    ok, why = canary(CANARY_CLICK_TIMEOUT_S if forced else CANARY_TIMEOUT_S)
+    _CLAUDE_OK = True if ok else None
+    if ok:
+        save_pin({"version": newest.name, "refreshed": today, "prev": old})
+        log(f"claude: pinned copy refreshed from {old} to {newest.name}; it reads the vault")
+        return
+    os.replace(CLAUDE_PREV, CLAUDE_BIN)
+    if why == "stalled":
+        save_pin(dict(rec, blocked=newest.name))
+        log(f"claude: {newest.name} could not read the vault (macOS asked again); rolled back to {old}")
+        notify("Insights pipeline \u26a0\ufe0f", f"Claude Code {newest.name} needs your OK before the unattended jobs use it. Click here at the Mac, then Allow on the \u201cclaude\u201d dialog. Until then they stay on {old}.",
+               execute=retry_cmd(REFRESH_NOW))
+    else:
+        log(f"claude: the refresh to {newest.name} could not be checked ({why}); rolled back to {old}, and the next run retries")
+
+
 # ----------------------------------------------------------------------------- queue views
 
 def slug_of(title: str) -> str:
@@ -475,6 +692,8 @@ def stage_one(article: Path, dry: bool) -> bool:
             return False
         if not CLAUDE_BIN.exists():
             log("claude binary missing; cannot stage")
+            return False
+        if not claude_ready():
             return False
         note = str(d.get("stage_note", "")).strip()
         prompt = STAGE_PROMPT.format(
@@ -1028,6 +1247,9 @@ def draft(dry: bool) -> int:
         if not CLAUDE_BIN.exists():
             log("claude binary missing; cannot draft")
             return 0
+        if not claude_ready():
+            log(f"draft: Topic {n} of {brief.name} waits until Claude can read the vault; no try charged")
+            return 0
         outcome, detail, name, title = draft_one(brief, n, heading, number)
         note_topic(brief, n, outcome, detail, name)
         log(f"draft outcome: {outcome}" + (f" {name}" if name else "") + (f" ({detail})" if detail else ""))
@@ -1115,6 +1337,9 @@ def brief(dry: bool, force: bool = False) -> int:
     if not CLAUDE_BIN.exists():
         log("claude binary missing; cannot write the brief")
         return 0
+    if not claude_ready():
+        log("brief: waits until Claude can read the vault; no try charged")
+        return 0
     result = STATE / "brief-result.json"
     result.unlink(missing_ok=True)
     res = headless(BRIEF_PROMPT.format(target=str(target), research=str(RESEARCH), archive=str(RESEARCH / "Archive"),
@@ -1181,6 +1406,9 @@ def status() -> None:
         skip = "   [screened: will be skipped]" if screen_hits(heading + "\n" + text) else ""
         print(f"  {brief.name[:10]} Topic {n}: {heading[:70]}{skip}")
     print(f"Last release: {RELEASE_STAMP.read_text().strip() if RELEASE_STAMP.exists() else '-'}   Paused: {PAUSE.exists()}   Drafting off: {NO_DRAFT.exists()}")
+    pin, chk = pin_record(), canary_state()
+    print(f"Headless Claude: {pin.get('version', '?')} pinned at {CLAUDE_BIN}" + (f"; {pin['blocked']} waits for your OK" if pin.get("blocked") else "")
+          + (f"   Vault check failing since {chk['failed']} ({chk['failing']})" if chk.get("failing") else ""))
 
 
 def main() -> int:
@@ -1204,6 +1432,8 @@ def main() -> int:
     git("pull", "-q", "--rebase")
     if vault_up:
         outcomes.append(guarded("vault records", lambda: reconcile(a.dry_run)))
+    if a.command in ("run", "stage", "brief", "draft") and vault_up and not a.dry_run:
+        outcomes.append(guarded("claude copy", refresh_claude))
     if a.command in ("run", "stage") and vault_up:
         outcomes.append(guarded("stage", lambda: stage(a.dry_run, a.all)))
     if a.command in ("run", "release"):
