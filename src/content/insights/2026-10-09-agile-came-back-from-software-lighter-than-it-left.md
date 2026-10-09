@@ -3,10 +3,9 @@ title: "Agile Came Back From Software Lighter Than It Left"
 summary: "Scrum was abstracted from manufacturers who could not patch a product after it shipped. Software inherited the practices in a medium where correction is nearly free. Programs building hardware are now taking on the ceremony without the condition that made it safe."
 themes:
   - "Change & Transformation"
-image: ./088-agile-came-back-from-software-lighter-than-it-left.jpg
+image: ../../assets/insights/agile-came-back-from-software-lighter-than-it-left.jpg
 imageCredit: "Photo: J E, via Pexels. An idle press brake on a fabrication shop floor."
-queue: 88
-vault: "088-agile-hardware-origins-cost-of-being-wrong.md"
+date: 2026-10-09
 ---
 In 1995 Ken Schwaber published the paper that put the first formal definition of Scrum into public view. He and Jeff Sutherland co-presented the work at a conference that year. On its second page he lists the places the approach had already been observed: Fuji-Xerox, Canon, Honda, NEC, Epson, Brother, 3M, Xerox and Hewlett-Packard (Schwaber, 1995). Copiers, cameras, cars, computers, printers, industrial products. There is not a software house among them. Schwaber named the method after the scrum in rugby, “a tight formation of forwards who bind together in specific positions”. He credited the observation to Takeuchi and Nonaka, who had studied how those firms ran new product development for the Harvard Business Review nine years earlier (Takeuchi & Nonaka, 1986).
 
