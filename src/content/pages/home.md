@@ -14,10 +14,10 @@ consulting:
 poetry:
   title: "Poetry"
   lede: "The land, the people on it, and what fire and weather do to both."
-  text: "Poems from Braidwood, in the southern tablelands of New South Wales. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize; others were shortlisted for the Bridport, Robert Gray and ACU prizes and longlisted for the Winchester Poetry Prize."
+  text: "Poems from Braidwood, in the southern tablelands of New South Wales. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, ‘Hecuba’ came second in the Winchester Poetry Prize, and others were shortlisted for the Bridport, Robert Gray and ACU prizes."
   buttons:
     - { label: "The poems", url: "/poetry/" }
 ---
-I advise Commonwealth leaders on complex change at Parbery Consulting, and I turn out with the Braidwood bushfire brigade when the pager goes. My poems have started to travel too: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize.
+I advise Commonwealth leaders on complex change at Parbery Consulting, and I turn out with the Braidwood bushfire brigade when the pager goes. My poems have started to travel too: ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, and ‘Hecuba’ came second in the Winchester Poetry Prize.
 
 My work sits at the intersection of strategy and delivery: helping senior leaders clarify direction, engage stakeholders, manage risk and translate policy intent into practical outcomes. Twenty years across government consulting, higher education leadership and financial services, and a fireground that taught me leadership is tested under pressure, not in planning sessions.
