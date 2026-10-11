@@ -25,6 +25,8 @@ origin_photo:
 instagram_buttons:
   - label: Watch ‘Bogong’
     url: https://www.instagram.com/reel/Dc5PtIAiqzH/
+  - label: Watch ‘Hecuba’
+    url: https://www.instagram.com/reel/DeUveaBIQ9z/
   - label: Follow @rpbuzby
     url: https://www.instagram.com/rpbuzby/
 bio25: Russell Buzby lives on Ngunnawal and Yuin Country at Braidwood, New South Wales, Australia. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize.
@@ -43,4 +45,4 @@ I write in two registers that keep swapping places: a plain documentary line tha
 
 ## On Instagram
 
-I read poems on Instagram ([@rpbuzby](https://www.instagram.com/rpbuzby/)): my own once they are published, and otherwise other people’s, from Clare and Hopkins to Judith Wright and Les Murray, with a few words on why. ‘Bogong’ was the first of mine, read on 6 September 2026.
+I read poems on Instagram ([@rpbuzby](https://www.instagram.com/rpbuzby/)): my own once they are published, and otherwise other people’s, from Clare and Hopkins to Judith Wright and Les Murray, with a few words on why. ‘Bogong’ was the first of mine, read on 6 September 2026, and ‘Hecuba’ followed on 10 October.
