@@ -3,11 +3,9 @@ title: "Fifty-Two Per Cent, Measured Once"
 summary: "Fuel is the only commodity the inquiry’s terms of reference name, and it comes with days of cover and a department reporting them. Whether Australians would fight to defend the country was measured once, in 2025, and not since."
 themes:
   - "Defence"
-image: ./089-fifty-two-per-cent-measured-once.jpg
+image: ../../assets/insights/fifty-two-per-cent-measured-once.jpg
 imageCredit: "Photo: Diego F. Parra, via Pexels. Bulk fuel tanks beside a container rail yard."
-queue: 89
-vault: "089-fifty-two-per-cent-measured-once.md"
-release_by: 2026-10-30
+date: 2026-10-12
 ---
 The Parliamentary Joint Committee on Defence is asking whether Australia could keep functioning through a war. Its terms of reference run to five paragraphs, and across all five they name exactly one commodity. The first paragraph commits the committee to examine “whole-of-nation support to National Defence for continuity of government and the availability of essential goods and services including fuel in crisis or conflict” (Parliamentary Joint Committee on Defence, 2026b). Fuel is a thing the Commonwealth can count. It has days of cover and a department that reports on them. Half the adult population has already answered a harder question about the same war, and that answer is eighteen months old, because nobody has asked again.
 
