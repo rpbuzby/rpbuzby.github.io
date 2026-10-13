@@ -3,11 +3,9 @@ title: "What Does the Model Think It Is Looking At?"
 summary: "A reviewed benchmark scores ten open-source multimodal models at 61.9 per cent on fire and smoke understanding. That average hides the table that matters: 90.3 per cent on whether a person is in the frame, 42.9 per cent on where fire and smoke sit."
 themes:
   - "Emergency Management & Resilience"
-image: ./090-what-does-the-model-think-it-is-looking-at.jpg
+image: ../../assets/insights/what-does-the-model-think-it-is-looking-at.jpg
 imageCredit: "Photo: Ben Shepherd, NSW Rural Fire Service, via the NSW RFS Flickr archive. Cliff Road fire, October 2011."
-queue: 90
-vault: "090-fire-scene-understanding-benchmark.md"
-release_by: 2026-10-31
+date: 2026-10-13
 ---
 ForestrySA switched on a camera at the Mount Crawford Fire Tower in the Adelaide Hills on 10 September, describing it as the first AI-powered fire detection camera operating in a peri-urban area in Australia. Its job, in the agency’s own words, is to “continuously monitor the landscape for signs of smoke and potential fire activity” (ForestrySA, 2026). That is a single question asked over and over in one place. Three days before that launch, a research group posted a benchmark that put a much broader question to general-purpose multimodal models: what is happening in this picture?
 
