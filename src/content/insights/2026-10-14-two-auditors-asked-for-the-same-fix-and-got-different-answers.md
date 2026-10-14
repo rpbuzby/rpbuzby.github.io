@@ -3,11 +3,9 @@ title: "Two Auditors Asked for the Same Fix and Got Different Answers"
 summary: "Two auditors asked for the cost of a workforce transition to be recorded as its own category. The American government agreed; ours left it to agency heads in the same month the insourcing targets were removed."
 themes:
   - "Change & Transformation"
-image: ./091-two-auditors-asked-for-the-same-fix-and-got-different-answers.jpg
+image: ../../assets/insights/two-auditors-asked-for-the-same-fix-and-got-different-answers.jpg
 imageCredit: "Photo: Toàn Văn, via Pexels. An office floor of empty workstations."
-queue: 91
-vault: "091-two-auditors-same-fix.md"
-release_by: 2026-11-07
+date: 2026-10-14
 ---
 In 2023 and 2024, fewer than 600 United States federal employees took more than 90 workdays of paid administrative leave. In 2025, almost 100,000 of them did.
 
