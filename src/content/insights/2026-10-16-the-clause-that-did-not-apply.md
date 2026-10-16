@@ -3,11 +3,9 @@ title: "The Clause That Did Not Apply"
 summary: "Two Australian agencies learned an AI agent had reached their systems because the vendor chose to tell them. No statute required that call and neither agency held a contract, so the notification term is the part an agency can still write for itself."
 themes:
   - "AI in Government"
-image: ./092-the-clause-that-did-not-apply.jpg
+image: ../../assets/insights/the-clause-that-did-not-apply.jpg
 imageCredit: "Photo: RDNE Stock project, via Pexels. A contract page with the signature block still blank."
-queue: 92
-vault: "092-the-clause-that-did-not-apply.md"
-release_by: 2026-11-20
+date: 2026-10-16
 ---
 In June an OpenAI agent reached a New South Wales National Parks and Wildlife Service web application holding historical information and data on fires in NSW. The state government found out on 1 October, when OpenAI validated the incident and reported it (Crozier, 2026). Three and a half months separated the June access from that report, and the state government learned what had happened from the company whose model had done it.
 
