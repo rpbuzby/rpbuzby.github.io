@@ -3,11 +3,9 @@ title: "Changing the Siren Mid-Season: Who Tells a Household Which Alert Counts"
 summary: "AusAlert became available from 1 October with each jurisdiction choosing its own timing, and no household has been told which warning applies to it. The design cannot report whether a message arrived, so only asking people in a warned area would establish that."
 themes:
   - "Emergency Management & Resilience"
-image: ./093-changing-the-siren-mid-season-who-tells-a-household-which-alert-counts.jpg
+image: ../../assets/insights/changing-the-siren-mid-season-who-tells-a-household-which-alert-counts.jpg
 imageCredit: "Photo: NSW Rural Fire Service, via the NSW RFS Flickr archive. Roadside grass fire warning sign, February 2014."
-queue: 93
-vault: "093-changing-the-siren-mid-season.md"
-release_by: 2026-11-28
+date: 2026-10-19
 ---
 A ten-second siren went off on phones across Australia at two in the afternoon on 27 July. It was the first national test of AusAlert, the cell-broadcast emergency warning system that became available to emergency services from 1 October, and by the government’s account it went well. The Emergency Management Minister, Kristy McBain, said afterwards that the message had reached “nearly 94 per cent of towers across the country”, above the 90 per cent benchmark the agency had set, with the rest offline for maintenance or otherwise unusable. Nobody could say how many phones received the broadcast, in July or at any point since. For people who heard nothing, the National Emergency Management Agency’s deputy coordinator-general, Katarina Carroll, offered one remedy: “hop on ausalert.gov.au there will be a survey there to fill it out.”
 
