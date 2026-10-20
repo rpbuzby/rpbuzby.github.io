@@ -3,11 +3,9 @@ title: "Two Hundred and Sixty-Six Recommendations, No Single Cause"
 summary: "California’s new fire report carries 266 recommendations. Australia holds 80 from its own royal commission and can confirm only the 15 the Commonwealth controlled outright, because nobody across nine governments has the standing to declare a recommendation finished."
 themes:
   - "Emergency Management & Resilience"
-image: ./096-two-hundred-and-sixty-six-recommendations-no-single-cause.jpg
+image: ../../assets/insights/two-hundred-and-sixty-six-recommendations-no-single-cause.jpg
 imageCredit: "Photo: NSW Rural Fire Service, via the NSW RFS Flickr archive. Blacking out a burnt edge, January 2013."
-queue: 96
-vault: "096-recommendation-closure-after-fire.md"
-release_by: 2026-11-21
+date: 2026-10-20
 ---
 On 2 October the Fire Safety Research Institute published 724 pages on the January 2025 fires in southern California, carrying 175 findings and 266 recommendations. Its own account of what it found is that the outcomes were “shaped by the interaction of multiple interlinked systems rather than any single factor or failure” (Alkonis et al., 2026). Those two statements sit badly together, which matters here because Australia has run the same exercise and cannot tell you how it finished.
 
