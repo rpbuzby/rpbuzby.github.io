@@ -3,11 +3,9 @@ title: "Ask How Many Crews Can Work a Third Night"
 summary: "Fire agencies roster on the assumption that night gives something back, and the measured relief has shrunk. A paper in an Australian journal asked for overnight resourcing in 2024, and I cannot find a costing. October is when the counting can still be done."
 themes:
   - "Emergency Management & Resilience"
-image: ./097-ask-how-many-crews-can-work-a-third-night.jpg
+image: ../../assets/insights/ask-how-many-crews-can-work-a-third-night.jpg
 imageCredit: "Photo: NSW Rural Fire Service, via the NSW RFS Flickr archive. Tankers staged in a paddock, February 2014."
-queue: 97
-vault: "097-crews-for-a-third-night.md"
-release_by: 2026-10-30
+date: 2026-10-23
 ---
 At 1am on Monday 5 October, the Fire Danger Period began in the Wellington and East Gippsland shires. CFA’s Chief Officer, Jason Heffernan, said conditions were “exceptionally dry” and put the start “two weeks earlier than the beginning of the 2025/26 fire season” (CFA, 2026a). Mildura is declared from 26 October and several councils in the state’s north from early November, while most municipalities on CFA’s own restriction table still read as having no restrictions in force (CFA, 2026b). Two shires at the start of October is not a season. It is, though, the stretch of the year when a resourcing question can still be answered on paper, and there is one that has been waiting since 2024.
 
