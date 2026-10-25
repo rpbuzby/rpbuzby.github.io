@@ -3,11 +3,9 @@ title: "A Price for Seeing Every Fire in a State"
 summary: "A preprint prices a modelled statewide drone detection network at about 5 per cent of what California spends each year on wildfire prevention, and leaves airspace authorisation and staffing out of that figure. In Australia, CASA says a beyond-visual-line-of-sight approval may take several months."
 themes:
   - "Emergency Management & Resilience"
-image: ./098-a-price-for-seeing-every-fire-in-a-state.jpg
+image: ../../assets/insights/a-price-for-seeing-every-fire-in-a-state.jpg
 imageCredit: "Photo: Bernie O’Rourke, NSW Rural Fire Service, via the NSW RFS Flickr archive. Aviation training at Wyong, July 2012."
-queue: 98
-vault: "098-a-price-for-state-scale-detection.md"
-release_by: 2026-11-14
+date: 2026-10-26
 ---
 Four researchers have put a price on seeing every fire in a state, and it is smaller than the capability conversation around fire detection would lead you to expect. In a preprint posted to arXiv on 16 September this year, Romain Puech and three co-authors optimised two things agencies normally buy separately: where detection infrastructure sits, and how a fleet of autonomous drones moves between those sites. Tested out of sample against 3,693 Californian ignitions recorded from 2021 to 2024, their modelled network, sized to a budget of US$100 million over five years, detected 97.3 per cent of those fires. Within the first hour it had found 74 per cent of them (Puech et al., 2026). No such network has been built. These are simulated results for a hypothetical deployment measured against historical ignition points, in a paper that has not yet been peer reviewed.
 
