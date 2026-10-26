@@ -1,0 +1,52 @@
+---
+title: "What Is the APS Pay Offer Competing With?"
+summary: "The Commonwealth measured its pay offer against the inflation forecast in its budget, and on that test it wins. The wage forecast one line below sits above every year of the offer, and base salary is what staff say decides whether they stay."
+themes:
+  - "Change & Transformation"
+image: ./100-what-is-the-aps-pay-offer-competing-with.jpg
+imageCredit: "Photo: RDNE Stock project, via Pexels. A pen resting on one rate while the next line reads lower."
+queue: 100
+vault: "100-aps-pay-offer-wage-forecast.md"
+release_by: 2026-11-06
+---
+149,668 Australian public servants filled in the APS Employee Census in May and June this year, an 80 per cent response rate. Among them, 61 per cent felt they were fairly remunerated for the work they do (APSC, 2026a). On 13 October the Australian Public Service Commission tabled the Commonwealth’s proposed pay package for the service-wide bargaining round: 3.2 per cent, then 3.0, dropping to 2.8.
+
+The first rise runs from March 2027, or from the start of a new agreement where that falls later, with the second and third in March 2028 and 2029, which the Commission totals at 9 per cent over three years (APSC, 2026b). Some lower-paid salary ranges in some agencies would get up to 0.5 per cent a year on top of that. An employee moving up a salary point would receive at least 3.0 per cent where the current step is smaller. The uplifts reach one classification or more in 101 of 110 agencies. On conditions, the Canberra Times reports superannuation on up to 52 weeks of unpaid parental leave and a better higher duties allowance, against a standard three-day Christmas shutdown replacing earlier closedown arrangements.
+
+Katy Gallagher called the offer fair and reasonable in a constrained fiscal environment. The Community and Public Sector Union, whose members endorsed a claim of 5 per cent a year or CPI whichever is higher, said it fell short (The Canberra Times, 2026). Chief Negotiator Alison Stott described the package as preliminary positions and not agreed outcomes.
+
+The Commission’s case for the offer rests on a single comparison, and it is sound. Its release states that the guaranteed rises exceed the 2.5 per cent annual CPI rate projected in the 2026-27 Budget over a similar period. They do. The obvious objection is that prices run faster than that: the Bureau of Statistics recorded headline inflation of 4.0 per cent in the twelve months to August 2026, with the trimmed mean steady at 3.6 (Australian Bureau of Statistics, 2026). No increase arrives before March 2027, though, so an offer made today has to beat a forecast of inflation rather than the latest reading of it.
+
+There is a second comparison in that document, a line below the first. Table 1.1 of Budget Paper No. 1 sets out the major economic parameters, and its consumer price index line holds that 2.5 per cent through to 2029-30. Immediately beneath it sits the wage price index: 3.5 per cent in 2026-27, the same in 2027-28 and 2028-29, then 3.75 in 2029-30 (Commonwealth of Australia, 2026). Each of the three offered rises is below the government’s own forecast of what wages across the economy will do in the year it takes effect.
+
+Three qualifications belong alongside that comparison. The wage price index measures hourly rates of pay across all employers, which is a different measure from a negotiated agreement increase. The APS headline excludes the advancement minimum and the agency uplifts, and the Commission expects about 38 per cent of maximum pay points and 45 per cent of minimum points to beat the headline by the end of the agreement. Each increase also falls part way through a financial year, so no year of the agreement gets a full twelve months of it. None of those qualifications lifts the headline rises themselves to 3.5.
+
+For an employer trying to keep people, the second comparison matters more. Inflation tells you what a wage will buy. The wage forecast tells you what the employer across the road is expected to pay for comparable work over those years. The Commission has already measured how much pay weighs on that decision. Of more than 39,000 participants in this year’s APS Employment Conditions Survey, the release reports, 79 per cent said base salary mattered most in deciding whether to join or stay.
+
+Now the Commonwealth’s other labour bill, in the news that fortnight. The Parliamentary Library has compiled federal spending on external consultants for the public service at $860 million in the last financial year, reported by PS News as a record (Johnson, 2026). Definitions of consultant differ between collections, so that total should not be added to anything.
+
+On 28 September, a fortnight before the offer, the Auditor-General presented a report on the Strategic Commissioning Framework, the scheme of annual agency targets for returning core work to the public service (Australian National Audit Office, 2026; Athwal, 2026a). What agencies committed to for 2024-25 came to less than 3 per cent of an external workforce spend of about $20 billion a year. Twelve of the 22 entities the audit sampled reported $90.3 million of reductions under the framework while their overall external labour expenses rose by $375.4 million. Services Australia reported $2.6 million of reductions while its external labour costs climbed 41 per cent, from $287.6 million in 2023-24 to $406.7 million in 2024-25. The Minister’s approval to streamline reporting for the final year of the framework came in April: no new targets, and no public update at the end of 2026.
+
+I have written already about [what that removal leaves nobody able to establish](https://russellbuzby.com/2026/10/14/two-auditors-asked-for-the-same-fix-and-got-different-answers/): whether four years of insourcing built capability. That argument is about measurement. This one is about price.
+
+In-housing rests on a proposition about labour: that work bought from a firm can instead be done by people the service employs directly. That depends on hiring them and keeping them. The price of keeping them is set centrally, once per three-year agreement, for more than a hundred agencies at a time, inside a fiscal envelope set by government. The price of buying the alternative is set agency by agency, against delivery pressure and whatever the market asks that quarter. Those two prices are struck in separate processes, each against its own benchmark, and nothing requires anybody to reconcile them.
+
+Retrenchments across the service reached 1,328 in 2025-26, against 352 in 2024-25 and 1,198 for the three years to 2024-25 combined (Athwal, 2026b). Most were voluntary: 1,193 redundancies and 95 senior executive incentive-to-retire packages, against 20 involuntary exits and 20 the data does not classify. Voluntary resignations fell over that year, to 6,023 from 6,927, so the picture is of people accepting exits that were offered, with no surge in resignations alongside them. An APSC spokesperson said maintaining capability and corporate knowledge are factors considered in retrenchment decisions. An agency that funds an exit and then procures the same hours on a contract has relocated a cost without removing it.
+
+I should say where I stand, because I sell consulting to the Commonwealth. A settlement below the government’s own wage forecast points towards more demand for external capacity, not less. Retrenchments at nearly four times last year’s level point in that direction too, and the public reporting that tracked the policy has been withdrawn. More demand is good for my market this year. It is not good for my clients, and not what the policy was for.
+
+For APS leaders the live question is no longer whether to insource. It is whether the in-house offer is competitive enough to hold the people the policy depends on. The answer sits in material the Commission already holds: the conditions survey it ran this year, and the contract rates its own agencies pay for the same hours.
+
+Both of the forecasts an offer like this should be measured against appear in the one budget table, a single line apart. The Commission quoted the lower of the two.
+
+## References
+
+- Athwal, R. (2026a, September 28). Departments hit insourcing targets on paper while contractor spending surges. *The Canberra Times.* https://www.canberratimes.com.au/story/9357805/anao-audit-finds-major-flaws-in-20b-aps-contractor-policy/
+- Athwal, R. (2026b, October 7). APS job cuts: 1328 public servants exited in record wave. *The Canberra Times.* https://www.canberratimes.com.au/story/9358718/aps-job-cuts-1328-public-servants-exited-in-record-wave/
+- Australian Bureau of Statistics. (2026, September 30). *CPI rose 4.0% in the year to August 2026* [Media release]. https://www.abs.gov.au/media-centre/media-releases/cpi-rose-40-year-august-2026
+- Australian National Audit Office. (2026). *Effectiveness of the Strategic Commissioning Framework* (Auditor-General Report No. 6 of 2026–27). Commonwealth of Australia. https://www.anao.gov.au/work/performance-audit/effectiveness-of-the-strategic-commissioning-framework
+- Australian Public Service Commission. (2026a). *APS Employee Census 2026.* https://www.apsc.gov.au/initiatives-and-programs/workforce-information/research-analysis-and-publications/aps-employee-census-2026
+- Australian Public Service Commission. (2026b, October 13). *Chief Negotiator tables proposed Australian Public Service (APS) pay package* [Media release]. https://www.apsc.gov.au/about-us/working-commission/who-we-are/media-releases-and-statements/media-release-aps-bargaining-pay-offer
+- Commonwealth of Australia. (2026). *Budget strategy and outlook: Budget paper no. 1, 2026–27* (Table 1.1, Major economic parameters). https://budget.gov.au/content/bp1/download/bp1_2026-27.pdf
+- Johnson, C. (2026, October 7). Federal Government spend on consultants hits record high. *PS News.* https://psnews.com.au/federal-government-spend-on-consultants-hits-record-high/186555/
+- The Canberra Times. (2026, October 13). Albanese government tables 9 per cent pay offer for the APS. https://www.canberratimes.com.au/story/9367578/albanese-government-tables-9-per-cent-pay-offer-for-the-aps/
