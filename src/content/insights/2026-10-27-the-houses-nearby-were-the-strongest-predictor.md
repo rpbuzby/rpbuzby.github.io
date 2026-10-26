@@ -3,11 +3,9 @@ title: "The Houses Nearby Were the Strongest Predictor"
 summary: "A peer-reviewed study of the Palisades Fire found the count of buildings within 100 metres predicted whether a house survived better than anything else measured. Australia’s bushfire attack level assessment has no input that would pick that up."
 themes:
   - "Emergency Management & Resilience"
-image: ./099-the-houses-nearby-were-the-strongest-predictor.jpg
+image: ../../assets/insights/the-houses-nearby-were-the-strongest-predictor.jpg
 imageCredit: "Photo: Anthony Clark, NSW Rural Fire Service, via the NSW RFS Flickr archive. Preparing a home, September 2012."
-queue: 99
-vault: "099-building-density-structure-loss.md"
-release_by: 2026-10-30
+date: 2026-10-27
 ---
 The Palisades Fire started on the morning of 7 January 2025 and burnt for most of the month. By the time CAL FIRE recorded containment on the 31st, it had covered 23,448 acres and destroyed 6,845 structures. Twelve civilians died (California Department of Forestry and Fire Protection, 2026). A paper published in *Frontiers in Sustainability* on 7 October this year took 12,081 damage inspections from that fire and asked one narrow question of them. Of everything you could measure about a house before a fire reaches it, which measurement best predicts whether the house survives? Across the inspected residential set, where 5,566 of 9,883 houses were destroyed, the variable that did most of the work was the number of other buildings standing within 100 metres (Farajpoor & Narimani, 2026a).
 
