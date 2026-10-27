@@ -3,11 +3,9 @@ title: "What Is the APS Pay Offer Competing With?"
 summary: "The Commonwealth measured its pay offer against the inflation forecast in its budget, and on that test it wins. The wage forecast one line below sits above every year of the offer, and base salary is what staff say decides whether they stay."
 themes:
   - "Change & Transformation"
-image: ./100-what-is-the-aps-pay-offer-competing-with.jpg
+image: ../../assets/insights/what-is-the-aps-pay-offer-competing-with.jpg
 imageCredit: "Photo: RDNE Stock project, via Pexels. A pen resting on one rate while the next line reads lower."
-queue: 100
-vault: "100-aps-pay-offer-wage-forecast.md"
-release_by: 2026-11-06
+date: 2026-10-28
 ---
 149,668 Australian public servants filled in the APS Employee Census in May and June this year, an 80 per cent response rate. Among them, 61 per cent felt they were fairly remunerated for the work they do (APSC, 2026a). On 13 October the Australian Public Service Commission tabled the Commonwealth’s proposed pay package for the service-wide bargaining round: 3.2 per cent, then 3.0, dropping to 2.8.
 
