@@ -3,11 +3,9 @@ title: "Two Ways to Find Out: The Half of the KPMG Review That Is About the Buye
 summary: "Watt’s review of KPMG found the Commonwealth has no assurance mechanism for identifying supplier misconduct, and only two ways of hearing about it: the supplier’s own notification, or the press. Finance accepted the recommendations about the firm and noted the two about the framework."
 themes:
   - "Change & Transformation"
-image: ./101-two-ways-to-find-out-the-half-of-the-kpmg-review-that-is-about-the-buyer.jpg
+image: ../../assets/insights/two-ways-to-find-out-the-half-of-the-kpmg-review-that-is-about-the-buyer.jpg
 imageCredit: "Photo: Suzy Hazelwood, via Pexels. A stack of folded newspapers on a table."
-queue: 101
-vault: "101-two-ways-to-find-out.md"
-release_by: 2026-11-06
+date: 2026-10-29
 ---
 On 29 May 2026 KPMG told the Department of Finance that the matter the two had been corresponding about since the Senate allegations of 24 March was a reportable significant event under clause 16.2.3 of its panel agreement. Three days before that assessment arrived, Finance had written to the firm’s then chief executive raising the possibility of suspension from the panel (Watt, 2026). A contractual clause whose purpose is to make a supplier tell its buyer about serious trouble produced its notification more than two months after the allegations became public, and only once the buyer had named the consequence of staying quiet.
 
