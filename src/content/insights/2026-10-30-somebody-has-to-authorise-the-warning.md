@@ -3,11 +3,9 @@ title: "Somebody Has to Authorise the Warning"
 summary: "A European preprint timed when satellite fire detections became public and could not time what agencies did next. Australia publishes hotspots within 17 minutes with an instruction not to act on them, and nobody measures how long the warning then takes."
 themes:
   - "Emergency Management & Resilience"
-image: ./102-somebody-has-to-authorise-the-warning.jpg
+image: ../../assets/insights/somebody-has-to-authorise-the-warning.jpg
 imageCredit: "Photo: Stephen Kada, NSW Rural Fire Service, via the NSW RFS Flickr archive. Incident management team, March 2013."
-queue: 102
-vault: "102-somebody-has-to-authorise-the-warning.md"
-release_by: 2026-11-13
+date: 2026-10-30
 ---
 The median wildfire in a new European study covered 52 hectares when its satellite detection first became publicly visible, and 557 hectares by the time anybody published a news story about it. The figures come from a preprint posted on 22 October by Daniil Anastachas and two co-authors at the International Scientific Youth Community (2026). They pulled active-fire detections for Europe and the Mediterranean from FIRMS, the public NASA feed that distributes them, covering 10 August to 10 October this year. Clustering 273,273 of them and removing industrial heat sources along with crop burns left 345 wildfires in 23 countries, 330 of which began inside the window and could be timed.
 
