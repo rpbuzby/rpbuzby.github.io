@@ -60,6 +60,10 @@ for f in targets:
     if name == 'README.md':
         continue
     body = open(f, encoding='utf-8').read()
+    heads = re.findall(r'^(#{1,6}) *References *$', body, re.M)
+    if len(heads) > 1 or (heads and heads[0] != '##'):
+        print(f'FAIL {name}: {len(heads)} References heading(s), {", ".join(heads)}; only one "## References" list renders in the small style'); fails += 1
+        continue
     entries, is_list = section(body)
     if entries is None:
         continue          # an article may legitimately carry no references

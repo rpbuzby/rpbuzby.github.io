@@ -806,6 +806,8 @@ def stage_one(article: Path, dry: bool) -> bool:
     shutil.copy2(img, qimg)
     refs = d.get("references") or []
     body = normalise(body).strip()
+    # a draft headed its list "### References", this check missed it and 096 went out with two lists (20 Oct 2026)
+    body = re.sub(r"^#{2,6}\s*References\s*$", "## References", body, flags=re.M)
     if refs and not re.search(r"^## References\s*$", body, re.M):
         body += "\n\n## References\n" + "\n".join("- " + normalise(r) for r in refs) + "\n"
     body = bullet_references(body)

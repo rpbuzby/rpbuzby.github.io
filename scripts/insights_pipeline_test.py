@@ -315,6 +315,24 @@ fm = frontmatter(held)
 check("an article the screen catches is held at once and never queued",
       queued_it is False and fm.get("hold") == "true" and "screen: ZEPHYR" in str(fm.get("stage_note")) and not list(ip.QUEUE.glob("074-*")))
 
+# 13a. the queued copy carries one reference list, whatever heading level the draft gave it (096 went out with two, 20 Oct 2026)
+sandbox()
+(ip.IMAGES / "075-x.jpg").write_bytes(b"jpg")
+stub = ip.STATE / "grade-stub.py"
+stub.write_text("print('{\"pass_rate\": \"63/63\", \"expectations\": []}')\n", encoding="utf-8")
+real_grader, ip.GRADER = ip.GRADER, stub
+two = ip.POSTS / "075-two-lists.md"
+two.write_text('---\ntitle: "A Piece With An H3 List"\nstatus: ready\nimage: 075-x.jpg\nimage_credit: "Photo by someone on Pexels"\n'
+               'image_caption: "Photo: someone, via Pexels."\ntheme: "Defence"\nsummary: "' + " ".join(["word"] * 30) + '"\n'
+               'references:\n  - "Someone. (2026). *A title.* https://example.org"\n---\n\n'
+               "The body of the piece.\n\n### References\n\n- Someone. (2026). *A title.* https://example.org\n", encoding="utf-8")
+queued_it = REAL_STAGE_ONE(two, False)
+ip.GRADER = real_grader
+copy = next(ip.QUEUE.glob("075-*.md"), None)
+text = copy.read_text(encoding="utf-8") if copy else ""
+check("a draft's H3 reference list is queued as the one H2 list, never doubled",
+      queued_it is True and text.count("References") == 1 and "\n## References\n" in text)
+
 # 13b. drafting order: the oldest brief still in date goes first, topic by topic
 sandbox()
 day = dt.date.today()
