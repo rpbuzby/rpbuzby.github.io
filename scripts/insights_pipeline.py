@@ -1062,7 +1062,8 @@ may already have passed. The pipeline releases such pieces ahead of ones that ke
 5. TEASER. Write it to the teaser path: a no-graphic LinkedIn post of 150 to 280 words in Russell's voice that makes the \
 article's point and leads to it, with frontmatter shaped like the newest teaser in that folder (`status: draft`, an empty \
 `article_url:` that the pipeline fills on release, word_count, sources, source_notes). Vary the sign-off against the last \
-few teasers, never say "this week's article", and never "link in comments".
+twelve teasers in its wording as well as its grammar: no phrase for the article (such as "the longer piece", which closed \
+eight teasers in October 2026) may appear in more than one of them. Never say "this week's article", and never "link in comments".
 6. GATES, on the article and then the teaser: /fact-check in apply mode; the humanise grader on the body only until every \
 hard gate passes; the portfolio habit audit (habits.py --last 12 --draft); the read-aloud pre-pass; the semantic pass (skill \
 Step 5.7) on the article. Re-grade after every fix. A load-bearing claim that cannot be verified is cut or recast; if the \
