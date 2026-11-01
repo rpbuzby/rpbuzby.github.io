@@ -3,11 +3,9 @@ title: "The Data Dictionary Nobody Had to Adopt"
 summary: "Australia published a national fire history data dictionary in 2022 and built a seven-agency dataset on it. An October paper asks for that vocabulary again, because nobody was ever given the job of holding it once the funding ended."
 themes:
   - "Emergency Management & Resilience"
-image: ./103-the-data-dictionary-nobody-had-to-adopt.jpg
+image: ../../assets/insights/the-data-dictionary-nobody-had-to-adopt.jpg
 imageCredit: "Photo: NSW Rural Fire Service, via the NSW RFS Flickr archive. Reading a map at a regional exercise."
-queue: 103
-vault: "103-the-data-dictionary-nobody-adopted.md"
-release_by: 2026-11-27
+date: 2026-11-02
 ---
 During the Black Summer fires, households on one state border could not work out whether a warning reaching them described a new fire or the one they were already watching. The states either side of them labelled fires by different conventions, so a single emergency arrived under two names, and the people deciding whether to leave had to resolve the contradiction themselves. Naderpajouh et al. (2026) use that example to argue that Australia urgently needs a national bushfire database.
 
