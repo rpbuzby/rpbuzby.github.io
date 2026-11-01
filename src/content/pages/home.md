@@ -14,7 +14,7 @@ consulting:
 poetry:
   title: "Poetry"
   lede: "The land, the people on it, and what fire and weather do to both."
-  text: "Poems from Braidwood, in the southern tablelands of New South Wales. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, ‘Hecuba’ came second in the Winchester Poetry Prize, and others were shortlisted for the Bridport, Robert Gray and ACU prizes."
+  text: "Poems from Braidwood, in the southern tablelands of New South Wales. ‘Bogong’ won the 2026 Venie Holmgren Environmental Poetry Prize, ‘Hecuba’ came second in the Winchester Poetry Prize, ‘The observer’ was commended in the Buzzwords Open Poetry Competition, and others were shortlisted for the Bridport, Robert Gray and ACU prizes."
   buttons:
     - { label: "The poems", url: "/poetry/" }
 ---
