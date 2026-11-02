@@ -3,11 +3,9 @@ title: "What Makes a Downgrade Temporary?"
 summary: "Defence told Senate estimates that over 75 per cent of the ADF holds a deployable classification, a weaker claim than three-quarters of the force being fit for anything. A senator’s question produced the 2011 figure too, and neither belongs to a published series."
 themes:
   - "Defence"
-image: ./104-what-makes-a-downgrade-temporary.jpg
+image: ../../assets/insights/what-makes-a-downgrade-temporary.jpg
 imageCredit: "Photo: Juan Manuel Montejano Lopez, via Pexels. A physiotherapist fits an ankle weight during a rehabilitation session."
-queue: 104
-vault: "104-what-makes-a-downgrade-temporary.md"
-release_by: 2026-11-20
+date: 2026-11-03
 ---
 On Thursday 29 October, a Senate estimates hearing turned to the department’s health contract with Bupa, and Defence’s Chief of Personnel answered with a figure about readiness. Lieutenant General Natasha Fox told the committee, in answer to independent Senator David Pocock, that “over 75 per cent of the ADF are actually in a deployable, military employment classification”. Reporting that day read the same figure from its other end: almost one in four Australian service members are not medically able to deploy (Greene, 2026).
 
