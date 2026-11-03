@@ -3,11 +3,9 @@ title: "Nothing Required the AI Council to Keep Meeting"
 summary: "A US audit found the council coordinating responsible AI across the Department of Defense had stopped meeting, and nobody was required to report it. Australia’s Defence AI policy settles who is accountable for a capability and is silent on who keeps the coordination running."
 themes:
   - "AI in Government"
-image: ./105-nothing-required-the-ai-council-to-keep-meeting.jpg
+image: ../../assets/insights/nothing-required-the-ai-council-to-keep-meeting.jpg
 imageCredit: "Photo: photoGraph, via Pexels. A month grid with nothing written in it."
-queue: 105
-vault: "105-nothing-required-the-council-to-meet.md"
-release_by: 2026-11-27
+date: 2026-11-04
 ---
 The United States Department of Defense has a body called the Responsible AI Working Council. Its chief digital and AI office set it up as the collaborative group where the people who have to apply the policy compare notes. On 14 October 2026 the Government Accountability Office published an audit recording that the council did not meet from late 2024 until August 2025 (GAO, 2026). No system misfired in a way that reached a newspaper. The council stopped convening, and the mechanism that eventually noticed was an auditor with a questionnaire.
 
