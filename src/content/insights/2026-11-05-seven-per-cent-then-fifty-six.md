@@ -3,11 +3,9 @@ title: "Seven Per Cent, Then Fifty-Six"
 summary: "Thirty-four fire and rescue personnel told researchers their training gives them too few exercises, and a new benchmark finds AI agents breaking down over the long sequences that exercises teach. The spending on one also buys the capacity to supervise the other."
 themes:
   - "Emergency Management & Resilience"
-image: ./106-seven-per-cent-then-fifty-six.jpg
+image: ../../assets/insights/seven-per-cent-then-fifty-six.jpg
 imageCredit: "Photo: Phillippa Baume, NSW Rural Fire Service, via the NSW RFS Flickr archive. After action review, March 2013."
-queue: 106
-vault: "106-seven-per-cent-then-fifty-six.md"
-release_by: 2026-11-27
+date: 2026-11-05
 ---
 “Exercises are not given enough priority in our training regime.” The person who said that is one of 34 Australian fire and rescue service personnel interviewed for a study published in October. Of the six questions they were asked, the paper reports their answers to one: how could agencies improve the training and development of the people who make operational decisions in roles like theirs? On average they had 23.1 years in emergency response work behind them. Nineteen of them held tactical roles and ten worked at the strategic level. These are the people who run incidents.
 
