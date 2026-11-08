@@ -3,11 +3,9 @@ title: "Ask the Register, Then Ask the Contract"
 summary: "Australia already mandates the AI use case register Europe lacks, yet none of its thirteen required fields names a contract, so nobody can audit it against what the agency bought. The privacy obligation commencing 10 December 2026 turns on computer programs rather than AI."
 themes:
   - "AI in Government"
-image: ./107-ask-the-register-then-ask-the-contract.jpg
+image: ../../assets/insights/ask-the-register-then-ask-the-contract.jpg
 imageCredit: "Photo: Tima Miroshnichenko, via Pexels. A carton being taped shut."
-queue: 107
-vault: "107-ask-the-register-then-the-contract.md"
-release_by: 2026-11-27
+date: 2026-11-09
 ---
 Public procurement records describe what an agency bought. They are not built to record whether the thing it bought makes decisions. A white paper deposited on Zenodo on 23 October 2026 measures how much that gap hides, using about 14.5 million purchase records from Tenders Electronic Daily and the national procurement registers of Spain, Italy, France, Germany and the Netherlands (Ramos-Sánchez, 2026). It is a single-author white paper and it has not been peer reviewed, which is worth saying before anybody quotes it.
 
