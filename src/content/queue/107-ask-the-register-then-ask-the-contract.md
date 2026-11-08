@@ -1,0 +1,46 @@
+---
+title: "Ask the Register, Then Ask the Contract"
+summary: "Australia already mandates the AI use case register Europe lacks, yet none of its thirteen required fields names a contract, so nobody can audit it against what the agency bought. The privacy obligation commencing 10 December 2026 turns on computer programs rather than AI."
+themes:
+  - "AI in Government"
+image: ./107-ask-the-register-then-ask-the-contract.jpg
+imageCredit: "Photo: Tima Miroshnichenko, via Pexels. A carton being taped shut."
+queue: 107
+vault: "107-ask-the-register-then-the-contract.md"
+release_by: 2026-11-27
+---
+Public procurement records describe what an agency bought. They are not built to record whether the thing it bought makes decisions. A white paper deposited on Zenodo on 23 October 2026 measures how much that gap hides, using about 14.5 million purchase records from Tenders Electronic Daily and the national procurement registers of Spain, Italy, France, Germany and the Netherlands (Ramos-Sánchez, 2026). It is a single-author white paper and it has not been peer reviewed, which is worth saying before anybody quotes it.
+
+The method is more careful than the counts it corrects. Purchases were ranked by meaning using an open-weights embedding model, classified under a written rule anchored in the EU AI Act’s definition of an AI system, then checked against a random sample of 2,317 purchases Ramos-Sánchez reviewed by hand. Agreement between the automated labels and the author’s own reached a kappa of 0.84, and 18 the system had marked certain changed on review.
+
+The measurement shows keyword searching failing in two directions at once. Of the purchases whose text mentions AI, only 43 to 82 per cent are AI purchases, depending on the register. Keyword searching also misses between 4 and 29 per cent of the AI actually bought, because AI gets described in other words or bought by brand name. One category escapes every method: AI “built into products whose notices do not describe it”, which the author says can only be bounded, never counted.
+
+Governance is less visible again. On the recomputed version 1.1 figures, a governance measure shows up in the register only where it was bought as a contract of its own, in about 1 in 54 AI purchases in Tenders Electronic Daily, and 1 per cent of AI purchases overall. The instructive part is what the author then did with that number. The paper’s title changed between versions, because the registers cannot show whether AI is governed and the report does not claim that it is not.
+
+Australia is much further along on the obligation than on the measurement, and a date is already fixed. Part 15 of the Privacy and Other Legislation Amendment Act 2024 commences on 10 December 2026 and inserts Australian Privacy Principle 1.7 into the Privacy Act 1988. The trigger repays a close read, because it never mentions AI. The obligation applies where an entity “has arranged for a computer program to make, or do a thing that is substantially and directly related to making, a decision”. Two further conditions attach. That decision must be one which “could reasonably be expected to significantly affect the rights or interests of an individual”, and personal information about that individual must be used in the program’s operation.
+
+A scoring model inside a platform meets that description, and so does a rules engine somebody wrote in 2009. The application provision answers the obvious question about legacy systems: the obligation reaches decisions made after commencement, whatever the age of the arrangement that produced them. That makes the task an inventory of every such arrangement already running, which is a different job from screening the next purchase.
+
+[The distance between disclosing an automated decision and giving someone inside the process the standing to refuse it](https://russellbuzby.com/2026/08/06/the-human-in-the-loop-needs-a-way-to-say-no/) was the subject of an article here in August 2026. This is the step before that one. A disclosure obligation assumes the entity can list the programs it is disclosing, and the listing is where the European study says the failure sits.
+
+Australia does mandate a list, which is more than the paper found anywhere in Europe. Under the Policy for the responsible use of AI in government, now at version 2.1, every non-corporate Commonwealth entity must publish an AI transparency statement and designate one or more accountable officials. It must also name an owner accountable for each in-scope AI use case, and keep an internal register of those use cases, shared with the Digital Transformation Agency every six months (DTA, 2026a). The current version took effect on 15 December 2025. Read the twelve-month clock from that date and the register deadline falls within a week of the privacy obligation.
+
+The register’s required fields are where the two systems come apart. Thirteen are mandatory for every entry, with two more for anything rated inherently high risk, and they run from the use case name and agency reference number through the technology type and lifecycle stage to the inherent and residual risk ratings (DTA, 2026b). I went through that standard looking for a contract number or a procurement reference of any kind, and could not find one. The closest is a conditional clause in the description field, asking for “the underpinning product’s name” where applicable.
+
+The consequence runs both ways. Without a procurement identifier, nobody can audit the register against what the agency actually bought, and no one can read the contract population to find the systems the register has missed. The register and the contract record cover overlapping ground and cannot be reconciled with each other.
+
+The scope test compounds that. A use case is in scope if, among other criteria, its failure could cause more than insignificant harm, or it will materially influence administrative decisions, or it is designed to use personal or sensitive data (DTA, 2026c). Those are reasonable tests, and each asks what a system does in service, which is knowledge held by the people operating it and not by whoever signed for it. The policy then excludes “incidental” AI, and its own example is grammar checking in off-the-shelf software. Also sensible, and it places the judgement precisely where the white paper says the record is blindest: inside a product whose purchase never described it.
+
+The Australian buying record gives that judgement nothing to work with. AusTender’s contract notice search classifies purchases by commodity category, and the list runs to 56 values, from apparel through to travel services (Department of Finance, 2026). For a case management platform with a scoring model inside it, the nearest value is “Information Technology Broadcasting and Telecommunications”. Nothing in the list records what the thing decides. That is not a flaw in the category scheme, which was built to answer a different question.
+
+Four things would close most of the distance, and none of them needs new legislation. Put a single question on the contract notice: does this purchase include a computer program that makes decisions about individuals or does something substantially and directly related to making them. Add a contract or notice identifier to the register’s minimum fields, so the two records can be read against each other. Work backwards through the existing contract population before 10 December 2026, screening on that statutory trigger instead of on the word AI, since it is what the obligation turns on. Then publish the method behind whatever count results, which is the second thing the white paper asks for and the one most likely to go missing.
+
+The last of those is the one I would defend hardest, because a count with no stated method cannot be checked or improved, and the European work shows how far the usual method is out. Before 10 December 2026 the useful work is unglamorous: read back through the contract population and find out which purchases brought in a program that decides something about a person. An agency starting its count only when the date arrives will write its disclosure from whatever the people still in the building remember buying.
+
+## References
+- Department of Finance. (2026). *Contract notices* [Search interface]. AusTender. https://www.tenders.gov.au/Cn/Search
+- Digital Transformation Agency. (2026a). *Policy for the responsible use of AI in government* (Version 2.1). Australian Government. https://www.digital.gov.au/ai/ai-in-government-policy
+- Digital Transformation Agency. (2026b). *Standard for accountability.* Australian Government. https://www.digital.gov.au/ai/ai-in-government-policy/accountability
+- Digital Transformation Agency. (2026c). *Policy for the responsible use of AI in government* (Version 2.1): *Appendix C, in-scope AI use cases.* Australian Government. https://www.digital.gov.au/ai/ai-in-government-policy/policy-responsible-use-ai-government-version-20-appendix-c-scope-ai-use-cases
+- *Privacy and Other Legislation Amendment Act 2024* (Cth). https://www.legislation.gov.au/C2024A00128/asmade/text
+- Ramos-Sánchez, P. (2026). *Unseen AI: What Europe’s public sector buys, and what its procurement registers cannot show* (Version 1.1) [White paper]. Zenodo. https://doi.org/10.5281/zenodo.23561547
