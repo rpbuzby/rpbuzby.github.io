@@ -3,11 +3,9 @@ title: "Everybody Thought Somebody Could Change It"
 summary: "Aged care’s assessment software recorded 2,851 overrides of outcomes no assessor had legal power to change, while departmental assurance covered 0.6 per cent of assessments. A rules-based eligibility system needs the power to substitute written into the instrument, and a count of its use."
 themes:
   - "AI in Government"
-image: ./108-everybody-thought-somebody-could-change-it.jpg
+image: ../../assets/insights/everybody-thought-somebody-could-change-it.jpg
 imageCredit: "Photo: Kampus Production, via Pexels. An assessment form filled in at the kitchen table."
-queue: 108
-vault: "108-everybody-thought-somebody-could-change-it.md"
-release_by: 2026-11-20
+date: 2026-11-10
 ---
 The software that decides how much home care funding an older Australian receives recorded 2,851 cases of its own classification outcome being overridden between 1 November 2025 and 25 May 2026. No assessor or delegated decision-maker held the legal power to override that outcome. The Department of Health, Disability and Ageing has told the Commonwealth Ombudsman it is working through those cases to establish whether the overrides were lawful (Commonwealth Ombudsman, 2026).
 
