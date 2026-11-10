@@ -3,11 +3,9 @@ title: "Who Confirms the Requirement?"
 summary: "Kellie Parker became Australia’s first National Armaments Director on 9 November 2026, eight months before the agency she will run exists. The published design already draws the boundary: her accountability starts at Second Pass approval, and someone else confirms the requirement."
 themes:
   - "Defence"
-image: ./109-who-confirms-the-requirement.jpg
+image: ../../assets/insights/who-confirms-the-requirement.jpg
 imageCredit: "Photo: Werner Pfennig, via Pexels. A board meeting in session, blank name cards along the table."
-queue: 109
-vault: "109-who-confirms-the-requirement.md"
-release_by: 2026-11-27
+date: 2026-11-11
 ---
 On 9 November 2026, Kellie Parker became Australia’s first National Armaments Director. The organisation she was appointed to lead does not exist. It will be established on 1 July 2027, so for the next eight months her title is National Armaments Director Designate. What she actually runs is a transitional body inside Defence, taken over from the interim director Nadine Williams (Department of Defence Ministers, 2026).
 
