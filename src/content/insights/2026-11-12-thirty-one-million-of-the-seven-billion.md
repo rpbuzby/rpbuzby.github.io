@@ -3,11 +3,9 @@ title: "Thirty-One Million of the Seven Billion"
 summary: "Three numbers are doing different jobs in the counter-drone announcement, and only A$31.7 million of it went to the cheap layer where the cost exchange favours the defender. No one has published a cost per engagement for any of it."
 themes:
   - "Defence"
-image: ./110-thirty-one-million-of-the-seven-billion.jpg
+image: ../../assets/insights/thirty-one-million-of-the-seven-billion.jpg
 imageCredit: "Photo: Peter Fazekas, via Pexels. A quadcopter seen from directly underneath, camera pointing down."
-queue: 110
-vault: "110-thirty-one-million-of-seven-billion.md"
-release_by: 2026-11-27
+date: 2026-11-12
 ---
 Late in 2025, soldiers patrolling the Cultana Training Area in South Australia were engaged by drones on purpose, so they could try out the equipment meant to stop them. The assessment ran ten days. Twenty systems went in and eight came out, selected to introduce into service. Behind it is Project Land 156, funded early in 2025, which bought its first systems that April and had them in field trials eight months after the concept (Department of Defence, 2026).
 
