@@ -3,11 +3,9 @@ title: "Your Change Program Is on the Hazard List"
 summary: "Since April 2023 the work health and safety regulations have required a duty holder to consider the design of work, and the approved code names poor organisational change management as a hazard. Your restructure needs a psychosocial risk assessment, written at the design phase."
 themes:
   - "Change & Transformation"
-image: ./111-your-change-program-is-on-the-hazard-list.jpg
+image: ../../assets/insights/your-change-program-is-on-the-hazard-list.jpg
 imageCredit: "Photo: Christina Morillo, via Pexels. A flowchart still being drawn in marker on an office whiteboard."
-queue: 111
-vault: "111-your-change-program-is-on-the-hazard-list.md"
-release_by: 2026-11-30
+date: 2026-11-13
 ---
 Eight hundred and fifty-eight public servants from federal and state agencies filled in The Mandarin’s Frank and Fearless survey this year. Forty-six per cent of them reported high or very high stress at work, 44 per cent of federal respondents and 49 per cent of state ones (The Mandarin, 2026). Brenton Prosser wrote the result up on 28 October, called it “a 20% jump in 12 months, after a 5% rise the year before”, and added the caution it deserves: “This is one survey, and it should be read that way” (Prosser, 2026).
 
