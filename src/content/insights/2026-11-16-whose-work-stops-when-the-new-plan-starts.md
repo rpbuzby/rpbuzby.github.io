@@ -3,10 +3,9 @@ title: "Whose Work Stops When the New Plan Starts?"
 summary: "Agencies follow through where an external office is still asking. Everything else gets rationed informally, by whoever inherits the list, and the cheapest fix is one column in the plan: who does this, and what they stop doing."
 themes:
   - "Change & Transformation"
-image: ./094-whose-work-stops-when-the-new-plan-starts.jpg
+image: ../../assets/insights/whose-work-stops-when-the-new-plan-starts.jpg
 imageCredit: "Photo: Mikhail Nilov, via Pexels. A blank board and empty chairs in a meeting room."
-queue: 94
-vault: "094-whose-work-stops.md"
+date: 2026-11-16
 ---
 Public sector plans are good at naming work and dates. They are much weaker at naming the person who will stop doing something else so the new work can happen. A plan reaches its approval meeting with its commitments and timeframes attached, usually with a budget line beside them. The question of whose existing workload gets rearranged is settled later, by whoever inherits the list. That sequence looks like administrative tidying. It is closer to the thing that decides whether the plan happens.
 
