@@ -3,10 +3,9 @@ title: "Every Attribute Passed and the Group Still Came Last"
 summary: "Eighteen models rated the same applicant profiles and put White men without degrees lowest, a result every single-attribute fairness check reads as clean. Australian bias testing asks for disaggregation by attribute and assumes one system at a time, and more testing repairs neither assumption."
 themes:
   - "AI in Government"
-image: ./095-every-attribute-passed-and-the-group-still-came-last.jpg
+image: ../../assets/insights/every-attribute-passed-and-the-group-still-came-last.jpg
 imageCredit: "Photo: Yura Forrat, via Pexels. Adults seated in a row of wooden chairs, seen from above."
-queue: 95
-vault: "095-intersectional-bias-and-the-handoff.md"
+date: 2026-11-17
 ---
 Eighteen large language models were each handed the same 32 applicant profiles ten times over and asked to rate them for consumer credit, then for a job, then for a rental property. The applicants’ stated finances and work histories stayed constant, and the only variables were demographic: gender, race, age, citizenship, education. That is 17,280 ratings. The group that finished lowest, averaged across every model, was White men without undergraduate degrees.
 
