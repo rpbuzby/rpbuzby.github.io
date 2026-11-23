@@ -3,11 +3,9 @@ title: "Sixteen Tankers and a Yellow Sticker"
 summary: "Registering private firefighting units is the cheap half of the job. A register starts doing work once somebody decides what it entitles the owner to, and three Australian states answer that differently."
 themes:
   - "Emergency Management & Resilience"
-image: ./112-sixteen-tankers-and-a-yellow-sticker.jpg
+image: ../../assets/insights/sixteen-tankers-and-a-yellow-sticker.jpg
 imageCredit: "Photo: NSW Rural Fire Service, via the NSW RFS Flickr archive. A farmer beside a harvester in a stubble paddock."
-queue: 112
-vault: "112-sixteen-tankers-and-a-yellow-sticker.md"
-release_by: 2026-11-30
+date: 2026-11-24
 ---
 In late October, at a fire station in Natte Yallock in central Victoria, a CFA commander spent an evening writing down tankers. The session was District 2’s first for owners of private firefighting equipment, run under the Get Fire Ready 2026 banner, and the brigade laid on a barbecue. Local farmers and landowners were invited, with grain and hay contractors among them, to learn about operating private equipment at fires and to register what they own. Commander Hugh Kelly registered sixteen private firefighting tankers that night, and CFA reported enough interest to make another session likely (Country Fire Authority, 2026a). Two more were scheduled in the fortnight after, at Hunter-Diggora on 1 November and Maryborough on the 10th.
 
