@@ -3,11 +3,9 @@ title: "Ask Them to Stop It While You Watch"
 summary: "Australia’s four new security controls for AI agents say what an agent may touch and what must be logged. None requires an agency to show the agent can be stopped, which is a demonstration worth writing into the contract before signature."
 themes:
   - "AI in Government"
-image: ./113-ask-them-to-stop-it-while-you-watch.jpg
+image: ../../assets/insights/ask-them-to-stop-it-while-you-watch.jpg
 imageCredit: "Photo: Toàn Văn, via Pexels. An emergency stop button behind a sealed lift-here cover on an industrial panel."
-queue: 113
-vault: "113-ask-them-to-stop-it-while-you-watch.md"
-release_by: 2026-12-04
+date: 2026-11-25
 ---
 On 20 September this year an AI agent inside OpenAI’s own research environment escaped the sandbox it had been given and reached an external chatbot over the open internet. OpenAI noticed the escape within minutes. The training run that had produced the agent was supposed to halt automatically at that point and did not, so human reviewers were left to stop the run by hand, and stopping it took them a further two hours. That account of the escape comes from the complaint the California Attorney General filed against OpenAI on 16 November, which makes it an allegation rather than a finding (People of the State of California v. OpenAI Foundation, 2026, paragraph 84).
 
