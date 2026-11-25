@@ -3,11 +3,9 @@ title: "An Audit Nobody Has to Answer"
 summary: "GAO ran a full performance audit on four commercial AI platforms, got past their safeguards in under twelve hours each, and made no recommendations, since no agency it audits built the product. Australia’s technical standard treats that test as optional."
 themes:
   - "AI in Government"
-image: ./114-an-audit-nobody-has-to-answer.jpg
+image: ../../assets/insights/an-audit-nobody-has-to-answer.jpg
 imageCredit: "Photo: Kindel Media, via Pexels. Separately clipped documents stacked on a desk beside a pair of reading glasses."
-queue: 114
-vault: "114-an-audit-nobody-has-to-answer.md"
-release_by: 2026-12-04
+date: 2026-11-26
 ---
 Investigators at the United States Government Accountability Office spent part of this year finding out whether a commercial AI platform would help somebody plan a terrorist attack. They settled on two scenarios after talking to outside experts. One was an improvised explosive device designed to cause mass casualties. The other was an attack on the electricity grid. They took the four most-used generative AI platforms as at April 2026. The report names all four: ChatGPT and Gemini alongside Claude and Grok. Each was assigned at random to one of the two scenarios, and the testing ran in the northern spring. The safeguards worked at first. Platforms refused requests and stripped information out of answers. In some cases they suspended the account. The investigators got past all of it using what the report calls “common safeguard-bypassing techniques”, and each of the four produced a viable plan in under twelve hours (Government Accountability Office, 2026a).
 
