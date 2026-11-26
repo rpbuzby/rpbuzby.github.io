@@ -3,11 +3,9 @@ title: "What Is a Business Case For?"
 summary: "All four NSW health projects in the audit were funded before anyone wrote a business case, and every case still complied. Scope is what moved, including a hospital floor left as a bare shell, so compliance says nothing about which decisions were open."
 themes:
   - "Change & Transformation"
-image: ./115-what-is-a-business-case-for.jpg
+image: ../../assets/insights/what-is-a-business-case-for.jpg
 imageCredit: "Photo: Mohammed Alnaily, via Pexels. A floor plate left as bare concrete, with no services and no finishes."
-queue: 115
-vault: "115-what-is-a-business-case-for.md"
-release_by: 2026-12-04
+date: 2026-11-27
 ---
 Health Infrastructure finalised the full business case for the Lower Mid North Coast Health Service in December 2025. It included a fourth floor at Manning Hospital: around 1,600 square metres, with capacity for 28 inpatient beds. The floor would go up as a bare shell, with no services connected and no finished floor or ceiling. Demand projections showed the beds would be needed in future. Fitting the space out would have taken the project past the money it had been given (Audit Office of NSW, 2026).
 
